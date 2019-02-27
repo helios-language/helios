@@ -72,16 +72,16 @@ def compilecfile(filename):
     obj = os.path.basename(filename).replace(".c", ".o")
     print("compiling {} to {}".format(filename, obj))
     try:
-        print(" ".join([
-            CXX,
-            "-c",
+        # print(" ".join([
+        #     CXX,
+        #     "-c",
 
-            *CXXFLAGS,
-            *headervar,
-            "-o",
-            BUILDDIR+"/"+obj,
-            filename
-        ]))
+        #     *CXXFLAGS,
+        #     *headervar,
+        #     "-o",
+        #     BUILDDIR+"/"+obj,
+        #     filename
+        # ]))
         sp.check_output([
             CXX,
             "-c",
@@ -105,17 +105,17 @@ pool = ThreadPool(processes=mp.cpu_count())
 pool.map(compilecfile, cfiles)
 
 try:
-    print(" ".join([
-        LD,
-        *LDFLAGS,
-        *objects,
-        "-o",
-        BINDIR+"/"+EXECUTABLE,
+    # print(" ".join([
+    #     LD,
+    #     *LDFLAGS,
+    #     *objects,
+    #     "-o",
+    #     BINDIR+"/"+EXECUTABLE,
 
-        "-L./"+LIBDIR,
-        *libvar
+    #     "-L./"+LIBDIR,
+    #     *libvar
 
-    ]))
+    # ]))
     sp.check_output([
         LD,
         *LDFLAGS,
