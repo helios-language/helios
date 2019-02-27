@@ -6,6 +6,9 @@
 #include <stdint.h>
 
 typedef enum {
+    /*
+        enum representing all possible token types.
+    */
 
     // integers
     TOK_DECINT,
@@ -26,8 +29,14 @@ typedef enum {
 } TOKENTYPE;
 
 typedef struct Token {
-    TOKENTYPE t;
-    void* value;
+    /*
+        This struct represents a token object.
+    */
+    TOKENTYPE t;  // the type of this token
+    void* value;  // the value of this token. Void pointer to allow for any
+                  // datatype, but generally assumed to be a string. If it's not
+                  // a string the printing routine may error. For this a special
+                  // printing case can be defined in token.c (token_print).
 } Token_t;
 
 void token_print(Token_t* token);
