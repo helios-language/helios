@@ -10,3 +10,5 @@ int main(int argc, char* argv[]) {
     AST_print(ast);
     AST_free(ast);
 }
+
+tt
