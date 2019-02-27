@@ -46,6 +46,8 @@ typedef struct Parser {
     char* accepted;  // a string of whatever the previous call to
                      // accept[char,anychar,string] has found so it can be added
                      // to an ast.
+
+    uint32_t indent;  // the current indentation level
 } Parser_t;
 
 Parser_t* parser_new(char* code);

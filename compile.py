@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 import multiprocessing as mp
 from multiprocessing.pool import ThreadPool
 import subprocess as sp

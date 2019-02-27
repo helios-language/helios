@@ -599,6 +599,6 @@ class Parser(ParserManager):
         return AST(HexInteger("".join(res)))
 
 
-p = Parser()
+# p = Parser()
 
-print(p.parse("(1 + 2) / 3 + 0x4 * -5 ** 6 // 3"))
+# print(p.parse("(1 + 2) / 3 + 0x4 * -5 ** 6 // 3"))

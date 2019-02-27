@@ -27,6 +27,11 @@ typedef enum {
     TOK_BINARYOP,
     TOK_UNARYOP,
 
+    // lines
+    TOK_NONE,  // use when there's no real token, or it will eventually be
+               // merged.
+    TOK_BLOCK,
+
 } TOKENTYPE;
 
 typedef struct Token {

@@ -24,6 +24,7 @@ typedef struct AST {
 
 AST_t* AST_new(Token_t* value);
 void AST_free(AST_t* ast);
+void AST_free_simple(AST_t* ast);
 void AST_freeChildren(AST_t* ast);
 void AST_addChild(AST_t* ast, AST_t* child);
 AST_t* AST_get(AST_t* ast, uint32_t index);

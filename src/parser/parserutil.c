@@ -26,10 +26,17 @@ AST_t* parser_parseString(char* str) {
     parser_advance(parser);
     AST_t* ast = parser_root(parser);
 
-    if (ast == NULL || !parser_exhausted(parser)) {
-        errorstack_push(parser->es, "invalid syntax", parser->line,
-                        parser->character);
-    }
+    // this used to be in there to find cases where the statement ended halfway
+    // through the compilation process to prevent it just exiting without error.
+    // however, now the root of the recursive descent can only exit errorless
+    // when it finds the end of the code. Because of this i believe this code is
+    // not needed anymore. More testing is required to verify this.
+
+    // if (ast == NULL ||
+    // !parser_exhausted(parser)) {
+    //     errorstack_push(parser->es, "invalid syntax", parser->line,
+    //                     parser->character);
+    // }
 
     if (!errorstack_empty(parser->es)) {
         errorstack_traceback(parser->es, str);
@@ -61,9 +68,10 @@ Parser_t* parser_new(char* code) {
         '\0',  // curr
         '\0',  // next
         code,
-        strlen(code),                                      // codelength
-        0,                                                 // index
-        malloc(PARSER_ACCEPTED_MAX_STRLEN * sizeof(char))  // accepted
+        strlen(code),                                       // codelength
+        0,                                                  // index
+        malloc(PARSER_ACCEPTED_MAX_STRLEN * sizeof(char)),  // accepted
+        0,
     };
     return parser;
 }
@@ -162,7 +170,8 @@ Parser_t* parser_copy(Parser_t* parser) {
         parser->code,
         parser->codelength,  // codelength
         parser->index,       // index
-        parser->accepted     // accepted
+        parser->accepted,    // accepted
+        parser->indent,      // indent level
     };
     return newparser;
 }
@@ -187,7 +196,8 @@ void parser_restore(Parser_t* parser, Parser_t* other) {
         other->code,
         other->codelength,  // codelength
         other->index,       // index
-        other->accepted     // accepted
+        other->accepted,    // accepted
+        other->indent,      // indent level
     };
 }
 
