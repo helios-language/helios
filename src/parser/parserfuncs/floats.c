@@ -44,7 +44,7 @@ PARSERFUNC(number) {
 
     res[filled] = '\0';
 
-    return AST_new(token_new(TOK_DECINT, res));
+    return AST_new(token_new(TOK_DECINT, res, true));
 }
 
 // this is the python implementation for the part when it cant find a ".". TODO:
@@ -84,13 +84,13 @@ PARSERFUNC(floatconst) {
     uint32_t eslength1 = errorstack_length(parser->es);
     Parser_t* parsercp1 = parser_copy(parser);
 
-    AST_t* result =
-        AST_new(token_new(TOK_FLOAT, "(intpart,floatpart,exponent)"));
+    AST_t* result = AST_new(
+        token_new(TOK_FLOAT, (void*)"(intpart,floatpart,exponent)", false));
 
     AST_t* ipart = PARSERCALL(number);
     if (errorstack_length(parser->es) != eslength1) {
         AST_free(ipart);
-        ipart = AST_new(token_new(TOK_IPART, (void*)"0"));
+        ipart = AST_new(token_new(TOK_IPART, (void*)"0", false));
         errorstack_popuntil(parser->es, eslength1);
         parser_restore(parser, parsercp1);
     }
@@ -116,7 +116,7 @@ PARSERFUNC(floatconst) {
     AST_t* fpart = PARSERCALL(number);
     if (errorstack_length(parser->es) != eslength2) {
         AST_free(fpart);
-        fpart = AST_new(token_new(TOK_FPART, (void*)"0"));
+        fpart = AST_new(token_new(TOK_FPART, (void*)"0", false));
         errorstack_popuntil(parser->es, eslength2);
         parser_restore(parser, parsercp2);
     } else {
@@ -144,7 +144,7 @@ PARSERFUNC(floatconst) {
         }
         epart->value->t = TOK_EPART;
     } else {
-        epart = AST_new(token_new(TOK_EPART, (void*)"0"));
+        epart = AST_new(token_new(TOK_EPART, (void*)"0", false));
     }
 
     AST_addChild(result, epart);
