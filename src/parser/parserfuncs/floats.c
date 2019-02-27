@@ -101,6 +101,21 @@ PARSERFUNC(floatconst) {
     if (!parser_expectchar(parser, '.')) {
         // if it couldnt find a ".", still check for the exponent
         parser_skipws(parser);
+        if (parser_acceptstring(parser, "exp") ||
+            parser_acceptstring(parser, "e")) {
+            errorstack_popuntil(parser->es, eslength1);
+
+            parser_skipws(parser);
+
+            AST_t* epart = PARSERCALL(number);
+            if (errorstack_length(parser->es) == eslength1) {
+                AST_addChild(result,
+                             AST_new(token_new(TOK_FPART, (void*)"0", false)));
+                AST_addChild(result, epart);
+                parser_free_simple(parsercp1);
+                return result;
+            }
+        }
         errorstack_push(parser->es, "invalid float constant", parser->line,
                         parser->character);
         parser_restore(parser, parsercp1);

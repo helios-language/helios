@@ -41,6 +41,8 @@ PARSERFUNC(atom) {
         parser_free_simple(parsercp1);
         return res;
     }
+    AST_free(res);
+
     errorstack_popuntil(parser->es, eslength1);
     parser_restore(parser, parsercp1);
     parser_free_simple(parsercp1);
