@@ -12,6 +12,14 @@
 #include <string.h>
 
 PARSERFUNC(number) {
+    /*
+        Similar to the function accepting integers but does not accept the 0d
+        prefix.
+
+        rule:
+        number = ("0" | "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9")+
+    */
+
     if (!parser_acceptanychar(parser, "0123456789")) {
         errorstack_push(parser->es, "invalid decimal constant", parser->line,
                         parser->character);
@@ -39,6 +47,9 @@ PARSERFUNC(number) {
     return AST_new(token_new(TOK_DECINT, res));
 }
 
+// this is the python implementation for the part when it cant find a ".". TODO:
+// actually implement it in c...
+//
 // if not self.expectchar("."):
 //     self.skipws()
 //     if self.acceptstring("exp") or self.acceptstring("e"):
@@ -60,24 +71,14 @@ PARSERFUNC(number) {
 //     ))
 //     return
 
-// self.skipws()
-// if self.acceptstring("exp") or self.acceptstring("e"):
-//     length3 = ErrorStack.getCurrentLength()
-//     self.skipws()
-//     codecp3 = self.code.copy()
-//     epart = self.intconst()
-//     if ErrorStack.getCurrentLength() != length3:
-//         ErrorStack.error(Error(
-//             "expected integer constant after exp",
-//             self.code.line, self.code.char
-//         ))
-//         return
-// else:
-//     epart = 0
-
-// return AST(Float((ipart, fpart, epart)))
-
 PARSERFUNC(floatconst) {
+    /*
+        Accepts a floating point constant in the format of
+
+        rule:
+        floatconst = (number "." number [("exp" | "e") number]) |
+            number ("exp" | "e") number
+    */
     parser_skipws(parser);
 
     uint32_t eslength1 = errorstack_length(parser->es);
@@ -98,6 +99,7 @@ PARSERFUNC(floatconst) {
 
     parser_skipws(parser);
     if (!parser_expectchar(parser, '.')) {
+        // if it couldnt find a ".", still check for the exponent
         parser_skipws(parser);
         errorstack_push(parser->es, "invalid float constant", parser->line,
                         parser->character);
@@ -140,7 +142,7 @@ PARSERFUNC(floatconst) {
             parser_free_simple(parsercp1);
             return AST_new(NULL);
         }
-        ep art->value->t = TOK_EPART;
+        epart->value->t = TOK_EPART;
     } else {
         epart = AST_new(token_new(TOK_EPART, (void*)"0"));
     }

@@ -10,35 +10,28 @@
 #include <stdlib.h>
 #include <string.h>
 
+/*
+The code in this file is mostly dedicated to accepting mathematical expressions
+and applying the order of operations.
+*/
+
 DECLARE_PARSERFUNC(expr);
 DECLARE_PARSERFUNC(intconst);
 DECLARE_PARSERFUNC(floatconst);
 
-// self.skipws()
-// length = ErrorStack.getCurrentLength()
-// codecp1 = self.code.copy()
-
-// res = self.floatconst()
-// if ErrorStack.getCurrentLength() == length:
-//     return res
-
-// ErrorStack.popUntilLength(length)
-// self.code = codecp1.copy()
-
-// res = self.intconst()
-// if ErrorStack.getCurrentLength() == length:
-//     return res
-
-// # ErrorStack.popUntilLength(length)
-// self.code = codecp1.copy()
-
-// ErrorStack.error(Error(
-//     "could not parse atom",
-//     self.code.line, self.code.char
-// ))
-// return AST("")
-
 PARSERFUNC(atom) {
+    /*
+        Tries to accept a floating point constant. if it couldn't find one it
+        tries an Integer constand and returns this.
+
+        TODO: All other constants (string, list etc)
+        NOTE: The order of float first int last is on purpose as the float
+        function will error and return much earlier. The int function first
+        checks for all different bases.
+
+        rule:
+        atom = floatconst | intconst
+    */
     parser_skipws(parser);
     uint32_t eslength1 = errorstack_length(parser->es);
     Parser_t* parsercp1 = parser_copy(parser);
@@ -56,6 +49,12 @@ PARSERFUNC(atom) {
 }
 
 PARSERFUNC(atomexpression) {
+    /*
+        Either accepts an atom or a bracketed expression
+
+        rule:
+        atomexpression = ("(" expr ")") | atom
+    */
     parser_skipws(parser);
 
     if (parser_acceptchar(parser, '(')) {
@@ -70,6 +69,13 @@ PARSERFUNC(atomexpression) {
 }
 
 PARSERFUNC(power) {
+    /*
+        Accepts parts of expressions which can have exponent notation (a ** b)
+        in them.
+
+        rule:
+        power = atomexpression ["**" power]
+     */
     parser_skipws(parser);
     AST_t* left = PARSERCALL(atomexpression);
     AST_t* res = left;
@@ -97,6 +103,12 @@ PARSERFUNC(power) {
 }
 
 PARSERFUNC(factor) {
+    /*
+        Accepts parts of expressions containing unary operators like + - and ~
+        to negate, invert or make positive a part of an expression.
+        rule:
+        factor = (("+" | "-" | "~") factor) | power
+    */
     parser_skipws(parser);
     if (parser_acceptanychar(parser, "+-~")) {
         parser_skipws(parser);
@@ -119,6 +131,15 @@ PARSERFUNC(factor) {
 }
 
 PARSERFUNC(term) {
+    /*
+        Accepts parts of expressions containing operators like * and / or
+        operators with the same precedance.
+
+        rule:
+        term = factor (("*" | "/" | "//") factor)*
+
+        TODO: add modulo
+    */
     parser_skipws(parser);
     AST_t* left = PARSERCALL(factor);
     AST_t* res = left;
@@ -146,6 +167,12 @@ PARSERFUNC(term) {
 }
 
 PARSERFUNC(expr) {
+    /*
+        Accepts any full expression.
+
+        rule:
+        expr = term (("+" | "-") term)*
+    */
     parser_skipws(parser);
     AST_t* left = PARSERCALL(term);
     AST_t* res = left;
