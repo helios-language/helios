@@ -105,6 +105,7 @@ pool = ThreadPool(processes=mp.cpu_count())
 pool.map(compilecfile, cfiles)
 
 try:
+    print("linking...")
     # print(" ".join([
     #     LD,
     #     *LDFLAGS,
