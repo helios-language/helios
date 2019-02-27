@@ -88,7 +88,7 @@ PARSERFUNC(power) {
         parser_skipws(parser);
 
         if (strcmp(op, "**") == 0) {
-            AST_t* res = AST_new(token_new(TOK_UNARYOP, op));
+            AST_t* res = AST_new(token_new(TOK_UNARYOP, op, true));
             AST_addChild(res, left);
             AST_addChild(res, right);
             return res;
@@ -118,7 +118,7 @@ PARSERFUNC(factor) {
         parser_skipws(parser);
         if (strcmp(op, "+") == 0 || strcmp(op, "-") == 0 ||
             strcmp(op, "~") == 0) {
-            AST_t* res = AST_new(token_new(TOK_UNARYOP, op));
+            AST_t* res = AST_new(token_new(TOK_UNARYOP, op, true));
             AST_addChild(res, child);
             return res;
         } else {
@@ -151,7 +151,7 @@ PARSERFUNC(term) {
         AST_t* right = PARSERCALL(factor);
         if (strcmp(op, "//") == 0 || strcmp(op, "*") == 0 ||
             strcmp(op, "/") == 0) {
-            res = AST_new(token_new(TOK_BINARYOP, op));
+            res = AST_new(token_new(TOK_BINARYOP, op, true));
             AST_addChild(res, left);
             AST_addChild(res, right);
             left = res;
@@ -182,7 +182,7 @@ PARSERFUNC(expr) {
         strcpy(op, parser->accepted);
         AST_t* right = PARSERCALL(term);
         if (strcmp(op, "+") == 0 || strcmp(op, "-") == 0) {
-            res = AST_new(token_new(TOK_BINARYOP, op));
+            res = AST_new(token_new(TOK_BINARYOP, op, true));
             AST_addChild(res, left);
             AST_addChild(res, right);
             left = res;

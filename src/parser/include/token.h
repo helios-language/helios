@@ -3,6 +3,7 @@
 #ifndef TOKEN_H
 #define TOKEN_H
 
+#include <stdbool.h>
 #include <stdint.h>
 
 typedef enum {
@@ -37,10 +38,13 @@ typedef struct Token {
                   // datatype, but generally assumed to be a string. If it's not
                   // a string the printing routine may error. For this a special
                   // printing case can be defined in token.c (token_print).
+
+    bool canfree;  // true if the value is freeable
 } Token_t;
 
 void token_print(Token_t* token);
-Token_t* token_new(TOKENTYPE t, void* value);
+Token_t* token_new(TOKENTYPE t, void* value, bool canfree);
 void token_free(Token_t* token);
+void token_free_simple(Token_t* token);
 
 #endif

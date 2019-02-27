@@ -47,7 +47,7 @@ PARSERFUNC(binconst) {
 
     res[filled] = '\0';
 
-    return AST_new(token_new(TOK_BININT, res));
+    return AST_new(token_new(TOK_BININT, res, true));
 }
 
 PARSERFUNC(hexconst) {
@@ -90,7 +90,7 @@ PARSERFUNC(hexconst) {
 
     res[filled] = '\0';
 
-    return AST_new(token_new(TOK_HEXINT, res));
+    return AST_new(token_new(TOK_HEXINT, res, true));
 }
 
 PARSERFUNC(octconst) {
@@ -130,7 +130,7 @@ PARSERFUNC(octconst) {
 
     res[filled] = '\0';
 
-    return AST_new(token_new(TOK_OCTINT, res));
+    return AST_new(token_new(TOK_OCTINT, res, true));
 }
 
 PARSERFUNC(decconst) {
@@ -166,7 +166,7 @@ PARSERFUNC(decconst) {
 
     res[filled] = '\0';
 
-    return AST_new(token_new(TOK_DECINT, res));
+    return AST_new(token_new(TOK_DECINT, res, true));
 }
 
 PARSERFUNC(intconst) {

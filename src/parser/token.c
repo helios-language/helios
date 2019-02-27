@@ -1,3 +1,4 @@
+#include <stdbool.h>
 #include <stdint.h>
 #include <stdio.h>
 #include <stdlib.h>
@@ -33,27 +34,28 @@ void token_print(Token_t* token) {
     }
 }
 
-Token_t* token_new(TOKENTYPE t, void* value) {
+Token_t* token_new(TOKENTYPE t, void* value, bool canfree) {
     /*
         Constructor for token objects.
         @param t the type of the constructed token in enum TOKENTYPE.
         @param value the value of this token.
+        @param canfree true if the value is freeable
         @return the newly created token.
+
+        WARNING: never use string constants as values for tokens
     */
     Token_t* token = malloc(sizeof(Token_t));
-    *token = (Token_t){t, value};
+    *token = (Token_t){t, value, canfree};
     return token;
 }
 
 void token_free(Token_t* token) {
     /*
         Destroys a token object. Also frees the token's value.
-        TODO: this may not be desired. Provide alternative which doesnt free the
-        value.
 
         @param token the token to free
      */
-    if (token != NULL) {
+    if (token != NULL && token->canfree) {
         free(token->value);
     }
     free(token);
