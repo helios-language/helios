@@ -9,4 +9,4 @@ jobs:
 
       - run:
           name: Build
-          command: python3.6 compile.py
+          command: python36 compile.py
