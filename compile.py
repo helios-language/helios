@@ -82,7 +82,7 @@ def compilecfile(filename):
             BUILDDIR+"/"+obj,
             filename
         ]))
-        sp.call([
+        sp.check_output([
             CXX,
             "-c",
 
@@ -91,10 +91,11 @@ def compilecfile(filename):
             "-o",
             BUILDDIR+"/"+obj,
             filename
-        ])
+        ], stderr=sp.PIPE)
 
     except Exception as e:
         print("Error: ", e)
+        os._exit(-1)
 
     objects.append(BUILDDIR+"/"+obj)
     return 0
@@ -115,7 +116,7 @@ try:
         *libvar
 
     ]))
-    sp.call([
+    sp.check_output([
         LD,
         *LDFLAGS,
         *objects,
@@ -125,10 +126,11 @@ try:
         "-L./"+LIBDIR,
         *libvar
 
-    ])
+    ], stderr=sp.PIPE)
 
 except Exception as e:
     print("Error: ", e)
+    os._exit(-1)
 
 print("compilation finished. executable can be found in {}".format(
     os.path.join(BINDIR, EXECUTABLE)))
@@ -141,3 +143,4 @@ try:
     ])
 except Exception as e:
     print("Error: ", e)
+    os._exit(-1)
