@@ -66,4 +66,13 @@ using something.something.something as s:
 #on exit the __exit__ method will be called in a  similar fashion.
 #when an error occures in this block the __error__ function will be called and the block can act like a try-catch statement
 #WIP
+
+#namespaces:
+
+somename:
+    a = 3
+    b = 4
+
+print(somename.a)
+
 ```

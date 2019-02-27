@@ -6,7 +6,7 @@
 #include <parser.h>
 
 int main(int argc, char* argv[]) {
-    AST_t* ast = parser_parseString("");
+    AST_t* ast = parser_parseString("3 + 5\n");
     AST_print(ast);
     AST_free(ast);
 }
