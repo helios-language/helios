@@ -24,7 +24,7 @@ well that's about it tbh...
 # examples of WIP or future mechanics
 
 typing system:
-```python
+```
 a->int = 5
 
 b->int = 6
@@ -42,7 +42,7 @@ a->int = 3 + b->int #fine
 ```
 
 functions and blocks
-```python
+```
 
 #demonstrates parameter typing and return types and default parameters
 function helloworld(a,b->int,c->int=8)->float:
@@ -56,7 +56,7 @@ a = function(a,b)->int: c #no newline allowed (since brackets wont be allowed an
 
 extension of blocks:
 
-```python
+```
 
 using something.something.something as s:
     s.something()
