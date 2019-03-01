@@ -1,12 +1,10 @@
 
 #include <stdio.h>
 
-#include <AST.h>
-#include <error.h>
-#include <parser.h>
+#include <tokenizer.h>
 
 int main(int argc, char* argv[]) {
-    AST_t* ast = parser_parseString("3 + 5\n");
-    AST_print(ast);
-    AST_free(ast);
+    tokenstream_t* t = tokenizer_tokenize("\"hello world\" 10 100 abc a");
+    tokenstream_print(t);
+    tokenstream_free(t);
 }

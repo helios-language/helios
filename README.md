@@ -76,3 +76,15 @@ somename:
 print(somename.a)
 
 ```
+
+file interface:
+
+```
+#rootdir is the directory of the module's root
+
+
+```
+
+ideas:
+    while clause in generators (3142)
+    except in statements a = (somelist[index] except IndexError: 3)

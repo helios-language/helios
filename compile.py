@@ -91,10 +91,11 @@ def compilecfile(filename):
             "-o",
             BUILDDIR+"/"+obj,
             filename
-        ], stderr=sp.PIPE)
+        ], stderr=sp.STDOUT, shell=True, timeout=3,
+            universal_newlines=True)
 
     except Exception as e:
-        print("Error: ", e)
+        print("Error: ", e.returncode, e.output)
         os._exit(-1)
 
     objects.append(BUILDDIR+"/"+obj)
