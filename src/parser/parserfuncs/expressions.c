@@ -16,6 +16,7 @@ and applying the order of operations.
 */
 
 DECLARE_PARSERFUNC(expr);
+DECLARE_PARSERFUNC(factor);
 DECLARE_PARSERFUNC(intconst);
 DECLARE_PARSERFUNC(floatconst);
 
@@ -54,7 +55,7 @@ PARSERFUNC(atomexpression) {
     /*
         Either accepts an atom or a bracketed expression
 
-        rule:
+        rule:   
         atomexpression = ("(" expr ")") | atom
     */
     parser_skipws(parser);
@@ -86,7 +87,7 @@ PARSERFUNC(power) {
         parser_skipws(parser);
         char* op = malloc(strlen(parser->accepted) + 1);
         strcpy(op, parser->accepted);
-        AST_t* right = PARSERCALL(power);
+        AST_t* right = PARSERCALL(factor);
         parser_skipws(parser);
 
         if (strcmp(op, "**") == 0) {

@@ -62,7 +62,9 @@ void parser_next(Parser_t* parser);
 bool parser_exhausted(Parser_t* parser);
 Parser_t* parser_copy(Parser_t* parser);
 void parser_restore(Parser_t* parser, Parser_t* other);
+
 AST_t* parser_parseString(char* str);
+
 AST_t* parser_root(Parser_t* parser);
 
 void parser_skipws(Parser_t* parser);

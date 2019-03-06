@@ -40,7 +40,7 @@ PARSERFUNC(statement) {
         AST_addChild(ast, nextstmt);
     }
     parser_skipws(parser);
-    parser_acceptchar(parser, ';');
+    while(parser_acceptchar(parser, ';'));
 
     parser_acceptchar(parser, '\r');
     parser_expectchar(parser, '\n');

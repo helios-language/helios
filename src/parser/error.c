@@ -37,20 +37,47 @@ void error_throw(Error_t err, const char* code, bool hard) {
         }
     } else {
         error_print(err);
-        char* line = strtok(strdup(code), "\n");
-        for (uint32_t i = 0; i < err.line; i++) {
-            line = strtok(NULL, "\n");
+        uint32_t codelength = strlen(code);
+        char newcode[codelength+1];
+        for(uint32_t i = 0; i < codelength; i++){
+            newcode[i] = code[i];
         }
-        if (line != NULL && *line != '\0' && err.character < strlen(line)) {
+        newcode[codelength] = '\0';
+        
+        uint32_t start = 0;
+        uint32_t end = 0;
+        for (uint32_t i = 0; i < err.line-1; i++) {
+            while(newcode[start++] != '\n'){
+                if(newcode[start] == '\0'){
+                    printf(
+                    "line or character index out of bounds. could not display "
+                    "error line information.\n");
+                    exit(-1);
+                }
+            }
+        }
+
+        char * line = newcode+start;
+        while(line[end++] != '\n'){
+            if(newcode[start] == '\0'){
+                printf(
+                "line or character index out of bounds. could not display "
+                "error line information.\n");
+                exit(-1);
+            }
+        }
+        line[end] = '\0';
+
+        if (line != NULL && *line != '\0' && (err.character-1) < strlen(line)) {
             printf("%s\n", line);
-            for (uint32_t i = 0; i < err.character; i++) {
+            for (uint32_t i = 0; i < err.character-1; i++) {
                 printf(" ");
             }
             printf("^\n");
         } else {
             printf(
                 "line or character index out of bounds. could not display "
-                "error line information\n");
+                "error line information.\n");
         }
         if (hard) {
             exit(-1);

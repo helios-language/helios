@@ -13,13 +13,13 @@ AST_t* parser_parseString(char* str) {
     /*
         Parser Entrypoint.
         This is the base function for the parser. When it is called it will
-       construct the parser, and call the root of the recursive descent
-       algorithm.
+        construct the parser, and call the root of the recursive descent
+        algorithm.
 
         @param str The string to parse. Can obviously come from a file to parse
-       files. TODO: make function to read files and parse immediately
+        files. TODO: make function to read files and parse immediately
         @return an abstract syntax tree 'object' (struct defined in AST.h) which
-       recursively represents the parsed syntax
+        recursively represents the parsed syntax
     */
     Parser_t* parser = parser_new(str);
 
@@ -62,8 +62,8 @@ Parser_t* parser_new(char* code) {
     Parser_t* parser = malloc(sizeof(Parser_t));
     *parser = (Parser_t){
         errorstack_new(),
-        0,     // line
-        -1,    // character
+        1,     // line
+        0,    // character
         '\0',  // prev
         '\0',  // curr
         '\0',  // next
