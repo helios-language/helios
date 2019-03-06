@@ -47,7 +47,7 @@ c_object_files := $(patsubst src/%.c, \
     build/%.o, $(c_source_files))
 #qemu
 
-.PHONY: all clean run
+.PHONY: all clean run test
 
 all: $(executable)
 
@@ -60,11 +60,14 @@ run: $(executable)
 	@echo starting
 	@./$(executable) $(TESTFILE)
 
+test: $(executable)
+	@echo starting
+	@./$(executable) -t
+
 $(executable): $(assembly_object_files) $(c_object_files) $(nassembly_object_files)
 	@echo linking...
 	@mkdir -p bin
 	@$(LINKER) $(LFLAGS) -o $(executable) $(assembly_object_files) $(nassembly_object_files) $(c_object_files)
-
 
 # compile assembly files
 build/%.o: src/%.S
