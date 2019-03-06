@@ -2,11 +2,11 @@ version: 2
 jobs:
   build:
     docker:
-      - image: python:3.6
+      - image: ubuntu:latest
 
     steps:
       - checkout
 
       - run:
           name: Build
-          command: python3 compile.py
+          command: make
