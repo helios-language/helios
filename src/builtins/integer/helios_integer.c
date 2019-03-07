@@ -2,22 +2,14 @@
 #include <helios_integer.h>
 #include <helios_object.h>
 
-helios_object *helios_integer_add(helios_object *self, helios_object *other) {
-}
-
-helios_object *helios_integer_subtract(helios_object *self,
-                                       helios_object *other) {
-}
-
-helios_object *helios_integer_divide(helios_object *self,
-                                     helios_object *other) {
-}
-
-helios_object *helios_integer_multiply(helios_object *self,
-                                       helios_object *other) {
+helios_object *helios_integer_from_cint(int32_t value) {
+    helios_object *res = helios_integer_init();
+    TO_HELIOS_INTEGER(res)->value = value;
+    return res;
 }
 
 void helios_integer_delete(helios_object *obj) {
+    free(TO_HELIOS_INTEGER(obj));
 }
 
 helios_object *helios_integer_init() {
@@ -28,7 +20,7 @@ helios_object *helios_integer_init() {
     return TO_HELIOS_OBJECT(self);
 }
 
-helios_object helios_integer_type = {
+helios_type helios_integer_type = {
     HELIOS_OBJECT_COMMON_BASE_INIT(&helios_object_type),
 
     HELIOS_OBJECT_BASIC_FIELDS_CONSTRUCTOR(helios_integer_init),
