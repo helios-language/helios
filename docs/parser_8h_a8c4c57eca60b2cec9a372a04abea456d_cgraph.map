@@ -1,0 +1,5 @@
+<map id="parser_skipws" name="parser_skipws">
+<area shape="rect" id="node1" title="Advances the parser as long as it can find whitespace." alt="" coords="5,5,112,32"/>
+<area shape="rect" id="node2" href="$parserutil_8c.html#a2d9e8c20025b7b883c4e87790685a6ad" title="Proxy to parser_next." alt="" coords="160,5,275,32"/>
+<area shape="rect" id="node3" href="$parserutil_8c.html#ab25a97ff31329fe9461666bfe2dc6f2c" title="Iterate the parser." alt="" coords="323,5,413,32"/>
+</map>

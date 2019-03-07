@@ -17,10 +17,11 @@ executable := bin/$(executable_fullname)
 dirs = $(shell find src/ -type d -print)
 includedirs :=  $(sort $(foreach dir, $(foreach dir1, $(dirs), $(shell dirname $(dir1))), $(wildcard $(dir)/include)))
 
-LFLAGS =
+#linkerflags (include lm (math.h) for advanced math)
+LFLAGS = -lm
 
-#flags
-CFLAGS= -g -O2
+#cflags 
+CFLAGS= -g -O2 
 
 #automatically include any header in dirs called include
 CFLAGS += $(foreach dir, $(includedirs), -I./$(dir))
@@ -47,9 +48,12 @@ c_object_files := $(patsubst src/%.c, \
     build/%.o, $(c_source_files))
 #qemu
 
-.PHONY: all clean run test
+.PHONY: all clean run test install
 
 all: $(executable)
+
+install:
+	pacman -S built-essential doxygen graphviz
 
 
 clean:

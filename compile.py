@@ -19,7 +19,7 @@ EXECUTABLE = "helios"
 CXX = "gcc"
 CXXFLAGS = ["-Wall", "-g"]
 LD = "gcc"
-LDFLAGS = []
+LDFLAGS = ["-lm"]
 EXCLUDEDLIBS = []
 
 
