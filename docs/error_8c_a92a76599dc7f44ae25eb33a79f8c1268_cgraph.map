@@ -1,0 +1,6 @@
+<map id="errorstack_traceback" name="errorstack_traceback">
+<area shape="rect" id="node1" title="Throw all errors on the errorstack." alt="" coords="5,31,149,57"/>
+<area shape="rect" id="node2" href="$error_8c.html#adc799734c0f6f7e223ee20590c3b46e8" title=" " alt="" coords="207,5,293,32"/>
+<area shape="rect" id="node4" href="$error_8c.html#a08f836642a23e867f57c5f849f26443c" title="Return the top error of the errorstack." alt="" coords="197,56,303,83"/>
+<area shape="rect" id="node3" href="$error_8c.html#a661c01cb3d40abca57dc9d223e3d6381" title="prints an error struct" alt="" coords="351,5,431,32"/>
+</map>

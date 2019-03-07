@@ -10,44 +10,40 @@
 #include <stdlib.h>
 #include <string.h>
 
+/**
+ *The code in this file is mostly dedicated to accepting mathematical
+ *expressions and applying the order of operations.
+ */
+
 DECLARE_PARSERFUNC(expr);
+DECLARE_PARSERFUNC(factor);
 DECLARE_PARSERFUNC(intconst);
 DECLARE_PARSERFUNC(floatconst);
 
-// self.skipws()
-// length = ErrorStack.getCurrentLength()
-// codecp1 = self.code.copy()
-
-// res = self.floatconst()
-// if ErrorStack.getCurrentLength() == length:
-//     return res
-
-// ErrorStack.popUntilLength(length)
-// self.code = codecp1.copy()
-
-// res = self.intconst()
-// if ErrorStack.getCurrentLength() == length:
-//     return res
-
-// # ErrorStack.popUntilLength(length)
-// self.code = codecp1.copy()
-
-// ErrorStack.error(Error(
-//     "could not parse atom",
-//     self.code.line, self.code.char
-// ))
-// return AST("")
-
+/**
+ * Tries to accept a floating point constant. if it couldn't find one it
+ * tries an Integer constand and returns this.
+ *
+ * TODO: All other constants (string, list etc)
+ * NOTE: The order of float first int last is on purpose as the float
+ * function will error and return much earlier. The int function first
+ * checks for all different bases.
+ *
+ * rule:
+ * atom = floatconst | intconst
+ */
 PARSERFUNC(atom) {
     parser_skipws(parser);
     uint32_t eslength1 = errorstack_length(parser->es);
-    Parser_t* parsercp1 = parser_copy(parser);
+    Parser_t *parsercp1 = parser_copy(parser);
 
-    AST_t* res = PARSERCALL(floatconst);
+    AST_t *res = PARSERCALL(floatconst);
     if (errorstack_length(parser->es) == eslength1) {
         parser_free_simple(parsercp1);
         return res;
     }
+    AST_free(res);
+
     errorstack_popuntil(parser->es, eslength1);
     parser_restore(parser, parsercp1);
     parser_free_simple(parsercp1);
@@ -55,12 +51,18 @@ PARSERFUNC(atom) {
     return PARSERCALL(intconst);
 }
 
+/**
+ * Either accepts an atom or a bracketed expression
+ *
+ * rule:
+ * atomexpression = ("(" expr ")") | atom
+ */
 PARSERFUNC(atomexpression) {
     parser_skipws(parser);
 
     if (parser_acceptchar(parser, '(')) {
         parser_skipws(parser);
-        AST_t* res = PARSERCALL(expr);
+        AST_t *res = PARSERCALL(expr);
         parser_skipws(parser);
         parser_expectchar(parser, ')');
         parser_skipws(parser);
@@ -68,21 +70,27 @@ PARSERFUNC(atomexpression) {
     }
     return PARSERCALL(atom);
 }
-
+/**
+ *  Accepts parts of expressions which can have exponent notation (a ** b)
+ * in them.
+ *
+ * rule:
+ * power = atomexpression ["**" power]
+ */
 PARSERFUNC(power) {
     parser_skipws(parser);
-    AST_t* left = PARSERCALL(atomexpression);
-    AST_t* res = left;
+    AST_t *left = PARSERCALL(atomexpression);
+    AST_t *res = left;
     parser_skipws(parser);
     if (parser_acceptstring(parser, "**")) {
         parser_skipws(parser);
-        char* op = malloc(strlen(parser->accepted) + 1);
+        char *op = malloc(strlen(parser->accepted) + 1);
         strcpy(op, parser->accepted);
-        AST_t* right = PARSERCALL(power);
+        AST_t *right = PARSERCALL(factor);
         parser_skipws(parser);
 
         if (strcmp(op, "**") == 0) {
-            AST_t* res = AST_new(token_new(TOK_UNARYOP, op));
+            AST_t *res = AST_new(token_new(TOK_UNARYOP, op, true));
             AST_addChild(res, left);
             AST_addChild(res, right);
             return res;
@@ -96,17 +104,24 @@ PARSERFUNC(power) {
     return res;
 }
 
+/**
+ * Accepts parts of expressions containing unary operators like + - and ~
+ * to negate, invert or make positive a part of an expression.
+ *
+ * rule:
+ * factor = (("+" | "-" | "~") factor) | power
+ */
 PARSERFUNC(factor) {
     parser_skipws(parser);
     if (parser_acceptanychar(parser, "+-~")) {
         parser_skipws(parser);
-        char* op = malloc(strlen(parser->accepted) + 1);
+        char *op = malloc(strlen(parser->accepted) + 1);
         strcpy(op, parser->accepted);
-        AST_t* child = PARSERCALL(factor);
+        AST_t *child = PARSERCALL(factor);
         parser_skipws(parser);
         if (strcmp(op, "+") == 0 || strcmp(op, "-") == 0 ||
             strcmp(op, "~") == 0) {
-            AST_t* res = AST_new(token_new(TOK_UNARYOP, op));
+            AST_t *res = AST_new(token_new(TOK_UNARYOP, op, true));
             AST_addChild(res, child);
             return res;
         } else {
@@ -118,19 +133,28 @@ PARSERFUNC(factor) {
     return PARSERCALL(power);
 }
 
+/**
+ * Accepts parts of expressions containing operators like * and / or
+ * operators with the same precedance.
+ *
+ * rule:
+ * term = factor (("*" | "/" | "//") factor)*
+ *
+ * TODO: add modulo
+ */
 PARSERFUNC(term) {
     parser_skipws(parser);
-    AST_t* left = PARSERCALL(factor);
-    AST_t* res = left;
+    AST_t *left = PARSERCALL(factor);
+    AST_t *res = left;
     parser_skipws(parser);
     while (parser_acceptstring(parser, "//") ||
            parser_acceptchar(parser, '*') || parser_acceptchar(parser, '/')) {
-        char* op = malloc(strlen(parser->accepted) + 1);
+        char *op = malloc(strlen(parser->accepted) + 1);
         strcpy(op, parser->accepted);
-        AST_t* right = PARSERCALL(factor);
+        AST_t *right = PARSERCALL(factor);
         if (strcmp(op, "//") == 0 || strcmp(op, "*") == 0 ||
             strcmp(op, "/") == 0) {
-            res = AST_new(token_new(TOK_BINARYOP, op));
+            res = AST_new(token_new(TOK_BINARYOP, op, true));
             AST_addChild(res, left);
             AST_addChild(res, right);
             left = res;
@@ -145,17 +169,23 @@ PARSERFUNC(term) {
     return res;
 }
 
+/**
+ * Accepts any full expression.
+ *
+ * rule:
+ * expr = term (("+" | "-") term)*
+ */
 PARSERFUNC(expr) {
     parser_skipws(parser);
-    AST_t* left = PARSERCALL(term);
-    AST_t* res = left;
+    AST_t *left = PARSERCALL(term);
+    AST_t *res = left;
     parser_skipws(parser);
     while (parser_acceptchar(parser, '+') || parser_acceptchar(parser, '-')) {
-        char* op = malloc(strlen(parser->accepted) + 1);
+        char *op = malloc(strlen(parser->accepted) + 1);
         strcpy(op, parser->accepted);
-        AST_t* right = PARSERCALL(term);
+        AST_t *right = PARSERCALL(term);
         if (strcmp(op, "+") == 0 || strcmp(op, "-") == 0) {
-            res = AST_new(token_new(TOK_BINARYOP, op));
+            res = AST_new(token_new(TOK_BINARYOP, op, true));
             AST_addChild(res, left);
             AST_addChild(res, right);
             left = res;
