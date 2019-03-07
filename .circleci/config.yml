@@ -2,15 +2,11 @@ version: 2
 jobs:
   build:
     docker:
-      - image: debian:stretch
+      - image: continuul/build-essential:latest
 
     steps:
       - checkout
 
       - run:
-          name: Greeting
-          command: echo Hello, world.
-
-      - run:
-          name: Print the Current Time
-          command: date
+          name: Build
+          command: make

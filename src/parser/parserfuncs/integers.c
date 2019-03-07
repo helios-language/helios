@@ -10,13 +10,13 @@
 #include <stdlib.h>
 #include <string.h>
 
+/**
+ * Accepts a binary constant.
+ *
+ * rule:
+ * binconst = 0b("0" | "1")+
+ */
 PARSERFUNC(binconst) {
-    /*
-        Accepts a binary constant.
-
-        rule:
-        binconst = 0b("0" | "1")+
-    */
     if (!parser_expectstring(parser, "0b")) {
         errorstack_push(parser->es, "invalid bin constant", parser->line,
                         parser->character);
@@ -30,7 +30,7 @@ PARSERFUNC(binconst) {
     }
     uint32_t filled = 1;
     uint32_t size = 2;
-    char* res = malloc(size);
+    char *res = malloc(size);
     res[0] = parser->accepted[0];
     while (parser_acceptanychar(parser, "01")) {
         res[filled++] = parser->accepted[0];
@@ -50,16 +50,16 @@ PARSERFUNC(binconst) {
     return AST_new(token_new(TOK_BININT, res, true));
 }
 
+/**
+ * Accepts a hexadecimal constant.
+ *
+ * Also accepts uppercase letters for a-f.
+ *
+ * rule:
+ * hexconst = 0x("0" | "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9"
+ * | "a" | "b" | "c" | "d" | "e" | "f" | "A" | "B" | "C" | "D" | "E" | "F")+
+ */
 PARSERFUNC(hexconst) {
-    /*
-        Accepts a hexadecimal constant.
-
-        Also accepts uppercase letters for a-f.
-
-        rule:
-        hexconst = 0x("0" | "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9"
-       | "a" | "b" | "c" | "d" | "e" | "f" | "A" | "B" | "C" | "D" | "E" | "F")+
-    */
     if (!parser_expectstring(parser, "0x")) {
         errorstack_push(parser->es, "invalid hex constant", parser->line,
                         parser->character);
@@ -73,7 +73,7 @@ PARSERFUNC(hexconst) {
     }
     uint32_t filled = 1;
     uint32_t size = 2;
-    char* res = malloc(size);
+    char *res = malloc(size);
     res[0] = parser->accepted[0];
     while (parser_acceptanychar(parser, "0123456789abcdefABCDEF")) {
         res[filled++] = parser->accepted[0];
@@ -93,13 +93,13 @@ PARSERFUNC(hexconst) {
     return AST_new(token_new(TOK_HEXINT, res, true));
 }
 
+/**
+ * Accepts an octal constant.
+ *
+ * rule:
+ * octconst = 0o("0" | "1" | "2" | "3" | "4" | "5" | "6" | "7")+
+ */
 PARSERFUNC(octconst) {
-    /*
-        Accepts an octal constant.
-
-        rule:
-        octconst = 0o("0" | "1" | "2" | "3" | "4" | "5" | "6" | "7")+
-    */
     if (!parser_expectstring(parser, "0o")) {
         errorstack_push(parser->es, "invalid octal constant", parser->line,
                         parser->character);
@@ -113,7 +113,7 @@ PARSERFUNC(octconst) {
     }
     uint32_t filled = 1;
     uint32_t size = 2;
-    char* res = malloc(size);
+    char *res = malloc(size);
     res[0] = parser->accepted[0];
     while (parser_acceptanychar(parser, "01234567")) {
         res[filled++] = parser->accepted[0];
@@ -132,15 +132,14 @@ PARSERFUNC(octconst) {
 
     return AST_new(token_new(TOK_OCTINT, res, true));
 }
-
+/**
+ * Accepts a decimal constant.
+ *
+ * rule:
+ * decconst = [0d]("0" | "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" |
+ * "9")+
+ */
 PARSERFUNC(decconst) {
-    /*
-        Accepts a decimal constant.
-
-        rule:
-        decconst = [0d]("0" | "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" |
-       "9")+
-    */
     parser_acceptstring(parser, "0d");
     if (!parser_acceptanychar(parser, "0123456789")) {
         errorstack_push(parser->es, "invalid decimal constant", parser->line,
@@ -149,7 +148,7 @@ PARSERFUNC(decconst) {
     }
     uint32_t filled = 1;
     uint32_t size = 2;
-    char* res = malloc(size);
+    char *res = malloc(size);
     res[0] = parser->accepted[0];
     while (parser_acceptanychar(parser, "0123456789")) {
         res[filled++] = parser->accepted[0];
@@ -169,29 +168,29 @@ PARSERFUNC(decconst) {
     return AST_new(token_new(TOK_DECINT, res, true));
 }
 
+/**
+ * Accepts an integer of any (supported) base.
+ * rule:
+ * intconst = hexconst | octconst | binconst | decconst
+ */
 PARSERFUNC(intconst) {
-    /*
-        Accepts an integer of any (supported) base.
-        rule:
-        intconst = hexconst | octconst | binconst | decconst
-    */
     // setup
     parser_skipws(parser);
 
     uint32_t eslength = errorstack_length(parser->es);
-    Parser_t* parsercp1 = parser_copy(parser);
+    Parser_t *parsercp1 = parser_copy(parser);
 
-    AST_t* res;
+    AST_t *res;
 
     // // HEX
 
     res = PARSERCALL(hexconst);
     if (errorstack_length(parser->es) == eslength) {
         parser_free_simple(
-            parsercp1);  // free the parser copy to avoid memory leaks
+            parsercp1); // free the parser copy to avoid memory leaks
         return res;
     }
-    AST_free(res);  // free old AST as it no longer represents the actual value
+    AST_free(res); // free old AST as it no longer represents the actual value
     // since the error stack grew
     res = NULL;
     errorstack_popuntil(parser->es, eslength);
@@ -202,10 +201,10 @@ PARSERFUNC(intconst) {
     res = PARSERCALL(octconst);
     if (errorstack_length(parser->es) == eslength) {
         parser_free_simple(
-            parsercp1);  // free the parser copy to avoid memory leaks
+            parsercp1); // free the parser copy to avoid memory leaks
         return res;
     }
-    AST_free(res);  // free old AST as it no longer represents the actual value
+    AST_free(res); // free old AST as it no longer represents the actual value
     // since the error stack grew
     res = NULL;
     errorstack_popuntil(parser->es, eslength);
@@ -216,10 +215,10 @@ PARSERFUNC(intconst) {
     res = PARSERCALL(binconst);
     if (errorstack_length(parser->es) == eslength) {
         parser_free_simple(
-            parsercp1);  // free the parser copy to avoid memory leaks
+            parsercp1); // free the parser copy to avoid memory leaks
         return res;
     }
-    AST_free(res);  // free old AST as it no longer represents the actualvalue
+    AST_free(res); // free old AST as it no longer represents the actualvalue
     // since the error stack grew
     res = NULL;
     errorstack_popuntil(parser->es, eslength);
@@ -229,11 +228,11 @@ PARSERFUNC(intconst) {
     res = PARSERCALL(decconst);
     if (errorstack_length(parser->es) == eslength) {
         parser_free_simple(
-            parsercp1);  // free the parser copy to avoid memory leaks
+            parsercp1); // free the parser copy to avoid memory leaks
         return res;
     }
-    AST_free(res);  // free old AST as it no longer represents the actual value
-                    // since the error stack grew
+    AST_free(res); // free old AST as it no longer represents the actual value
+                   // since the error stack grew
     res = NULL;
     errorstack_popuntil(parser->es, eslength);
     parser_restore(parser, parsercp1);

@@ -1,0 +1,9 @@
+<map id="parser_acceptstring" name="parser_acceptstring">
+<area shape="rect" id="node1" title="Advances the parser only if the next n characters (where n is the length of the string) matches the s..." alt="" coords="5,81,141,108"/>
+<area shape="rect" id="node2" href="$parserutil_8c.html#aecf4b8bdaae9ca8435542900cf024f4e" title="Copy a parser." alt="" coords="209,5,302,32"/>
+<area shape="rect" id="node3" href="$parserutil_8c.html#a1a00af051004cb18edac760f39982eea" title="Searches for the given character, advances the parser if it found it." alt="" coords="191,56,320,83"/>
+<area shape="rect" id="node6" href="$parserutil_8c.html#a1f1841a636bfe529466c99e3db9999cd" title="Restores a parser to another parser&#39;s position." alt="" coords="203,107,308,133"/>
+<area shape="rect" id="node7" href="$parserutil_8c.html#ab62454c7986532e03ea36b14956b5ad1" title="Simple parser destructor." alt="" coords="189,157,321,184"/>
+<area shape="rect" id="node4" href="$parserutil_8c.html#a2d9e8c20025b7b883c4e87790685a6ad" title="Proxy to parser_next." alt="" coords="369,56,484,83"/>
+<area shape="rect" id="node5" href="$parserutil_8c.html#ab25a97ff31329fe9461666bfe2dc6f2c" title="Iterate the parser." alt="" coords="532,56,623,83"/>
+</map>

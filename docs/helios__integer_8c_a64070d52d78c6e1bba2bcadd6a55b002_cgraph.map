@@ -1,0 +1,4 @@
+<map id="helios_integer_from_cint" name="helios_integer_from_cint">
+<area shape="rect" id="node1" title="Create a helios_integer object from a c integer type." alt="" coords="5,5,168,32"/>
+<area shape="rect" id="node2" href="$helios__integer_8c.html#a50a26b1e9578164839f3a5bb17e04051" title="Constructor of a helios_integer object." alt="" coords="216,5,343,32"/>
+</map>

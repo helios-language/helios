@@ -8,24 +8,24 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-AST_t* AST_new(Token_t* value) {
-    /*
-        Constructore for ast objects.
-
-        @param value the token to put in this ast
-        @return the created ast.
-    */
-    AST_t* ast = malloc(sizeof(AST_t));
+/**
+ * Constructore for ast objects.
+ *
+ * @param value the token to put in this ast
+ * @return the created ast.
+ */
+AST_t *AST_new(Token_t *value) {
+    AST_t *ast = malloc(sizeof(AST_t));
     *ast = (AST_t){value, AST_DEFAULT_CHILDREN, 0,
-                   malloc(AST_DEFAULT_CHILDREN * sizeof(AST_t*))};
+                   malloc(AST_DEFAULT_CHILDREN * sizeof(AST_t *))};
     return ast;
 }
 
-void AST_free(AST_t* ast) {
-    /*
-        Destructor for ast objects. Recursively frees an AST to its leaf nodes.
-        @param ast the ast to destroy
-    */
+/**
+ * Destructor for ast objects. Recursively frees an AST to its leaf nodes.
+ * @param ast the ast to destroy
+ */
+void AST_free(AST_t *ast) {
     if (ast == NULL) {
         return;
     }
@@ -41,12 +41,12 @@ void AST_free(AST_t* ast) {
     free(ast);
 }
 
-void AST_free_simple(AST_t* ast) {
-    /*
-        Destructor for ast objects. DOESNT recursively destroy children and only
-        touches the ast node it received.
-        @param ast the ast to destroy
-    */
+/**
+ * Destructor for ast objects. DOESNT recursively destroy children and only
+ * touches the ast node it received.
+ * @param ast the ast to destroy
+ */
+void AST_free_simple(AST_t *ast) {
     if (ast == NULL) {
         return;
     }
@@ -58,12 +58,12 @@ void AST_free_simple(AST_t* ast) {
     free(ast);
 }
 
-void AST_freeChildren(AST_t* ast) {
-    /*
-        Destructor for an AST. ONLY children are freed but the root node is
-        kept.
-        @param ast the ast which children will be freed.
-    */
+/**
+ * Destructor for an AST. ONLY children are freed but the root node is
+ * kept.
+ * @param ast the ast which children will be freed.
+ */
+void AST_freeChildren(AST_t *ast) {
     if (ast == NULL) {
         return;
     }
@@ -74,40 +74,39 @@ void AST_freeChildren(AST_t* ast) {
     }
 }
 
-void AST_addChild(AST_t* ast, AST_t* child) {
-    /*
-        Adds a child ast node to a parent ast node.
-        @param ast the parent the child is added to
-        @param child the child node which gets attached to the parent
-    */
+/**
+ * Adds a child ast node to a parent ast node.
+ * @param ast the parent the child is added to
+ * @param child the child node which gets attached to the parent
+ */
+void AST_addChild(AST_t *ast, AST_t *child) {
     ast->children[ast->filled++] = child;
     if (ast->filled >= ast->size) {
         ast->size <<= 1;
-        ast->children = realloc(ast->children, ast->size * sizeof(AST_t*));
+        ast->children = realloc(ast->children, ast->size * sizeof(AST_t *));
     }
 }
 
-AST_t* AST_get(AST_t* ast, uint32_t index) {
-    /*
-        Get the nth child of an AST.
-        @param ast the ast to get the nth child of.
-        @param index the index of the child that is returned.
-    */
+/**
+ * Get the nth child of an AST.
+ * @param ast the ast to get the nth child of.
+ * @param index the index of the child that is returned.
+ */
+AST_t *AST_get(AST_t *ast, uint32_t index) {
     if (index >= ast->filled || index < 0) {
         printf("ast error: child index out of bounds in AST_get");
         exit(-1);
     }
     return ast->children[index];
 }
-
-void AST_set(AST_t* ast, uint32_t index, AST_t* child) {
-    /*
-        Set (overwrite) the nth node of the AST. Note: this nth node isnt
-        automatically freed when overwritten and can cause memory leaks.
-        @param ast the ast to set a node of
-        @param index the index to replace a node at
-        @param child the ast which becomes the new child at the given index
-    */
+/**
+ * Set (overwrite) the nth node of the AST. Note: this nth node isnt
+ * automatically freed when overwritten and can cause memory leaks.
+ * @param ast the ast to set a node of
+ * @param index the index to replace a node at
+ * @param child the ast which becomes the new child at the given index
+ */
+void AST_set(AST_t *ast, uint32_t index, AST_t *child) {
     if (index >= ast->filled || index < 0) {
         printf("ast error: child index out of bounds in AST_set");
         exit(-1);
@@ -115,14 +114,14 @@ void AST_set(AST_t* ast, uint32_t index, AST_t* child) {
     ast->children[index] = child;
 }
 
-void AST_print_helper(AST_t* ast, uint32_t depth) {
-    /*
-        Recursively prints an ast. For internal use only as it adds a depth
-        parameter.
-        @param ast the ast to print
-        @param depth the recursive depth of the printing and as such,
-        proportional to the indentation of the printed nodes.
-    */
+/**
+ * Recursively prints an ast. For internal use only as it adds a depth
+ * parameter.
+ * @param ast the ast to print
+ * @param depth the recursive depth of the printing and as such,
+ * proportional to the indentation of the printed nodes.
+ */
+void AST_print_helper(AST_t *ast, uint32_t depth) {
     for (uint32_t i = 0; i < depth; i++) {
         printf("  ");
     }
@@ -139,12 +138,12 @@ void AST_print_helper(AST_t* ast, uint32_t depth) {
     }
 }
 
-void AST_print(AST_t* ast) {
-    /*
-        Print an ast object. This is the function that's visible from outside
-        this c module. It will call the helper function with 0 as second
-        argument to start the indentation at 0.
-        @param ast the ast to print
-    */
+/**
+ * Print an ast object. This is the function that's visible from outside
+ * this c module. It will call the helper function with 0 as second
+ * argument to start the indentation at 0.
+ * @param ast the ast to print
+ */
+void AST_print(AST_t *ast) {
     AST_print_helper(ast, 0);
 }

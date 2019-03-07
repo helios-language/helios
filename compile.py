@@ -7,7 +7,8 @@ import os
 
 os.path.sep = "/"
 
-ARGS = sys.argv
+# ARGS = ["test.hel"]
+ARGS = ["--test"]
 LIBDIR = "lib"
 LIBS = []
 BUILDDIR = "build"
@@ -18,8 +19,10 @@ EXECUTABLE = "helios"
 CXX = "gcc"
 CXXFLAGS = ["-Wall", "-g"]
 LD = "gcc"
-LDFLAGS = []
+LDFLAGS = ["-lm"]
 EXCLUDEDLIBS = []
+
+
 
 files = [os.path.join(dp, f) for dp, dn, fn in os.walk(
     os.path.expanduser(SRCDIR)) for f in fn]
@@ -72,7 +75,17 @@ def compilecfile(filename):
     obj = os.path.basename(filename).replace(".c", ".o")
     print("compiling {} to {}".format(filename, obj))
     try:
-        print(" ".join([
+        # print(" ".join([
+        #     CXX,
+        #     "-c",
+
+        #     *CXXFLAGS,
+        #     *headervar,
+        #     "-o",
+        #     BUILDDIR+"/"+obj,
+        #     filename
+        # ]))
+        sp.check_output([
             CXX,
             "-c",
 
@@ -81,20 +94,11 @@ def compilecfile(filename):
             "-o",
             BUILDDIR+"/"+obj,
             filename
-        ]))
-        sp.call([
-            CXX,
-            "-c",
-
-            *CXXFLAGS,
-            *headervar,
-            "-o",
-            BUILDDIR+"/"+obj,
-            filename
-        ])
+        ], stderr=sp.PIPE)
 
     except Exception as e:
         print("Error: ", e)
+        os._exit(-1)
 
     objects.append(BUILDDIR+"/"+obj)
     return 0
@@ -104,7 +108,19 @@ pool = ThreadPool(processes=mp.cpu_count())
 pool.map(compilecfile, cfiles)
 
 try:
-    print(" ".join([
+    print("linking...")
+    # print(" ".join([
+    #     LD,
+    #     *LDFLAGS,
+    #     *objects,
+    #     "-o",
+    #     BINDIR+"/"+EXECUTABLE,
+
+    #     "-L./"+LIBDIR,
+    #     *libvar
+
+    # ]))
+    sp.check_output([
         LD,
         *LDFLAGS,
         *objects,
@@ -114,21 +130,11 @@ try:
         "-L./"+LIBDIR,
         *libvar
 
-    ]))
-    sp.call([
-        LD,
-        *LDFLAGS,
-        *objects,
-        "-o",
-        BINDIR+"/"+EXECUTABLE,
-
-        "-L./"+LIBDIR,
-        *libvar
-
-    ])
+    ], stderr=sp.PIPE)
 
 except Exception as e:
     print("Error: ", e)
+    os._exit(-1)
 
 print("compilation finished. executable can be found in {}".format(
     os.path.join(BINDIR, EXECUTABLE)))
@@ -141,3 +147,4 @@ try:
     ])
 except Exception as e:
     print("Error: ", e)
+    os._exit(-1)
