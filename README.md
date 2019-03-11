@@ -3,7 +3,7 @@
 
 # Helios
 
-Documentation: https://helios-language.github.io/helios/
+Documentation: https://helios-language.github.io/helios/ <br>
 Github repository: https://github.com/helios-language/helios/
 
 Helios is a (very) WIP programming language that aims to take the flexebility of scripting languages (inspired by python) and add to it a system of more static typing. This means it will still make typing optional, but when it's used it is enforced throughout the program.
