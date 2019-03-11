@@ -12,11 +12,6 @@ int testmain(int argc, char *argv[]) {
     garbagecollector *gc = helios_init_garbagecollector();
     helios_set_garbagecollector(gc);
 
-    for (uint32_t i = 0; i < 10000; i++) {
-        helios_object *integer_a = helios_integer_from_cint(10);
-        HELIOS_CALL_MEMBER(destructor, integer_a);
-    }
-
     helios_delete_garbagecollector(gc);
 
     return 0;

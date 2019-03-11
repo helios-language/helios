@@ -49,12 +49,12 @@ garbagecollector *__GC_CURRENT;
 /**
  * Increment the reference count of an object
  */
-#define HELIOS_INCREF(obj) ((struct __helios_object_s *)obj->refcount++);
+#define HELIOS_INCREF(obj) (((struct __helios_object_s *)obj)->refcount++);
 /**
  * Decrement the reference count of an object. When the count reaches 0 no
  * garbage collection will be performed.
  */
-#define HELIOS_DECREF_NOGC(obj) ((struct __helios_object_s *)obj->refcount--);
+#define HELIOS_DECREF_NOGC(obj) (((struct __helios_object_s *)obj)->refcount--);
 
 /**
  * Decrement the reference count of an object. When the count reaches 0 (or

@@ -114,8 +114,6 @@ static uint64_t __hashfunction(uint64_t key) {
  * @param gc the garbage collection to check
  */
 static void rehash(garbagecollector *gc) {
-    printf("%lf,%lf\n", ((double)gc->filled / (double)gc->size),
-           (GC_REHASH_PERCENT / 100.0));
     if (((double)gc->filled / (double)gc->size) > (GC_REHASH_PERCENT / 100.0)) {
         __helios_gc_hashmap_node *newtrackedobjects =
             malloc(gc->size << 1 * sizeof(__helios_gc_hashmap_node));
@@ -170,6 +168,7 @@ static void helios_track_object(helios_object *obj) {
 
 void helios_set_garbagecollectable(helios_object *obj) {
     obj->gc = helios_get_garbagecollector();
+    HELIOS_INCREF(obj);
     helios_track_object(obj);
 }
 
