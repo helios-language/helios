@@ -1,0 +1,7 @@
+<map id="helios_integer_tostring" name="helios_integer_tostring">
+<area shape="rect" id="node1" title="Create a helios_string object which represents the helios_integer object&#39;s value." alt="" coords="5,13,157,39"/>
+<area shape="rect" id="node2" href="$helios__string_8c.html#a4338910535421a24735fc7eb3123495c" title="Create a helios_string object from a c string." alt="" coords="205,5,333,47"/>
+<area shape="rect" id="node3" href="$helios__string_8c.html#af727ca5352482ab7e542510f178a9f85" title="Constructor of a helios_string." alt="" coords="381,13,500,39"/>
+<area shape="rect" id="node4" href="$helios__memory_8c.html#aab8866fd2abd9389795ad1639991caa4" title="Allocates a new helios object (and performs all the GC steps associated with that action)." alt="" coords="548,13,699,39"/>
+<area shape="rect" id="node5" href="$helios__memory_8c.html#a27b2da5d6954fd6e7aa0d2f352336c25" title="Get the global current garbage collector." alt="" coords="747,13,929,39"/>
+</map>

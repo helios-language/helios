@@ -1,5 +1,7 @@
 var searchData=
 [
+  ['helios_5fhashmap_2ec',['helios_hashmap.c',['../helios__hashmap_8c.html',1,'']]],
+  ['helios_5fhashmap_2eh',['helios_hashmap.h',['../helios__hashmap_8h.html',1,'']]],
   ['helios_5finteger_2ec',['helios_integer.c',['../helios__integer_8c.html',1,'']]],
   ['helios_5finteger_2eh',['helios_integer.h',['../helios__integer_8h.html',1,'']]],
   ['helios_5finteger_5fmath_2ec',['helios_integer_math.c',['../helios__integer__math_8c.html',1,'']]],

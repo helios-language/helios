@@ -14,7 +14,8 @@
         "variant": "c",
         "*.inc": "c",
         "builtins.h": "c",
-        "stdlib.h": "c"
+        "stdlib.h": "c",
+        "builtinutils.h": "c"
     },
     "python.pythonPath": "/usr/bin/python3"
 }

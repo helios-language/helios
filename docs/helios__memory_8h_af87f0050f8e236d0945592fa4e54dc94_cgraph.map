@@ -1,0 +1,4 @@
+<map id="helios_allocate_object" name="helios_allocate_object">
+<area shape="rect" id="node1" title="Allocates a new helios object (and performs all the GC steps associated with that action)." alt="" coords="5,5,156,32"/>
+<area shape="rect" id="node2" href="$helios__memory_8c.html#a27b2da5d6954fd6e7aa0d2f352336c25" title="Get the global current garbage collector." alt="" coords="204,5,387,32"/>
+</map>

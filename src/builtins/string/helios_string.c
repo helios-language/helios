@@ -1,4 +1,5 @@
 
+#include <helios_memory.h>
 #include <helios_object.h>
 #include <helios_string.h>
 #include <string.h>
@@ -64,7 +65,7 @@ char *helios_string_to_charp(helios_object *obj) {
  */
 void helios_string_delete(helios_object *obj) {
     free(TO_HELIOS_STRING(obj)->value);
-    free(TO_HELIOS_STRING(obj));
+    helios_free_object(obj);
 }
 
 /**
@@ -73,7 +74,8 @@ void helios_string_delete(helios_object *obj) {
  * @return a newly constructed string object with no length and no contents.
  */
 helios_object *helios_string_init() {
-    helios_string *self = malloc(sizeof(helios_string));
+    helios_string *self =
+        (helios_string *)helios_allocate_object(sizeof(helios_string));
     *self = (helios_string){
         HELIOS_OBJECT_COMMON_BASE_INIT(&helios_string_type),
         .size = HELIOS_STRING_DEFAULT_SIZE, .filled = 0,

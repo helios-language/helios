@@ -1,0 +1,4 @@
+<map id="helios_delete_garbagecollector" name="helios_delete_garbagecollector">
+<area shape="rect" id="node1" title="Free a garbagecollector object." alt="" coords="5,5,205,32"/>
+<area shape="rect" id="node2" href="$helios__memory_8c.html#a5dcd65b50eabfe133b9fcf6206b2bd1e" title="Frees all tracked objects of a garbagecollector without freeing the GC itself." alt="" coords="253,5,408,32"/>
+</map>

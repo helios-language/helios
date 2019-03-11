@@ -1,6 +1,27 @@
 var searchData=
 [
-  ['is_5fhelios_5finteger',['IS_HELIOS_INTEGER',['../helios__integer_8h.html#a8476cc43434d502c78ccf44f01b7bf4b',1,'helios_integer.h']]],
-  ['is_5fhelios_5fobject',['IS_HELIOS_OBJECT',['../helios__object_8h.html#ae7d1b8152e981ef705ab15f6258a385e',1,'helios_object.h']]],
-  ['is_5fhelios_5fstring',['IS_HELIOS_STRING',['../helios__string_8h.html#a0f47701ddc25605fe95c731aec3eeeea',1,'helios_string.h']]]
+  ['helios_5fcall_5fmember',['HELIOS_CALL_MEMBER',['../builtinutils_8h.html#aa862687a707dcd3bf49ff4ffc91871e4',1,'builtinutils.h']]],
+  ['helios_5fdecref',['HELIOS_DECREF',['../helios__memory_8h.html#a0ca4ccb924c0070686f0cca8feb0ff27',1,'helios_memory.h']]],
+  ['helios_5fdecref_5fnogc',['HELIOS_DECREF_NOGC',['../helios__memory_8h.html#aff41a519ebf28356740eeab69721c59a',1,'helios_memory.h']]],
+  ['helios_5fget_5fobj_5fgc',['HELIOS_GET_OBJ_GC',['../helios__memory_8h.html#a5301b4c3358268578cde0b330c52efb2',1,'helios_memory.h']]],
+  ['helios_5fgetref',['HELIOS_GETREF',['../helios__memory_8h.html#a8c172aa0256138d40339d80c3f9a1540',1,'helios_memory.h']]],
+  ['helios_5fincref',['HELIOS_INCREF',['../helios__memory_8h.html#ad6a677794da9e4d1890752b20985794b',1,'helios_memory.h']]],
+  ['helios_5finteger_5fdefault_5fvalue',['HELIOS_INTEGER_DEFAULT_VALUE',['../helios__integer_8h.html#abb5b5eb1aa7530e84b4a8e9cbcb9bdb6',1,'helios_integer.h']]],
+  ['helios_5fobject_5fbasic_5ffields',['HELIOS_OBJECT_BASIC_FIELDS',['../helios__type_8h.html#a88b3cb317a48eb70fc4ac7a5647b93ed',1,'helios_type.h']]],
+  ['helios_5fobject_5fbasic_5ffields_5fclassname',['HELIOS_OBJECT_BASIC_FIELDS_CLASSNAME',['../helios__type_8h.html#ad54e4f910414936dd116c2fbe3b71edb',1,'helios_type.h']]],
+  ['helios_5fobject_5fbasic_5ffields_5fconstructor',['HELIOS_OBJECT_BASIC_FIELDS_CONSTRUCTOR',['../helios__type_8h.html#a4257876f7d9c01bbcb25172609df2468',1,'helios_type.h']]],
+  ['helios_5fobject_5fbasic_5ffields_5fdestructor',['HELIOS_OBJECT_BASIC_FIELDS_DESTRUCTOR',['../helios__type_8h.html#af56c0f6d3a5bddc03321fe124d92a6fd',1,'helios_type.h']]],
+  ['helios_5fobject_5fbasic_5ffields_5fnull',['HELIOS_OBJECT_BASIC_FIELDS_NULL',['../helios__type_8h.html#aacd13212467316fbe87ec445b8affd78',1,'helios_type.h']]],
+  ['helios_5fobject_5fbasic_5ffields_5frepresent',['HELIOS_OBJECT_BASIC_FIELDS_REPRESENT',['../helios__type_8h.html#ae1793ae481c120492834f36e9eefb65c',1,'helios_type.h']]],
+  ['helios_5fobject_5fbasic_5ffields_5ftostring',['HELIOS_OBJECT_BASIC_FIELDS_TOSTRING',['../helios__type_8h.html#adcb6b2746784fc4b44e291c402e470e4',1,'helios_type.h']]],
+  ['helios_5fobject_5fbinops_5ffields',['HELIOS_OBJECT_BINOPS_FIELDS',['../helios__type_8h.html#a1b8a3ff208bb571705e4d040f611ff2e',1,'helios_type.h']]],
+  ['helios_5fobject_5fbinops_5ffields_5fadd',['HELIOS_OBJECT_BINOPS_FIELDS_ADD',['../helios__type_8h.html#add1d674e3f6b149460f574963e81810b',1,'helios_type.h']]],
+  ['helios_5fobject_5fbinops_5ffields_5fdivide',['HELIOS_OBJECT_BINOPS_FIELDS_DIVIDE',['../helios__type_8h.html#a71c711e8b7d36eafaa3b472807e04aed',1,'helios_type.h']]],
+  ['helios_5fobject_5fbinops_5ffields_5fmultiply',['HELIOS_OBJECT_BINOPS_FIELDS_MULTIPLY',['../helios__type_8h.html#a1077cf49432969550f72be6bdaac68e2',1,'helios_type.h']]],
+  ['helios_5fobject_5fbinops_5ffields_5fnull',['HELIOS_OBJECT_BINOPS_FIELDS_NULL',['../helios__type_8h.html#ab907377d72b96b551da5961ad8f76689',1,'helios_type.h']]],
+  ['helios_5fobject_5fbinops_5ffields_5fsubtract',['HELIOS_OBJECT_BINOPS_FIELDS_SUBTRACT',['../helios__type_8h.html#a25c3ba27192c2d955e6f7366afb77756',1,'helios_type.h']]],
+  ['helios_5fobject_5fcommon_5fbase',['HELIOS_OBJECT_COMMON_BASE',['../helios__type_8h.html#a471093d72523f865faf7ad611c297a09',1,'helios_type.h']]],
+  ['helios_5fobject_5fcommon_5fbase_5finit',['HELIOS_OBJECT_COMMON_BASE_INIT',['../helios__type_8h.html#a8b07031bb02b4e368f8534876a0f28a9',1,'helios_type.h']]],
+  ['helios_5fsetref',['HELIOS_SETREF',['../helios__memory_8h.html#a121e8a618c451401f4a74f77ee940cf2',1,'helios_memory.h']]],
+  ['helios_5fstring_5fdefault_5fsize',['HELIOS_STRING_DEFAULT_SIZE',['../helios__string_8h.html#a60460ea123803728980db7e22a28edad',1,'helios_string.h']]]
 ];

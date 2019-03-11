@@ -1,11 +1,13 @@
 <map id="builtins/object/include/helios_object.h" name="builtins/object/include/helios_object.h">
-<area shape="rect" id="node1" title=" " alt="" coords="326,5,473,47"/>
-<area shape="rect" id="node2" href="$builtins_8h.html" title=" " alt="" coords="5,191,169,218"/>
-<area shape="rect" id="node4" href="$helios__integer_8c.html" title=" " alt="" coords="194,184,338,225"/>
-<area shape="rect" id="node5" href="$helios__integer__math_8c.html" title=" " alt="" coords="362,184,506,225"/>
-<area shape="rect" id="node6" href="$helios__integer_8h.html" title=" " alt="" coords="101,95,252,136"/>
-<area shape="rect" id="node7" href="$helios__object_8c.html" title=" " alt="" coords="597,95,737,136"/>
-<area shape="rect" id="node8" href="$helios__string_8c.html" title=" " alt="" coords="531,184,668,225"/>
-<area shape="rect" id="node9" href="$helios__string_8h.html" title=" " alt="" coords="327,95,471,136"/>
-<area shape="rect" id="node3" href="$test_8c.html" title=" " alt="" coords="47,273,128,300"/>
+<area shape="rect" id="node1" title=" " alt="" coords="529,5,676,47"/>
+<area shape="rect" id="node2" href="$helios__hashmap_8h.html" title=" " alt="" coords="5,95,171,136"/>
+<area shape="rect" id="node3" href="$builtins_8h.html" title=" " alt="" coords="126,191,290,218"/>
+<area shape="rect" id="node5" href="$helios__integer_8c.html" title=" " alt="" coords="315,184,459,225"/>
+<area shape="rect" id="node6" href="$helios__integer__math_8c.html" title=" " alt="" coords="645,184,789,225"/>
+<area shape="rect" id="node7" href="$helios__integer_8h.html" title=" " alt="" coords="414,95,565,136"/>
+<area shape="rect" id="node8" href="$helios__object_8c.html" title=" " alt="" coords="742,95,882,136"/>
+<area shape="rect" id="node9" href="$helios__string_8c.html" title=" " alt="" coords="483,184,621,225"/>
+<area shape="rect" id="node10" href="$helios__string_8h.html" title=" " alt="" coords="245,95,389,136"/>
+<area shape="rect" id="node11" href="$helios__memory_8c.html" title=" " alt="" coords="907,102,1077,129"/>
+<area shape="rect" id="node4" href="$test_8c.html" title=" " alt="" coords="167,273,249,300"/>
 </map>

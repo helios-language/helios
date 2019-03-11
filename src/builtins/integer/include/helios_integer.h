@@ -28,11 +28,11 @@ helios_object *helios_integer_divide(helios_object *self, helios_object *other);
 helios_object *helios_integer_multiply(helios_object *self,
                                        helios_object *other);
 
-void helios_integer_delete(helios_object *obj);
+void helios_integer_delete(helios_object *self);
 helios_object *helios_integer_init();
 
-helios_object *helios_integer_tostring(helios_object *obj);
-helios_object *helios_integer_represent(helios_object *obj);
+helios_object *helios_integer_tostring(helios_object *self);
+helios_object *helios_integer_represent(helios_object *self);
 
 helios_object *helios_integer_from_cint(int32_t value);
 

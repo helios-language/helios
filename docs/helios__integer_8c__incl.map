@@ -1,11 +1,14 @@
 <map id="builtins/integer/helios_integer.c" name="builtins/integer/helios_integer.c">
-<area shape="rect" id="node1" title=" " alt="" coords="173,5,317,47"/>
+<area shape="rect" id="node1" title=" " alt="" coords="219,5,363,47"/>
 <area shape="rect" id="node2" href="$helios__integer_8h.html" title=" " alt="" coords="5,95,117,121"/>
-<area shape="rect" id="node3" href="$helios__object_8h.html" title=" " alt="" coords="100,169,209,196"/>
-<area shape="rect" id="node7" href="$helios__string_8h.html" title=" " alt="" coords="192,95,299,121"/>
-<area shape="rect" id="node8" title=" " alt="" coords="323,95,386,121"/>
-<area shape="rect" id="node9" title=" " alt="" coords="411,95,472,121"/>
-<area shape="rect" id="node4" href="$helios__type_8h.html" title=" " alt="" coords="105,244,204,271"/>
-<area shape="rect" id="node5" title=" " alt="" coords="78,319,143,345"/>
-<area shape="rect" id="node6" title=" " alt="" coords="168,319,232,345"/>
+<area shape="rect" id="node3" href="$helios__object_8h.html" title=" " alt="" coords="116,169,225,196"/>
+<area shape="rect" id="node5" href="$helios__memory_8h.html" title=" " alt="" coords="268,319,388,345"/>
+<area shape="rect" id="node10" href="$helios__string_8h.html" title=" " alt="" coords="192,95,299,121"/>
+<area shape="rect" id="node11" title=" " alt="" coords="374,95,437,121"/>
+<area shape="rect" id="node12" title=" " alt="" coords="461,95,523,121"/>
+<area shape="rect" id="node4" href="$helios__type_8h.html" title=" " alt="" coords="153,244,252,271"/>
+<area shape="rect" id="node8" title=" " alt="" coords="157,393,222,420"/>
+<area shape="rect" id="node9" title=" " alt="" coords="180,319,244,345"/>
+<area shape="rect" id="node6" href="$builtinutils_8h.html" title=" " alt="" coords="363,393,453,420"/>
+<area shape="rect" id="node7" title=" " alt="" coords="269,393,339,420"/>
 </map>

@@ -7,13 +7,13 @@
  * accepting any kind (so not type specific!) of helios object.
  */
 
+#include <builtinutils.h>
+
+#include <helios_hashmap.h>
 #include <helios_integer.h>
 #include <helios_object.h>
 #include <helios_string.h>
 
-//! generic function for calling a member function of a helios_object struct.
-//! note: doesn't include obj.__dict__ like lookup
-#define HELIOS_CALL_MEMBER(func, obj, ...)                                     \
-    (obj->class->func(obj, ##__VA_ARGS__))
+#include <helios_memory.h>
 
 #endif

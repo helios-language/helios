@@ -1,5 +1,6 @@
 
 #include <helios_integer.h>
+#include <helios_memory.h>
 #include <helios_object.h>
 #include <helios_string.h>
 #include <math.h>
@@ -23,8 +24,8 @@ helios_object *helios_integer_from_cint(int32_t value) {
  *
  * @param obj the object to destruct.
  */
-void helios_integer_delete(helios_object *obj) {
-    free(TO_HELIOS_INTEGER(obj));
+void helios_integer_delete(helios_object *self) {
+    helios_free_object(self);
 }
 
 /**
@@ -34,7 +35,8 @@ void helios_integer_delete(helios_object *obj) {
  * @return a new helios_integer object.
  */
 helios_object *helios_integer_init() {
-    helios_integer *self = malloc(sizeof(helios_integer));
+    helios_integer *self =
+        (helios_integer *)helios_allocate_object(sizeof(helios_integer));
     *self =
         (helios_integer){HELIOS_OBJECT_COMMON_BASE_INIT(&helios_integer_type),
                          .value = HELIOS_INTEGER_DEFAULT_VALUE};
@@ -49,10 +51,10 @@ helios_object *helios_integer_init() {
  * @return a helios_string object with the string representation of the
  * helios_integer
  */
-helios_object *helios_integer_tostring(helios_object *obj) {
-    uint32_t digits = floor(log10(abs(TO_HELIOS_INTEGER(obj)->value))) + 2;
+helios_object *helios_integer_tostring(helios_object *self) {
+    uint32_t digits = floor(log10(abs(TO_HELIOS_INTEGER(self)->value))) + 2;
     char str[digits];
-    sprintf(str, "%d", TO_HELIOS_INTEGER(obj)->value);
+    sprintf(str, "%d", TO_HELIOS_INTEGER(self)->value);
     return helios_string_from_charp(str);
 }
 
@@ -63,8 +65,8 @@ helios_object *helios_integer_tostring(helios_object *obj) {
  * @return a helios_string object with the string representation of the
  * helios_integer
  */
-helios_object *helios_integer_represent(helios_object *obj) {
-    return helios_integer_tostring(obj);
+helios_object *helios_integer_represent(helios_object *self) {
+    return helios_integer_tostring(self);
 }
 
 /**

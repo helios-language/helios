@@ -2,6 +2,7 @@
 #ifndef HELIOS_TYPE_H
 #define HELIOS_TYPE_H
 
+#include <helios_memory.h>
 #include <stdint.h>
 #include <stdlib.h>
 
@@ -14,7 +15,8 @@ struct __helios_type_s;
  */
 #define HELIOS_OBJECT_COMMON_BASE                                              \
     struct __helios_type_s *class;                                             \
-    uint32_t refcount
+    uint32_t refcount;                                                         \
+    garbagecollector *gc
 
 /**
  * Initializes the HELIOS_OBJECT_COMMON_BASE field of any helios object.
