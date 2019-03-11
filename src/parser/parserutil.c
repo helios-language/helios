@@ -20,11 +20,11 @@
  * @return an abstract syntax tree 'object' (struct defined in AST.h)
  * which recursively represents the parsed syntax
  */
-AST_t *parser_parseString(char *str) {
+AST *parser_parseString(char *str) {
     Parser_t *parser = parser_new(str);
 
     parser_advance(parser);
-    AST_t *ast = parser_root(parser);
+    AST *ast = parser_root(parser);
 
     // this used to be in there to find cases where the statement ended halfway
     // through the compilation process to prevent it just exiting without error.

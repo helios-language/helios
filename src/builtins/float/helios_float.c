@@ -6,6 +6,23 @@
 #include <math.h>
 #include <stdio.h>
 
+// typedef struct {
+//     uint64_t mantisa : 52;
+//     uint64_t exponent : 11;
+//     uint64_t sign : 1;
+// } doubleparts;
+
+// typedef union {
+//     double f;
+//     doubleparts d;
+// } doublehelper;
+
+// helios_object *helios_float_from_ife(uint32_t intpart, uint32_t floatpart,
+//                                      uint32_t exponent) {
+
+//     doublehelper d;
+// }
+
 /**
  * Create a helios_float object from a c double type. Alternate constructor
  * for helios_float.

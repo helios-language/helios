@@ -22,16 +22,16 @@ typedef struct AST {
     uint32_t filled; //!< the actual amount of used space in this array. Always
                      //!< less than the size attribute.
     struct AST **children; //!< the children array.
-} AST_t;
+} AST;
 
-AST_t *AST_new(Token_t *value);
-void AST_free(AST_t *ast);
-void AST_free_simple(AST_t *ast);
-void AST_freeChildren(AST_t *ast);
-void AST_addChild(AST_t *ast, AST_t *child);
-AST_t *AST_get(AST_t *ast, uint32_t index);
-void AST_set(AST_t *ast, uint32_t index, AST_t *child);
+AST *AST_new(Token_t *value);
+void AST_free(AST *ast);
+void AST_free_simple(AST *ast);
+void AST_freeChildren(AST *ast);
+void AST_addChild(AST *ast, AST *child);
+AST *AST_get(AST *ast, uint32_t index);
+void AST_set(AST *ast, uint32_t index, AST *child);
 
-void AST_print(AST_t *ast);
+void AST_print(AST *ast);
 
 #endif

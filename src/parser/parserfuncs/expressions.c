@@ -37,7 +37,7 @@ PARSERFUNC(atom) {
     uint32_t eslength1 = errorstack_length(parser->es);
     Parser_t *parsercp1 = parser_copy(parser);
 
-    AST_t *res = PARSERCALL(floatconst);
+    AST *res = PARSERCALL(floatconst);
     if (errorstack_length(parser->es) == eslength1) {
         parser_free_simple(parsercp1);
         return res;
@@ -62,7 +62,7 @@ PARSERFUNC(atomexpression) {
 
     if (parser_acceptchar(parser, '(')) {
         parser_skipws(parser);
-        AST_t *res = PARSERCALL(expr);
+        AST *res = PARSERCALL(expr);
         parser_skipws(parser);
         parser_expectchar(parser, ')');
         parser_skipws(parser);
@@ -79,18 +79,18 @@ PARSERFUNC(atomexpression) {
  */
 PARSERFUNC(power) {
     parser_skipws(parser);
-    AST_t *left = PARSERCALL(atomexpression);
-    AST_t *res = left;
+    AST *left = PARSERCALL(atomexpression);
+    AST *res = left;
     parser_skipws(parser);
     if (parser_acceptstring(parser, "**")) {
         parser_skipws(parser);
         char *op = malloc(strlen(parser->accepted) + 1);
         strcpy(op, parser->accepted);
-        AST_t *right = PARSERCALL(factor);
+        AST *right = PARSERCALL(factor);
         parser_skipws(parser);
 
         if (strcmp(op, "**") == 0) {
-            AST_t *res = AST_new(token_new(TOK_UNARYOP, op, true));
+            AST *res = AST_new(token_new(TOK_UNARYOP, op, true));
             AST_addChild(res, left);
             AST_addChild(res, right);
             return res;
@@ -117,11 +117,11 @@ PARSERFUNC(factor) {
         parser_skipws(parser);
         char *op = malloc(strlen(parser->accepted) + 1);
         strcpy(op, parser->accepted);
-        AST_t *child = PARSERCALL(factor);
+        AST *child = PARSERCALL(factor);
         parser_skipws(parser);
         if (strcmp(op, "+") == 0 || strcmp(op, "-") == 0 ||
             strcmp(op, "~") == 0) {
-            AST_t *res = AST_new(token_new(TOK_UNARYOP, op, true));
+            AST *res = AST_new(token_new(TOK_UNARYOP, op, true));
             AST_addChild(res, child);
             return res;
         } else {
@@ -144,14 +144,14 @@ PARSERFUNC(factor) {
  */
 PARSERFUNC(term) {
     parser_skipws(parser);
-    AST_t *left = PARSERCALL(factor);
-    AST_t *res = left;
+    AST *left = PARSERCALL(factor);
+    AST *res = left;
     parser_skipws(parser);
     while (parser_acceptstring(parser, "//") ||
            parser_acceptchar(parser, '*') || parser_acceptchar(parser, '/')) {
         char *op = malloc(strlen(parser->accepted) + 1);
         strcpy(op, parser->accepted);
-        AST_t *right = PARSERCALL(factor);
+        AST *right = PARSERCALL(factor);
         if (strcmp(op, "//") == 0 || strcmp(op, "*") == 0 ||
             strcmp(op, "/") == 0) {
             res = AST_new(token_new(TOK_BINARYOP, op, true));
@@ -177,13 +177,13 @@ PARSERFUNC(term) {
  */
 PARSERFUNC(expr) {
     parser_skipws(parser);
-    AST_t *left = PARSERCALL(term);
-    AST_t *res = left;
+    AST *left = PARSERCALL(term);
+    AST *res = left;
     parser_skipws(parser);
     while (parser_acceptchar(parser, '+') || parser_acceptchar(parser, '-')) {
         char *op = malloc(strlen(parser->accepted) + 1);
         strcpy(op, parser->accepted);
-        AST_t *right = PARSERCALL(term);
+        AST *right = PARSERCALL(term);
         if (strcmp(op, "+") == 0 || strcmp(op, "-") == 0) {
             res = AST_new(token_new(TOK_BINARYOP, op, true));
             AST_addChild(res, left);

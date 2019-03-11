@@ -76,14 +76,22 @@ struct __helios_type_s;
     struct __helios_object_s *(*divide)(struct __helios_object_s * self,       \
                                         struct __helios_object_s * other);     \
     struct __helios_object_s *(*multiply)(struct __helios_object_s * self,     \
-                                          struct __helios_object_s * other)
+                                          struct __helios_object_s * other);   \
+    struct __helios_object_s *(*modulo)(struct __helios_object_s * self,       \
+                                        struct __helios_object_s * other);     \
+    struct __helios_object_s *(*power)(struct __helios_object_s * self,        \
+                                       struct __helios_object_s * other);      \
+    struct __helios_object_s *(*floordivide)(                                  \
+        struct __helios_object_s * self, struct __helios_object_s * other);
 
 /**
  * Zero out all HELIOS_OBJECT_BINOPS_FIELDS. Technically not needed as
- * struct fields are nulled automatically. But it does make stuff much clearer.
+ * struct fields are nulled automatically. But it does make stuff much
+ * clearer.
  */
 #define HELIOS_OBJECT_BINOPS_FIELDS_NULL()                                     \
-    .add = NULL, .subtract = NULL, .divide = NULL, .multiply = NULL
+    .add = NULL, .subtract = NULL, .divide = NULL, .multiply = NULL,           \
+    .modulo = NULL, .power = NULL, .floordivide = NULL
 
 /**
  * Set the add function in a struct initialization.
@@ -101,6 +109,51 @@ struct __helios_type_s;
  * Set the multiply function in a struct initialization.
  */
 #define HELIOS_OBJECT_BINOPS_FIELDS_MULTIPLY(function) .multiply = function
+/**
+ * Set the modulo function in a struct initialization.
+ */
+#define HELIOS_OBJECT_BINOPS_FIELDS_MODULO(function) .modulo = function
+/**
+ * Set the power function in a struct initialization.
+ */
+#define HELIOS_OBJECT_BINOPS_FIELDS_POWER(function) .power = function
+/**
+ * Set the floordivide function in a struct initialization.
+ */
+#define HELIOS_OBJECT_BINOPS_FIELDS_FLOORDIVIDE(function)                      \
+    .floordivide = function
+
+/**
+ * Define the fields corresponding to unary number operators for helios object
+ * struct definitions.
+ */
+#define HELIOS_OBJECT_UNARYOPS_FIELDS                                          \
+    struct __helios_object_s *(*minus)(struct __helios_object_s * self);       \
+    struct __helios_object_s *(*invert)(struct __helios_object_s * self);      \
+    struct __helios_object_s *(*plus)(struct __helios_object_s * self)
+
+/**
+ * Zero out all HELIOS_OBJECT_UNARYOPS_FIELDS. Technically not needed as
+ * struct fields are nulled automatically. But it does make stuff much
+ * clearer.
+ */
+#define HELIOS_OBJECT_UNARYOPS_FIELDS_NULL()                                   \
+    .minus = NULL, .invert = NULL, .plus = NULL
+
+/**
+ * Set the minus function in a struct initialization.
+ */
+#define HELIOS_OBJECT_UNARYOPS_FIELDS_MINUS(function) .minus = function
+
+/**
+ * Set the invert function in a struct initialization.
+ */
+#define HELIOS_OBJECT_UNARYOPS_FIELDS_INVERT(function) .invert = function
+
+/**
+ * Set the plus function in a struct initialization.
+ */
+#define HELIOS_OBJECT_UNARYOPS_FIELDS_PLUS(function) .plus = function
 
 /**
  * The definition of a helios type struct. This is the part in any helios

@@ -18,7 +18,10 @@
         "builtinutils.h": "c",
         "helios_string.h": "c",
         "helios_float.h": "c",
-        "helios_integer.h": "c"
+        "helios_integer.h": "c",
+        "program.h": "c",
+        "instruction.h": "c",
+        "inttypes.h": "c"
     },
     "python.pythonPath": "/usr/bin/python3"
 }

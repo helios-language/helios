@@ -59,10 +59,10 @@ PARSERFUNC(floatconst) {
     uint32_t eslength1 = errorstack_length(parser->es);
     Parser_t *parsercp1 = parser_copy(parser);
 
-    AST_t *result = AST_new(
+    AST *result = AST_new(
         token_new(TOK_FLOAT, (void *)"(intpart,floatpart,exponent)", false));
 
-    AST_t *ipart = PARSERCALL(number);
+    AST *ipart = PARSERCALL(number);
     if (errorstack_length(parser->es) != eslength1) {
         AST_free(ipart);
         ipart = AST_new(token_new(TOK_IPART, (void *)"0", false));
@@ -82,7 +82,7 @@ PARSERFUNC(floatconst) {
 
             parser_skipws(parser);
 
-            AST_t *epart = PARSERCALL(number);
+            AST *epart = PARSERCALL(number);
             if (errorstack_length(parser->es) == eslength1) {
                 AST_addChild(result,
                              AST_new(token_new(TOK_FPART, (void *)"0", false)));
@@ -103,7 +103,7 @@ PARSERFUNC(floatconst) {
     uint32_t eslength2 = errorstack_length(parser->es);
     Parser_t *parsercp2 = parser_copy(parser);
 
-    AST_t *fpart = PARSERCALL(number);
+    AST *fpart = PARSERCALL(number);
     if (errorstack_length(parser->es) != eslength2) {
         AST_free(fpart);
         fpart = AST_new(token_new(TOK_FPART, (void *)"0", false));
@@ -117,7 +117,7 @@ PARSERFUNC(floatconst) {
     parser_free_simple(parsercp2);
 
     parser_skipws(parser);
-    AST_t *epart = NULL;
+    AST *epart = NULL;
 
     if (parser_acceptstring(parser, "exp") ||
         parser_acceptstring(parser, "e")) {

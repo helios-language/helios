@@ -17,12 +17,13 @@
  * values.
  */
 const char *tokennames[] = {
-    enumtostring(TOK_DECINT),  enumtostring(TOK_HEXINT),
-    enumtostring(TOK_BININT),  enumtostring(TOK_OCTINT),
-    enumtostring(TOK_UNARYOP), enumtostring(TOK_BINARYOP),
-    enumtostring(TOK_EPART),   enumtostring(TOK_FPART),
-    enumtostring(TOK_IPART),   enumtostring(TOK_FLOAT),
-    enumtostring(TOK_NONE),    enumtostring(TOK_BLOCK),
+    enumtostring(TOK_DECINT),    enumtostring(TOK_HEXINT),
+    enumtostring(TOK_BININT),    enumtostring(TOK_OCTINT),
+    enumtostring(TOK_UNARYOP),   enumtostring(TOK_BINARYOP),
+    enumtostring(TOK_EPART),     enumtostring(TOK_FPART),
+    enumtostring(TOK_IPART),     enumtostring(TOK_FLOAT),
+    enumtostring(TOK_NONE),      enumtostring(TOK_BLOCK),
+    enumtostring(TOK_ROOTBLOCK),
 
 };
 

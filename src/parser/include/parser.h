@@ -16,11 +16,11 @@
  *  defines a function used for recursive descent parsing. accepts a parser
  * object and returns an ast object.
  */
-#define PARSERFUNC(name) AST_t *parser_##name(Parser_t *parser)
+#define PARSERFUNC(name) AST *parser_##name(Parser_t *parser)
 /**
  * similar to parserfunc, except only forward-declares it.
  */
-#define DECLARE_PARSERFUNC(name) AST_t *parser_##name(Parser_t *parser)
+#define DECLARE_PARSERFUNC(name) AST *parser_##name(Parser_t *parser)
 /**
  * calls a parserfunc with the desired arguments (the parser).
  */
@@ -69,9 +69,9 @@ bool parser_exhausted(Parser_t *parser);
 Parser_t *parser_copy(Parser_t *parser);
 void parser_restore(Parser_t *parser, Parser_t *other);
 
-AST_t *parser_parseString(char *str);
+AST *parser_parseString(char *str);
 
-AST_t *parser_root(Parser_t *parser);
+AST *parser_root(Parser_t *parser);
 
 void parser_skipws(Parser_t *parser);
 void parser_skipwsnl(Parser_t *parser);

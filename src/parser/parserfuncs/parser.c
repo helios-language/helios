@@ -23,7 +23,7 @@ PARSERFUNC(simple_statement) {
 
 PARSERFUNC(statement) {
     // statement:  simple_statement (";" simple_statement)* ";"? _nl
-    AST_t *ast = AST_new(token_new(TOK_NONE, (char *)"", false));
+    AST *ast = AST_new(token_new(TOK_NONE, (char *)"", false));
     parser_skipws(parser);
     AST_addChild(ast, PARSERCALL(simple_statement));
     parser_skipws(parser);
@@ -31,7 +31,7 @@ PARSERFUNC(statement) {
         parser_skipws(parser);
 
         uint32_t length1 = errorstack_length(parser->es);
-        AST_t *nextstmt = PARSERCALL(simple_statement);
+        AST *nextstmt = PARSERCALL(simple_statement);
         if (length1 != errorstack_length(parser->es)) {
             AST_free(nextstmt);
             errorstack_popuntil(parser->es, length1);
@@ -60,7 +60,7 @@ PARSERFUNC(statement) {
  */
 PARSERFUNC(root) {
     uint32_t eslength1 = errorstack_length(parser->es);
-    AST_t *result = AST_new(token_new(TOK_BLOCK, "rootblock", false));
+    AST *result = AST_new(token_new(TOK_ROOTBLOCK, "rootblock", false));
 
     do {
         parser_skipws(parser);
@@ -73,7 +73,7 @@ PARSERFUNC(root) {
             break;
         }
 
-        AST_t *tmp = PARSERCALL(statement);
+        AST *tmp = PARSERCALL(statement);
         for (int i = 0; i < tmp->filled; i++) {
             AST_addChild(result, tmp->children[i]);
         }

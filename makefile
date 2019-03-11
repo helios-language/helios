@@ -8,6 +8,7 @@ ASM = gcc
 NASM = nasm
 
 TESTFILE = test.hel
+TESTRES = test.helc
 
 #names
 executable_fullname := helios-$(version)-$(arch)
@@ -56,7 +57,7 @@ install:
 	pacman -S built-essential doxygen graphviz
 
 leaktest $(executable):
-	valgrind --leak-check=yes $(executable) -t
+	valgrind --leak-check=yes $(executable) $(TESTFILE) $(TESTRES)
 
 clean:
 	@rm -r build
@@ -64,11 +65,8 @@ clean:
 
 run: $(executable)
 	@echo starting
-	@./$(executable) $(TESTFILE)
+	@./$(executable) $(TESTFILE) $(TESTRES)
 
-test: $(executable)
-	@echo starting
-	@./$(executable) -t
 
 $(executable): $(assembly_object_files) $(c_object_files) $(nassembly_object_files)
 	@echo linking...

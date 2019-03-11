@@ -180,7 +180,7 @@ PARSERFUNC(intconst) {
     uint32_t eslength = errorstack_length(parser->es);
     Parser_t *parsercp1 = parser_copy(parser);
 
-    AST_t *res;
+    AST *res;
 
     // // HEX
 

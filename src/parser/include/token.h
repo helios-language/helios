@@ -31,6 +31,7 @@ typedef enum {
     TOK_NONE, // use when there's no real token, or it will eventually be
               // merged.
     TOK_BLOCK,
+    TOK_ROOTBLOCK,
 
 } TOKENTYPE;
 
