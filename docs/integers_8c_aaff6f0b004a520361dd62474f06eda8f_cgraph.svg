@@ -81,7 +81,7 @@
 <!-- Node62 -->
 <g id="node8" class="node">
 <title>Node62</title>
-<g id="a_node8"><a xlink:href="AST_8c.html#a3ca8abc74574b984118c6364414ee5e4" target="_top" xlink:title="Destructor for ast objects.">
+<g id="a_node8"><a xlink:href="AST_8c.html#adc8be8765bd5abffeef1f5649587cb45" target="_top" xlink:title="Destructor for ast objects.">
 <polygon fill="#ffffff" stroke="#000000" points="142.5,-152.5 142.5,-171.5 200.5,-171.5 200.5,-152.5 142.5,-152.5"/>
 <text text-anchor="middle" x="171.5" y="-159.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">AST_free</text>
 </a>
@@ -141,7 +141,7 @@
 <!-- Node68 -->
 <g id="node14" class="node">
 <title>Node68</title>
-<g id="a_node14"><a xlink:href="AST_8c.html#a8c2fa2cf1cd82b5d85d7297e1150980b" target="_top" xlink:title="Constructore for ast objects.">
+<g id="a_node14"><a xlink:href="AST_8c.html#a3a1c70c232e669f02ef0a4e171ee6ab2" target="_top" xlink:title="Constructore for ast objects.">
 <polygon fill="#ffffff" stroke="#000000" points="142,-.5 142,-19.5 201,-19.5 201,-.5 142,-.5"/>
 <text text-anchor="middle" x="171.5" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">AST_new</text>
 </a>

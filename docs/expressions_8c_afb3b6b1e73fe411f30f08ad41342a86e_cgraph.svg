@@ -97,7 +97,7 @@ var sectionId = 'dynsection-4';
 <!-- Node50 -->
 <g id="node7" class="node">
 <title>Node50</title>
-<g id="a_node7"><a xlink:href="AST_8c.html#a8c2fa2cf1cd82b5d85d7297e1150980b" target="_top" xlink:title="Constructore for ast objects.">
+<g id="a_node7"><a xlink:href="AST_8c.html#a3a1c70c232e669f02ef0a4e171ee6ab2" target="_top" xlink:title="Constructore for ast objects.">
 <polygon fill="#ffffff" stroke="#000000" points="149,-114.5 149,-133.5 208,-133.5 208,-114.5 149,-114.5"/>
 <text text-anchor="middle" x="178.5" y="-121.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">AST_new</text>
 </a>
@@ -127,7 +127,7 @@ var sectionId = 'dynsection-4';
 <!-- Node52 -->
 <g id="node9" class="node">
 <title>Node52</title>
-<g id="a_node9"><a xlink:href="AST_8c.html#a6d2da376a87fc874be61ece3d28c7a4f" target="_top" xlink:title="Adds a child ast node to a parent ast node.">
+<g id="a_node9"><a xlink:href="AST_8c.html#a5f9c0bcd1d544aac044f4acf93c27ddb" target="_top" xlink:title="Adds a child ast node to a parent ast node.">
 <polygon fill="#ffffff" stroke="#000000" points="138.5,-38.5 138.5,-57.5 218.5,-57.5 218.5,-38.5 138.5,-38.5"/>
 <text text-anchor="middle" x="178.5" y="-45.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">AST_addChild</text>
 </a>

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['tokentype',['TOKENTYPE',['../token_8h.html#ae5a0083ddd5589f62186ab1292cdd438',1,'token.h']]]
+  ['opcode',['OPCODE',['../instruction_8h.html#aae4693759624167b03e9b584f16e8687',1,'instruction.h']]]
 ];

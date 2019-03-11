@@ -1,22 +1,26 @@
 <map id="main" name="main">
-<area shape="rect" id="node1" title=" " alt="" coords="5,215,56,241"/>
-<area shape="rect" id="node2" href="$files_8c.html#ad9909e16f65d8f14412653a8674df0d9" title=" " alt="" coords="116,132,223,159"/>
-<area shape="rect" id="node3" href="$parser_8h.html#a8d29751ff64610cbe0fc10c7c25306af" title="Parser Entrypoint." alt="" coords="104,183,235,209"/>
-<area shape="rect" id="node16" href="$AST_8c.html#a37701c3c8ade5609738bfa726e0320cb" title="Print an ast object." alt="" coords="129,240,209,267"/>
-<area shape="rect" id="node19" href="$AST_8c.html#a3ca8abc74574b984118c6364414ee5e4" title="Destructor for ast objects." alt="" coords="131,328,208,355"/>
-<area shape="rect" id="node4" href="$parserutil_8c.html#aeabb62e46d4414de7848d31d805ab834" title="Parser constructor." alt="" coords="310,5,399,32"/>
-<area shape="rect" id="node6" href="$parserutil_8c.html#a2d9e8c20025b7b883c4e87790685a6ad" title="Proxy to parser_next." alt="" coords="297,56,412,83"/>
-<area shape="rect" id="node8" href="$parser_8h.html#a7f01c72614726af8596180c2799c9a3d" title=" " alt="" coords="311,107,398,133"/>
-<area shape="rect" id="node9" href="$error_8c.html#abd91e0920f6396db920ea38a4d701613" title="Return true if a given errorstack is empty." alt="" coords="293,157,416,184"/>
-<area shape="rect" id="node10" href="$error_8c.html#a92a76599dc7f44ae25eb33a79f8c1268" title="Throw all errors on the errorstack." alt="" coords="283,208,427,235"/>
-<area shape="rect" id="node14" href="$parserutil_8c.html#a1ddd27828ac4848a4b9c05eb6190852f" title="Parser destructor." alt="" coords="311,259,398,285"/>
-<area shape="rect" id="node5" href="$error_8c.html#a801707ae606a85c72383643bf3ce5875" title="Creates a new errorstack object." alt="" coords="475,5,585,32"/>
-<area shape="rect" id="node7" href="$parserutil_8c.html#ab25a97ff31329fe9461666bfe2dc6f2c" title="Iterate the parser." alt="" coords="485,56,575,83"/>
-<area shape="rect" id="node11" href="$error_8c.html#adc799734c0f6f7e223ee20590c3b46e8" title=" " alt="" coords="487,157,573,184"/>
-<area shape="rect" id="node13" href="$error_8c.html#a08f836642a23e867f57c5f849f26443c" title="Return the top error of the errorstack." alt="" coords="477,208,583,235"/>
-<area shape="rect" id="node12" href="$error_8c.html#a661c01cb3d40abca57dc9d223e3d6381" title="prints an error struct" alt="" coords="633,157,713,184"/>
-<area shape="rect" id="node15" href="$error_8c.html#a307900324127113f505e2011b6fa2c45" title=" " alt="" coords="475,259,585,285"/>
-<area shape="rect" id="node17" href="$AST_8c.html#a92979ecde0bf875237d089ebd25d07b0" title="Recursively prints an ast." alt="" coords="293,309,416,336"/>
-<area shape="rect" id="node18" href="$token_8h.html#a347371dbade2f4df7ca01fd60f226951" title="Prints a token object." alt="" coords="487,309,573,336"/>
-<area shape="rect" id="node20" href="$token_8h.html#a863ec10d282f1f7e0dbbbaae6cec4f15" title=" " alt="" coords="313,360,396,387"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,297,56,324"/>
+<area shape="rect" id="node2" href="$files_8c.html#ad9909e16f65d8f14412653a8674df0d9" title=" " alt="" coords="146,127,253,153"/>
+<area shape="rect" id="node3" href="$parser_8h.html#ac230f189b920bf540a0e14b079c3caf7" title="Parser Entrypoint." alt="" coords="134,177,265,204"/>
+<area shape="rect" id="node16" href="$AST_8c.html#a58d5ba08d8eda04b6d0414ed3d43a60f" title="Print an ast object." alt="" coords="159,247,239,273"/>
+<area shape="rect" id="node19" href="$generator_8c.html#a594404944250328ce93425fec273eba4" title=" " alt="" coords="104,297,295,324"/>
+<area shape="rect" id="node21" href="$files_8c.html#a9939a0318428d912d51fa718d511bedd" title=" " alt="" coords="137,348,262,375"/>
+<area shape="rect" id="node22" href="$AST_8c.html#adc8be8765bd5abffeef1f5649587cb45" title="Destructor for ast objects." alt="" coords="161,423,238,449"/>
+<area shape="rect" id="node24" href="$program_8h.html#a080a679b7f252d4db66d6c31ad53c99f" title=" " alt="" coords="144,473,255,500"/>
+<area shape="rect" id="node4" href="$parserutil_8c.html#aeabb62e46d4414de7848d31d805ab834" title="Parser constructor." alt="" coords="370,5,459,32"/>
+<area shape="rect" id="node6" href="$parserutil_8c.html#a2d9e8c20025b7b883c4e87790685a6ad" title="Proxy to parser_next." alt="" coords="357,56,472,83"/>
+<area shape="rect" id="node8" href="$parser_8h.html#a909b31712182aae737a48cd819f43a2d" title=" " alt="" coords="371,107,458,133"/>
+<area shape="rect" id="node9" href="$error_8c.html#abd91e0920f6396db920ea38a4d701613" title="Return true if a given errorstack is empty." alt="" coords="353,157,476,184"/>
+<area shape="rect" id="node10" href="$error_8c.html#a92a76599dc7f44ae25eb33a79f8c1268" title="Throw all errors on the errorstack." alt="" coords="343,208,487,235"/>
+<area shape="rect" id="node14" href="$parserutil_8c.html#a1ddd27828ac4848a4b9c05eb6190852f" title="Parser destructor." alt="" coords="371,259,458,285"/>
+<area shape="rect" id="node5" href="$error_8c.html#a801707ae606a85c72383643bf3ce5875" title="Creates a new errorstack object." alt="" coords="535,5,645,32"/>
+<area shape="rect" id="node7" href="$parserutil_8c.html#ab25a97ff31329fe9461666bfe2dc6f2c" title="Iterate the parser." alt="" coords="545,56,635,83"/>
+<area shape="rect" id="node11" href="$error_8c.html#adc799734c0f6f7e223ee20590c3b46e8" title=" " alt="" coords="547,157,633,184"/>
+<area shape="rect" id="node13" href="$error_8c.html#a08f836642a23e867f57c5f849f26443c" title="Return the top error of the errorstack." alt="" coords="537,208,643,235"/>
+<area shape="rect" id="node12" href="$error_8c.html#a661c01cb3d40abca57dc9d223e3d6381" title="prints an error struct" alt="" coords="693,157,773,184"/>
+<area shape="rect" id="node15" href="$error_8c.html#a307900324127113f505e2011b6fa2c45" title=" " alt="" coords="535,259,645,285"/>
+<area shape="rect" id="node17" href="$AST_8c.html#aec2b1350d43ba95c45e32469270abd46" title="Recursively prints an ast." alt="" coords="353,309,476,336"/>
+<area shape="rect" id="node18" href="$token_8h.html#a347371dbade2f4df7ca01fd60f226951" title="Prints a token object." alt="" coords="547,309,633,336"/>
+<area shape="rect" id="node20" href="$program_8h.html#a8f50482d1feff9840c4af25207fbb332" title=" " alt="" coords="365,360,465,387"/>
+<area shape="rect" id="node23" href="$token_8h.html#a863ec10d282f1f7e0dbbbaae6cec4f15" title=" " alt="" coords="373,423,456,449"/>
 </map>

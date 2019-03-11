@@ -4,7 +4,7 @@
 <area shape="rect" id="node5" href="$error_8c.html#a28e1cff59ef8560afa8ede4b201938c6" title="Find the length of an errorstack." alt="" coords="173,56,295,83"/>
 <area shape="rect" id="node6" href="$parser_8h.html#aecf4b8bdaae9ca8435542900cf024f4e" title="Copy a parser." alt="" coords="187,107,281,133"/>
 <area shape="rect" id="node7" href="$parser_8h.html#ab62454c7986532e03ea36b14956b5ad1" title="Simple parser destructor." alt="" coords="168,157,300,184"/>
-<area shape="rect" id="node8" href="$AST_8c.html#a3ca8abc74574b984118c6364414ee5e4" title="Destructor for ast objects." alt="" coords="195,232,273,259"/>
+<area shape="rect" id="node8" href="$AST_8c.html#adc8be8765bd5abffeef1f5649587cb45" title="Destructor for ast objects." alt="" coords="195,232,273,259"/>
 <area shape="rect" id="node10" href="$error_8c.html#ade2d9bb9a151b899f16f096d482a9f0e" title="pop the errorstack until it has a desired length." alt="" coords="168,283,300,309"/>
 <area shape="rect" id="node12" href="$parser_8h.html#a1f1841a636bfe529466c99e3db9999cd" title="Restores a parser to another parser&#39;s position." alt="" coords="181,333,287,360"/>
 <area shape="rect" id="node3" href="$parserutil_8c.html#a2d9e8c20025b7b883c4e87790685a6ad" title="Proxy to parser_next." alt="" coords="348,5,463,32"/>

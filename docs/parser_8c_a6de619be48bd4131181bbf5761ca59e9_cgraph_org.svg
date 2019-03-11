@@ -36,7 +36,7 @@
 <!-- Node23 -->
 <g id="node3" class="node">
 <title>Node23</title>
-<g id="a_node3"><a xlink:href="AST_8c.html#a8c2fa2cf1cd82b5d85d7297e1150980b" target="_top" xlink:title="Constructore for ast objects.">
+<g id="a_node3"><a xlink:href="AST_8c.html#a3a1c70c232e669f02ef0a4e171ee6ab2" target="_top" xlink:title="Constructore for ast objects.">
 <polygon fill="#ffffff" stroke="#000000" points="149,-228.5 149,-247.5 208,-247.5 208,-228.5 149,-228.5"/>
 <text text-anchor="middle" x="178.5" y="-235.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">AST_new</text>
 </a>
@@ -111,7 +111,7 @@
 <!-- Node31 -->
 <g id="node11" class="node">
 <title>Node31</title>
-<g id="a_node11"><a xlink:href="AST_8c.html#a6d2da376a87fc874be61ece3d28c7a4f" target="_top" xlink:title="Adds a child ast node to a parent ast node.">
+<g id="a_node11"><a xlink:href="AST_8c.html#a5f9c0bcd1d544aac044f4acf93c27ddb" target="_top" xlink:title="Adds a child ast node to a parent ast node.">
 <polygon fill="#ffffff" stroke="#000000" points="138.5,-38.5 138.5,-57.5 218.5,-57.5 218.5,-38.5 138.5,-38.5"/>
 <text text-anchor="middle" x="178.5" y="-45.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">AST_addChild</text>
 </a>
@@ -126,7 +126,7 @@
 <!-- Node32 -->
 <g id="node12" class="node">
 <title>Node32</title>
-<g id="a_node12"><a xlink:href="AST_8c.html#aeac0ecd25dd3a58d3746a6ddb7afdffd" target="_top" xlink:title="Destructor for ast objects.">
+<g id="a_node12"><a xlink:href="AST_8c.html#ab249a336233e682270a06601b5864480" target="_top" xlink:title="Destructor for ast objects.">
 <polygon fill="#ffffff" stroke="#000000" points="132.5,-.5 132.5,-19.5 224.5,-19.5 224.5,-.5 132.5,-.5"/>
 <text text-anchor="middle" x="178.5" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">AST_free_simple</text>
 </a>

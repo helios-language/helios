@@ -1,12 +1,4 @@
 var searchData=
 [
-  ['ast_5faddchild',['AST_addChild',['../AST_8c.html#a6d2da376a87fc874be61ece3d28c7a4f',1,'AST_addChild(AST_t *ast, AST_t *child):&#160;AST.c'],['../AST_8h.html#a6d2da376a87fc874be61ece3d28c7a4f',1,'AST_addChild(AST_t *ast, AST_t *child):&#160;AST.c']]],
-  ['ast_5ffree',['AST_free',['../AST_8c.html#a3ca8abc74574b984118c6364414ee5e4',1,'AST_free(AST_t *ast):&#160;AST.c'],['../AST_8h.html#a3ca8abc74574b984118c6364414ee5e4',1,'AST_free(AST_t *ast):&#160;AST.c']]],
-  ['ast_5ffree_5fsimple',['AST_free_simple',['../AST_8c.html#aeac0ecd25dd3a58d3746a6ddb7afdffd',1,'AST_free_simple(AST_t *ast):&#160;AST.c'],['../AST_8h.html#aeac0ecd25dd3a58d3746a6ddb7afdffd',1,'AST_free_simple(AST_t *ast):&#160;AST.c']]],
-  ['ast_5ffreechildren',['AST_freeChildren',['../AST_8c.html#adb24e97f778928d5b145881048a9d6b1',1,'AST_freeChildren(AST_t *ast):&#160;AST.c'],['../AST_8h.html#adb24e97f778928d5b145881048a9d6b1',1,'AST_freeChildren(AST_t *ast):&#160;AST.c']]],
-  ['ast_5fget',['AST_get',['../AST_8c.html#a7e68dea2cf251d1596da355b9b3c259d',1,'AST_get(AST_t *ast, uint32_t index):&#160;AST.c'],['../AST_8h.html#a7e68dea2cf251d1596da355b9b3c259d',1,'AST_get(AST_t *ast, uint32_t index):&#160;AST.c']]],
-  ['ast_5fnew',['AST_new',['../AST_8c.html#a8c2fa2cf1cd82b5d85d7297e1150980b',1,'AST_new(Token_t *value):&#160;AST.c'],['../AST_8h.html#a8c2fa2cf1cd82b5d85d7297e1150980b',1,'AST_new(Token_t *value):&#160;AST.c']]],
-  ['ast_5fprint',['AST_print',['../AST_8c.html#a37701c3c8ade5609738bfa726e0320cb',1,'AST_print(AST_t *ast):&#160;AST.c'],['../AST_8h.html#a37701c3c8ade5609738bfa726e0320cb',1,'AST_print(AST_t *ast):&#160;AST.c']]],
-  ['ast_5fprint_5fhelper',['AST_print_helper',['../AST_8c.html#a92979ecde0bf875237d089ebd25d07b0',1,'AST.c']]],
-  ['ast_5fset',['AST_set',['../AST_8c.html#a4f2a515b3e4d32061f5b91f273a8b84f',1,'AST_set(AST_t *ast, uint32_t index, AST_t *child):&#160;AST.c'],['../AST_8h.html#a4f2a515b3e4d32061f5b91f273a8b84f',1,'AST_set(AST_t *ast, uint32_t index, AST_t *child):&#160;AST.c']]]
+  ['declare_5fparserfunc',['DECLARE_PARSERFUNC',['../expressions_8c.html#a8bcd4cd5114b5dba81f000f848f05f5f',1,'DECLARE_PARSERFUNC(expr):&#160;expressions.c'],['../expressions_8c.html#aef0eb3e012ec0d75da19de842bbc8d47',1,'DECLARE_PARSERFUNC(factor):&#160;expressions.c'],['../expressions_8c.html#ad3e1a7c211e5c317dfd64b22bb26885c',1,'DECLARE_PARSERFUNC(intconst):&#160;expressions.c'],['../expressions_8c.html#a0d9d45cd0accb8a0170b16c3ad5335eb',1,'DECLARE_PARSERFUNC(floatconst):&#160;expressions.c'],['../parser_8c.html#a8bcd4cd5114b5dba81f000f848f05f5f',1,'DECLARE_PARSERFUNC(expr):&#160;parser.c']]]
 ];

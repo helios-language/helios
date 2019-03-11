@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['testmain',['testmain',['../test_8h.html#a9cd4bd5df18dd2b80ee2012218d6f13c',1,'testmain(int argc, char *argv[]):&#160;test.c'],['../test_8c.html#a9cd4bd5df18dd2b80ee2012218d6f13c',1,'testmain(int argc, char *argv[]):&#160;test.c']]],
   ['token_5ffree',['token_free',['../token_8h.html#a863ec10d282f1f7e0dbbbaae6cec4f15',1,'token_free(Token_t *token):&#160;token.c'],['../token_8c.html#a863ec10d282f1f7e0dbbbaae6cec4f15',1,'token_free(Token_t *token):&#160;token.c']]],
   ['token_5ffree_5fsimple',['token_free_simple',['../token_8h.html#a02baccdc1bb78aa075ef799889f81c64',1,'token.h']]],
   ['token_5fnew',['token_new',['../token_8h.html#a6df9cba793453cf8281c9843e576fe40',1,'token_new(TOKENTYPE t, void *value, bool canfree):&#160;token.c'],['../token_8c.html#a6df9cba793453cf8281c9843e576fe40',1,'token_new(TOKENTYPE t, void *value, bool canfree):&#160;token.c']]],

@@ -1,10 +1,6 @@
 var searchData=
 [
   ['t',['t',['../structToken__t.html#a49d2c041cd8bad8a98943938e228eed6',1,'Token_t']]],
-  ['test_2ec',['test.c',['../test_8c.html',1,'']]],
-  ['test_2eh',['test.h',['../test_8h.html',1,'']]],
-  ['testmain',['testmain',['../test_8h.html#a9cd4bd5df18dd2b80ee2012218d6f13c',1,'testmain(int argc, char *argv[]):&#160;test.c'],['../test_8c.html#a9cd4bd5df18dd2b80ee2012218d6f13c',1,'testmain(int argc, char *argv[]):&#160;test.c']]],
-  ['testmain_2ec',['testmain.c',['../testmain_8c.html',1,'']]],
   ['to_5fhelios_5ffloat',['TO_HELIOS_FLOAT',['../helios__float_8h.html#ab72758aa9e61a9d2d3171fa3769422ea',1,'helios_float.h']]],
   ['to_5fhelios_5fhashmap',['TO_HELIOS_HASHMAP',['../helios__hashmap_8h.html#a4cc606f35ce1ccc8cba472cfea3ea03d',1,'helios_hashmap.h']]],
   ['to_5fhelios_5finteger',['TO_HELIOS_INTEGER',['../helios__integer_8h.html#a5e58e30c9022b406bcff64cd49e99589',1,'helios_integer.h']]],
@@ -21,6 +17,7 @@ var searchData=
   ['tok_5fipart',['TOK_IPART',['../token_8h.html#ae5a0083ddd5589f62186ab1292cdd438afdbc74c131d2b9a0156506b741de0203',1,'token.h']]],
   ['tok_5fnone',['TOK_NONE',['../token_8h.html#ae5a0083ddd5589f62186ab1292cdd438aa0432b1447cf4a7cd5799446f7e28171',1,'token.h']]],
   ['tok_5foctint',['TOK_OCTINT',['../token_8h.html#ae5a0083ddd5589f62186ab1292cdd438ada354f1f932dbe66e1d717027a58b9cf',1,'token.h']]],
+  ['tok_5frootblock',['TOK_ROOTBLOCK',['../token_8h.html#ae5a0083ddd5589f62186ab1292cdd438a03ba7d31225a8c2afb6a81e30766fb2f',1,'token.h']]],
   ['tok_5funaryop',['TOK_UNARYOP',['../token_8h.html#ae5a0083ddd5589f62186ab1292cdd438a411ed961b8bbeaebaa745a70360b209f',1,'token.h']]],
   ['token_2ec',['token.c',['../token_8c.html',1,'']]],
   ['token_2eh',['token.h',['../token_8h.html',1,'']]],
