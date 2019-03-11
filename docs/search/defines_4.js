@@ -3,6 +3,7 @@ var searchData=
   ['helios_5fcall_5fmember',['HELIOS_CALL_MEMBER',['../builtinutils_8h.html#aa862687a707dcd3bf49ff4ffc91871e4',1,'builtinutils.h']]],
   ['helios_5fdecref',['HELIOS_DECREF',['../helios__memory_8h.html#a0ca4ccb924c0070686f0cca8feb0ff27',1,'helios_memory.h']]],
   ['helios_5fdecref_5fnogc',['HELIOS_DECREF_NOGC',['../helios__memory_8h.html#aff41a519ebf28356740eeab69721c59a',1,'helios_memory.h']]],
+  ['helios_5ffloat_5fdefault_5fvalue',['HELIOS_FLOAT_DEFAULT_VALUE',['../helios__float_8h.html#a28f3fd9401ca98d56954f3590a21f8e9',1,'helios_float.h']]],
   ['helios_5fget_5fobj_5fgc',['HELIOS_GET_OBJ_GC',['../helios__memory_8h.html#a5301b4c3358268578cde0b330c52efb2',1,'helios_memory.h']]],
   ['helios_5fgetref',['HELIOS_GETREF',['../helios__memory_8h.html#a8c172aa0256138d40339d80c3f9a1540',1,'helios_memory.h']]],
   ['helios_5fincref',['HELIOS_INCREF',['../helios__memory_8h.html#ad6a677794da9e4d1890752b20985794b',1,'helios_memory.h']]],

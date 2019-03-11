@@ -1,6 +1,5 @@
 
 #include <helios_float.h>
-#include <helios_integer.h>
 #include <helios_memory.h>
 #include <helios_object.h>
 #include <helios_string.h>
@@ -8,7 +7,7 @@
 #include <stdio.h>
 
 /**
- * Create a helios_float object from a c float type. Alternate constructor
+ * Create a helios_float object from a c double type. Alternate constructor
  * for helios_float.
  *
  * @param value the value contained in the newly created helios_float object

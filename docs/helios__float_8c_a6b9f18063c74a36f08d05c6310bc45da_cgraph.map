@@ -1,0 +1,5 @@
+<map id="helios_float_init" name="helios_float_init">
+<area shape="rect" id="node1" title="Constructor of a helios_float object." alt="" coords="5,31,117,57"/>
+<area shape="rect" id="node2" href="$helios__memory_8h.html#af87f0050f8e236d0945592fa4e54dc94" title="Allocates a new helios object (and performs all the GC steps associated with that action)." alt="" coords="188,5,339,32"/>
+<area shape="rect" id="node3" href="$helios__memory_8h.html#ab14fb1c046aae61ab06eda8eeaf2cd85" title=" " alt="" coords="165,56,361,83"/>
+</map>

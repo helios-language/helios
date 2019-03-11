@@ -1,7 +1,9 @@
 <map id="builtins/integer/helios_integer_math.c" name="builtins/integer/helios_integer_math.c">
-<area shape="rect" id="node1" title=" " alt="" coords="273,5,417,47"/>
-<area shape="rect" id="node2" href="$helios__integer_8h.html" title=" " alt="" coords="243,95,355,121"/>
+<area shape="rect" id="node1" title=" " alt="" coords="320,5,464,47"/>
+<area shape="rect" id="node2" href="$helios__float_8h.html" title=" " alt="" coords="209,95,308,121"/>
 <area shape="rect" id="node3" href="$helios__object_8h.html" title=" " alt="" coords="291,169,400,196"/>
+<area shape="rect" id="node11" href="$helios__integer_8h.html" title=" " alt="" coords="383,95,495,121"/>
+<area shape="rect" id="node12" title=" " alt="" coords="519,95,580,121"/>
 <area shape="rect" id="node4" href="$helios__type_8h.html" title=" " alt="" coords="296,244,395,271"/>
 <area shape="rect" id="node5" href="$helios__memory_8h.html" title=" " alt="" coords="188,319,308,345"/>
 <area shape="rect" id="node9" title=" " alt="" coords="313,393,378,420"/>

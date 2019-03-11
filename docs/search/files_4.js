@@ -1,5 +1,8 @@
 var searchData=
 [
+  ['helios_5ffloat_2ec',['helios_float.c',['../helios__float_8c.html',1,'']]],
+  ['helios_5ffloat_2eh',['helios_float.h',['../helios__float_8h.html',1,'']]],
+  ['helios_5ffloat_5fmath_2ec',['helios_float_math.c',['../helios__float__math_8c.html',1,'']]],
   ['helios_5fhashmap_2ec',['helios_hashmap.c',['../helios__hashmap_8c.html',1,'']]],
   ['helios_5fhashmap_2eh',['helios_hashmap.h',['../helios__hashmap_8h.html',1,'']]],
   ['helios_5finteger_2ec',['helios_integer.c',['../helios__integer_8c.html',1,'']]],

@@ -1,0 +1,6 @@
+<map id="helios_float_from_cdouble" name="helios_float_from_cdouble">
+<area shape="rect" id="node1" title="Create a helios_float object from a c double type." alt="" coords="5,31,179,57"/>
+<area shape="rect" id="node2" href="$helios__float_8c.html#a6b9f18063c74a36f08d05c6310bc45da" title="Constructor of a helios_float object." alt="" coords="227,31,339,57"/>
+<area shape="rect" id="node3" href="$helios__memory_8h.html#af87f0050f8e236d0945592fa4e54dc94" title="Allocates a new helios object (and performs all the GC steps associated with that action)." alt="" coords="409,5,560,32"/>
+<area shape="rect" id="node4" href="$helios__memory_8h.html#ab14fb1c046aae61ab06eda8eeaf2cd85" title=" " alt="" coords="387,56,583,83"/>
+</map>
