@@ -80,6 +80,8 @@ helios_object *helios_string_init() {
         HELIOS_OBJECT_COMMON_BASE_INIT(&helios_string_type),
         .size = HELIOS_STRING_DEFAULT_SIZE, .filled = 0,
         .value = malloc(HELIOS_STRING_DEFAULT_SIZE * sizeof(char))};
+    helios_set_garbagecollectable(TO_HELIOS_OBJECT(self));
+
     return TO_HELIOS_OBJECT(self);
 }
 

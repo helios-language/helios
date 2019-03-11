@@ -25,6 +25,8 @@
  *
  * TODO: object reuse. instead of freeing it, keep it with a refcount of 0 in
  * the GC and allow it to be repurposed without calling malloc again.
+ *
+ * TODO: cycle detection
  */
 
 #include <helios_memory.h>
@@ -71,9 +73,12 @@ void helios_set_garbagecollector(garbagecollector *gc) {
  */
 garbagecollector *helios_init_garbagecollector() {
     garbagecollector *gc = malloc(sizeof(garbagecollector));
-    *gc =
-        (garbagecollector){GC_DEFAULT_LENGTH, 0,
-                           malloc(GC_DEFAULT_LENGTH * sizeof(helios_object *))};
+    *gc = (garbagecollector){
+        GC_DEFAULT_LENGTH, 0,
+        malloc(GC_DEFAULT_LENGTH * sizeof(__helios_gc_hashmap_node))};
+    for (uint32_t i = 0; i < gc->size; i++) {
+        gc->allocated_objects[i].used = false;
+    }
     return gc;
 }
 
@@ -89,18 +94,83 @@ void helios_delete_garbagecollector(garbagecollector *gc) {
 }
 
 /**
+ *
+ */
+static uint64_t __hashfunction(uint64_t key) {
+    key = (~key) + (key << 21);
+    key = key ^ (key >> 24);
+    key = (key + (key << 3)) + (key << 8);
+    key = key ^ (key >> 14);
+    key = (key + (key << 2)) + (key << 4);
+    key = key ^ (key >> 28);
+    key = key + (key << 31);
+    return key;
+}
+
+/**
+ * Checks the gc hashmap for the load percentage and rehashes the objects in
+ * them when the number of objects exceeds the load percentage.
+ *
+ * @param gc the garbage collection to check
+ */
+static void rehash(garbagecollector *gc) {
+    printf("%lf,%lf\n", ((double)gc->filled / (double)gc->size),
+           (GC_REHASH_PERCENT / 100.0));
+    if (((double)gc->filled / (double)gc->size) > (GC_REHASH_PERCENT / 100.0)) {
+        __helios_gc_hashmap_node *newtrackedobjects =
+            malloc(gc->size << 1 * sizeof(__helios_gc_hashmap_node));
+
+        for (uint32_t i = 0; i < gc->size; i++) {
+            gc->allocated_objects[i].used = false;
+        }
+
+        for (uint32_t i = 0; i < gc->size; i++) {
+            if (gc->allocated_objects[i].used == true) {
+                helios_object *obj = gc->allocated_objects[i].obj;
+
+                uint64_t index =
+                    __hashfunction((uint64_t)obj) % (gc->size << 1);
+
+                while (newtrackedobjects[index].used == true) {
+                    index = (index + 1) % gc->size;
+                }
+
+                gc->allocated_objects[index].used = true;
+                gc->allocated_objects[index].obj = obj;
+            }
+        }
+
+        free(gc->allocated_objects);
+        gc->allocated_objects = newtrackedobjects;
+        gc->size <<= 1;
+    }
+}
+
+/**
  * Adds an object to the tracked_objects array of a GC. For internal use only.
  *
  * @param the object to start tracking.
  */
 static void helios_track_object(helios_object *obj) {
     garbagecollector *gc = HELIOS_GET_OBJ_GC(obj);
-    gc->allocated_objects[gc->filled++] = obj;
-    if (gc->filled >= gc->size) {
-        gc->size <<= 1;
-        gc->allocated_objects =
-            realloc(gc->allocated_objects, gc->size * sizeof(helios_object *));
+
+    uint64_t index = __hashfunction((uint64_t)obj) % gc->size;
+
+    while (gc->allocated_objects[index].used == true) {
+        index = (index + 1) % gc->size;
     }
+
+    gc->filled++;
+
+    gc->allocated_objects[index].used = true;
+    gc->allocated_objects[index].obj = obj;
+
+    rehash(gc);
+}
+
+void helios_set_garbagecollectable(helios_object *obj) {
+    obj->gc = helios_get_garbagecollector();
+    helios_track_object(obj);
 }
 
 /**
@@ -111,7 +181,9 @@ static void helios_track_object(helios_object *obj) {
  */
 void helios_free_all_tracked(garbagecollector *gc) {
     for (uint32_t i = 0; i < gc->filled; i++) {
-        HELIOS_CALL_MEMBER(destructor, gc->allocated_objects[i]);
+        if (gc->allocated_objects[i].used == true) {
+            HELIOS_CALL_MEMBER(destructor, gc->allocated_objects[i].obj);
+        }
     }
 }
 
@@ -124,8 +196,9 @@ void helios_free_all_tracked(garbagecollector *gc) {
  */
 void helios_garbage_collect(garbagecollector *gc) {
     for (uint32_t i = 0; i < gc->filled; i++) {
-        if (HELIOS_GETREF(gc->allocated_objects[i]) == 0) {
-            HELIOS_CALL_MEMBER(destructor, gc->allocated_objects[i]);
+        if (gc->allocated_objects[i].used == true &&
+            HELIOS_GETREF(gc->allocated_objects[i].obj) == 0) {
+            HELIOS_CALL_MEMBER(destructor, gc->allocated_objects[i].obj);
         }
     }
 }
@@ -142,8 +215,6 @@ void helios_garbage_collect(garbagecollector *gc) {
  */
 helios_object *helios_allocate_object(size_t size) {
     helios_object *res = (helios_object *)malloc(size);
-    res->gc = helios_get_garbagecollector();
-    helios_track_object(res);
     return res;
 }
 
@@ -166,11 +237,18 @@ helios_object *helios_allocate_object_on_gc(garbagecollector *gc, size_t size) {
 /**
  * Frees a helios object. removes it from the it's GC's tracked_objects array.
  *
- * SHIT here i realize that the GC array should really be a hashset to do
- * efficient removal. It's 2AM lets do that later....
- *
  * @param obj to object to free.
  */
 void helios_free_object(helios_object *obj) {
+    garbagecollector *gc = HELIOS_GET_OBJ_GC(obj);
+
+    uint64_t index = __hashfunction((uint64_t)obj) % gc->size;
+
+    while (gc->allocated_objects[index].used == true &&
+           gc->allocated_objects[index].obj != obj) {
+        index = (index + 1) % gc->size;
+    }
+    gc->allocated_objects[index].used = false;
+    gc->filled--;
     free(obj);
 }

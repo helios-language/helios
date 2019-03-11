@@ -21,7 +21,7 @@ includedirs :=  $(sort $(foreach dir, $(foreach dir1, $(dirs), $(shell dirname $
 LFLAGS = -lm
 
 #cflags 
-CFLAGS= -g -O2 
+CFLAGS= -g -O0 -Wall
 
 #automatically include any header in dirs called include
 CFLAGS += $(foreach dir, $(includedirs), -I./$(dir))
@@ -55,6 +55,8 @@ all: $(executable)
 install:
 	pacman -S built-essential doxygen graphviz
 
+leaktest $(executable):
+	valgrind --leak-check=yes $(executable) -t
 
 clean:
 	@rm -r build

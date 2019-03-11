@@ -12,27 +12,12 @@ int testmain(int argc, char *argv[]) {
     garbagecollector *gc = helios_init_garbagecollector();
     helios_set_garbagecollector(gc);
 
-    helios_object *integer_a = helios_integer_from_cint(10);
-    helios_object *integer_b = helios_integer_from_cint(11);
-
-    helios_object *integer_c = HELIOS_CALL_MEMBER(add, integer_a, integer_b);
-    helios_object *integer_d =
-        HELIOS_CALL_MEMBER(subtract, integer_a, integer_b);
-    helios_object *integer_e =
-        HELIOS_CALL_MEMBER(multiply, integer_a, integer_b);
-    helios_object *integer_f = HELIOS_CALL_MEMBER(divide, integer_a, integer_b);
-
-    printf("%i\n", TO_HELIOS_INTEGER(integer_a)->value);
-    printf("%i\n", TO_HELIOS_INTEGER(integer_b)->value);
-
-    printf("+ %i\n", TO_HELIOS_INTEGER(integer_c)->value);
-    printf("- %i\n", TO_HELIOS_INTEGER(integer_d)->value);
-    printf("* %i\n", TO_HELIOS_INTEGER(integer_e)->value);
-    printf("/ %i\n", TO_HELIOS_INTEGER(integer_f)->value);
-
-    helios_object *stringified_integer_e =
-        HELIOS_CALL_MEMBER(tostring, integer_e);
-    printf("* tostring: %s\n", helios_string_to_charp(stringified_integer_e));
+    for (uint32_t i = 0; i < 10000; i++) {
+        helios_object *integer_a = helios_integer_from_cint(10);
+        HELIOS_CALL_MEMBER(destructor, integer_a);
+    }
 
     helios_delete_garbagecollector(gc);
+
+    return 0;
 }

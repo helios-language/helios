@@ -1,12 +1,11 @@
 <map id="testmain" name="testmain">
-<area shape="rect" id="node1" title=" " alt="" coords="5,107,77,133"/>
-<area shape="rect" id="node2" href="$helios__memory_8c.html#aaabde550780f37dc19f59b3e8bc9c514" title="Creates a new garbagecollector object." alt="" coords="134,5,317,32"/>
-<area shape="rect" id="node3" href="$helios__memory_8c.html#a0352d829134eb27df2d9e088062e987d" title="Points the global garbagecollector pointer to a new garbagecollector." alt="" coords="134,56,317,83"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,81,77,108"/>
+<area shape="rect" id="node2" href="$helios__memory_8h.html#aaabde550780f37dc19f59b3e8bc9c514" title="Creates a new garbagecollector object." alt="" coords="134,5,317,32"/>
+<area shape="rect" id="node3" href="$helios__memory_8h.html#a0352d829134eb27df2d9e088062e987d" title="Points the global garbagecollector pointer to a new garbagecollector." alt="" coords="134,56,317,83"/>
 <area shape="rect" id="node4" href="$helios__integer_8c.html#a64070d52d78c6e1bba2bcadd6a55b002" title="Create a helios_integer object from a c integer type." alt="" coords="144,107,307,133"/>
-<area shape="rect" id="node8" href="$helios__string_8c.html#a9d2005b1762ff6459a22a115549a08f5" title="Create a cstring from a helios_string object." alt="" coords="149,157,301,184"/>
-<area shape="rect" id="node9" href="$helios__memory_8c.html#a0ba47c8ed7e1be60f1c360e33a0aff15" title="Free a garbagecollector object." alt="" coords="125,208,325,235"/>
+<area shape="rect" id="node8" href="$helios__memory_8h.html#a0ba47c8ed7e1be60f1c360e33a0aff15" title="Free a garbagecollector object." alt="" coords="125,157,325,184"/>
 <area shape="rect" id="node5" href="$helios__integer_8c.html#a50a26b1e9578164839f3a5bb17e04051" title="Constructor of a helios_integer object." alt="" coords="387,107,514,133"/>
-<area shape="rect" id="node6" href="$helios__memory_8c.html#aab8866fd2abd9389795ad1639991caa4" title="Allocates a new helios object (and performs all the GC steps associated with that action)." alt="" coords="576,107,727,133"/>
-<area shape="rect" id="node7" href="$helios__memory_8c.html#a27b2da5d6954fd6e7aa0d2f352336c25" title="Get the global current garbage collector." alt="" coords="775,107,957,133"/>
-<area shape="rect" id="node10" href="$helios__memory_8c.html#a5dcd65b50eabfe133b9fcf6206b2bd1e" title="Frees all tracked objects of a garbagecollector without freeing the GC itself." alt="" coords="373,208,528,235"/>
+<area shape="rect" id="node6" href="$helios__memory_8h.html#af87f0050f8e236d0945592fa4e54dc94" title="Allocates a new helios object (and performs all the GC steps associated with that action)." alt="" coords="599,81,749,108"/>
+<area shape="rect" id="node7" href="$helios__memory_8h.html#ab14fb1c046aae61ab06eda8eeaf2cd85" title=" " alt="" coords="576,132,772,159"/>
+<area shape="rect" id="node9" href="$refcount_8c.html#a5dcd65b50eabfe133b9fcf6206b2bd1e" title="Frees all tracked objects of a garbagecollector without freeing the GC itself." alt="" coords="373,157,528,184"/>
 </map>

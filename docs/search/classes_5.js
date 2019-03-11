@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['token_5ft',['Token_t',['../structToken__t.html',1,'']]]
+  ['parser_5ft',['Parser_t',['../structParser__t.html',1,'']]]
 ];

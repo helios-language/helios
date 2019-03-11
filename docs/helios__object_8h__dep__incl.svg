@@ -46,7 +46,7 @@ if (edges && edges.length) {
         </defs>
 
 <script type="text/javascript">
-var viewWidth = 812;
+var viewWidth = 782;
 var viewHeight = 229;
 var sectionId = 'dynsection-1';
 </script>
@@ -54,10 +54,10 @@ var sectionId = 'dynsection-1';
 <svg id="graph" class="graph">
 <g id="viewport">
 <title>builtins/object/include/helios_object.h</title>
-<polygon fill="#ffffff" stroke="transparent" points="-4,4 -4,-225 808,-225 808,4 -4,4"/>
-<!-- Node7 -->
+<polygon fill="#ffffff" stroke="transparent" points="-4,4 -4,-225 778,-225 778,4 -4,4"/>
+<!-- Node8 -->
 <g id="node1" class="node">
-<title>Node7</title>
+<title>Node8</title>
 <g id="a_node1"><a xlink:title=" ">
 <polygon fill="#bfbfbf" stroke="#000000" points="393,-190.5 393,-220.5 503,-220.5 503,-190.5 393,-190.5"/>
 <text text-anchor="start" x="401" y="-208.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">builtins/object/include</text>
@@ -65,9 +65,9 @@ var sectionId = 'dynsection-1';
 </a>
 </g>
 </g>
-<!-- Node8 -->
+<!-- Node9 -->
 <g id="node2" class="node">
-<title>Node8</title>
+<title>Node9</title>
 <g id="a_node2"><a xlink:href="helios__hashmap_8h.html" target="_top" xlink:title=" ">
 <polygon fill="#ffffff" stroke="#000000" points="0,-123.5 0,-153.5 124,-153.5 124,-123.5 0,-123.5"/>
 <text text-anchor="start" x="8" y="-141.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">builtins/hashmap/include</text>
@@ -75,30 +75,30 @@ var sectionId = 'dynsection-1';
 </a>
 </g>
 </g>
-<!-- Node7&#45;&gt;Node8 -->
+<!-- Node8&#45;&gt;Node9 -->
 <g id="edge1" class="edge">
-<title>Node7&#45;&gt;Node8</title>
+<title>Node8&#45;&gt;Node9</title>
 <path fill="none" stroke="#191970" d="M382.5739,-195.3429C319.7502,-185.4216 222.2308,-169.5805 138,-154 133.4979,-153.1672 128.8511,-152.2823 124.1775,-151.3736"/>
 <polygon fill="#191970" stroke="#191970" points="382.3123,-198.8447 392.7352,-196.9437 383.4018,-191.93 382.3123,-198.8447"/>
 </g>
-<!-- Node9 -->
+<!-- Node10 -->
 <g id="node3" class="node">
-<title>Node9</title>
+<title>Node10</title>
 <g id="a_node3"><a xlink:href="builtins_8h.html" target="_top" xlink:title=" ">
 <polygon fill="#ffffff" stroke="#000000" points="90.5,-62 90.5,-81 213.5,-81 213.5,-62 90.5,-62"/>
 <text text-anchor="middle" x="152" y="-69" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">builtins/include/builtins.h</text>
 </a>
 </g>
 </g>
-<!-- Node7&#45;&gt;Node9 -->
+<!-- Node8&#45;&gt;Node10 -->
 <g id="edge4" class="edge">
-<title>Node7&#45;&gt;Node9</title>
+<title>Node8&#45;&gt;Node10</title>
 <path fill="none" stroke="#191970" d="M382.5022,-201.4795C310.3613,-195.6847 200.6208,-182.3869 171,-154 150.8379,-134.6778 150.1379,-98.5925 151.1171,-81.2703"/>
 <polygon fill="#191970" stroke="#191970" points="382.6189,-204.9989 392.8591,-202.2809 383.159,-198.0198 382.6189,-204.9989"/>
 </g>
-<!-- Node11 -->
+<!-- Node12 -->
 <g id="node5" class="node">
-<title>Node11</title>
+<title>Node12</title>
 <g id="a_node5"><a xlink:href="helios__integer_8c.html" target="_top" xlink:title=" ">
 <polygon fill="#ffffff" stroke="#000000" points="232,-56.5 232,-86.5 340,-86.5 340,-56.5 232,-56.5"/>
 <text text-anchor="start" x="240" y="-74.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">builtins/integer/helios</text>
@@ -106,15 +106,15 @@ var sectionId = 'dynsection-1';
 </a>
 </g>
 </g>
-<!-- Node7&#45;&gt;Node11 -->
+<!-- Node8&#45;&gt;Node12 -->
 <g id="edge5" class="edge">
-<title>Node7&#45;&gt;Node11</title>
+<title>Node8&#45;&gt;Node12</title>
 <path fill="none" stroke="#191970" d="M448.2994,-180.3835C447.1995,-162.3801 442.8788,-138.6422 429,-123 416.7847,-109.2327 375.4198,-95.1772 340.301,-85.2357"/>
 <polygon fill="#191970" stroke="#191970" points="444.8041,-180.5897 448.6239,-190.472 451.8005,-180.3646 444.8041,-180.5897"/>
 </g>
-<!-- Node12 -->
+<!-- Node13 -->
 <g id="node6" class="node">
-<title>Node12</title>
+<title>Node13</title>
 <g id="a_node6"><a xlink:href="helios__integer__math_8c.html" target="_top" xlink:title=" ">
 <polygon fill="#ffffff" stroke="#000000" points="480,-56.5 480,-86.5 588,-86.5 588,-56.5 480,-56.5"/>
 <text text-anchor="start" x="488" y="-74.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">builtins/integer/helios</text>
@@ -122,15 +122,15 @@ var sectionId = 'dynsection-1';
 </a>
 </g>
 </g>
-<!-- Node7&#45;&gt;Node12 -->
+<!-- Node8&#45;&gt;Node13 -->
 <g id="edge6" class="edge">
-<title>Node7&#45;&gt;Node12</title>
+<title>Node8&#45;&gt;Node13</title>
 <path fill="none" stroke="#191970" d="M463.218,-181.7882C480.8275,-154.3502 509.307,-109.9751 524.2054,-86.7614"/>
 <polygon fill="#191970" stroke="#191970" points="460.1538,-180.0827 457.6981,-190.389 466.0449,-183.8635 460.1538,-180.0827"/>
 </g>
-<!-- Node13 -->
+<!-- Node14 -->
 <g id="node7" class="node">
-<title>Node13</title>
+<title>Node14</title>
 <g id="a_node7"><a xlink:href="helios__integer_8h.html" target="_top" xlink:title=" ">
 <polygon fill="#ffffff" stroke="#000000" points="306.5,-123.5 306.5,-153.5 419.5,-153.5 419.5,-123.5 306.5,-123.5"/>
 <text text-anchor="start" x="314.5" y="-141.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">builtins/integer/include</text>
@@ -138,15 +138,15 @@ var sectionId = 'dynsection-1';
 </a>
 </g>
 </g>
-<!-- Node7&#45;&gt;Node13 -->
+<!-- Node8&#45;&gt;Node14 -->
 <g id="edge7" class="edge">
-<title>Node7&#45;&gt;Node13</title>
+<title>Node8&#45;&gt;Node14</title>
 <path fill="none" stroke="#191970" d="M420.8055,-184.0643C408.2374,-174.1577 393.6083,-162.6265 382.2115,-153.6432"/>
 <polygon fill="#191970" stroke="#191970" points="418.6919,-186.8549 428.7122,-190.2967 423.0253,-181.3574 418.6919,-186.8549"/>
 </g>
-<!-- Node14 -->
+<!-- Node15 -->
 <g id="node8" class="node">
-<title>Node14</title>
+<title>Node15</title>
 <g id="a_node8"><a xlink:href="helios__object_8c.html" target="_top" xlink:title=" ">
 <polygon fill="#ffffff" stroke="#000000" points="552.5,-123.5 552.5,-153.5 657.5,-153.5 657.5,-123.5 552.5,-123.5"/>
 <text text-anchor="start" x="560.5" y="-141.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">builtins/object/helios</text>
@@ -154,15 +154,15 @@ var sectionId = 'dynsection-1';
 </a>
 </g>
 </g>
-<!-- Node7&#45;&gt;Node14 -->
+<!-- Node8&#45;&gt;Node15 -->
 <g id="edge11" class="edge">
-<title>Node7&#45;&gt;Node14</title>
+<title>Node8&#45;&gt;Node15</title>
 <path fill="none" stroke="#191970" d="M492.6359,-186.4516C517.035,-176.0392 546.834,-163.3224 569.6125,-153.6017"/>
 <polygon fill="#191970" stroke="#191970" points="491.0576,-183.3197 483.2339,-190.4639 493.8052,-189.7579 491.0576,-183.3197"/>
 </g>
-<!-- Node15 -->
+<!-- Node16 -->
 <g id="node9" class="node">
-<title>Node15</title>
+<title>Node16</title>
 <g id="a_node9"><a xlink:href="helios__string_8c.html" target="_top" xlink:title=" ">
 <polygon fill="#ffffff" stroke="#000000" points="358.5,-56.5 358.5,-86.5 461.5,-86.5 461.5,-56.5 358.5,-56.5"/>
 <text text-anchor="start" x="366.5" y="-74.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">builtins/string/helios</text>
@@ -170,15 +170,15 @@ var sectionId = 'dynsection-1';
 </a>
 </g>
 </g>
-<!-- Node7&#45;&gt;Node15 -->
+<!-- Node8&#45;&gt;Node16 -->
 <g id="edge12" class="edge">
-<title>Node7&#45;&gt;Node15</title>
+<title>Node8&#45;&gt;Node16</title>
 <path fill="none" stroke="#191970" d="M459.1686,-180.6734C465.0815,-163.8581 469.6871,-141.4323 462,-123 455.8866,-108.3412 443.3456,-95.7191 432.1114,-86.6396"/>
 <polygon fill="#191970" stroke="#191970" points="455.775,-179.7437 455.4163,-190.3325 462.2999,-182.2785 455.775,-179.7437"/>
 </g>
-<!-- Node16 -->
+<!-- Node17 -->
 <g id="node10" class="node">
-<title>Node16</title>
+<title>Node17</title>
 <g id="a_node10"><a xlink:href="helios__string_8h.html" target="_top" xlink:title=" ">
 <polygon fill="#ffffff" stroke="#000000" points="180,-123.5 180,-153.5 288,-153.5 288,-123.5 180,-123.5"/>
 <text text-anchor="start" x="188" y="-141.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">builtins/string/include</text>
@@ -186,81 +186,81 @@ var sectionId = 'dynsection-1';
 </a>
 </g>
 </g>
-<!-- Node7&#45;&gt;Node16 -->
+<!-- Node8&#45;&gt;Node17 -->
 <g id="edge13" class="edge">
-<title>Node7&#45;&gt;Node16</title>
+<title>Node8&#45;&gt;Node17</title>
 <path fill="none" stroke="#191970" d="M390.2274,-187.4123C356.4266,-176.8298 314.2452,-163.6235 282.2352,-153.6017"/>
 <polygon fill="#191970" stroke="#191970" points="389.3852,-190.8161 399.9742,-190.4639 391.4768,-184.1359 389.3852,-190.8161"/>
 </g>
-<!-- Node17 -->
+<!-- Node18 -->
 <g id="node11" class="node">
-<title>Node17</title>
-<g id="a_node11"><a xlink:href="helios__memory_8c.html" target="_top" xlink:title=" ">
-<polygon fill="#ffffff" stroke="#000000" points="676,-129 676,-148 804,-148 804,-129 676,-129"/>
-<text text-anchor="middle" x="740" y="-136" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">memory/helios_memory.c</text>
+<title>Node18</title>
+<g id="a_node11"><a xlink:href="refcount_8c.html" target="_top" xlink:title=" ">
+<polygon fill="#ffffff" stroke="#000000" points="676,-129 676,-148 774,-148 774,-129 676,-129"/>
+<text text-anchor="middle" x="725" y="-136" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">memory/refcount.c</text>
 </a>
 </g>
 </g>
-<!-- Node7&#45;&gt;Node17 -->
+<!-- Node8&#45;&gt;Node18 -->
 <g id="edge17" class="edge">
-<title>Node7&#45;&gt;Node17</title>
-<path fill="none" stroke="#191970" d="M513.182,-190.5439C569.7154,-177.5722 649.8517,-159.1847 698.186,-148.0943"/>
-<polygon fill="#191970" stroke="#191970" points="512.2302,-187.1712 503.2663,-192.819 513.7957,-193.9939 512.2302,-187.1712"/>
+<title>Node8&#45;&gt;Node18</title>
+<path fill="none" stroke="#191970" d="M512.9252,-190.773C556.5685,-180.7406 615.3382,-166.9743 667,-154 674.4806,-152.1213 682.4828,-150.0336 690.0799,-148.0147"/>
+<polygon fill="#191970" stroke="#191970" points="511.9764,-187.3996 503.0123,-193.0473 513.5418,-194.2224 511.9764,-187.3996"/>
 </g>
-<!-- Node8&#45;&gt;Node9 -->
+<!-- Node9&#45;&gt;Node10 -->
 <g id="edge2" class="edge">
-<title>Node8&#45;&gt;Node9</title>
+<title>Node9&#45;&gt;Node10</title>
 <path fill="none" stroke="#191970" d="M90.5962,-117.2117C106.9132,-105.0646 126.5638,-90.4358 139.165,-81.055"/>
 <polygon fill="#191970" stroke="#191970" points="88.3537,-114.5177 82.4224,-123.2967 92.5338,-120.1327 88.3537,-114.5177"/>
 </g>
-<!-- Node10 -->
+<!-- Node11 -->
 <g id="node4" class="node">
-<title>Node10</title>
+<title>Node11</title>
 <g id="a_node4"><a xlink:href="test_8c.html" target="_top" xlink:title=" ">
 <polygon fill="#ffffff" stroke="#000000" points="121.5,-.5 121.5,-19.5 182.5,-19.5 182.5,-.5 121.5,-.5"/>
 <text text-anchor="middle" x="152" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">test/test.c</text>
 </a>
 </g>
 </g>
-<!-- Node9&#45;&gt;Node10 -->
+<!-- Node10&#45;&gt;Node11 -->
 <g id="edge3" class="edge">
-<title>Node9&#45;&gt;Node10</title>
+<title>Node10&#45;&gt;Node11</title>
 <path fill="none" stroke="#191970" d="M152,-51.7462C152,-41.0519 152,-28.314 152,-19.7449"/>
 <polygon fill="#191970" stroke="#191970" points="148.5001,-51.8906 152,-61.8906 155.5001,-51.8907 148.5001,-51.8906"/>
 </g>
-<!-- Node13&#45;&gt;Node9 -->
+<!-- Node14&#45;&gt;Node10 -->
 <g id="edge8" class="edge">
-<title>Node13&#45;&gt;Node9</title>
+<title>Node14&#45;&gt;Node10</title>
 <path fill="none" stroke="#191970" d="M306.0124,-120.4044C266.0079,-107.7016 214.1067,-91.2211 181.9346,-81.0053"/>
 <polygon fill="#191970" stroke="#191970" points="305.0572,-123.7732 315.6475,-123.4639 307.1757,-117.1015 305.0572,-123.7732"/>
 </g>
-<!-- Node13&#45;&gt;Node11 -->
+<!-- Node14&#45;&gt;Node12 -->
 <g id="edge9" class="edge">
-<title>Node13&#45;&gt;Node11</title>
+<title>Node14&#45;&gt;Node12</title>
 <path fill="none" stroke="#191970" d="M337.7124,-116.4965C326.476,-106.7193 313.5308,-95.4554 303.4033,-86.6432"/>
 <polygon fill="#191970" stroke="#191970" points="335.6861,-119.3728 345.5275,-123.2967 340.281,-114.092 335.6861,-119.3728"/>
 </g>
-<!-- Node13&#45;&gt;Node12 -->
+<!-- Node14&#45;&gt;Node13 -->
 <g id="edge10" class="edge">
-<title>Node13&#45;&gt;Node12</title>
+<title>Node14&#45;&gt;Node13</title>
 <path fill="none" stroke="#191970" d="M410.912,-119.7275C437.616,-109.2645 470.4277,-96.4084 495.4569,-86.6017"/>
 <polygon fill="#191970" stroke="#191970" points="409.4097,-116.5569 401.3757,-123.4639 411.9634,-123.0745 409.4097,-116.5569"/>
 </g>
-<!-- Node16&#45;&gt;Node9 -->
+<!-- Node17&#45;&gt;Node10 -->
 <g id="edge14" class="edge">
-<title>Node16&#45;&gt;Node9</title>
+<title>Node17&#45;&gt;Node10</title>
 <path fill="none" stroke="#191970" d="M207.5357,-116.8767C192.7511,-104.7967 175.0699,-90.3498 163.6941,-81.055"/>
 <polygon fill="#191970" stroke="#191970" points="205.4346,-119.6797 215.3929,-123.2967 209.8637,-114.2591 205.4346,-119.6797"/>
 </g>
-<!-- Node16&#45;&gt;Node11 -->
+<!-- Node17&#45;&gt;Node12 -->
 <g id="edge15" class="edge">
-<title>Node16&#45;&gt;Node11</title>
+<title>Node17&#45;&gt;Node12</title>
 <path fill="none" stroke="#191970" d="M251.9665,-115.3509C259.3417,-105.8482 267.6734,-95.1132 274.2471,-86.6432"/>
 <polygon fill="#191970" stroke="#191970" points="249.1659,-113.2508 245.7996,-123.2967 254.6958,-117.5427 249.1659,-113.2508"/>
 </g>
-<!-- Node16&#45;&gt;Node15 -->
+<!-- Node17&#45;&gt;Node16 -->
 <g id="edge16" class="edge">
-<title>Node16&#45;&gt;Node15</title>
+<title>Node17&#45;&gt;Node16</title>
 <path fill="none" stroke="#191970" d="M282.9516,-119.865C310.5014,-109.3773 344.4559,-96.4515 370.3299,-86.6017"/>
 <polygon fill="#191970" stroke="#191970" points="281.5983,-116.6351 273.4978,-123.4639 284.0888,-123.1771 281.5983,-116.6351"/>
 </g>

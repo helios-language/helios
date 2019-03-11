@@ -3,17 +3,24 @@
 #define HELIOS_MEMORY_H
 
 #include <builtinutils.h>
+#include <stdbool.h>
 #include <stddef.h>
 #include <stdint.h>
 
 #define GC_DEFAULT_LENGTH 10
+#define GC_REHASH_PERCENT ((double)55)
 
 struct __helios_object_s;
 
 typedef struct {
+    bool used;
+    struct __helios_object_s *obj;
+} __helios_gc_hashmap_node;
+
+typedef struct {
     uint32_t size;
     uint32_t filled;
-    struct __helios_object_s **allocated_objects;
+    __helios_gc_hashmap_node *allocated_objects;
 } garbagecollector;
 
 garbagecollector *helios_get_garbagecollector();
@@ -21,13 +28,13 @@ garbagecollector *helios_get_garbagecollector();
 void helios_set_garbagecollector(garbagecollector *gc);
 garbagecollector *helios_init_garbagecollector();
 void helios_delete_garbagecollector(garbagecollector *gc);
-static void helios_track_object(struct __helios_object_s *obj);
 void helios_free_all_tracked(garbagecollector *gc);
 void helios_garbage_collect(garbagecollector *gc);
 struct __helios_object_s *helios_allocate_object(size_t size);
 struct __helios_object_s *helios_allocate_object_on_gc(garbagecollector *gc,
                                                        size_t size);
 void helios_free_object(struct __helios_object_s *obj);
+void helios_set_garbagecollectable(struct __helios_object_s *obj);
 
 /**
  *  the global current garbagecollector.

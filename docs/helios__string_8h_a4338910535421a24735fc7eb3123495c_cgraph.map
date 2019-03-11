@@ -1,6 +1,6 @@
 <map id="helios_string_from_charp" name="helios_string_from_charp">
-<area shape="rect" id="node1" title="Create a helios_string object from a c string." alt="" coords="5,5,133,47"/>
-<area shape="rect" id="node2" href="$helios__string_8c.html#af727ca5352482ab7e542510f178a9f85" title="Constructor of a helios_string." alt="" coords="181,13,300,39"/>
-<area shape="rect" id="node3" href="$helios__memory_8c.html#aab8866fd2abd9389795ad1639991caa4" title="Allocates a new helios object (and performs all the GC steps associated with that action)." alt="" coords="348,13,499,39"/>
-<area shape="rect" id="node4" href="$helios__memory_8c.html#a27b2da5d6954fd6e7aa0d2f352336c25" title="Get the global current garbage collector." alt="" coords="547,13,729,39"/>
+<area shape="rect" id="node1" title="Create a helios_string object from a c string." alt="" coords="5,23,133,65"/>
+<area shape="rect" id="node2" href="$helios__string_8c.html#af727ca5352482ab7e542510f178a9f85" title="Constructor of a helios_string." alt="" coords="181,31,300,57"/>
+<area shape="rect" id="node3" href="$helios__memory_8h.html#af87f0050f8e236d0945592fa4e54dc94" title="Allocates a new helios object (and performs all the GC steps associated with that action)." alt="" coords="371,5,521,32"/>
+<area shape="rect" id="node4" href="$helios__memory_8h.html#ab14fb1c046aae61ab06eda8eeaf2cd85" title=" " alt="" coords="348,56,544,83"/>
 </map>

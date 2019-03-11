@@ -21,7 +21,7 @@
 <!-- Node2 -->
 <g id="node2" class="node">
 <title>Node2</title>
-<g id="a_node2"><a xlink:href="helios__memory_8c.html#a8624e91857b860a62db7fc2cc20841b4" target="_top" xlink:title="Frees a helios object.">
+<g id="a_node2"><a xlink:href="helios__memory_8h.html#a08e10d6dde741394f52241662ea01fc4" target="_top" xlink:title=" ">
 <polygon fill="#ffffff" stroke="#000000" points="144,-.5 144,-19.5 239,-19.5 239,-.5 144,-.5"/>
 <text text-anchor="middle" x="191.5" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">helios_free_object</text>
 </a>

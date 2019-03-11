@@ -1,15 +1,15 @@
 <map id="builtins/type/include/helios_type.h" name="builtins/type/include/helios_type.h">
-<area shape="rect" id="node1" title=" " alt="" coords="365,5,503,47"/>
+<area shape="rect" id="node1" title=" " alt="" coords="355,5,492,47"/>
 <area shape="rect" id="node2" href="$helios__object_8c.html" title=" " alt="" coords="5,184,145,225"/>
-<area shape="rect" id="node3" href="$helios__object_8h.html" title=" " alt="" coords="361,95,507,136"/>
-<area shape="rect" id="node13" href="$helios__type_8c.html" title=" " alt="" coords="531,95,662,136"/>
-<area shape="rect" id="node4" href="$helios__hashmap_8h.html" title=" " alt="" coords="634,184,799,225"/>
-<area shape="rect" id="node5" href="$builtins_8h.html" title=" " alt="" coords="496,281,660,307"/>
-<area shape="rect" id="node7" href="$helios__integer_8c.html" title=" " alt="" coords="823,273,967,315"/>
-<area shape="rect" id="node8" href="$helios__integer__math_8c.html" title=" " alt="" coords="991,273,1135,315"/>
-<area shape="rect" id="node9" href="$helios__integer_8h.html" title=" " alt="" coords="824,184,975,225"/>
+<area shape="rect" id="node3" href="$helios__object_8h.html" title=" " alt="" coords="350,95,497,136"/>
+<area shape="rect" id="node13" href="$helios__type_8c.html" title=" " alt="" coords="521,95,651,136"/>
+<area shape="rect" id="node4" href="$helios__hashmap_8h.html" title=" " alt="" coords="594,184,759,225"/>
+<area shape="rect" id="node5" href="$builtins_8h.html" title=" " alt="" coords="516,281,680,307"/>
+<area shape="rect" id="node7" href="$helios__integer_8c.html" title=" " alt="" coords="783,273,927,315"/>
+<area shape="rect" id="node8" href="$helios__integer__math_8c.html" title=" " alt="" coords="951,273,1095,315"/>
+<area shape="rect" id="node9" href="$helios__integer_8h.html" title=" " alt="" coords="784,184,935,225"/>
 <area shape="rect" id="node10" href="$helios__string_8c.html" title=" " alt="" coords="195,273,332,315"/>
 <area shape="rect" id="node11" href="$helios__string_8h.html" title=" " alt="" coords="271,184,415,225"/>
-<area shape="rect" id="node12" href="$helios__memory_8c.html" title=" " alt="" coords="439,191,610,218"/>
-<area shape="rect" id="node6" href="$test_8c.html" title=" " alt="" coords="537,363,619,389"/>
+<area shape="rect" id="node12" href="$refcount_8c.html" title=" " alt="" coords="439,191,570,218"/>
+<area shape="rect" id="node6" href="$test_8c.html" title=" " alt="" coords="557,363,639,389"/>
 </map>

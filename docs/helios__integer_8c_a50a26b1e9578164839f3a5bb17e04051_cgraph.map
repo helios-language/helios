@@ -1,5 +1,5 @@
 <map id="helios_integer_init" name="helios_integer_init">
-<area shape="rect" id="node1" title="Constructor of a helios_integer object." alt="" coords="5,5,132,32"/>
-<area shape="rect" id="node2" href="$helios__memory_8c.html#aab8866fd2abd9389795ad1639991caa4" title="Allocates a new helios object (and performs all the GC steps associated with that action)." alt="" coords="180,5,331,32"/>
-<area shape="rect" id="node3" href="$helios__memory_8c.html#a27b2da5d6954fd6e7aa0d2f352336c25" title="Get the global current garbage collector." alt="" coords="379,5,561,32"/>
+<area shape="rect" id="node1" title="Constructor of a helios_integer object." alt="" coords="5,31,132,57"/>
+<area shape="rect" id="node2" href="$helios__memory_8h.html#af87f0050f8e236d0945592fa4e54dc94" title="Allocates a new helios object (and performs all the GC steps associated with that action)." alt="" coords="203,5,353,32"/>
+<area shape="rect" id="node3" href="$helios__memory_8h.html#ab14fb1c046aae61ab06eda8eeaf2cd85" title=" " alt="" coords="180,56,376,83"/>
 </map>

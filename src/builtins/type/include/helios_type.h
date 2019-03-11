@@ -15,8 +15,8 @@ struct __helios_type_s;
  */
 #define HELIOS_OBJECT_COMMON_BASE                                              \
     struct __helios_type_s *class;                                             \
-    uint32_t refcount;                                                         \
-    garbagecollector *gc
+    garbagecollector *gc;                                                      \
+    uint32_t refcount
 
 /**
  * Initializes the HELIOS_OBJECT_COMMON_BASE field of any helios object.
@@ -104,19 +104,20 @@ struct __helios_type_s;
 
 /**
  * The definition of a helios type struct. This is the part in any helios
- * object defining what type it is. Any helios struct must define a type and use
- * it in the HELIOS_OBJECT_COMMON_BASE which tells the object system what type
- * the object is. It has pointers to all the functions and fields acting on the
- * type which are standardized. Non standard functions can still be exported
- * (example: helios_string_from_charp).
+ * object defining what type it is. Any helios struct must define a type and
+ * use it in the HELIOS_OBJECT_COMMON_BASE which tells the object system
+ * what type the object is. It has pointers to all the functions and fields
+ * acting on the type which are standardized. Non standard functions can
+ * still be exported (example: helios_string_from_charp).
  *
  * Inheritance system:
  * Any object has an helios_type object in it of which the object is an
- * instance. helios_type is always instance of itself. By putting a pointer to
- * the type of an object in the first field of the struct, any helios_object can
- * be cast to the msot basic object possible (helios_object), and using the type
- * it's type can be determined and the object can be cast back. This makes it
- * possible to use helios_object as type for any helios object.
+ * instance. helios_type is always instance of itself. By putting a pointer
+ * to the type of an object in the first field of the struct, any
+ * helios_object can be cast to the msot basic object possible
+ * (helios_object), and using the type it's type can be determined and the
+ * object can be cast back. This makes it possible to use helios_object as
+ * type for any helios object.
  */
 typedef struct __helios_type_s {
     HELIOS_OBJECT_COMMON_BASE;

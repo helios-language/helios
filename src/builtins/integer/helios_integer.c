@@ -40,6 +40,8 @@ helios_object *helios_integer_init() {
     *self =
         (helios_integer){HELIOS_OBJECT_COMMON_BASE_INIT(&helios_integer_type),
                          .value = HELIOS_INTEGER_DEFAULT_VALUE};
+    helios_set_garbagecollectable(TO_HELIOS_OBJECT(self));
+
     return TO_HELIOS_OBJECT(self);
 }
 
