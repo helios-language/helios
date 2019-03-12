@@ -21,17 +21,17 @@ includedirs :=  $(sort $(foreach dir, $(foreach dir1, $(dirs), $(shell dirname $
 #linkerflags (include lm (math.h) for advanced math)
 LFLAGS = -lm
 
-#cflags 
+#cflags
 CFLAGS= -g -O0 -Wall
 
 #automatically include any header in dirs called include
 CFLAGS += $(foreach dir, $(includedirs), -I./$(dir))
 
 #assembly
-ASMFLAGS = 
+ASMFLAGS =
 ASMFLAGS += $(foreach dir, $(includedirs), -I./$(dir))
 
-NASMFLAGS = 
+NASMFLAGS =
 
 #support for .S
 assembly_source_files := $(foreach dir,$(dirs),$(wildcard $(dir)/*.S))
@@ -54,7 +54,7 @@ c_object_files := $(patsubst src/%.c, \
 all: $(executable)
 
 install:
-	pacman -S built-essential doxygen graphviz
+	sudo pacman -S base-devel doxygen graphviz valgrind
 
 leaktest $(executable):
 	valgrind --leak-check=yes $(executable) $(TESTFILE) $(TESTRES)
