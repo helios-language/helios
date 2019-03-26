@@ -163,3 +163,7 @@ This is an example of a normal memory usage. It seems pretty high but the vm ass
 ![](resources/memory%20usage%20two%20phases.png)
 
 As is very apparent in this image, there are two phases in the running of a helios program. the compilation and the execution. Both take up some memory but when the execution start most of the memory used by the compiler is freed.
+
+
+
+note: the helios language spec will only allow either tabs or 42 spaces/tab. The default 4 spaces per tab    will not be allowed as tabs are clearly superior.
