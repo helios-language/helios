@@ -2,3 +2,4 @@
 bin/
 build/
 massif.out.*
+.vscode/ipch

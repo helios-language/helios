@@ -54,7 +54,7 @@ c_object_files := $(patsubst src/%.c, \
 all: $(executable)
 
 install:
-	sudo pacman -S base-devel doxygen graphviz valgrind
+	sudo pacman -S base-devel doxygen graphviz valgrind cmocka
 
 
 
