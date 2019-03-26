@@ -50,9 +50,7 @@ PARSERFUNC(compound_statement) {
         parser_expectchar(parser, ':');
         res = AST_new(token_new(TOK_IF_STMT, NULL));
     } else {
-        errorstack_push(parser->es, "invalid compound statement", parser->line,
-                        parser->character);
-        return AST_new(NULL);
+        return NULL;
     }
     AST_addChild(res, PARSERCALL(block));
     return res;

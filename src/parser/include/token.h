@@ -33,6 +33,7 @@ typedef enum {
     TOK_INTEGER_DIVIDE,
     TOK_MULTIPLY,
     TOK_POWER,
+    TOK_ASSIGN,
 
     TOK_BLOCK,
     TOK_ROOTBLOCK,

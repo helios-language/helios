@@ -57,5 +57,6 @@ PARSERFUNC(stringconst) {
     } else {
         errorstack_push(parser->es, "invalid string constant", parser->line,
                         parser->character);
+        return AST_new(NULL);
     }
 }

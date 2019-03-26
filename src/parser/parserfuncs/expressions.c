@@ -21,9 +21,45 @@ DECLARE_PARSERFUNC(intconst);
 DECLARE_PARSERFUNC(floatconst);
 DECLARE_PARSERFUNC(stringconst);
 
+PARSERFUNC(name) {
+    parser_skipws(parser);
+
+    char *res = malloc(10 * sizeof(char));
+    uint32_t filled = 0;
+    uint32_t size = 10;
+
+    if (parser_acceptanychar(
+            parser, "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ_")) {
+        res[filled++] = parser->accepted[0];
+        if (filled >= size) {
+            size <<= 1;
+            res = realloc(res, size * sizeof(char));
+        }
+        while (parser_acceptanychar(parser,
+                                    "0123456789abcdefghijklmnopqrstuvwxyz"
+                                    "ABCDEFGHIJKLMNOPQRSTUVWXYZ_")) {
+            res[filled++] = parser->accepted[0];
+            if (filled >= size) {
+                size <<= 1;
+                res = realloc(res, size * sizeof(char));
+            }
+        }
+        res[filled] = 0;
+
+        AST *ast = AST_new(token_new(TOK_NAME, helios_string_from_charp(res)));
+        free(res);
+        return ast;
+    } else {
+        errorstack_push(parser->es, "invalid name", parser->line,
+                        parser->character);
+        return AST_new(NULL);
+    }
+}
+
 /**
  * Tries to accept a floating point constant. if it couldn't find one it
- * tries an Integer constand and returns this.
+ * tries an Integer constant, if it couldn't find one it tries a String
+ * constant, if it couldnt find one etc... and returns this.
  *
  * TODO: All other constants (string, list etc)
  * NOTE: The order of float first int last is on purpose as the float
@@ -38,6 +74,8 @@ PARSERFUNC(atom) {
     uint32_t eslength1 = errorstack_length(parser->es);
     Parser_t *parsercp1 = parser_copy(parser);
 
+    // string
+
     AST *res = PARSERCALL(stringconst);
     if (errorstack_length(parser->es) == eslength1) {
         parser_free_simple(parsercp1);
@@ -49,6 +87,8 @@ PARSERFUNC(atom) {
     errorstack_popuntil(parser->es, eslength1);
     parser_restore(parser, parsercp1);
 
+    // float
+
     res = PARSERCALL(floatconst);
     if (errorstack_length(parser->es) == eslength1) {
         parser_free_simple(parsercp1);
@@ -59,6 +99,21 @@ PARSERFUNC(atom) {
 
     errorstack_popuntil(parser->es, eslength1);
     parser_restore(parser, parsercp1);
+
+    // name
+
+    res = PARSERCALL(name);
+    if (errorstack_length(parser->es) == eslength1) {
+        parser_free_simple(parsercp1);
+        return res;
+    }
+    AST_free(res);
+    res = NULL;
+
+    errorstack_popuntil(parser->es, eslength1);
+    parser_restore(parser, parsercp1);
+
+    // int
 
     parser_free_simple(parsercp1);
     return PARSERCALL(intconst);

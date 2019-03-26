@@ -10,18 +10,47 @@
 #include <stdlib.h>
 #include <string.h>
 
+DECLARE_PARSERFUNC(name);
 DECLARE_PARSERFUNC(expr);
 DECLARE_PARSERFUNC(compound_statement);
 
+PARSERFUNC(single_statement) {
+    AST *res = NULL;
+
+    parser_skipws(parser);
+
+    uint32_t eslength = errorstack_length(parser->es);
+    AST *left = PARSERCALL(expr);
+    if (errorstack_length(parser->es) > eslength) {
+        errorstack_popuntil(parser->es, eslength);
+        errorstack_push(parser->es, "expected name", parser->line,
+                        parser->character);
+        return AST_new(NULL);
+    }
+
+    parser_skipws(parser);
+    if (parser_acceptchar(parser, '=')) {
+        res = AST_new(token_new(TOK_ASSIGN, NULL));
+    }
+    parser_skipws(parser);
+    AST *right = PARSERCALL(expr);
+
+    if (res != NULL) {
+        AST_addChild(res, left);
+        AST_addChild(res, right);
+        return res;
+    } else {
+        return NULL;
+    }
+}
+
 PARSERFUNC(simple_statement) {
-    uint32_t length1 = errorstack_length(parser->es);
     AST *res = PARSERCALL(compound_statement);
-    if (length1 == errorstack_length(parser->es)) {
+    if (res != NULL) {
         return res;
     }
     AST_free(res);
-    errorstack_popuntil(parser->es, length1);
-    return PARSERCALL(expr);
+    return PARSERCALL(single_statement);
 }
 
 /**

@@ -27,6 +27,7 @@ const char *tokennames[] = {
     enumtostring(TOK_DIVIDE),      enumtostring(TOK_INTEGER_DIVIDE),
     enumtostring(TOK_PLUS),        enumtostring(TOK_MINUS),
     enumtostring(TOK_MULTIPLY),    enumtostring(TOK_POWER),
+    enumtostring(TOK_ASSIGN),
 
     enumtostring(TOK_UNARY_MINUS), enumtostring(TOK_UNARY_NOT),
     enumtostring(TOK_UNARY_PLUS),

@@ -9,6 +9,7 @@
 
 #include <builtinutils.h>
 
+#include <helios_boolean.h>
 #include <helios_code.h>
 #include <helios_float.h>
 #include <helios_hashmap.h>
