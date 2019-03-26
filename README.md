@@ -156,10 +156,10 @@ print(a)
 
 # memory usage and garbage collection
 
-![](resources/"memory useage of a simple expression")
+![](resources/memory%20useage%20of%20a%20simple%20expression)
 
 This is an example of a normal memory usage. It seems pretty high but the vm assumes large expressions and automatically allocates a kilobyte of memory for the internal execution stack, as allocating more at once is more efficient. The memory usage for the hvm part will therefore be pretty constant. 
 
-![](resources/"memory useage two phases")
+![](resources/memory%20useage%20two%20phases)
 
 As is very apparent in this image, there are two phases in the running of a helios program. the compilation and the execution. Both take up some memory but when the execution start most of the memory used by the compiler is freed.
