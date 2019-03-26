@@ -1,0 +1,4 @@
+<map id="errorstack_t" name="errorstack_t">
+<area shape="rect" id="node1" title="This struct represents a stack of errors." alt="" coords="5,95,96,121"/>
+<area shape="rect" id="node2" href="$structerror__t.html" title="This struct represents an error object." alt="" coords="21,5,80,32"/>
+</map>
