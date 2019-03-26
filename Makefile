@@ -20,16 +20,16 @@ includedirs :=  $(sort $(foreach dir, $(foreach dir1, $(dirs), $(shell dirname $
 
 #linkerflags (include lm (math.h) for advanced math)
 LFLAGS = -lm
+LIBRARIES = -lcmocka
 
 #cflags
-CFLAGS= -g -O0 -Wall
+CFLAGS= -g -O2 -Wall $(foreach dir, $(includedirs), -I./$(dir))
+test: CFLAGS= -g -O2 -Wall -DTEST $(foreach dir, $(includedirs), -I./$(dir))
 
-#automatically include any header in dirs called include
-CFLAGS += $(foreach dir, $(includedirs), -I./$(dir))
+
 
 #assembly
-ASMFLAGS =
-ASMFLAGS += $(foreach dir, $(includedirs), -I./$(dir))
+ASMFLAGS = $(foreach dir, $(includedirs), -I./$(dir))
 
 NASMFLAGS =
 
@@ -49,26 +49,22 @@ c_object_files := $(patsubst src/%.c, \
     build/%.o, $(c_source_files))
 #qemu
 
-.PHONY: all clean run test install leaktest memgraph
+.PHONY: all clean run test install leaktest memgraph test
 
 all: $(executable)
 
 install:
 	sudo pacman -S base-devel doxygen graphviz valgrind cmocka
 
-
-
 memgraph: $(executable)
 	valgrind --tool=massif --massif-out-file=massif.out.1 $(executable) $(TESTFILE) $(TESTRES)
 	massif-visualizer massif.out.1
 
 leaktest: $(executable)
-	valgrind --leak-check=full --show-leak-kinds=all $(executable) $(TESTFILE) $(TESTRES)
+	valgrind --error-exitcode=1 --leak-check=full --show-leak-kinds=all $(executable) $(TESTFILE) $(TESTRES)
 
 debug: $(executable)
 	gdb --args $(executable) $(TESTFILE) $(TESTRES)
-
-
 
 clean:
 	@rm -r build
@@ -78,11 +74,13 @@ run: $(executable)
 	@echo starting
 	@./$(executable) $(TESTFILE) $(TESTRES)
 
+test: $(executable)
+	@./$(executable)
 
 $(executable): $(assembly_object_files) $(c_object_files) $(nassembly_object_files)
 	@echo linking...
 	@mkdir -p bin
-	@$(LINKER) $(LFLAGS) -o $(executable) $(assembly_object_files) $(nassembly_object_files) $(c_object_files)
+	@$(LINKER) -L/usr/lib $(LFLAGS) -o $(executable) $(assembly_object_files) $(nassembly_object_files) $(c_object_files) $(LIBRARIES)
 
 # compile assembly files
 build/%.o: src/%.S

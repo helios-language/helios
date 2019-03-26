@@ -96,6 +96,7 @@ void helios_delete_garbagecollector(garbagecollector *gc) {
     helios_free_all_tracked(gc);
     free(gc->allocated_objects);
     free(gc);
+    __GC_CURRENT = NULL;
 }
 
 /**

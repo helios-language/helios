@@ -27,7 +27,11 @@
         "string.h": "c",
         "helios_serializeutils.h": "c",
         "serialize.h": "c",
-        "stdint.h": "c"
+        "stdint.h": "c",
+        "stdarg.h": "c",
+        "builtins_test.h": "c",
+        "parser_error.h": "c",
+        "error.h": "c"
     },
     "python.pythonPath": "/usr/bin/python3"
 }

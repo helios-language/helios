@@ -1,7 +1,7 @@
 
 #include <AST.h>
-#include <error.h>
 #include <parser.h>
+#include <parser_error.h>
 
 #include <stdbool.h>
 #include <stdint.h>

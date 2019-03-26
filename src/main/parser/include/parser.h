@@ -3,7 +3,7 @@
 #define PARSER_H
 
 #include <AST.h>
-#include <error.h>
+#include <parser_error.h>
 #include <stdbool.h>
 #include <stdint.h>
 
@@ -40,7 +40,7 @@
  *  This struct represents the state of the parser.
  */
 typedef struct Parser {
-    errorstack_t *es;   //!< the errorstack belonging to this parser
+    errorstack *es;     //!< the errorstack belonging to this parser
     uint32_t line;      //!< the line the parser is currently on
     uint32_t character; //!< the character in this line the parser is currently
                         //!< pointing at.

@@ -14,11 +14,11 @@
 /**
  *  This struct represents an error object.
  */
-typedef struct Error {
+typedef struct __error_s {
     uint32_t line;       //!< the line number of the occured error.
     uint32_t character;  //!< the character index of the occured error.
     const char *message; //!< the message associated with this error.
-} error_t;
+} parser_error;
 
 /**
  * This struct represents a stack of errors. Whenever a new error is caused
@@ -27,25 +27,25 @@ typedef struct Error {
  * empty and all errors on it are thrown, until the last one exits the
  * process. (this is the errorstack_traceback function in error.c)
  */
-typedef struct Errorstack {
+typedef struct __errorstack_s {
     uint32_t filled; //!< the amount of errors in the stack
     uint32_t size;   //!< the actual allocated size of the stack. Always larger
                      //!< than the filled parameter.
-    error_t *stack;
-} errorstack_t;
+    parser_error *stack;
+} errorstack;
 
-void error_print(error_t err);
-void error_throw(error_t err, const char *code, bool hard);
+void error_print(parser_error err);
+void error_throw(parser_error err, const char *code, bool hard);
 
-errorstack_t *errorstack_new();
-void errorstack_free(errorstack_t *es);
-void errorstack_push(errorstack_t *es, const char *message, uint32_t line,
+errorstack *errorstack_new();
+void errorstack_free(errorstack *es);
+void errorstack_push(errorstack *es, const char *message, uint32_t line,
                      uint32_t character);
-uint32_t errorstack_length(errorstack_t *es);
-error_t errorstack_pop(errorstack_t *es);
-void errorstack_popuntil(errorstack_t *es, uint32_t length);
-error_t errorstack_top(errorstack_t *es);
-bool errorstack_empty(errorstack_t *es);
-void errorstack_traceback(errorstack_t *es, const char *code);
+uint32_t errorstack_length(errorstack *es);
+parser_error errorstack_pop(errorstack *es);
+void errorstack_popuntil(errorstack *es, uint32_t length);
+parser_error errorstack_top(errorstack *es);
+bool errorstack_empty(errorstack *es);
+void errorstack_traceback(errorstack *es, const char *code);
 
 #endif

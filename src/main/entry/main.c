@@ -5,6 +5,7 @@
 #include <AST.h>
 #include <builtins.h>
 #include <error.h>
+#include <helios_test.h>
 #include <hvm.h>
 #include <parser.h>
 
