@@ -1,18 +1,19 @@
 <map id="parser/include/token.h" name="parser/include/token.h">
-<area shape="rect" id="node1" title=" " alt="" coords="802,5,953,32"/>
-<area shape="rect" id="node2" href="$builtins_8h.html" title=" " alt="" coords="349,80,424,107"/>
-<area shape="rect" id="node8" title=" " alt="" coords="739,453,813,480"/>
-<area shape="rect" id="node10" title=" " alt="" coords="379,453,445,480"/>
-<area shape="rect" id="node3" href="$builtinutils_8h.html" title=" " alt="" coords="19,453,109,480"/>
-<area shape="rect" id="node4" href="$helios__code_8h.html" title=" " alt="" coords="145,155,247,181"/>
-<area shape="rect" id="node5" href="$helios__object_8h.html" title=" " alt="" coords="396,229,505,256"/>
-<area shape="rect" id="node7" href="$helios__memory_8h.html" title=" " alt="" coords="167,379,287,405"/>
-<area shape="rect" id="node12" href="$helios__float_8h.html" title=" " alt="" coords="272,155,371,181"/>
-<area shape="rect" id="node13" href="$helios__hashmap_8h.html" title=" " alt="" coords="713,155,839,181"/>
-<area shape="rect" id="node14" href="$helios__integer_8h.html" title=" " alt="" coords="395,155,507,181"/>
-<area shape="rect" id="node15" href="$helios__string_8h.html" title=" " alt="" coords="531,155,637,181"/>
-<area shape="rect" id="node16" href="$serialize_8h.html" title=" " alt="" coords="193,229,274,256"/>
-<area shape="rect" id="node6" href="$helios__type_8h.html" title=" " alt="" coords="293,304,392,331"/>
-<area shape="rect" id="node11" title=" " alt="" coords="311,379,375,405"/>
-<area shape="rect" id="node9" title=" " alt="" coords="192,453,261,480"/>
+<area shape="rect" id="node1" title=" " alt="" coords="619,5,770,32"/>
+<area shape="rect" id="node2" href="$builtins_8h.html" title=" " alt="" coords="657,80,732,107"/>
+<area shape="rect" id="node8" title=" " alt="" coords="139,453,213,480"/>
+<area shape="rect" id="node10" title=" " alt="" coords="791,453,857,480"/>
+<area shape="rect" id="node3" href="$builtinutils_8h.html" title=" " alt="" coords="975,453,1065,480"/>
+<area shape="rect" id="node4" href="$helios__boolean_8h.html" title=" " alt="" coords="43,155,162,181"/>
+<area shape="rect" id="node5" href="$helios__object_8h.html" title=" " alt="" coords="528,229,637,256"/>
+<area shape="rect" id="node7" href="$helios__memory_8h.html" title=" " alt="" coords="859,379,979,405"/>
+<area shape="rect" id="node12" href="$helios__code_8h.html" title=" " alt="" coords="778,155,881,181"/>
+<area shape="rect" id="node13" href="$helios__float_8h.html" title=" " alt="" coords="337,155,436,181"/>
+<area shape="rect" id="node14" href="$helios__hashmap_8h.html" title=" " alt="" coords="186,155,313,181"/>
+<area shape="rect" id="node15" href="$helios__integer_8h.html" title=" " alt="" coords="460,155,572,181"/>
+<area shape="rect" id="node16" href="$helios__string_8h.html" title=" " alt="" coords="596,155,703,181"/>
+<area shape="rect" id="node17" href="$serialize_8h.html" title=" " alt="" coords="817,229,898,256"/>
+<area shape="rect" id="node6" href="$helios__type_8h.html" title=" " alt="" coords="772,304,871,331"/>
+<area shape="rect" id="node11" title=" " alt="" coords="720,379,784,405"/>
+<area shape="rect" id="node9" title=" " alt="" coords="881,453,951,480"/>
 </map>

@@ -50,6 +50,7 @@ PARSERFUNC(name) {
         free(res);
         return ast;
     } else {
+        free(res);
         errorstack_push(parser->es, "invalid name", parser->line,
                         parser->character);
         return AST_new(NULL);

@@ -9,93 +9,93 @@
 <g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 359)">
 <title>PARSERFUNC</title>
 <polygon fill="#ffffff" stroke="transparent" points="-4,4 -4,-359 650,-359 650,4 -4,4"/>
-<!-- Node61 -->
+<!-- Node75 -->
 <g id="node1" class="node">
-<title>Node61</title>
+<title>Node75</title>
 <g id="a_node1"><a xlink:title="Accepts parts of expressions containing operators like * and / or operators with the same precedance.">
 <polygon fill="#bfbfbf" stroke="#000000" points="0,-145.5 0,-164.5 86,-164.5 86,-145.5 0,-145.5"/>
 <text text-anchor="middle" x="43" y="-152.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">PARSERFUNC</text>
 </a>
 </g>
 </g>
-<!-- Node62 -->
+<!-- Node76 -->
 <g id="node2" class="node">
-<title>Node62</title>
+<title>Node76</title>
 <g id="a_node2"><a xlink:href="parser_8h.html#a8c4c57eca60b2cec9a372a04abea456d" target="_top" xlink:title="Advances the parser as long as it can find whitespace.">
 <polygon fill="#ffffff" stroke="#000000" points="269.5,-335.5 269.5,-354.5 349.5,-354.5 349.5,-335.5 269.5,-335.5"/>
 <text text-anchor="middle" x="309.5" y="-342.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">parser_skipws</text>
 </a>
 </g>
 </g>
-<!-- Node61&#45;&gt;Node62 -->
+<!-- Node75&#45;&gt;Node76 -->
 <g id="edge1" class="edge">
-<title>Node61&#45;&gt;Node62</title>
+<title>Node75&#45;&gt;Node76</title>
 <path fill="none" stroke="#191970" d="M47.3036,-164.6409C57.376,-186.2003 84.5,-238.7837 122,-269 162.5942,-301.7095 219.1432,-322.0372 259.5014,-333.3455"/>
 <polygon fill="#191970" stroke="#191970" points="258.8261,-336.7887 269.3936,-336.0282 260.6583,-330.0328 258.8261,-336.7887"/>
 </g>
-<!-- Node65 -->
+<!-- Node79 -->
 <g id="node5" class="node">
-<title>Node65</title>
+<title>Node79</title>
 <g id="a_node5"><a xlink:href="parser_8h.html#a3c9c52258898d196f76b4d58595b33b9" target="_top" xlink:title="Advances the parser only if the next n characters (where n is the length of the string) matches the s...">
 <polygon fill="#ffffff" stroke="#000000" points="122,-240.5 122,-259.5 224,-259.5 224,-240.5 122,-240.5"/>
 <text text-anchor="middle" x="173" y="-247.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">parser_acceptstring</text>
 </a>
 </g>
 </g>
-<!-- Node61&#45;&gt;Node65 -->
+<!-- Node75&#45;&gt;Node79 -->
 <g id="edge4" class="edge">
-<title>Node61&#45;&gt;Node65</title>
+<title>Node75&#45;&gt;Node79</title>
 <path fill="none" stroke="#191970" d="M51.9774,-164.7154C65.905,-179.3843 94.0375,-207.44 122,-226 127.4575,-229.6224 133.5477,-232.9913 139.5668,-235.9916"/>
 <polygon fill="#191970" stroke="#191970" points="138.3289,-239.2777 148.8656,-240.3865 141.3201,-232.949 138.3289,-239.2777"/>
 </g>
-<!-- Node70 -->
+<!-- Node84 -->
 <g id="node10" class="node">
-<title>Node70</title>
+<title>Node84</title>
 <g id="a_node10"><a xlink:href="parser_8h.html#a1a00af051004cb18edac760f39982eea" target="_top" xlink:title="Searches for the given character, advances the parser if it found it.">
 <polygon fill="#ffffff" stroke="#000000" points="261,-145.5 261,-164.5 358,-164.5 358,-145.5 261,-145.5"/>
 <text text-anchor="middle" x="309.5" y="-152.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">parser_acceptchar</text>
 </a>
 </g>
 </g>
-<!-- Node61&#45;&gt;Node70 -->
+<!-- Node75&#45;&gt;Node84 -->
 <g id="edge10" class="edge">
-<title>Node61&#45;&gt;Node70</title>
+<title>Node75&#45;&gt;Node84</title>
 <path fill="none" stroke="#191970" d="M57.6932,-164.5648C73.0226,-173.9274 98.1098,-187.5529 122,-193 166.199,-203.0775 179.9965,-203.8996 224,-193 241.561,-188.6502 243.5257,-181.477 260,-174 264.216,-172.0865 268.686,-170.1915 273.1477,-168.3816"/>
 <polygon fill="#191970" stroke="#191970" points="274.7771,-171.5016 282.7994,-164.5811 272.2124,-164.9884 274.7771,-171.5016"/>
 </g>
-<!-- Node71 -->
+<!-- Node85 -->
 <g id="node11" class="node">
-<title>Node71</title>
+<title>Node85</title>
 <g id="a_node11"><a xlink:href="AST_8c.html#a3a1c70c232e669f02ef0a4e171ee6ab2" target="_top" xlink:title="Constructore for ast objects.">
 <polygon fill="#ffffff" stroke="#000000" points="143.5,-164.5 143.5,-183.5 202.5,-183.5 202.5,-164.5 143.5,-164.5"/>
 <text text-anchor="middle" x="173" y="-171.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">AST_new</text>
 </a>
 </g>
 </g>
-<!-- Node61&#45;&gt;Node71 -->
+<!-- Node75&#45;&gt;Node85 -->
 <g id="edge12" class="edge">
-<title>Node61&#45;&gt;Node71</title>
+<title>Node75&#45;&gt;Node85</title>
 <path fill="none" stroke="#191970" d="M86.2881,-161.3267C101.5313,-163.5546 118.5742,-166.0455 133.4895,-168.2254"/>
 <polygon fill="#191970" stroke="#191970" points="133.0262,-171.6948 143.4273,-169.6778 134.0386,-164.7684 133.0262,-171.6948"/>
 </g>
-<!-- Node72 -->
+<!-- Node86 -->
 <g id="node12" class="node">
-<title>Node72</title>
+<title>Node86</title>
 <g id="a_node12"><a xlink:href="token_8h.html#a5f63b7723640416a125433badc7d6563" target="_top" xlink:title="Constructor for token objects.">
 <polygon fill="#ffffff" stroke="#000000" points="141,-126.5 141,-145.5 205,-145.5 205,-126.5 141,-126.5"/>
 <text text-anchor="middle" x="173" y="-133.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">token_new</text>
 </a>
 </g>
 </g>
-<!-- Node61&#45;&gt;Node72 -->
+<!-- Node75&#45;&gt;Node86 -->
 <g id="edge13" class="edge">
-<title>Node61&#45;&gt;Node72</title>
+<title>Node75&#45;&gt;Node86</title>
 <path fill="none" stroke="#191970" d="M86.2881,-148.6733C100.5526,-146.5885 116.3932,-144.2733 130.5914,-142.1982"/>
 <polygon fill="#191970" stroke="#191970" points="131.2049,-145.6458 140.5936,-140.7363 130.1925,-138.7194 131.2049,-145.6458"/>
 </g>
-<!-- Node73 -->
+<!-- Node87 -->
 <g id="node13" class="node">
-<title>Node73</title>
+<title>Node87</title>
 <g id="a_node13"><a xlink:href="helios__string_8c.html#a4338910535421a24735fc7eb3123495c" target="_top" xlink:title="Create a helios_string object from a c string.">
 <polygon fill="#ffffff" stroke="#000000" points="125,-77 125,-107 221,-107 221,-77 125,-77"/>
 <text text-anchor="start" x="133" y="-95" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">helios_string_from</text>
@@ -103,186 +103,186 @@
 </a>
 </g>
 </g>
-<!-- Node61&#45;&gt;Node73 -->
+<!-- Node75&#45;&gt;Node87 -->
 <g id="edge14" class="edge">
-<title>Node61&#45;&gt;Node73</title>
+<title>Node75&#45;&gt;Node87</title>
 <path fill="none" stroke="#191970" d="M62.7442,-145.4317C81.223,-136.4766 109.3892,-122.8268 132.6272,-111.5653"/>
 <polygon fill="#191970" stroke="#191970" points="134.4408,-114.5758 141.9134,-107.065 131.388,-108.2765 134.4408,-114.5758"/>
 </g>
-<!-- Node77 -->
+<!-- Node91 -->
 <g id="node17" class="node">
-<title>Node77</title>
+<title>Node91</title>
 <g id="a_node17"><a xlink:href="error_8c.html#a1febf822c4d9249dd4afd09c5d5f87bb" target="_top" xlink:title="Construct a new error object out of parameters, and push it to the errorstack.">
 <polygon fill="#ffffff" stroke="#000000" points="130,-38.5 130,-57.5 216,-57.5 216,-38.5 130,-38.5"/>
 <text text-anchor="middle" x="173" y="-45.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">errorstack_push</text>
 </a>
 </g>
 </g>
-<!-- Node61&#45;&gt;Node77 -->
+<!-- Node75&#45;&gt;Node91 -->
 <g id="edge18" class="edge">
-<title>Node61&#45;&gt;Node77</title>
+<title>Node75&#45;&gt;Node91</title>
 <path fill="none" stroke="#191970" d="M49.235,-145.4107C61.2724,-127.5952 89.4197,-89.1904 122,-67 124.859,-65.0528 127.9432,-63.2739 131.1298,-61.6551"/>
 <polygon fill="#191970" stroke="#191970" points="132.6151,-64.8247 140.2795,-57.5097 129.7263,-58.4485 132.6151,-64.8247"/>
 </g>
-<!-- Node78 -->
+<!-- Node92 -->
 <g id="node18" class="node">
-<title>Node78</title>
+<title>Node92</title>
 <g id="a_node18"><a xlink:href="AST_8c.html#a5f9c0bcd1d544aac044f4acf93c27ddb" target="_top" xlink:title="Adds a child ast node to a parent ast node.">
 <polygon fill="#ffffff" stroke="#000000" points="133,-.5 133,-19.5 213,-19.5 213,-.5 133,-.5"/>
 <text text-anchor="middle" x="173" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">AST_addChild</text>
 </a>
 </g>
 </g>
-<!-- Node61&#45;&gt;Node78 -->
+<!-- Node75&#45;&gt;Node92 -->
 <g id="edge19" class="edge">
-<title>Node61&#45;&gt;Node78</title>
+<title>Node75&#45;&gt;Node92</title>
 <path fill="none" stroke="#191970" d="M46.5314,-145.2915C55.5004,-121.9372 81.3674,-62.1071 122,-29 124.051,-27.3289 126.2635,-25.796 128.5775,-24.3911"/>
 <polygon fill="#191970" stroke="#191970" points="130.6018,-27.2849 137.8798,-19.5854 127.3888,-21.0658 130.6018,-27.2849"/>
 </g>
-<!-- Node63 -->
+<!-- Node77 -->
 <g id="node3" class="node">
-<title>Node63</title>
+<title>Node77</title>
 <g id="a_node3"><a xlink:href="parserutil_8c.html#a2d9e8c20025b7b883c4e87790685a6ad" target="_top" xlink:title="Proxy to parser_next.">
 <polygon fill="#ffffff" stroke="#000000" points="425.5,-259.5 425.5,-278.5 511.5,-278.5 511.5,-259.5 425.5,-259.5"/>
 <text text-anchor="middle" x="468.5" y="-266.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">parser_advance</text>
 </a>
 </g>
 </g>
-<!-- Node62&#45;&gt;Node63 -->
+<!-- Node76&#45;&gt;Node77 -->
 <g id="edge2" class="edge">
-<title>Node62&#45;&gt;Node63</title>
+<title>Node76&#45;&gt;Node77</title>
 <path fill="none" stroke="#191970" d="M335.9316,-335.4901C343.4571,-332.6116 351.6142,-329.3269 359,-326 388.1075,-312.8887 420.4147,-295.7371 442.3432,-283.6861"/>
 <polygon fill="#191970" stroke="#191970" points="444.2973,-286.605 451.3525,-278.7008 440.9081,-280.4802 444.2973,-286.605"/>
 </g>
-<!-- Node64 -->
+<!-- Node78 -->
 <g id="node4" class="node">
-<title>Node64</title>
+<title>Node78</title>
 <g id="a_node4"><a xlink:href="parserutil_8c.html#ab25a97ff31329fe9461666bfe2dc6f2c" target="_top" xlink:title="Iterate the parser.">
 <polygon fill="#ffffff" stroke="#000000" points="578,-259.5 578,-278.5 646,-278.5 646,-259.5 578,-259.5"/>
 <text text-anchor="middle" x="612" y="-266.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">parser_next</text>
 </a>
 </g>
 </g>
-<!-- Node63&#45;&gt;Node64 -->
+<!-- Node77&#45;&gt;Node78 -->
 <g id="edge3" class="edge">
-<title>Node63&#45;&gt;Node64</title>
+<title>Node77&#45;&gt;Node78</title>
 <path fill="none" stroke="#191970" d="M511.5547,-269C529.2218,-269 549.6679,-269 567.4835,-269"/>
 <polygon fill="#191970" stroke="#191970" points="567.6282,-272.5001 577.6282,-269 567.6281,-265.5001 567.6282,-272.5001"/>
 </g>
-<!-- Node66 -->
+<!-- Node80 -->
 <g id="node6" class="node">
-<title>Node66</title>
+<title>Node80</title>
 <g id="a_node6"><a xlink:href="parserutil_8c.html#aecf4b8bdaae9ca8435542900cf024f4e" target="_top" xlink:title="Copy a parser.">
 <polygon fill="#ffffff" stroke="#000000" points="274.5,-297.5 274.5,-316.5 344.5,-316.5 344.5,-297.5 274.5,-297.5"/>
 <text text-anchor="middle" x="309.5" y="-304.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">parser_copy</text>
 </a>
 </g>
 </g>
-<!-- Node65&#45;&gt;Node66 -->
+<!-- Node79&#45;&gt;Node80 -->
 <g id="edge5" class="edge">
-<title>Node65&#45;&gt;Node66</title>
+<title>Node79&#45;&gt;Node80</title>
 <path fill="none" stroke="#191970" d="M194.3369,-259.6415C211.879,-267.4904 237.4304,-278.745 260,-288 264.6017,-289.887 269.466,-291.8239 274.2771,-293.7054"/>
 <polygon fill="#191970" stroke="#191970" points="273.3871,-297.1138 283.9764,-297.4564 275.9119,-290.585 273.3871,-297.1138"/>
 </g>
-<!-- Node67 -->
+<!-- Node81 -->
 <g id="node7" class="node">
-<title>Node67</title>
+<title>Node81</title>
 <g id="a_node7"><a xlink:href="parserutil_8c.html#a1a00af051004cb18edac760f39982eea" target="_top" xlink:title="Searches for the given character, advances the parser if it found it.">
 <polygon fill="#ffffff" stroke="#000000" points="261,-259.5 261,-278.5 358,-278.5 358,-259.5 261,-259.5"/>
 <text text-anchor="middle" x="309.5" y="-266.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">parser_acceptchar</text>
 </a>
 </g>
 </g>
-<!-- Node65&#45;&gt;Node67 -->
+<!-- Node79&#45;&gt;Node81 -->
 <g id="edge6" class="edge">
-<title>Node65&#45;&gt;Node67</title>
+<title>Node79&#45;&gt;Node81</title>
 <path fill="none" stroke="#191970" d="M224.2159,-257.129C232.8068,-258.3248 241.7824,-259.5741 250.5494,-260.7944"/>
 <polygon fill="#191970" stroke="#191970" points="250.3227,-264.2965 260.7097,-262.2087 251.2878,-257.3634 250.3227,-264.2965"/>
 </g>
-<!-- Node68 -->
+<!-- Node82 -->
 <g id="node8" class="node">
-<title>Node68</title>
+<title>Node82</title>
 <g id="a_node8"><a xlink:href="parserutil_8c.html#a1f1841a636bfe529466c99e3db9999cd" target="_top" xlink:title="Restores a parser to another parser&#39;s position.">
 <polygon fill="#ffffff" stroke="#000000" points="270,-221.5 270,-240.5 349,-240.5 349,-221.5 270,-221.5"/>
 <text text-anchor="middle" x="309.5" y="-228.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">parser_restore</text>
 </a>
 </g>
 </g>
-<!-- Node65&#45;&gt;Node68 -->
+<!-- Node79&#45;&gt;Node82 -->
 <g id="edge8" class="edge">
-<title>Node65&#45;&gt;Node68</title>
+<title>Node79&#45;&gt;Node82</title>
 <path fill="none" stroke="#191970" d="M224.2159,-242.871C235.9179,-241.2422 248.3336,-239.514 259.9637,-237.8952"/>
 <polygon fill="#191970" stroke="#191970" points="260.5221,-241.3513 269.9441,-236.506 259.557,-234.4181 260.5221,-241.3513"/>
 </g>
-<!-- Node69 -->
+<!-- Node83 -->
 <g id="node9" class="node">
-<title>Node69</title>
+<title>Node83</title>
 <g id="a_node9"><a xlink:href="parserutil_8c.html#ab62454c7986532e03ea36b14956b5ad1" target="_top" xlink:title="Simple parser destructor.">
 <polygon fill="#ffffff" stroke="#000000" points="260,-183.5 260,-202.5 359,-202.5 359,-183.5 260,-183.5"/>
 <text text-anchor="middle" x="309.5" y="-190.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">parser_free_simple</text>
 </a>
 </g>
 </g>
-<!-- Node65&#45;&gt;Node69 -->
+<!-- Node79&#45;&gt;Node83 -->
 <g id="edge9" class="edge">
-<title>Node65&#45;&gt;Node69</title>
+<title>Node79&#45;&gt;Node83</title>
 <path fill="none" stroke="#191970" d="M194.3369,-240.3585C211.879,-232.5096 237.4304,-221.255 260,-212 264.6017,-210.113 269.466,-208.1761 274.2771,-206.2946"/>
 <polygon fill="#191970" stroke="#191970" points="275.9119,-209.415 283.9764,-202.5436 273.3871,-202.8862 275.9119,-209.415"/>
 </g>
-<!-- Node67&#45;&gt;Node63 -->
+<!-- Node81&#45;&gt;Node77 -->
 <g id="edge7" class="edge">
-<title>Node67&#45;&gt;Node63</title>
+<title>Node81&#45;&gt;Node77</title>
 <path fill="none" stroke="#191970" d="M358.0692,-269C376.1775,-269 396.8223,-269 415.3231,-269"/>
 <polygon fill="#191970" stroke="#191970" points="415.3511,-272.5001 425.3511,-269 415.3511,-265.5001 415.3511,-272.5001"/>
 </g>
-<!-- Node70&#45;&gt;Node63 -->
+<!-- Node84&#45;&gt;Node77 -->
 <g id="edge11" class="edge">
-<title>Node70&#45;&gt;Node63</title>
+<title>Node84&#45;&gt;Node77</title>
 <path fill="none" stroke="#191970" d="M339.3455,-164.5274C346.023,-167.1803 352.9227,-170.3525 359,-174 395.9582,-196.1817 432.4747,-231.2031 452.5992,-251.9567"/>
 <polygon fill="#191970" stroke="#191970" points="450.2723,-254.588 459.7095,-259.4037 455.3353,-249.754 450.2723,-254.588"/>
 </g>
-<!-- Node74 -->
+<!-- Node88 -->
 <g id="node14" class="node">
-<title>Node74</title>
+<title>Node88</title>
 <g id="a_node14"><a xlink:href="helios__string_8c.html#af727ca5352482ab7e542510f178a9f85" target="_top" xlink:title="Constructor of a helios_string.">
 <polygon fill="#ffffff" stroke="#000000" points="265,-82.5 265,-101.5 354,-101.5 354,-82.5 265,-82.5"/>
 <text text-anchor="middle" x="309.5" y="-89.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">helios_string_init</text>
 </a>
 </g>
 </g>
-<!-- Node73&#45;&gt;Node74 -->
+<!-- Node87&#45;&gt;Node88 -->
 <g id="edge15" class="edge">
-<title>Node73&#45;&gt;Node74</title>
+<title>Node87&#45;&gt;Node88</title>
 <path fill="none" stroke="#191970" d="M221.1248,-92C231.8275,-92 243.2553,-92 254.2195,-92"/>
 <polygon fill="#191970" stroke="#191970" points="254.5507,-95.5001 264.5507,-92 254.5507,-88.5001 254.5507,-95.5001"/>
 </g>
-<!-- Node75 -->
+<!-- Node89 -->
 <g id="node15" class="node">
-<title>Node75</title>
+<title>Node89</title>
 <g id="a_node15"><a xlink:href="helios__memory_8h.html#af87f0050f8e236d0945592fa4e54dc94" target="_top" xlink:title="Allocates a new helios object (and performs all the GC steps associated with that action).">
 <polygon fill="#ffffff" stroke="#000000" points="412,-101.5 412,-120.5 525,-120.5 525,-101.5 412,-101.5"/>
 <text text-anchor="middle" x="468.5" y="-108.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">helios_allocate_object</text>
 </a>
 </g>
 </g>
-<!-- Node74&#45;&gt;Node75 -->
+<!-- Node88&#45;&gt;Node89 -->
 <g id="edge16" class="edge">
-<title>Node74&#45;&gt;Node75</title>
+<title>Node88&#45;&gt;Node89</title>
 <path fill="none" stroke="#191970" d="M354.2135,-97.3431C368.9062,-99.0989 385.5736,-101.0906 401.5476,-102.9994"/>
 <polygon fill="#191970" stroke="#191970" points="401.5723,-106.5272 411.917,-104.2385 402.4029,-99.5766 401.5723,-106.5272"/>
 </g>
-<!-- Node76 -->
+<!-- Node90 -->
 <g id="node16" class="node">
-<title>Node76</title>
+<title>Node90</title>
 <g id="a_node16"><a xlink:href="helios__memory_8h.html#ab14fb1c046aae61ab06eda8eeaf2cd85" target="_top" xlink:title=" ">
 <polygon fill="#ffffff" stroke="#000000" points="395,-63.5 395,-82.5 542,-82.5 542,-63.5 395,-63.5"/>
 <text text-anchor="middle" x="468.5" y="-70.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">helios_set_garbagecollectable</text>
 </a>
 </g>
 </g>
-<!-- Node74&#45;&gt;Node76 -->
+<!-- Node88&#45;&gt;Node90 -->
 <g id="edge17" class="edge">
-<title>Node74&#45;&gt;Node76</title>
+<title>Node88&#45;&gt;Node90</title>
 <path fill="none" stroke="#191970" d="M354.2135,-86.6569C363.8192,-85.509 374.2689,-84.2603 384.8171,-82.9998"/>
 <polygon fill="#191970" stroke="#191970" points="385.4221,-86.4525 394.9361,-81.7907 384.5914,-79.502 385.4221,-86.4525"/>
 </g>
