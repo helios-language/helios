@@ -10,6 +10,31 @@
 #include <string.h>
 
 /**
+ * Removes comments from a string. Note: frees old string and allocates new
+ * string.
+ *
+ * In helios every character on a line, after a hashtag (#) is a comment.
+ *
+ * @param code the code with comments.
+ * @return the transformed code without comments.
+ */
+char *parser_remove_comments(char *code) {
+    char *res = calloc(strlen(code) + 1, 1);
+    uint32_t resindex = 0;
+
+    for (char *i = code; *i != '\0'; i++) {
+        if (*i == '#') {
+            while ((*++i) != '\n')
+                ;
+        }
+        res[resindex++] = *i;
+    }
+
+    free(code);
+    return res;
+}
+
+/**
  * Parser Entrypoint.
  * This is the base function for the parser. When it is called it will
  * construct the parser, and call the root of the recursive descent
@@ -21,16 +46,19 @@
  * which recursively represents the parsed syntax
  */
 AST *parser_parseString(char *str) {
+    str = parser_remove_comments(str);
+
     Parser_t *parser = parser_new(str);
 
     parser_advance(parser);
     AST *ast = parser_root(parser);
 
-    // this used to be in there to find cases where the statement ended halfway
-    // through the compilation process to prevent it just exiting without error.
-    // however, now the root of the recursive descent can only exit errorless
-    // when it finds the end of the code. Because of this i believe this code is
-    // not needed anymore. More testing is required to verify this.
+    // this used to be in there to find cases where the statement ended
+    // halfway through the compilation process to prevent it just exiting
+    // without error. however, now the root of the recursive descent can
+    // only exit errorless when it finds the end of the code. Because of
+    // this i believe this code is not needed anymore. More testing is
+    // required to verify this.
 
     // if (ast == NULL ||
     // !parser_exhausted(parser)) {
@@ -330,6 +358,7 @@ bool parser_acceptstring(Parser_t *parser, char *str) {
  */
 bool parser_expectchar(Parser_t *parser, char character) {
     if (!parser_acceptchar(parser, character)) {
+        printf(">%i\n", character);
         errorstack_push(parser->es, "unexpected character", parser->line,
                         parser->character);
         return false;

@@ -166,4 +166,4 @@ As is very apparent in this image, there are two phases in the running of a heli
 
 
 
-note: the helios language spec will only allow either tabs or 42 spaces/tab. The default 4 spaces per tab    will not be allowed as tabs are clearly superior.
+note: The helios language spec will only allow either tabs or 42 spaces/tab. The default 4 spaces per tab    will not be allowed as tabs are clearly superior.
