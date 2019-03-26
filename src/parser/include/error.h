@@ -18,7 +18,7 @@ typedef struct Error {
     uint32_t line;       //!< the line number of the occured error.
     uint32_t character;  //!< the character index of the occured error.
     const char *message; //!< the message associated with this error.
-} Error_t;
+} error_t;
 
 /**
  * This struct represents a stack of errors. Whenever a new error is caused
@@ -31,21 +31,21 @@ typedef struct Errorstack {
     uint32_t filled; //!< the amount of errors in the stack
     uint32_t size;   //!< the actual allocated size of the stack. Always larger
                      //!< than the filled parameter.
-    Error_t *stack;
-} Errorstack_t;
+    error_t *stack;
+} errorstack_t;
 
-void error_print(Error_t err);
-void error_throw(Error_t err, const char *code, bool hard);
+void error_print(error_t err);
+void error_throw(error_t err, const char *code, bool hard);
 
-Errorstack_t *errorstack_new();
-void errorstack_free(Errorstack_t *es);
-void errorstack_push(Errorstack_t *es, const char *message, uint32_t line,
+errorstack_t *errorstack_new();
+void errorstack_free(errorstack_t *es);
+void errorstack_push(errorstack_t *es, const char *message, uint32_t line,
                      uint32_t character);
-uint32_t errorstack_length(Errorstack_t *es);
-Error_t errorstack_pop(Errorstack_t *es);
-void errorstack_popuntil(Errorstack_t *es, uint32_t length);
-Error_t errorstack_top(Errorstack_t *es);
-bool errorstack_empty(Errorstack_t *es);
-void errorstack_traceback(Errorstack_t *es, const char *code);
+uint32_t errorstack_length(errorstack_t *es);
+error_t errorstack_pop(errorstack_t *es);
+void errorstack_popuntil(errorstack_t *es, uint32_t length);
+error_t errorstack_top(errorstack_t *es);
+bool errorstack_empty(errorstack_t *es);
+void errorstack_traceback(errorstack_t *es, const char *code);
 
 #endif

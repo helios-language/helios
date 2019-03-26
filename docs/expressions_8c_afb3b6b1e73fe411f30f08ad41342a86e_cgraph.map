@@ -3,9 +3,9 @@
 <area shape="rect" id="node2" href="$parser_8h.html#a8c4c57eca60b2cec9a372a04abea456d" title="Advances the parser as long as it can find whitespace." alt="" coords="378,5,485,32"/>
 <area shape="rect" id="node5" href="$parser_8h.html#a499e49a3ad7a6fde77c49792f1a0774a" title="Searches for any of the characters given in the parser." alt="" coords="168,56,319,83"/>
 <area shape="rect" id="node7" href="$AST_8c.html#a3a1c70c232e669f02ef0a4e171ee6ab2" title="Constructore for ast objects." alt="" coords="204,107,283,133"/>
-<area shape="rect" id="node8" href="$token_8h.html#a6df9cba793453cf8281c9843e576fe40" title="Constructor for token objects." alt="" coords="201,157,286,184"/>
-<area shape="rect" id="node9" href="$AST_8c.html#a5f9c0bcd1d544aac044f4acf93c27ddb" title="Adds a child ast node to a parent ast node." alt="" coords="190,208,297,235"/>
-<area shape="rect" id="node10" href="$error_8c.html#afe624477a33ab8814a9454f58a0bc1fa" title="Construct a new error object out of parameters, and push it to the errorstack." alt="" coords="186,259,301,285"/>
+<area shape="rect" id="node8" href="$token_8h.html#a5f63b7723640416a125433badc7d6563" title="Constructor for token objects." alt="" coords="201,157,286,184"/>
+<area shape="rect" id="node9" href="$error_8c.html#a1febf822c4d9249dd4afd09c5d5f87bb" title="Construct a new error object out of parameters, and push it to the errorstack." alt="" coords="186,208,301,235"/>
+<area shape="rect" id="node10" href="$AST_8c.html#a5f9c0bcd1d544aac044f4acf93c27ddb" title="Adds a child ast node to a parent ast node." alt="" coords="190,259,297,285"/>
 <area shape="rect" id="node3" href="$parserutil_8c.html#a2d9e8c20025b7b883c4e87790685a6ad" title="Proxy to parser_next." alt="" coords="544,31,659,57"/>
 <area shape="rect" id="node4" href="$parserutil_8c.html#ab25a97ff31329fe9461666bfe2dc6f2c" title="Iterate the parser." alt="" coords="707,31,797,57"/>
 <area shape="rect" id="node6" href="$parserutil_8c.html#a1a00af051004cb18edac760f39982eea" title="Searches for the given character, advances the parser if it found it." alt="" coords="367,56,496,83"/>

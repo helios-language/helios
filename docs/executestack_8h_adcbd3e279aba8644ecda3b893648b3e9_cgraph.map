@@ -1,0 +1,4 @@
+<map id="execstack_clear" name="execstack_clear">
+<area shape="rect" id="node1" title="Pop the executestack until it&#39;s empty." alt="" coords="5,5,123,32"/>
+<area shape="rect" id="node2" href="$executestack_8c.html#a00b8d0e56e3754f23f19037c3b4070f4" title="Pops the top of the executestack and returns it." alt="" coords="171,5,281,32"/>
+</map>

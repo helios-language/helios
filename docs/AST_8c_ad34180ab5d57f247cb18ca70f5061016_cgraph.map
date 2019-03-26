@@ -1,5 +1,5 @@
 <map id="AST_freeChildren" name="AST_freeChildren">
 <area shape="rect" id="node1" title="Destructor for an AST." alt="" coords="5,29,131,56"/>
 <area shape="rect" id="node2" href="$AST_8c.html#adc8be8765bd5abffeef1f5649587cb45" title="Destructor for ast objects." alt="" coords="179,29,256,56"/>
-<area shape="rect" id="node3" href="$token_8h.html#a863ec10d282f1f7e0dbbbaae6cec4f15" title=" " alt="" coords="304,29,387,56"/>
+<area shape="rect" id="node3" href="$token_8h.html#a863ec10d282f1f7e0dbbbaae6cec4f15" title="Destroys a token object.Also frees the token&#39;s value." alt="" coords="304,29,387,56"/>
 </map>

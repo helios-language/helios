@@ -1,0 +1,6 @@
+<map id="helios_integer_copy" name="helios_integer_copy">
+<area shape="rect" id="node1" title="Copy a helios integer object." alt="" coords="5,31,143,57"/>
+<area shape="rect" id="node2" href="$helios__integer_8c.html#a50a26b1e9578164839f3a5bb17e04051" title="Constructor of a helios_integer object." alt="" coords="191,31,317,57"/>
+<area shape="rect" id="node3" href="$helios__memory_8h.html#af87f0050f8e236d0945592fa4e54dc94" title="Allocates a new helios object (and performs all the GC steps associated with that action)." alt="" coords="388,5,539,32"/>
+<area shape="rect" id="node4" href="$helios__memory_8h.html#ab14fb1c046aae61ab06eda8eeaf2cd85" title=" " alt="" coords="365,56,561,83"/>
+</map>

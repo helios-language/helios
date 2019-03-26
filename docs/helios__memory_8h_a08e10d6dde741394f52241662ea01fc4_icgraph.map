@@ -1,6 +1,8 @@
 <map id="helios_free_object" name="helios_free_object">
-<area shape="rect" id="node1" title=" " alt="" coords="197,56,324,83"/>
-<area shape="rect" id="node2" href="$helios__float_8h.html#a7ed95856db3f5ffda6f0fc91c9196dd3" title="Destructor of a helios_float object." alt="" coords="12,5,143,32"/>
-<area shape="rect" id="node3" href="$helios__integer_8h.html#ac7731385ec91b5f6fdf7ef205eba7ded" title="Destructor of a helios_integer object." alt="" coords="5,56,149,83"/>
-<area shape="rect" id="node4" href="$helios__string_8h.html#aa95b3f21f6ec9f9c19dd873193c473f9" title="Destructor of a helios_string object." alt="" coords="9,107,146,133"/>
+<area shape="rect" id="node1" title=" " alt="" coords="213,107,340,133"/>
+<area shape="rect" id="node2" href="$helios__code_8h.html#a4a6bd5c2d4489cebee037663182b5dd3" title=" " alt="" coords="19,5,152,32"/>
+<area shape="rect" id="node3" href="$helios__float_8h.html#a7ed95856db3f5ffda6f0fc91c9196dd3" title="Destructor of a helios_float object." alt="" coords="20,56,151,83"/>
+<area shape="rect" id="node4" href="$helios__integer_8h.html#ac7731385ec91b5f6fdf7ef205eba7ded" title="Destructor of a helios_integer object." alt="" coords="13,107,157,133"/>
+<area shape="rect" id="node5" href="$serialize_8c.html#ae1a2313279db47de086283c9aabcd458" title=" " alt="" coords="5,158,165,199"/>
+<area shape="rect" id="node6" href="$helios__string_8h.html#aa95b3f21f6ec9f9c19dd873193c473f9" title="Destructor of a helios_string object." alt="" coords="17,224,154,251"/>
 </map>

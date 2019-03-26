@@ -21,7 +21,7 @@
 <!-- Node22 -->
 <g id="node2" class="node">
 <title>Node22</title>
-<g id="a_node2"><a xlink:href="error_8c.html#a28e1cff59ef8560afa8ede4b201938c6" target="_top" xlink:title="Find the length of an errorstack.">
+<g id="a_node2"><a xlink:href="error_8c.html#ac348843496d6fe5024df7b11724d71c2" target="_top" xlink:title="Find the length of an errorstack.">
 <polygon fill="#ffffff" stroke="#000000" points="132.5,-266.5 132.5,-285.5 224.5,-285.5 224.5,-266.5 132.5,-266.5"/>
 <text text-anchor="middle" x="178.5" y="-273.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">errorstack_length</text>
 </a>
@@ -51,7 +51,7 @@
 <!-- Node24 -->
 <g id="node4" class="node">
 <title>Node24</title>
-<g id="a_node4"><a xlink:href="token_8h.html#a6df9cba793453cf8281c9843e576fe40" target="_top" xlink:title="Constructor for token objects.">
+<g id="a_node4"><a xlink:href="token_8h.html#a5f63b7723640416a125433badc7d6563" target="_top" xlink:title="Constructor for token objects.">
 <polygon fill="#ffffff" stroke="#000000" points="146.5,-190.5 146.5,-209.5 210.5,-209.5 210.5,-190.5 146.5,-190.5"/>
 <text text-anchor="middle" x="178.5" y="-197.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">token_new</text>
 </a>
@@ -192,7 +192,7 @@
 <!-- Node33 -->
 <g id="node13" class="node">
 <title>Node33</title>
-<g id="a_node13"><a xlink:href="token_8h.html#a863ec10d282f1f7e0dbbbaae6cec4f15" target="_top" xlink:title=" ">
+<g id="a_node13"><a xlink:href="token_8h.html#a863ec10d282f1f7e0dbbbaae6cec4f15" target="_top" xlink:title="Destroys a token object.Also frees the token&#39;s value.">
 <polygon fill="#ffffff" stroke="#000000" points="288.5,-.5 288.5,-19.5 350.5,-19.5 350.5,-.5 288.5,-.5"/>
 <text text-anchor="middle" x="319.5" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">token_free</text>
 </a>

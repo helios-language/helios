@@ -1,0 +1,4 @@
+<map id="execstack_init" name="execstack_init">
+<area shape="rect" id="node1" title="Creates a new stack for executing bytecode on." alt="" coords="5,5,112,32"/>
+<area shape="rect" id="node2" href="$helios__memory_8h.html#a27b2da5d6954fd6e7aa0d2f352336c25" title="Get the global current garbage collector." alt="" coords="160,5,343,32"/>
+</map>

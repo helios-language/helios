@@ -1,4 +1,4 @@
 <map id="helios_set_garbagecollectable" name="helios_set_garbagecollectable">
-<area shape="rect" id="node1" title=" " alt="" coords="5,5,201,32"/>
+<area shape="rect" id="node1" title="Registers an object in the garbagecollector to be freed later." alt="" coords="5,5,201,32"/>
 <area shape="rect" id="node2" href="$refcount_8c.html#a27b2da5d6954fd6e7aa0d2f352336c25" title="Get the global current garbage collector." alt="" coords="249,5,432,32"/>
 </map>

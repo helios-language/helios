@@ -2,7 +2,7 @@
 <area shape="rect" id="node1" title="Crossover between acceptstring and expectchar." alt="" coords="5,107,141,133"/>
 <area shape="rect" id="node2" href="$parserutil_8c.html#aecf4b8bdaae9ca8435542900cf024f4e" title="Copy a parser." alt="" coords="209,5,302,32"/>
 <area shape="rect" id="node3" href="$parserutil_8c.html#ad7f3825521eb3e5bd3af734357caa4d6" title="If the parser can accept the given character, accept it, else push an error on the parsers errorstack..." alt="" coords="191,56,320,83"/>
-<area shape="rect" id="node7" href="$error_8c.html#afe624477a33ab8814a9454f58a0bc1fa" title="Construct a new error object out of parameters, and push it to the errorstack." alt="" coords="377,107,491,133"/>
+<area shape="rect" id="node7" href="$error_8c.html#a1febf822c4d9249dd4afd09c5d5f87bb" title="Construct a new error object out of parameters, and push it to the errorstack." alt="" coords="377,107,491,133"/>
 <area shape="rect" id="node8" href="$parserutil_8c.html#a1f1841a636bfe529466c99e3db9999cd" title="Restores a parser to another parser&#39;s position." alt="" coords="203,157,308,184"/>
 <area shape="rect" id="node9" href="$parserutil_8c.html#ab62454c7986532e03ea36b14956b5ad1" title="Simple parser destructor." alt="" coords="189,208,321,235"/>
 <area shape="rect" id="node4" href="$parserutil_8c.html#a1a00af051004cb18edac760f39982eea" title="Searches for the given character, advances the parser if it found it." alt="" coords="369,56,499,83"/>

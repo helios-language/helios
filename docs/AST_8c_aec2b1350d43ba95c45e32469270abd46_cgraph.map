@@ -1,4 +1,5 @@
 <map id="AST_print_helper" name="AST_print_helper">
 <area shape="rect" id="node1" title="Recursively prints an ast." alt="" coords="5,5,128,32"/>
 <area shape="rect" id="node2" href="$token_8h.html#a347371dbade2f4df7ca01fd60f226951" title="Prints a token object." alt="" coords="176,5,263,32"/>
+<area shape="rect" id="node3" href="$helios__string_8c.html#a9d2005b1762ff6459a22a115549a08f5" title="Create a cstring from a helios_string object." alt="" coords="311,5,463,32"/>
 </map>

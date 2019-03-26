@@ -1,0 +1,4 @@
+<map id="errorstack_popuntil" name="errorstack_popuntil">
+<area shape="rect" id="node1" title="pop the errorstack until it has a desired length." alt="" coords="5,5,137,32"/>
+<area shape="rect" id="node2" href="$error_8c.html#a97e94bccb231e66498eb7b2b72d8ec87" title="Pop and return the top element of the errorstack." alt="" coords="185,5,293,32"/>
+</map>

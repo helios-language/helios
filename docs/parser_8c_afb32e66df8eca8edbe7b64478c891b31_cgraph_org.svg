@@ -36,7 +36,7 @@
 <!-- Node6 -->
 <g id="node3" class="node">
 <title>Node6</title>
-<g id="a_node3"><a xlink:href="token_8h.html#a6df9cba793453cf8281c9843e576fe40" target="_top" xlink:title="Constructor for token objects.">
+<g id="a_node3"><a xlink:href="token_8h.html#a5f63b7723640416a125433badc7d6563" target="_top" xlink:title="Constructor for token objects.">
 <polygon fill="#ffffff" stroke="#000000" points="139.5,-322.5 139.5,-341.5 203.5,-341.5 203.5,-322.5 139.5,-322.5"/>
 <text text-anchor="middle" x="171.5" y="-329.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">token_new</text>
 </a>
@@ -96,7 +96,7 @@
 <!-- Node12 -->
 <g id="node9" class="node">
 <title>Node12</title>
-<g id="a_node9"><a xlink:href="error_8c.html#a28e1cff59ef8560afa8ede4b201938c6" target="_top" xlink:title="Find the length of an errorstack.">
+<g id="a_node9"><a xlink:href="error_8c.html#ac348843496d6fe5024df7b11724d71c2" target="_top" xlink:title="Find the length of an errorstack.">
 <polygon fill="#ffffff" stroke="#000000" points="125.5,-170.5 125.5,-189.5 217.5,-189.5 217.5,-170.5 125.5,-170.5"/>
 <text text-anchor="middle" x="171.5" y="-177.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">errorstack_length</text>
 </a>
@@ -126,7 +126,7 @@
 <!-- Node15 -->
 <g id="node12" class="node">
 <title>Node15</title>
-<g id="a_node12"><a xlink:href="error_8c.html#ade2d9bb9a151b899f16f096d482a9f0e" target="_top" xlink:title="pop the errorstack until it has a desired length.">
+<g id="a_node12"><a xlink:href="error_8c.html#a4b3b88945de18cbfb783a3e8f76b573d" target="_top" xlink:title="pop the errorstack until it has a desired length.">
 <polygon fill="#ffffff" stroke="#000000" points="122,-76.5 122,-95.5 221,-95.5 221,-76.5 122,-76.5"/>
 <text text-anchor="middle" x="171.5" y="-83.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">errorstack_popuntil</text>
 </a>
@@ -198,7 +198,7 @@
 <!-- Node14 -->
 <g id="node11" class="node">
 <title>Node14</title>
-<g id="a_node11"><a xlink:href="token_8h.html#a863ec10d282f1f7e0dbbbaae6cec4f15" target="_top" xlink:title=" ">
+<g id="a_node11"><a xlink:href="token_8h.html#a863ec10d282f1f7e0dbbbaae6cec4f15" target="_top" xlink:title="Destroys a token object.Also frees the token&#39;s value.">
 <polygon fill="#ffffff" stroke="#000000" points="274.5,-114.5 274.5,-133.5 336.5,-133.5 336.5,-114.5 274.5,-114.5"/>
 <text text-anchor="middle" x="305.5" y="-121.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">token_free</text>
 </a>
@@ -213,7 +213,7 @@
 <!-- Node16 -->
 <g id="node13" class="node">
 <title>Node16</title>
-<g id="a_node13"><a xlink:href="error_8c.html#afbf47f2a1edae9c81dcaced1f61515b6" target="_top" xlink:title="Pop and return the top element of the errorstack.">
+<g id="a_node13"><a xlink:href="error_8c.html#a97e94bccb231e66498eb7b2b72d8ec87" target="_top" xlink:title="Pop and return the top element of the errorstack.">
 <polygon fill="#ffffff" stroke="#000000" points="265,-76.5 265,-95.5 346,-95.5 346,-76.5 265,-76.5"/>
 <text text-anchor="middle" x="305.5" y="-83.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">errorstack_pop</text>
 </a>
@@ -243,7 +243,7 @@
 <!-- Node19 -->
 <g id="node16" class="node">
 <title>Node19</title>
-<g id="a_node16"><a xlink:href="error_8c.html#afe624477a33ab8814a9454f58a0bc1fa" target="_top" xlink:title="Construct a new error object out of parameters, and push it to the errorstack.">
+<g id="a_node16"><a xlink:href="error_8c.html#a1febf822c4d9249dd4afd09c5d5f87bb" target="_top" xlink:title="Construct a new error object out of parameters, and push it to the errorstack.">
 <polygon fill="#ffffff" stroke="#000000" points="262.5,-.5 262.5,-19.5 348.5,-19.5 348.5,-.5 262.5,-.5"/>
 <text text-anchor="middle" x="305.5" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">errorstack_push</text>
 </a>

@@ -21,7 +21,7 @@
 <!-- Node36 -->
 <g id="node2" class="node">
 <title>Node36</title>
-<g id="a_node2"><a xlink:href="error_8c.html#a801707ae606a85c72383643bf3ce5875" target="_top" xlink:title="Creates a new errorstack object.">
+<g id="a_node2"><a xlink:href="error_8c.html#ab400e9a29e066e1bbe7b7893e1eb767e" target="_top" xlink:title="Creates a new errorstack object.">
 <polygon fill="#ffffff" stroke="#000000" points="103,-.5 103,-19.5 186,-19.5 186,-.5 103,-.5"/>
 <text text-anchor="middle" x="144.5" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">errorstack_new</text>
 </a>

@@ -25,7 +25,7 @@ helios_object *helios_float_from_cdouble(double value) {
 /**
  * Destructor of a helios_float object.
  *
- * @param obj the object to destruct.
+ * @param self the object to destruct.
  */
 void helios_float_delete(helios_object *self) {
     helios_free_object(self);
@@ -52,7 +52,7 @@ helios_object *helios_float_init() {
  * Create a helios_string object which represents the helios_float
  * object's value.
  *
- * @param a helios_float object to stringify.
+ * @param self helios_float object to stringify.
  * @return a helios_string object with the string representation of the
  * helios_float
  */
@@ -66,7 +66,7 @@ helios_object *helios_float_tostring(helios_object *self) {
 /**
  * Alias of helios_float_tostring for completeness.
  *
- * @param a helios_float object to stringify.
+ * @param self helios_float object to stringify.
  * @return a helios_string object with the string representation of the
  * helios_float
  */
@@ -76,6 +76,9 @@ helios_object *helios_float_represent(helios_object *self) {
 
 /**
  * Copy a helios float object.
+ *
+ * @param obj the object to copy
+ * @return a new float with the same value.
  */
 helios_object *helios_float_copy(helios_object *obj) {
     helios_float *old = TO_HELIOS_FLOAT(obj);

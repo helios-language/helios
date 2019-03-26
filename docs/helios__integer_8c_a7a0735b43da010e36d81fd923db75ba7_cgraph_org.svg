@@ -9,33 +9,33 @@
 <g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 62)">
 <title>helios_integer_represent</title>
 <polygon fill="#ffffff" stroke="transparent" points="-4,4 -4,-62 716,-62 716,4 -4,4"/>
-<!-- Node9 -->
+<!-- Node13 -->
 <g id="node1" class="node">
-<title>Node9</title>
+<title>Node13</title>
 <g id="a_node1"><a xlink:title="Alias of helios_integer_tostring for completeness.">
 <polygon fill="#bfbfbf" stroke="#000000" points="0,-19.5 0,-38.5 122,-38.5 122,-19.5 0,-19.5"/>
 <text text-anchor="middle" x="61" y="-26.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">helios_integer_represent</text>
 </a>
 </g>
 </g>
-<!-- Node10 -->
+<!-- Node14 -->
 <g id="node2" class="node">
-<title>Node10</title>
+<title>Node14</title>
 <g id="a_node2"><a xlink:href="helios__integer_8c.html#a5332d92b4fbb2aef5764c95999b4a44a" target="_top" xlink:title="Create a helios_string object which represents the helios_integer object&#39;s value.">
 <polygon fill="#ffffff" stroke="#000000" points="158,-19.5 158,-38.5 272,-38.5 272,-19.5 158,-19.5"/>
 <text text-anchor="middle" x="215" y="-26.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">helios_integer_tostring</text>
 </a>
 </g>
 </g>
-<!-- Node9&#45;&gt;Node10 -->
+<!-- Node13&#45;&gt;Node14 -->
 <g id="edge1" class="edge">
-<title>Node9&#45;&gt;Node10</title>
+<title>Node13&#45;&gt;Node14</title>
 <path fill="none" stroke="#191970" d="M122.3074,-29C130.6559,-29 139.2614,-29 147.7085,-29"/>
 <polygon fill="#191970" stroke="#191970" points="147.9057,-32.5001 157.9057,-29 147.9057,-25.5001 147.9057,-32.5001"/>
 </g>
-<!-- Node11 -->
+<!-- Node15 -->
 <g id="node3" class="node">
-<title>Node11</title>
+<title>Node15</title>
 <g id="a_node3"><a xlink:href="helios__string_8c.html#a4338910535421a24735fc7eb3123495c" target="_top" xlink:title="Create a helios_string object from a c string.">
 <polygon fill="#ffffff" stroke="#000000" points="308,-14 308,-44 404,-44 404,-14 308,-14"/>
 <text text-anchor="start" x="316" y="-32" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">helios_string_from</text>
@@ -43,54 +43,54 @@
 </a>
 </g>
 </g>
-<!-- Node10&#45;&gt;Node11 -->
+<!-- Node14&#45;&gt;Node15 -->
 <g id="edge2" class="edge">
-<title>Node10&#45;&gt;Node11</title>
+<title>Node14&#45;&gt;Node15</title>
 <path fill="none" stroke="#191970" d="M272.3501,-29C280.6976,-29 289.3,-29 297.6667,-29"/>
 <polygon fill="#191970" stroke="#191970" points="297.7224,-32.5001 307.7224,-29 297.7223,-25.5001 297.7224,-32.5001"/>
 </g>
-<!-- Node12 -->
+<!-- Node16 -->
 <g id="node4" class="node">
-<title>Node12</title>
+<title>Node16</title>
 <g id="a_node4"><a xlink:href="helios__string_8c.html#af727ca5352482ab7e542510f178a9f85" target="_top" xlink:title="Constructor of a helios_string.">
 <polygon fill="#ffffff" stroke="#000000" points="440,-19.5 440,-38.5 529,-38.5 529,-19.5 440,-19.5"/>
 <text text-anchor="middle" x="484.5" y="-26.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">helios_string_init</text>
 </a>
 </g>
 </g>
-<!-- Node11&#45;&gt;Node12 -->
+<!-- Node15&#45;&gt;Node16 -->
 <g id="edge3" class="edge">
-<title>Node11&#45;&gt;Node12</title>
+<title>Node15&#45;&gt;Node16</title>
 <path fill="none" stroke="#191970" d="M404.2143,-29C412.5175,-29 421.2026,-29 429.6649,-29"/>
 <polygon fill="#191970" stroke="#191970" points="429.8359,-32.5001 439.8359,-29 429.8359,-25.5001 429.8359,-32.5001"/>
 </g>
-<!-- Node13 -->
+<!-- Node17 -->
 <g id="node5" class="node">
-<title>Node13</title>
+<title>Node17</title>
 <g id="a_node5"><a xlink:href="helios__memory_8h.html#af87f0050f8e236d0945592fa4e54dc94" target="_top" xlink:title="Allocates a new helios object (and performs all the GC steps associated with that action).">
 <polygon fill="#ffffff" stroke="#000000" points="582,-38.5 582,-57.5 695,-57.5 695,-38.5 582,-38.5"/>
 <text text-anchor="middle" x="638.5" y="-45.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">helios_allocate_object</text>
 </a>
 </g>
 </g>
-<!-- Node12&#45;&gt;Node13 -->
+<!-- Node16&#45;&gt;Node17 -->
 <g id="edge4" class="edge">
-<title>Node12&#45;&gt;Node13</title>
+<title>Node16&#45;&gt;Node17</title>
 <path fill="none" stroke="#191970" d="M529.0432,-34.4956C542.4679,-36.1519 557.5038,-38.007 572.0302,-39.7992"/>
 <polygon fill="#191970" stroke="#191970" points="571.626,-43.2758 581.9794,-41.0267 572.4832,-36.3284 571.626,-43.2758"/>
 </g>
-<!-- Node14 -->
+<!-- Node18 -->
 <g id="node6" class="node">
-<title>Node14</title>
+<title>Node18</title>
 <g id="a_node6"><a xlink:href="helios__memory_8h.html#ab14fb1c046aae61ab06eda8eeaf2cd85" target="_top" xlink:title=" ">
 <polygon fill="#ffffff" stroke="#000000" points="565,-.5 565,-19.5 712,-19.5 712,-.5 565,-.5"/>
 <text text-anchor="middle" x="638.5" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">helios_set_garbagecollectable</text>
 </a>
 </g>
 </g>
-<!-- Node12&#45;&gt;Node14 -->
+<!-- Node16&#45;&gt;Node18 -->
 <g id="edge5" class="edge">
-<title>Node12&#45;&gt;Node14</title>
+<title>Node16&#45;&gt;Node18</title>
 <path fill="none" stroke="#191970" d="M529.0432,-23.5044C537.1755,-22.5011 545.899,-21.4248 554.7423,-20.3337"/>
 <polygon fill="#191970" stroke="#191970" points="555.2564,-23.7969 564.7525,-19.0987 554.3992,-16.8496 555.2564,-23.7969"/>
 </g>

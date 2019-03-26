@@ -1,4 +1,4 @@
 <map id="AST_free_simple" name="AST_free_simple">
 <area shape="rect" id="node1" title="Destructor for ast objects." alt="" coords="5,5,128,32"/>
-<area shape="rect" id="node2" href="$token_8h.html#a863ec10d282f1f7e0dbbbaae6cec4f15" title=" " alt="" coords="176,5,259,32"/>
+<area shape="rect" id="node2" href="$token_8h.html#a863ec10d282f1f7e0dbbbaae6cec4f15" title="Destroys a token object.Also frees the token&#39;s value." alt="" coords="176,5,259,32"/>
 </map>

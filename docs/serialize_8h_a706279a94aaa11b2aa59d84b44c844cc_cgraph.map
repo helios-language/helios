@@ -1,0 +1,6 @@
+<map id="helios_serialize_object" name="helios_serialize_object">
+<area shape="rect" id="node1" title=" " alt="" coords="5,31,159,57"/>
+<area shape="rect" id="node2" href="$serialize_8c.html#ad72a9663ebca3d0f4f38b63a0e8e8668" title=" " alt="" coords="207,31,391,57"/>
+<area shape="rect" id="node3" href="$helios__memory_8h.html#af87f0050f8e236d0945592fa4e54dc94" title="Allocates a new helios object (and performs all the GC steps associated with that action)." alt="" coords="461,5,612,32"/>
+<area shape="rect" id="node4" href="$helios__memory_8h.html#ab14fb1c046aae61ab06eda8eeaf2cd85" title=" " alt="" coords="439,56,635,83"/>
+</map>

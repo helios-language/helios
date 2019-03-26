@@ -36,7 +36,7 @@
 <!-- Node12 -->
 <g id="node5" class="node">
 <title>Node12</title>
-<g id="a_node5"><a xlink:href="error_8c.html#a28e1cff59ef8560afa8ede4b201938c6" target="_top" xlink:title="Find the length of an errorstack.">
+<g id="a_node5"><a xlink:href="error_8c.html#ac348843496d6fe5024df7b11724d71c2" target="_top" xlink:title="Find the length of an errorstack.">
 <polygon fill="#ffffff" stroke="#000000" points="125.5,-208.5 125.5,-227.5 217.5,-227.5 217.5,-208.5 125.5,-208.5"/>
 <text text-anchor="middle" x="171.5" y="-215.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">errorstack_length</text>
 </a>
@@ -96,7 +96,7 @@
 <!-- Node17 -->
 <g id="node10" class="node">
 <title>Node17</title>
-<g id="a_node10"><a xlink:href="error_8c.html#ade2d9bb9a151b899f16f096d482a9f0e" target="_top" xlink:title="pop the errorstack until it has a desired length.">
+<g id="a_node10"><a xlink:href="error_8c.html#a4b3b88945de18cbfb783a3e8f76b573d" target="_top" xlink:title="pop the errorstack until it has a desired length.">
 <polygon fill="#ffffff" stroke="#000000" points="122,-38.5 122,-57.5 221,-57.5 221,-38.5 122,-38.5"/>
 <text text-anchor="middle" x="171.5" y="-45.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">errorstack_popuntil</text>
 </a>
@@ -162,7 +162,7 @@
 <!-- Node16 -->
 <g id="node9" class="node">
 <title>Node16</title>
-<g id="a_node9"><a xlink:href="token_8h.html#a863ec10d282f1f7e0dbbbaae6cec4f15" target="_top" xlink:title=" ">
+<g id="a_node9"><a xlink:href="token_8h.html#a863ec10d282f1f7e0dbbbaae6cec4f15" target="_top" xlink:title="Destroys a token object.Also frees the token&#39;s value.">
 <polygon fill="#ffffff" stroke="#000000" points="269,-76.5 269,-95.5 331,-95.5 331,-76.5 269,-76.5"/>
 <text text-anchor="middle" x="300" y="-83.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">token_free</text>
 </a>
@@ -177,7 +177,7 @@
 <!-- Node18 -->
 <g id="node11" class="node">
 <title>Node18</title>
-<g id="a_node11"><a xlink:href="error_8c.html#afbf47f2a1edae9c81dcaced1f61515b6" target="_top" xlink:title="Pop and return the top element of the errorstack.">
+<g id="a_node11"><a xlink:href="error_8c.html#a97e94bccb231e66498eb7b2b72d8ec87" target="_top" xlink:title="Pop and return the top element of the errorstack.">
 <polygon fill="#ffffff" stroke="#000000" points="259.5,-38.5 259.5,-57.5 340.5,-57.5 340.5,-38.5 259.5,-38.5"/>
 <text text-anchor="middle" x="300" y="-45.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">errorstack_pop</text>
 </a>

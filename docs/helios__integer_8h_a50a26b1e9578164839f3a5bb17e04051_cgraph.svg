@@ -9,42 +9,42 @@
 <g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 62)">
 <title>helios_integer_init</title>
 <polygon fill="#ffffff" stroke="transparent" points="-4,4 -4,-62 282,-62 282,4 -4,4"/>
-<!-- Node8 -->
+<!-- Node12 -->
 <g id="node1" class="node">
-<title>Node8</title>
+<title>Node12</title>
 <g id="a_node1"><a xlink:title="Constructor of a helios_integer object.">
 <polygon fill="#bfbfbf" stroke="#000000" points="0,-19.5 0,-38.5 95,-38.5 95,-19.5 0,-19.5"/>
 <text text-anchor="middle" x="47.5" y="-26.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">helios_integer_init</text>
 </a>
 </g>
 </g>
-<!-- Node9 -->
+<!-- Node13 -->
 <g id="node2" class="node">
-<title>Node9</title>
+<title>Node13</title>
 <g id="a_node2"><a xlink:href="helios__memory_8h.html#af87f0050f8e236d0945592fa4e54dc94" target="_top" xlink:title="Allocates a new helios object (and performs all the GC steps associated with that action).">
 <polygon fill="#ffffff" stroke="#000000" points="148,-38.5 148,-57.5 261,-57.5 261,-38.5 148,-38.5"/>
 <text text-anchor="middle" x="204.5" y="-45.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">helios_allocate_object</text>
 </a>
 </g>
 </g>
-<!-- Node8&#45;&gt;Node9 -->
+<!-- Node12&#45;&gt;Node13 -->
 <g id="edge1" class="edge">
-<title>Node8&#45;&gt;Node9</title>
+<title>Node12&#45;&gt;Node13</title>
 <path fill="none" stroke="#191970" d="M95.0312,-34.7522C108.3942,-36.3694 123.1831,-38.1591 137.4556,-39.8863"/>
 <polygon fill="#191970" stroke="#191970" points="137.3811,-43.4028 147.7292,-41.1297 138.2222,-36.4535 137.3811,-43.4028"/>
 </g>
-<!-- Node10 -->
+<!-- Node14 -->
 <g id="node3" class="node">
-<title>Node10</title>
+<title>Node14</title>
 <g id="a_node3"><a xlink:href="helios__memory_8h.html#ab14fb1c046aae61ab06eda8eeaf2cd85" target="_top" xlink:title=" ">
 <polygon fill="#ffffff" stroke="#000000" points="131,-.5 131,-19.5 278,-19.5 278,-.5 131,-.5"/>
 <text text-anchor="middle" x="204.5" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">helios_set_garbagecollectable</text>
 </a>
 </g>
 </g>
-<!-- Node8&#45;&gt;Node10 -->
+<!-- Node12&#45;&gt;Node14 -->
 <g id="edge2" class="edge">
-<title>Node8&#45;&gt;Node10</title>
+<title>Node12&#45;&gt;Node14</title>
 <path fill="none" stroke="#191970" d="M95.0312,-23.2478C103.228,-22.2559 111.9612,-21.199 120.7827,-20.1314"/>
 <polygon fill="#191970" stroke="#191970" points="121.249,-23.6006 130.756,-18.9244 120.4079,-16.6513 121.249,-23.6006"/>
 </g>

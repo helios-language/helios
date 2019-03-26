@@ -36,7 +36,7 @@
 <!-- Node22 -->
 <g id="node5" class="node">
 <title>Node22</title>
-<g id="a_node5"><a xlink:href="error_8c.html#afe624477a33ab8814a9454f58a0bc1fa" target="_top" xlink:title="Construct a new error object out of parameters, and push it to the errorstack.">
+<g id="a_node5"><a xlink:href="error_8c.html#a1febf822c4d9249dd4afd09c5d5f87bb" target="_top" xlink:title="Construct a new error object out of parameters, and push it to the errorstack.">
 <polygon fill="#ffffff" stroke="#000000" points="138.5,-.5 138.5,-19.5 224.5,-19.5 224.5,-.5 138.5,-.5"/>
 <text text-anchor="middle" x="181.5" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">errorstack_push</text>
 </a>

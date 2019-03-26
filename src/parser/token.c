@@ -60,7 +60,6 @@ void token_print(Token_t *token) {
  * Constructor for token objects.
  * @param t the type of the constructed token in enum TOKENTYPE.
  * @param value the value of this token.
- * @param canfree true if the value is freeable
  * @return the newly created token.
  *  WARNING: never use string constants as values for tokens
  */
@@ -70,12 +69,12 @@ Token_t *token_new(TOKENTYPE t, helios_object *value) {
     return token;
 }
 
+/**
+ * Destroys a token object.Also frees the token's value.
+ *
+ * @param token the token to free
+ */
 void token_free(Token_t *token) {
-    /**
-     * Destroys a token object.Also frees the token's value.
-     *
-     * @param token the token to free
-     */
     if (token == NULL) {
         return;
     }

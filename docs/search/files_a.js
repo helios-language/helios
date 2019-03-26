@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['readme_2emd',['README.md',['../README_8md.html',1,'']]],
-  ['refcount_2ec',['refcount.c',['../refcount_8c.html',1,'']]]
+  ['serialize_2ec',['serialize.c',['../serialize_8c.html',1,'']]],
+  ['serialize_2eh',['serialize.h',['../serialize_8h.html',1,'']]],
+  ['strtod_2ec',['strtod.c',['../strtod_8c.html',1,'']]]
 ];

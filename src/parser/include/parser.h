@@ -35,7 +35,7 @@
  *  This struct represents the state of the parser.
  */
 typedef struct Parser {
-    Errorstack_t *es;   //!< the errorstack belonging to this parser
+    errorstack_t *es;   //!< the errorstack belonging to this parser
     uint32_t line;      //!< the line the parser is currently on
     uint32_t character; //!< the character in this line the parser is currently
                         //!< pointing at.

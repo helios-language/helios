@@ -1,9 +1,8 @@
 var searchData=
 [
   ['accepted',['accepted',['../structParser__t.html#abd6c294f45cc21640c322255fbc9ae8d',1,'Parser_t']]],
-  ['add',['ADD',['../instruction_8h.html#aae4693759624167b03e9b584f16e8687acfcf145f2788bf340ff3f3098bc54909',1,'instruction.h']]],
   ['allocated_5fobjects',['allocated_objects',['../structgarbagecollector.html#ab635d21bdac578501b1feacc8124f013',1,'garbagecollector']]],
-  ['argument',['argument',['../structinstruction.html#a06a3ccbc915013a7d55cd312399d39ba',1,'instruction']]],
+  ['argument',['argument',['../structhelios__instruction.html#a7371914847cca1ecb1c691d1fc6498e4',1,'helios_instruction']]],
   ['ast',['AST',['../structAST.html',1,'']]],
   ['ast_2ec',['AST.c',['../AST_8c.html',1,'']]],
   ['ast_2eh',['AST.h',['../AST_8h.html',1,'']]],

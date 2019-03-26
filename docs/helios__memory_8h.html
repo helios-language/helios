@@ -87,8 +87,7 @@ Include dependency graph for helios_memory.h:</div>
 </div><div class="textblock"><div class="dynheader">
 This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="helios__memory_8h__dep__incl.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="helios__memory_8h__dep__incl.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 </div>
 <p><a href="helios__memory_8h_source.html">Go to the source code of this file.</a></p>
@@ -102,10 +101,14 @@ Classes</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
 Macros</h2></td></tr>
+<tr class="memitem:aacb2e437a5d6d1fac2bfbe176b2099ba"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="helios__memory_8h.html#aacb2e437a5d6d1fac2bfbe176b2099ba">HELIOS_MEMORY_DEBUG</a>&#160;&#160;&#160;false</td></tr>
+<tr class="separator:aacb2e437a5d6d1fac2bfbe176b2099ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5e29bea4269384b13c7e2799b02d4ded"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="helios__memory_8h.html#a5e29bea4269384b13c7e2799b02d4ded">GC_DEFAULT_LENGTH</a>&#160;&#160;&#160;10</td></tr>
 <tr class="separator:a5e29bea4269384b13c7e2799b02d4ded"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afcb2995864ced8e4d4bfa1672b3a45bf"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="helios__memory_8h.html#afcb2995864ced8e4d4bfa1672b3a45bf">GC_REHASH_PERCENT</a>&#160;&#160;&#160;((double)55)</td></tr>
 <tr class="separator:afcb2995864ced8e4d4bfa1672b3a45bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acf1377fdc0c088c3bea11743f7a3ff18"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="helios__memory_8h.html#acf1377fdc0c088c3bea11743f7a3ff18">GC_REHASH_LOWER_PERCENT</a>&#160;&#160;&#160;((double)30)</td></tr>
+<tr class="separator:acf1377fdc0c088c3bea11743f7a3ff18"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5301b4c3358268578cde0b330c52efb2"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="helios__memory_8h.html#a5301b4c3358268578cde0b330c52efb2">HELIOS_GET_OBJ_GC</a>(obj)&#160;&#160;&#160;(((struct __helios_object_s *)obj)-&gt;gc)</td></tr>
 <tr class="separator:a5301b4c3358268578cde0b330c52efb2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad6a677794da9e4d1890752b20985794b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="helios__memory_8h.html#ad6a677794da9e4d1890752b20985794b">HELIOS_INCREF</a>(obj)&#160;&#160;&#160;(((struct __helios_object_s *)obj)-&gt;refcount++);</td></tr>
@@ -135,8 +138,6 @@ Functions</h2></td></tr>
 <tr class="separator:a48e4eb31a7e7d92b0e015ae68c01bb3a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af87f0050f8e236d0945592fa4e54dc94"><td class="memItemLeft" align="right" valign="top">struct __helios_object_s *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="helios__memory_8h.html#af87f0050f8e236d0945592fa4e54dc94">helios_allocate_object</a> (size_t size)</td></tr>
 <tr class="separator:af87f0050f8e236d0945592fa4e54dc94"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7198e7bab5c6af47abd5c20b31aceb49"><td class="memItemLeft" align="right" valign="top">struct __helios_object_s *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="helios__memory_8h.html#a7198e7bab5c6af47abd5c20b31aceb49">helios_allocate_object_on_gc</a> (<a class="el" href="structgarbagecollector.html">garbagecollector</a> *gc, size_t size)</td></tr>
-<tr class="separator:a7198e7bab5c6af47abd5c20b31aceb49"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a08e10d6dde741394f52241662ea01fc4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="helios__memory_8h.html#a08e10d6dde741394f52241662ea01fc4">helios_free_object</a> (struct __helios_object_s *obj)</td></tr>
 <tr class="separator:a08e10d6dde741394f52241662ea01fc4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab14fb1c046aae61ab06eda8eeaf2cd85"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="helios__memory_8h.html#ab14fb1c046aae61ab06eda8eeaf2cd85">helios_set_garbagecollectable</a> (struct __helios_object_s *obj)</td></tr>
@@ -160,7 +161,23 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="helios__memory_8h_source.html#l00010">10</a> of file <a class="el" href="helios__memory_8h_source.html">helios_memory.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="helios__memory_8h_source.html#l00012">12</a> of file <a class="el" href="helios__memory_8h_source.html">helios_memory.h</a>.</p>
+
+</div>
+</div>
+<a id="acf1377fdc0c088c3bea11743f7a3ff18"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acf1377fdc0c088c3bea11743f7a3ff18">&#9670;&nbsp;</a></span>GC_REHASH_LOWER_PERCENT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define GC_REHASH_LOWER_PERCENT&#160;&#160;&#160;((double)30)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="helios__memory_8h_source.html#l00014">14</a> of file <a class="el" href="helios__memory_8h_source.html">helios_memory.h</a>.</p>
 
 </div>
 </div>
@@ -176,7 +193,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="helios__memory_8h_source.html#l00011">11</a> of file <a class="el" href="helios__memory_8h_source.html">helios_memory.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="helios__memory_8h_source.html#l00013">13</a> of file <a class="el" href="helios__memory_8h_source.html">helios_memory.h</a>.</p>
 
 </div>
 </div>
@@ -195,11 +212,11 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line"><span class="keywordflow">do</span> {                                                                       \</div><div class="line">        ((<span class="keyword">struct </span>__helios_object_s *)obj)-&gt;refcount--;                         \</div><div class="line">        if (((<span class="keyword">struct</span> __helios_object_s *)obj)-&gt;refcount &lt;= 0) {                \</div><div class="line">            HELIOS_CALL_MEMBER(destructor, obj)                                \</div><div class="line">        }                                                                      \</div><div class="line">    } <span class="keywordflow">while</span> (0);</div></div><!-- fragment -->
+<b>Value:</b><div class="fragment"><div class="line"><span class="keywordflow">do</span> {                                                                       \</div><div class="line">        ((<span class="keyword">struct </span>__helios_object_s *)obj)-&gt;refcount--;                         \</div><div class="line">        if (((<span class="keyword">struct</span> __helios_object_s *)obj)-&gt;refcount &lt;= 0) {                \</div><div class="line">            HELIOS_CALL_MEMBER(destructor, obj);                               \</div><div class="line">        }                                                                      \</div><div class="line">    } <span class="keywordflow">while</span> (0);</div></div><!-- fragment -->
 <p>Decrement the reference count of an object. </p>
 <p>When the count reaches 0 (or below) the object will be freed. </p>
 
-<p class="definition">Definition at line <a class="el" href="helios__memory_8h_source.html#l00063">63</a> of file <a class="el" href="helios__memory_8h_source.html">helios_memory.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="helios__memory_8h_source.html#l00065">65</a> of file <a class="el" href="helios__memory_8h_source.html">helios_memory.h</a>.</p>
 
 </div>
 </div>
@@ -222,7 +239,7 @@ Variables</h2></td></tr>
 <p>Decrement the reference count of an object. </p>
 <p>When the count reaches 0 no garbage collection will be performed. </p>
 
-<p class="definition">Definition at line <a class="el" href="helios__memory_8h_source.html#l00057">57</a> of file <a class="el" href="helios__memory_8h_source.html">helios_memory.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="helios__memory_8h_source.html#l00059">59</a> of file <a class="el" href="helios__memory_8h_source.html">helios_memory.h</a>.</p>
 
 </div>
 </div>
@@ -244,7 +261,7 @@ Variables</h2></td></tr>
 
 <p>Get the garbagecollector of an object. </p>
 
-<p class="definition">Definition at line <a class="el" href="helios__memory_8h_source.html#l00047">47</a> of file <a class="el" href="helios__memory_8h_source.html">helios_memory.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="helios__memory_8h_source.html#l00049">49</a> of file <a class="el" href="helios__memory_8h_source.html">helios_memory.h</a>.</p>
 
 </div>
 </div>
@@ -266,7 +283,7 @@ Variables</h2></td></tr>
 
 <p>Get the reference count of an object. </p>
 
-<p class="definition">Definition at line <a class="el" href="helios__memory_8h_source.html#l00087">87</a> of file <a class="el" href="helios__memory_8h_source.html">helios_memory.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="helios__memory_8h_source.html#l00089">89</a> of file <a class="el" href="helios__memory_8h_source.html">helios_memory.h</a>.</p>
 
 </div>
 </div>
@@ -288,7 +305,23 @@ Variables</h2></td></tr>
 
 <p>Increment the reference count of an object. </p>
 
-<p class="definition">Definition at line <a class="el" href="helios__memory_8h_source.html#l00052">52</a> of file <a class="el" href="helios__memory_8h_source.html">helios_memory.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="helios__memory_8h_source.html#l00054">54</a> of file <a class="el" href="helios__memory_8h_source.html">helios_memory.h</a>.</p>
+
+</div>
+</div>
+<a id="aacb2e437a5d6d1fac2bfbe176b2099ba"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aacb2e437a5d6d1fac2bfbe176b2099ba">&#9670;&nbsp;</a></span>HELIOS_MEMORY_DEBUG</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define HELIOS_MEMORY_DEBUG&#160;&#160;&#160;false</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="helios__memory_8h_source.html#l00010">10</a> of file <a class="el" href="helios__memory_8h_source.html">helios_memory.h</a>.</p>
 
 </div>
 </div>
@@ -321,7 +354,7 @@ Variables</h2></td></tr>
 <p>Sets the reference count of an object. </p>
 <p>Setting the reference count of an object to 0 is equal to calling it's destructor. </p>
 
-<p class="definition">Definition at line <a class="el" href="helios__memory_8h_source.html#l00075">75</a> of file <a class="el" href="helios__memory_8h_source.html">helios_memory.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="helios__memory_8h_source.html#l00077">77</a> of file <a class="el" href="helios__memory_8h_source.html">helios_memory.h</a>.</p>
 
 </div>
 </div>
@@ -344,7 +377,6 @@ Variables</h2></td></tr>
 
 <p>Allocates a new helios object (and performs all the GC steps associated with that action). </p>
 <p>Use this instead of malloc whenever a helios object is created.</p>
-<p>NOTE: Automatically assigns the object's gc to be the current global GC pointer. If this is not desired use helios_allocate_object_on_gc.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">size</td><td>the size in bytes of an object to allocate </td></tr>
@@ -353,50 +385,8 @@ Variables</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>the newly allocated object </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="refcount_8c_source.html#l00215">215</a> of file <a class="el" href="refcount_8c_source.html">refcount.c</a>.</p>
-<div class="fragment"><div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;                                                   {</div><div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;    <a class="code" href="structhelios__object.html">helios_object</a> *res = (<a class="code" href="structhelios__object.html">helios_object</a> *)malloc(size);</div><div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;    <span class="keywordflow">return</span> res;</div><div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;}</div><div class="ttc" id="structhelios__object_html"><div class="ttname"><a href="structhelios__object.html">helios_object</a></div><div class="ttdoc">Definition of the most basic helios object.</div><div class="ttdef"><b>Definition:</b> <a href="helios__object_8h_source.html#l00011">helios_object.h:11</a></div></div>
-</div><!-- fragment -->
-</div>
-</div>
-<a id="a7198e7bab5c6af47abd5c20b31aceb49"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7198e7bab5c6af47abd5c20b31aceb49">&#9670;&nbsp;</a></span>helios_allocate_object_on_gc()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">struct __helios_object_s* helios_allocate_object_on_gc </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="structgarbagecollector.html">garbagecollector</a> *&#160;</td>
-          <td class="paramname"><em>gc</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">size_t&#160;</td>
-          <td class="paramname"><em>size</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Allocates a new helios object (and performs all the GC steps associated with that action). </p>
-<p>Use this instead of malloc whenever a helios object is created. Sets the object's GC to whichever GC is passed in as the first argument.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">gc</td><td>the garbagecollector to use for the allocated object. </td></tr>
-    <tr><td class="paramname">size</td><td>the size in bytes of an object to allocate </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>the newly allocated object </dd></dl>
-
-<p class="definition">Definition at line <a class="el" href="refcount_8c_source.html#l00229">229</a> of file <a class="el" href="refcount_8c_source.html">refcount.c</a>.</p>
-<div class="fragment"><div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;                                                                               {</div><div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;    <a class="code" href="structhelios__object.html">helios_object</a> *res = (<a class="code" href="structhelios__object.html">helios_object</a> *)malloc(size);</div><div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;    res-&gt;gc = gc;</div><div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;    helios_track_object(res);</div><div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;    <span class="keywordflow">return</span> res;</div><div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;}</div><div class="ttc" id="structhelios__object_html"><div class="ttname"><a href="structhelios__object.html">helios_object</a></div><div class="ttdoc">Definition of the most basic helios object.</div><div class="ttdef"><b>Definition:</b> <a href="helios__object_8h_source.html#l00011">helios_object.h:11</a></div></div>
+<p class="definition">Definition at line <a class="el" href="refcount_8c_source.html#l00267">267</a> of file <a class="el" href="refcount_8c_source.html">refcount.c</a>.</p>
+<div class="fragment"><div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;                                                   {</div><div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;<span class="preprocessor">#if HELIOS_MEMORY_DEBUG</span></div><div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;    printf(<span class="stringliteral">&quot;\x1b[31mhelios memory debug: allocated %ld bytes (%i objects &quot;</span></div><div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;           <span class="stringliteral">&quot;allocated)\x1b[0m\n&quot;</span>,</div><div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;           size, ++__MEMDEBUG_objectsallocated);</div><div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;<span class="preprocessor">#endif</span></div><div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;</div><div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;    <a class="code" href="structhelios__object.html">helios_object</a> *res = (<a class="code" href="structhelios__object.html">helios_object</a> *)malloc(size);</div><div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;<span class="preprocessor">#if HELIOS_MEMORY_DEBUG</span></div><div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;    printf(<span class="stringliteral">&quot;\x1b[31mallocated at 0x%lx\x1b[0m\n&quot;</span>, (uint64_t)res);</div><div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;<span class="preprocessor">#endif</span></div><div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;</div><div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;    <span class="keywordflow">return</span> res;</div><div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;}</div><div class="ttc" id="structhelios__object_html"><div class="ttname"><a href="structhelios__object.html">helios_object</a></div><div class="ttdoc">Definition of the most basic helios object.</div><div class="ttdef"><b>Definition:</b> <a href="helios__object_8h_source.html#l00011">helios_object.h:11</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -425,9 +415,9 @@ Variables</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="refcount_8c_source.html#l00090">90</a> of file <a class="el" href="refcount_8c_source.html">refcount.c</a>.</p>
-<div class="fragment"><div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;                                                          {</div><div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    <a class="code" href="refcount_8c.html#a5dcd65b50eabfe133b9fcf6206b2bd1e">helios_free_all_tracked</a>(gc);</div><div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    free(gc-&gt;<a class="code" href="structgarbagecollector.html#ab635d21bdac578501b1feacc8124f013">allocated_objects</a>);</div><div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    free(gc);</div><div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;}</div><div class="ttc" id="structgarbagecollector_html_ab635d21bdac578501b1feacc8124f013"><div class="ttname"><a href="structgarbagecollector.html#ab635d21bdac578501b1feacc8124f013">garbagecollector::allocated_objects</a></div><div class="ttdeci">__helios_gc_hashmap_node * allocated_objects</div><div class="ttdef"><b>Definition:</b> <a href="helios__memory_8h_source.html#l00023">helios_memory.h:23</a></div></div>
-<div class="ttc" id="refcount_8c_html_a5dcd65b50eabfe133b9fcf6206b2bd1e"><div class="ttname"><a href="refcount_8c.html#a5dcd65b50eabfe133b9fcf6206b2bd1e">helios_free_all_tracked</a></div><div class="ttdeci">void helios_free_all_tracked(garbagecollector *gc)</div><div class="ttdoc">Frees all tracked objects of a garbagecollector without freeing the GC itself.</div><div class="ttdef"><b>Definition:</b> <a href="refcount_8c_source.html#l00181">refcount.c:181</a></div></div>
+<p class="definition">Definition at line <a class="el" href="refcount_8c_source.html#l00095">95</a> of file <a class="el" href="refcount_8c_source.html">refcount.c</a>.</p>
+<div class="fragment"><div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;                                                          {</div><div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    <a class="code" href="refcount_8c.html#a5dcd65b50eabfe133b9fcf6206b2bd1e">helios_free_all_tracked</a>(gc);</div><div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    free(gc-&gt;<a class="code" href="structgarbagecollector.html#ab635d21bdac578501b1feacc8124f013">allocated_objects</a>);</div><div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    free(gc);</div><div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;}</div><div class="ttc" id="structgarbagecollector_html_ab635d21bdac578501b1feacc8124f013"><div class="ttname"><a href="structgarbagecollector.html#ab635d21bdac578501b1feacc8124f013">garbagecollector::allocated_objects</a></div><div class="ttdeci">__helios_gc_hashmap_node * allocated_objects</div><div class="ttdef"><b>Definition:</b> <a href="helios__memory_8h_source.html#l00026">helios_memory.h:26</a></div></div>
+<div class="ttc" id="refcount_8c_html_a5dcd65b50eabfe133b9fcf6206b2bd1e"><div class="ttname"><a href="refcount_8c.html#a5dcd65b50eabfe133b9fcf6206b2bd1e">helios_free_all_tracked</a></div><div class="ttdeci">void helios_free_all_tracked(garbagecollector *gc)</div><div class="ttdoc">Frees all tracked objects of a garbagecollector without freeing the GC itself.</div><div class="ttdef"><b>Definition:</b> <a href="refcount_8c_source.html#l00232">refcount.c:232</a></div></div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -460,12 +450,12 @@ Here is the call graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="refcount_8c_source.html#l00181">181</a> of file <a class="el" href="refcount_8c_source.html">refcount.c</a>.</p>
-<div class="fragment"><div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;                                                   {</div><div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;    <span class="keywordflow">for</span> (uint32_t i = 0; i &lt; gc-&gt;<a class="code" href="structgarbagecollector.html#a0d6ec8a21c69c450e0631523fa685cf7">filled</a>; i++) {</div><div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;        <span class="keywordflow">if</span> (gc-&gt;<a class="code" href="structgarbagecollector.html#ab635d21bdac578501b1feacc8124f013">allocated_objects</a>[i].<a class="code" href="struct____helios__gc__hashmap__node.html#a32311561a1e3cfa95511b2a8fb517a95">used</a> == <span class="keyword">true</span>) {</div><div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;            <a class="code" href="builtinutils_8h.html#aa862687a707dcd3bf49ff4ffc91871e4">HELIOS_CALL_MEMBER</a>(destructor, gc-&gt;<a class="code" href="structgarbagecollector.html#ab635d21bdac578501b1feacc8124f013">allocated_objects</a>[i].<a class="code" href="struct____helios__gc__hashmap__node.html#adbebba8ca971110112edfb370fcd4973">obj</a>);</div><div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;        }</div><div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;    }</div><div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;}</div><div class="ttc" id="structgarbagecollector_html_ab635d21bdac578501b1feacc8124f013"><div class="ttname"><a href="structgarbagecollector.html#ab635d21bdac578501b1feacc8124f013">garbagecollector::allocated_objects</a></div><div class="ttdeci">__helios_gc_hashmap_node * allocated_objects</div><div class="ttdef"><b>Definition:</b> <a href="helios__memory_8h_source.html#l00023">helios_memory.h:23</a></div></div>
-<div class="ttc" id="struct____helios__gc__hashmap__node_html_a32311561a1e3cfa95511b2a8fb517a95"><div class="ttname"><a href="struct____helios__gc__hashmap__node.html#a32311561a1e3cfa95511b2a8fb517a95">__helios_gc_hashmap_node::used</a></div><div class="ttdeci">bool used</div><div class="ttdef"><b>Definition:</b> <a href="helios__memory_8h_source.html#l00016">helios_memory.h:16</a></div></div>
+<p class="definition">Definition at line <a class="el" href="refcount_8c_source.html#l00232">232</a> of file <a class="el" href="refcount_8c_source.html">refcount.c</a>.</p>
+<div class="fragment"><div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;                                                   {</div><div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;<span class="preprocessor">#if HELIOS_MEMORY_DEBUG</span></div><div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;    printf(<span class="stringliteral">&quot;\x1b[31mfreeing all tracked objects.\n\x1b[0m\n&quot;</span>);</div><div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;<span class="preprocessor">#endif</span></div><div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;    <span class="keywordflow">for</span> (uint32_t i = 0; i &lt; gc-&gt;<a class="code" href="structgarbagecollector.html#ae45ae787ff7ccbca16600ff1adc3d762">size</a>; i++) {</div><div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;        <span class="keywordflow">if</span> (gc-&gt;<a class="code" href="structgarbagecollector.html#ab635d21bdac578501b1feacc8124f013">allocated_objects</a>[i].<a class="code" href="struct____helios__gc__hashmap__node.html#a32311561a1e3cfa95511b2a8fb517a95">used</a> == <span class="keyword">true</span>) {</div><div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;            <a class="code" href="builtinutils_8h.html#aa862687a707dcd3bf49ff4ffc91871e4">HELIOS_CALL_MEMBER</a>(destructor, gc-&gt;<a class="code" href="structgarbagecollector.html#ab635d21bdac578501b1feacc8124f013">allocated_objects</a>[i].<a class="code" href="struct____helios__gc__hashmap__node.html#adbebba8ca971110112edfb370fcd4973">obj</a>);</div><div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;        }</div><div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;    }</div><div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;}</div><div class="ttc" id="structgarbagecollector_html_ab635d21bdac578501b1feacc8124f013"><div class="ttname"><a href="structgarbagecollector.html#ab635d21bdac578501b1feacc8124f013">garbagecollector::allocated_objects</a></div><div class="ttdeci">__helios_gc_hashmap_node * allocated_objects</div><div class="ttdef"><b>Definition:</b> <a href="helios__memory_8h_source.html#l00026">helios_memory.h:26</a></div></div>
+<div class="ttc" id="struct____helios__gc__hashmap__node_html_a32311561a1e3cfa95511b2a8fb517a95"><div class="ttname"><a href="struct____helios__gc__hashmap__node.html#a32311561a1e3cfa95511b2a8fb517a95">__helios_gc_hashmap_node::used</a></div><div class="ttdeci">bool used</div><div class="ttdef"><b>Definition:</b> <a href="helios__memory_8h_source.html#l00019">helios_memory.h:19</a></div></div>
 <div class="ttc" id="builtinutils_8h_html_aa862687a707dcd3bf49ff4ffc91871e4"><div class="ttname"><a href="builtinutils_8h.html#aa862687a707dcd3bf49ff4ffc91871e4">HELIOS_CALL_MEMBER</a></div><div class="ttdeci">#define HELIOS_CALL_MEMBER(func, obj,...)</div><div class="ttdoc">This header is only there to resolve some circular dependency (with memory.h) issues but it fully bel...</div><div class="ttdef"><b>Definition:</b> <a href="builtinutils_8h_source.html#l00011">builtinutils.h:11</a></div></div>
-<div class="ttc" id="structgarbagecollector_html_a0d6ec8a21c69c450e0631523fa685cf7"><div class="ttname"><a href="structgarbagecollector.html#a0d6ec8a21c69c450e0631523fa685cf7">garbagecollector::filled</a></div><div class="ttdeci">uint32_t filled</div><div class="ttdef"><b>Definition:</b> <a href="helios__memory_8h_source.html#l00022">helios_memory.h:22</a></div></div>
-<div class="ttc" id="struct____helios__gc__hashmap__node_html_adbebba8ca971110112edfb370fcd4973"><div class="ttname"><a href="struct____helios__gc__hashmap__node.html#adbebba8ca971110112edfb370fcd4973">__helios_gc_hashmap_node::obj</a></div><div class="ttdeci">struct __helios_object_s * obj</div><div class="ttdef"><b>Definition:</b> <a href="helios__memory_8h_source.html#l00017">helios_memory.h:17</a></div></div>
+<div class="ttc" id="structgarbagecollector_html_ae45ae787ff7ccbca16600ff1adc3d762"><div class="ttname"><a href="structgarbagecollector.html#ae45ae787ff7ccbca16600ff1adc3d762">garbagecollector::size</a></div><div class="ttdeci">uint32_t size</div><div class="ttdef"><b>Definition:</b> <a href="helios__memory_8h_source.html#l00024">helios_memory.h:24</a></div></div>
+<div class="ttc" id="struct____helios__gc__hashmap__node_html_adbebba8ca971110112edfb370fcd4973"><div class="ttname"><a href="struct____helios__gc__hashmap__node.html#adbebba8ca971110112edfb370fcd4973">__helios_gc_hashmap_node::obj</a></div><div class="ttdeci">struct __helios_object_s * obj</div><div class="ttdef"><b>Definition:</b> <a href="helios__memory_8h_source.html#l00020">helios_memory.h:20</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -487,7 +477,7 @@ Here is the call graph for this function:</div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="helios__memory_8h_a08e10d6dde741394f52241662ea01fc4_icgraph.svg" width="330" height="139"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="helios__memory_8h_a08e10d6dde741394f52241662ea01fc4_icgraph.svg" width="346" height="256"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -517,13 +507,13 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="refcount_8c_source.html#l00196">196</a> of file <a class="el" href="refcount_8c_source.html">refcount.c</a>.</p>
-<div class="fragment"><div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;                                                  {</div><div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;    <span class="keywordflow">for</span> (uint32_t i = 0; i &lt; gc-&gt;<a class="code" href="structgarbagecollector.html#a0d6ec8a21c69c450e0631523fa685cf7">filled</a>; i++) {</div><div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;        <span class="keywordflow">if</span> (gc-&gt;<a class="code" href="structgarbagecollector.html#ab635d21bdac578501b1feacc8124f013">allocated_objects</a>[i].<a class="code" href="struct____helios__gc__hashmap__node.html#a32311561a1e3cfa95511b2a8fb517a95">used</a> == <span class="keyword">true</span> &amp;&amp;</div><div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;            <a class="code" href="helios__memory_8h.html#a8c172aa0256138d40339d80c3f9a1540">HELIOS_GETREF</a>(gc-&gt;<a class="code" href="structgarbagecollector.html#ab635d21bdac578501b1feacc8124f013">allocated_objects</a>[i].<a class="code" href="struct____helios__gc__hashmap__node.html#adbebba8ca971110112edfb370fcd4973">obj</a>) == 0) {</div><div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;            <a class="code" href="builtinutils_8h.html#aa862687a707dcd3bf49ff4ffc91871e4">HELIOS_CALL_MEMBER</a>(destructor, gc-&gt;<a class="code" href="structgarbagecollector.html#ab635d21bdac578501b1feacc8124f013">allocated_objects</a>[i].<a class="code" href="struct____helios__gc__hashmap__node.html#adbebba8ca971110112edfb370fcd4973">obj</a>);</div><div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;        }</div><div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;    }</div><div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;}</div><div class="ttc" id="structgarbagecollector_html_ab635d21bdac578501b1feacc8124f013"><div class="ttname"><a href="structgarbagecollector.html#ab635d21bdac578501b1feacc8124f013">garbagecollector::allocated_objects</a></div><div class="ttdeci">__helios_gc_hashmap_node * allocated_objects</div><div class="ttdef"><b>Definition:</b> <a href="helios__memory_8h_source.html#l00023">helios_memory.h:23</a></div></div>
-<div class="ttc" id="struct____helios__gc__hashmap__node_html_a32311561a1e3cfa95511b2a8fb517a95"><div class="ttname"><a href="struct____helios__gc__hashmap__node.html#a32311561a1e3cfa95511b2a8fb517a95">__helios_gc_hashmap_node::used</a></div><div class="ttdeci">bool used</div><div class="ttdef"><b>Definition:</b> <a href="helios__memory_8h_source.html#l00016">helios_memory.h:16</a></div></div>
+<p class="definition">Definition at line <a class="el" href="refcount_8c_source.html#l00250">250</a> of file <a class="el" href="refcount_8c_source.html">refcount.c</a>.</p>
+<div class="fragment"><div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;                                                  {</div><div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;    <span class="keywordflow">for</span> (uint32_t i = 0; i &lt; gc-&gt;<a class="code" href="structgarbagecollector.html#a0d6ec8a21c69c450e0631523fa685cf7">filled</a>; i++) {</div><div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;        <span class="keywordflow">if</span> (gc-&gt;<a class="code" href="structgarbagecollector.html#ab635d21bdac578501b1feacc8124f013">allocated_objects</a>[i].<a class="code" href="struct____helios__gc__hashmap__node.html#a32311561a1e3cfa95511b2a8fb517a95">used</a> == <span class="keyword">true</span> &amp;&amp;</div><div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;            <a class="code" href="helios__memory_8h.html#a8c172aa0256138d40339d80c3f9a1540">HELIOS_GETREF</a>(gc-&gt;<a class="code" href="structgarbagecollector.html#ab635d21bdac578501b1feacc8124f013">allocated_objects</a>[i].<a class="code" href="struct____helios__gc__hashmap__node.html#adbebba8ca971110112edfb370fcd4973">obj</a>) &lt;= 0) {</div><div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;            <a class="code" href="builtinutils_8h.html#aa862687a707dcd3bf49ff4ffc91871e4">HELIOS_CALL_MEMBER</a>(destructor, gc-&gt;<a class="code" href="structgarbagecollector.html#ab635d21bdac578501b1feacc8124f013">allocated_objects</a>[i].<a class="code" href="struct____helios__gc__hashmap__node.html#adbebba8ca971110112edfb370fcd4973">obj</a>);</div><div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;        }</div><div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;    }</div><div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;}</div><div class="ttc" id="structgarbagecollector_html_ab635d21bdac578501b1feacc8124f013"><div class="ttname"><a href="structgarbagecollector.html#ab635d21bdac578501b1feacc8124f013">garbagecollector::allocated_objects</a></div><div class="ttdeci">__helios_gc_hashmap_node * allocated_objects</div><div class="ttdef"><b>Definition:</b> <a href="helios__memory_8h_source.html#l00026">helios_memory.h:26</a></div></div>
+<div class="ttc" id="struct____helios__gc__hashmap__node_html_a32311561a1e3cfa95511b2a8fb517a95"><div class="ttname"><a href="struct____helios__gc__hashmap__node.html#a32311561a1e3cfa95511b2a8fb517a95">__helios_gc_hashmap_node::used</a></div><div class="ttdeci">bool used</div><div class="ttdef"><b>Definition:</b> <a href="helios__memory_8h_source.html#l00019">helios_memory.h:19</a></div></div>
 <div class="ttc" id="builtinutils_8h_html_aa862687a707dcd3bf49ff4ffc91871e4"><div class="ttname"><a href="builtinutils_8h.html#aa862687a707dcd3bf49ff4ffc91871e4">HELIOS_CALL_MEMBER</a></div><div class="ttdeci">#define HELIOS_CALL_MEMBER(func, obj,...)</div><div class="ttdoc">This header is only there to resolve some circular dependency (with memory.h) issues but it fully bel...</div><div class="ttdef"><b>Definition:</b> <a href="builtinutils_8h_source.html#l00011">builtinutils.h:11</a></div></div>
-<div class="ttc" id="structgarbagecollector_html_a0d6ec8a21c69c450e0631523fa685cf7"><div class="ttname"><a href="structgarbagecollector.html#a0d6ec8a21c69c450e0631523fa685cf7">garbagecollector::filled</a></div><div class="ttdeci">uint32_t filled</div><div class="ttdef"><b>Definition:</b> <a href="helios__memory_8h_source.html#l00022">helios_memory.h:22</a></div></div>
-<div class="ttc" id="struct____helios__gc__hashmap__node_html_adbebba8ca971110112edfb370fcd4973"><div class="ttname"><a href="struct____helios__gc__hashmap__node.html#adbebba8ca971110112edfb370fcd4973">__helios_gc_hashmap_node::obj</a></div><div class="ttdeci">struct __helios_object_s * obj</div><div class="ttdef"><b>Definition:</b> <a href="helios__memory_8h_source.html#l00017">helios_memory.h:17</a></div></div>
-<div class="ttc" id="helios__memory_8h_html_a8c172aa0256138d40339d80c3f9a1540"><div class="ttname"><a href="helios__memory_8h.html#a8c172aa0256138d40339d80c3f9a1540">HELIOS_GETREF</a></div><div class="ttdeci">#define HELIOS_GETREF(obj)</div><div class="ttdoc">Get the reference count of an object.</div><div class="ttdef"><b>Definition:</b> <a href="helios__memory_8h_source.html#l00087">helios_memory.h:87</a></div></div>
+<div class="ttc" id="structgarbagecollector_html_a0d6ec8a21c69c450e0631523fa685cf7"><div class="ttname"><a href="structgarbagecollector.html#a0d6ec8a21c69c450e0631523fa685cf7">garbagecollector::filled</a></div><div class="ttdeci">uint32_t filled</div><div class="ttdef"><b>Definition:</b> <a href="helios__memory_8h_source.html#l00025">helios_memory.h:25</a></div></div>
+<div class="ttc" id="struct____helios__gc__hashmap__node_html_adbebba8ca971110112edfb370fcd4973"><div class="ttname"><a href="struct____helios__gc__hashmap__node.html#adbebba8ca971110112edfb370fcd4973">__helios_gc_hashmap_node::obj</a></div><div class="ttdeci">struct __helios_object_s * obj</div><div class="ttdef"><b>Definition:</b> <a href="helios__memory_8h_source.html#l00020">helios_memory.h:20</a></div></div>
+<div class="ttc" id="helios__memory_8h_html_a8c172aa0256138d40339d80c3f9a1540"><div class="ttname"><a href="helios__memory_8h.html#a8c172aa0256138d40339d80c3f9a1540">HELIOS_GETREF</a></div><div class="ttdeci">#define HELIOS_GETREF(obj)</div><div class="ttdoc">Get the reference count of an object.</div><div class="ttdef"><b>Definition:</b> <a href="helios__memory_8h_source.html#l00089">helios_memory.h:89</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -546,8 +536,8 @@ Here is the caller graph for this function:</div>
 <p>Errors whenever this value is not set.</p>
 <dl class="section return"><dt>Returns</dt><dd>the current GC </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="refcount_8c_source.html#l00047">47</a> of file <a class="el" href="refcount_8c_source.html">refcount.c</a>.</p>
-<div class="fragment"><div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;                                                {</div><div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="refcount_8c.html#ae984dcde75fe497c211fa3e23888dadd">__GC_CURRENT</a> == NULL) {</div><div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        printf(</div><div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;            <span class="stringliteral">&quot;ERROR: no garbage collector found (fix: use &quot;</span></div><div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;            <span class="stringliteral">&quot;helios_init_garbagecollector and helios_set_garbagecollector)\n&quot;</span>);</div><div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        exit(-1);</div><div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    }</div><div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="refcount_8c.html#ae984dcde75fe497c211fa3e23888dadd">__GC_CURRENT</a>;</div><div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;}</div><div class="ttc" id="refcount_8c_html_ae984dcde75fe497c211fa3e23888dadd"><div class="ttname"><a href="refcount_8c.html#ae984dcde75fe497c211fa3e23888dadd">__GC_CURRENT</a></div><div class="ttdeci">garbagecollector * __GC_CURRENT</div><div class="ttdoc">Garbage collector objects are a field in any thread, and any object has a pointer to one.</div><div class="ttdef"><b>Definition:</b> <a href="refcount_8c_source.html#l00039">refcount.c:39</a></div></div>
+<p class="definition">Definition at line <a class="el" href="refcount_8c_source.html#l00051">51</a> of file <a class="el" href="refcount_8c_source.html">refcount.c</a>.</p>
+<div class="fragment"><div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;                                                {</div><div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="refcount_8c.html#ae984dcde75fe497c211fa3e23888dadd">__GC_CURRENT</a> == NULL) {</div><div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        printf(</div><div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;            <span class="stringliteral">&quot;ERROR: no garbage collector found (fix: use &quot;</span></div><div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;            <span class="stringliteral">&quot;helios_init_garbagecollector and helios_set_garbagecollector)\n&quot;</span>);</div><div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        exit(-1);</div><div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    }</div><div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="refcount_8c.html#ae984dcde75fe497c211fa3e23888dadd">__GC_CURRENT</a>;</div><div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;}</div><div class="ttc" id="refcount_8c_html_ae984dcde75fe497c211fa3e23888dadd"><div class="ttname"><a href="refcount_8c.html#ae984dcde75fe497c211fa3e23888dadd">__GC_CURRENT</a></div><div class="ttdeci">garbagecollector * __GC_CURRENT</div><div class="ttdoc">Garbage collector objects are a field in any thread, and any object has a pointer to one.</div><div class="ttdef"><b>Definition:</b> <a href="refcount_8c_source.html#l00039">refcount.c:39</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -571,13 +561,14 @@ Here is the caller graph for this function:</div>
 <p>TODO: create shortcut function for creating a GC and setting it as current.</p>
 <dl class="section return"><dt>Returns</dt><dd>a newly created garbagecollector. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="refcount_8c_source.html#l00074">74</a> of file <a class="el" href="refcount_8c_source.html">refcount.c</a>.</p>
-<div class="fragment"><div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;                                                 {</div><div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <a class="code" href="structgarbagecollector.html">garbagecollector</a> *gc = malloc(<span class="keyword">sizeof</span>(<a class="code" href="structgarbagecollector.html">garbagecollector</a>));</div><div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    *gc = (<a class="code" href="structgarbagecollector.html">garbagecollector</a>){</div><div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        <a class="code" href="helios__memory_8h.html#a5e29bea4269384b13c7e2799b02d4ded">GC_DEFAULT_LENGTH</a>, 0,</div><div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        malloc(<a class="code" href="helios__memory_8h.html#a5e29bea4269384b13c7e2799b02d4ded">GC_DEFAULT_LENGTH</a> * <span class="keyword">sizeof</span>(<a class="code" href="struct____helios__gc__hashmap__node.html">__helios_gc_hashmap_node</a>))};</div><div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <span class="keywordflow">for</span> (uint32_t i = 0; i &lt; gc-&gt;<a class="code" href="structgarbagecollector.html#ae45ae787ff7ccbca16600ff1adc3d762">size</a>; i++) {</div><div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;        gc-&gt;<a class="code" href="structgarbagecollector.html#ab635d21bdac578501b1feacc8124f013">allocated_objects</a>[i].<a class="code" href="struct____helios__gc__hashmap__node.html#a32311561a1e3cfa95511b2a8fb517a95">used</a> = <span class="keyword">false</span>;</div><div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    }</div><div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <span class="keywordflow">return</span> gc;</div><div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;}</div><div class="ttc" id="structgarbagecollector_html_ab635d21bdac578501b1feacc8124f013"><div class="ttname"><a href="structgarbagecollector.html#ab635d21bdac578501b1feacc8124f013">garbagecollector::allocated_objects</a></div><div class="ttdeci">__helios_gc_hashmap_node * allocated_objects</div><div class="ttdef"><b>Definition:</b> <a href="helios__memory_8h_source.html#l00023">helios_memory.h:23</a></div></div>
-<div class="ttc" id="struct____helios__gc__hashmap__node_html_a32311561a1e3cfa95511b2a8fb517a95"><div class="ttname"><a href="struct____helios__gc__hashmap__node.html#a32311561a1e3cfa95511b2a8fb517a95">__helios_gc_hashmap_node::used</a></div><div class="ttdeci">bool used</div><div class="ttdef"><b>Definition:</b> <a href="helios__memory_8h_source.html#l00016">helios_memory.h:16</a></div></div>
-<div class="ttc" id="structgarbagecollector_html_ae45ae787ff7ccbca16600ff1adc3d762"><div class="ttname"><a href="structgarbagecollector.html#ae45ae787ff7ccbca16600ff1adc3d762">garbagecollector::size</a></div><div class="ttdeci">uint32_t size</div><div class="ttdef"><b>Definition:</b> <a href="helios__memory_8h_source.html#l00021">helios_memory.h:21</a></div></div>
-<div class="ttc" id="helios__memory_8h_html_a5e29bea4269384b13c7e2799b02d4ded"><div class="ttname"><a href="helios__memory_8h.html#a5e29bea4269384b13c7e2799b02d4ded">GC_DEFAULT_LENGTH</a></div><div class="ttdeci">#define GC_DEFAULT_LENGTH</div><div class="ttdef"><b>Definition:</b> <a href="helios__memory_8h_source.html#l00010">helios_memory.h:10</a></div></div>
-<div class="ttc" id="struct____helios__gc__hashmap__node_html"><div class="ttname"><a href="struct____helios__gc__hashmap__node.html">__helios_gc_hashmap_node</a></div><div class="ttdef"><b>Definition:</b> <a href="helios__memory_8h_source.html#l00015">helios_memory.h:15</a></div></div>
-<div class="ttc" id="structgarbagecollector_html"><div class="ttname"><a href="structgarbagecollector.html">garbagecollector</a></div><div class="ttdef"><b>Definition:</b> <a href="helios__memory_8h_source.html#l00020">helios_memory.h:20</a></div></div>
+<p class="definition">Definition at line <a class="el" href="refcount_8c_source.html#l00078">78</a> of file <a class="el" href="refcount_8c_source.html">refcount.c</a>.</p>
+<div class="fragment"><div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;                                                 {</div><div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <a class="code" href="structgarbagecollector.html">garbagecollector</a> *gc = malloc(<span class="keyword">sizeof</span>(<a class="code" href="structgarbagecollector.html">garbagecollector</a>));</div><div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    *gc = (<a class="code" href="structgarbagecollector.html">garbagecollector</a>){</div><div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;        <a class="code" href="helios__memory_8h.html#a5e29bea4269384b13c7e2799b02d4ded">GC_DEFAULT_LENGTH</a>, 0,</div><div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        malloc(<a class="code" href="helios__memory_8h.html#a5e29bea4269384b13c7e2799b02d4ded">GC_DEFAULT_LENGTH</a> * <span class="keyword">sizeof</span>(<a class="code" href="struct____helios__gc__hashmap__node.html">__helios_gc_hashmap_node</a>))};</div><div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <span class="keywordflow">for</span> (uint32_t i = 0; i &lt; gc-&gt;<a class="code" href="structgarbagecollector.html#ae45ae787ff7ccbca16600ff1adc3d762">size</a>; i++) {</div><div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;        gc-&gt;<a class="code" href="structgarbagecollector.html#ab635d21bdac578501b1feacc8124f013">allocated_objects</a>[i].<a class="code" href="struct____helios__gc__hashmap__node.html#a32311561a1e3cfa95511b2a8fb517a95">used</a> = <span class="keyword">false</span>;</div><div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        gc-&gt;<a class="code" href="structgarbagecollector.html#ab635d21bdac578501b1feacc8124f013">allocated_objects</a>[i].<a class="code" href="struct____helios__gc__hashmap__node.html#adbebba8ca971110112edfb370fcd4973">obj</a> = NULL;</div><div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    }</div><div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    <span class="keywordflow">return</span> gc;</div><div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;}</div><div class="ttc" id="structgarbagecollector_html_ab635d21bdac578501b1feacc8124f013"><div class="ttname"><a href="structgarbagecollector.html#ab635d21bdac578501b1feacc8124f013">garbagecollector::allocated_objects</a></div><div class="ttdeci">__helios_gc_hashmap_node * allocated_objects</div><div class="ttdef"><b>Definition:</b> <a href="helios__memory_8h_source.html#l00026">helios_memory.h:26</a></div></div>
+<div class="ttc" id="struct____helios__gc__hashmap__node_html_a32311561a1e3cfa95511b2a8fb517a95"><div class="ttname"><a href="struct____helios__gc__hashmap__node.html#a32311561a1e3cfa95511b2a8fb517a95">__helios_gc_hashmap_node::used</a></div><div class="ttdeci">bool used</div><div class="ttdef"><b>Definition:</b> <a href="helios__memory_8h_source.html#l00019">helios_memory.h:19</a></div></div>
+<div class="ttc" id="structgarbagecollector_html_ae45ae787ff7ccbca16600ff1adc3d762"><div class="ttname"><a href="structgarbagecollector.html#ae45ae787ff7ccbca16600ff1adc3d762">garbagecollector::size</a></div><div class="ttdeci">uint32_t size</div><div class="ttdef"><b>Definition:</b> <a href="helios__memory_8h_source.html#l00024">helios_memory.h:24</a></div></div>
+<div class="ttc" id="struct____helios__gc__hashmap__node_html_adbebba8ca971110112edfb370fcd4973"><div class="ttname"><a href="struct____helios__gc__hashmap__node.html#adbebba8ca971110112edfb370fcd4973">__helios_gc_hashmap_node::obj</a></div><div class="ttdeci">struct __helios_object_s * obj</div><div class="ttdef"><b>Definition:</b> <a href="helios__memory_8h_source.html#l00020">helios_memory.h:20</a></div></div>
+<div class="ttc" id="helios__memory_8h_html_a5e29bea4269384b13c7e2799b02d4ded"><div class="ttname"><a href="helios__memory_8h.html#a5e29bea4269384b13c7e2799b02d4ded">GC_DEFAULT_LENGTH</a></div><div class="ttdeci">#define GC_DEFAULT_LENGTH</div><div class="ttdef"><b>Definition:</b> <a href="helios__memory_8h_source.html#l00012">helios_memory.h:12</a></div></div>
+<div class="ttc" id="struct____helios__gc__hashmap__node_html"><div class="ttname"><a href="struct____helios__gc__hashmap__node.html">__helios_gc_hashmap_node</a></div><div class="ttdef"><b>Definition:</b> <a href="helios__memory_8h_source.html#l00018">helios_memory.h:18</a></div></div>
+<div class="ttc" id="structgarbagecollector_html"><div class="ttname"><a href="structgarbagecollector.html">garbagecollector</a></div><div class="ttdef"><b>Definition:</b> <a href="helios__memory_8h_source.html#l00023">helios_memory.h:23</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -599,7 +590,7 @@ Here is the caller graph for this function:</div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="helios__memory_8h_ab14fb1c046aae61ab06eda8eeaf2cd85_icgraph.svg" width="382" height="139"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="helios__memory_8h_ab14fb1c046aae61ab06eda8eeaf2cd85_icgraph.svg" width="439" height="240"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -628,8 +619,8 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="refcount_8c_source.html#l00062">62</a> of file <a class="el" href="refcount_8c_source.html">refcount.c</a>.</p>
-<div class="fragment"><div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;                                                       {</div><div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <a class="code" href="refcount_8c.html#ae984dcde75fe497c211fa3e23888dadd">__GC_CURRENT</a> = gc;</div><div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;}</div><div class="ttc" id="refcount_8c_html_ae984dcde75fe497c211fa3e23888dadd"><div class="ttname"><a href="refcount_8c.html#ae984dcde75fe497c211fa3e23888dadd">__GC_CURRENT</a></div><div class="ttdeci">garbagecollector * __GC_CURRENT</div><div class="ttdoc">Garbage collector objects are a field in any thread, and any object has a pointer to one.</div><div class="ttdef"><b>Definition:</b> <a href="refcount_8c_source.html#l00039">refcount.c:39</a></div></div>
+<p class="definition">Definition at line <a class="el" href="refcount_8c_source.html#l00066">66</a> of file <a class="el" href="refcount_8c_source.html">refcount.c</a>.</p>
+<div class="fragment"><div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;                                                       {</div><div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <a class="code" href="refcount_8c.html#ae984dcde75fe497c211fa3e23888dadd">__GC_CURRENT</a> = gc;</div><div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;}</div><div class="ttc" id="refcount_8c_html_ae984dcde75fe497c211fa3e23888dadd"><div class="ttname"><a href="refcount_8c.html#ae984dcde75fe497c211fa3e23888dadd">__GC_CURRENT</a></div><div class="ttdeci">garbagecollector * __GC_CURRENT</div><div class="ttdoc">Garbage collector objects are a field in any thread, and any object has a pointer to one.</div><div class="ttdef"><b>Definition:</b> <a href="refcount_8c_source.html#l00039">refcount.c:39</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -648,14 +639,14 @@ Here is the caller graph for this function:</div>
 
 <p>the global current garbagecollector. </p>
 
-<p class="definition">Definition at line <a class="el" href="helios__memory_8h_source.html#l00042">42</a> of file <a class="el" href="helios__memory_8h_source.html">helios_memory.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="helios__memory_8h_source.html#l00044">44</a> of file <a class="el" href="helios__memory_8h_source.html">helios_memory.h</a>.</p>
 
 </div>
 </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Mar 11 2019 22:44:03 for Helios-Language by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Mar 26 2019 11:50:19 for Helios-Language by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.15
 </small></address>

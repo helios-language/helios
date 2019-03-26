@@ -1,4 +1,5 @@
 <map id="AST" name="AST">
-<area shape="rect" id="node1" title="This struct represents an AST node object, and recursively defines an AST." alt="" coords="15,95,63,121"/>
-<area shape="rect" id="node2" href="$structToken__t.html" title="This struct represents a token object." alt="" coords="5,5,73,32"/>
+<area shape="rect" id="node1" title="This struct represents an AST node object, and recursively defines an AST." alt="" coords="31,184,79,211"/>
+<area shape="rect" id="node2" href="$structToken__t.html" title="This struct represents a token object." alt="" coords="21,95,89,121"/>
+<area shape="rect" id="node3" href="$structhelios__object.html" title="Definition of the most basic helios object." alt="" coords="5,5,104,32"/>
 </map>

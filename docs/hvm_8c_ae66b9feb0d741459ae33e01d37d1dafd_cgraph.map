@@ -1,0 +1,12 @@
+<map id="hvm_execute_codeobject" name="hvm_execute_codeobject">
+<area shape="rect" id="node1" title=" " alt="" coords="5,144,176,171"/>
+<area shape="rect" id="node2" href="$executestack_8c.html#a72ae26f9dec7953504a21aed7b894aca" title="Creates a new stack for executing bytecode on." alt="" coords="233,5,339,32"/>
+<area shape="rect" id="node4" href="$executestack_8c.html#a9343a4cdfb1aee0c4bbd340a09f75b75" title="Print an execstack using the print functions of the objects on it." alt="" coords="229,56,343,83"/>
+<area shape="rect" id="node6" href="$helios__instruction_8c.html#acbbf462394d0b4c811e6d3214121b1a9" title=" " alt="" coords="225,107,347,149"/>
+<area shape="rect" id="node7" href="$executestack_8c.html#aad1e7afec264b72e249c35c80510bb8c" title="Pushes a helios_object onto the stack." alt="" coords="227,173,345,200"/>
+<area shape="rect" id="node8" href="$executestack_8c.html#a00b8d0e56e3754f23f19037c3b4070f4" title="Pops the top of the executestack and returns it." alt="" coords="231,224,341,251"/>
+<area shape="rect" id="node9" href="$executestack_8c.html#a4a019c6c395ae846c7f903671d874891" title="Deletes an execute stack." alt="" coords="224,275,348,301"/>
+<area shape="rect" id="node3" href="$helios__memory_8h.html#a27b2da5d6954fd6e7aa0d2f352336c25" title="Get the global current garbage collector." alt="" coords="396,5,579,32"/>
+<area shape="rect" id="node5" href="$helios__string_8c.html#a9d2005b1762ff6459a22a115549a08f5" title="Create a cstring from a helios_string object." alt="" coords="411,56,563,83"/>
+<area shape="rect" id="node10" href="$helios__memory_8h.html#a48e4eb31a7e7d92b0e015ae68c01bb3a" title="Perform a GC cleanup cycle." alt="" coords="410,275,565,301"/>
+</map>

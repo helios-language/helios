@@ -22,7 +22,7 @@ helios_object *helios_integer_from_cint(int32_t value) {
 /**
  * Destructor of a helios_integer object.
  *
- * @param obj the object to destruct.
+ * @param self the object to destruct.
  */
 void helios_integer_delete(helios_object *self) {
     helios_free_object(self);
@@ -49,7 +49,7 @@ helios_object *helios_integer_init() {
  * Create a helios_string object which represents the helios_integer object's
  * value.
  *
- * @param a helios_integer object to stringify.
+ * @param self helios_integer object to stringify.
  * @return a helios_string object with the string representation of the
  * helios_integer
  */
@@ -63,7 +63,7 @@ helios_object *helios_integer_tostring(helios_object *self) {
 /**
  * Alias of helios_integer_tostring for completeness.
  *
- * @param a helios_integer object to stringify.
+ * @param self helios_integer object to stringify.
  * @return a helios_string object with the string representation of the
  * helios_integer
  */
@@ -73,6 +73,9 @@ helios_object *helios_integer_represent(helios_object *self) {
 
 /**
  * Copy a helios integer object.
+ *
+ * @param obj the object to copy
+ * @return a new helios_integer with the same value
  */
 helios_object *helios_integer_copy(helios_object *obj) {
     helios_integer *old = TO_HELIOS_INTEGER(obj);

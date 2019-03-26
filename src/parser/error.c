@@ -9,7 +9,7 @@
  *  prints an error struct
  *  @param err the error to print
  */
-void error_print(Error_t err) {
+void error_print(error_t err) {
     printf("%s in line %i character %i\n", err.message, err.line,
            err.character);
 }
@@ -25,7 +25,7 @@ void error_print(Error_t err) {
  * @param hard boolean if throwing this error should exit the compilation
  * process.
  */
-void error_throw(Error_t err, const char *code, bool hard) {
+void error_throw(error_t err, const char *code, bool hard) {
     if (code == NULL) {
         error_print(err);
         if (hard) {
@@ -88,10 +88,10 @@ void error_throw(Error_t err, const char *code, bool hard) {
  *
  * @return the newly created errorstack.
  */
-Errorstack_t *errorstack_new() {
-    Errorstack_t *es = malloc(sizeof(Errorstack_t));
-    *es = (Errorstack_t){0, ERRORSTACK_DEFAULT_SIZE,
-                         malloc(ERRORSTACK_DEFAULT_SIZE * sizeof(Error_t))};
+errorstack_t *errorstack_new() {
+    errorstack_t *es = malloc(sizeof(errorstack_t));
+    *es = (errorstack_t){0, ERRORSTACK_DEFAULT_SIZE,
+                         malloc(ERRORSTACK_DEFAULT_SIZE * sizeof(error_t))};
     return es;
 }
 
@@ -99,7 +99,7 @@ Errorstack_t *errorstack_new() {
  * Frees an errorstack.
  * @param es the errorstack to free.
  */
-void errorstack_free(Errorstack_t *es) {
+void errorstack_free(errorstack_t *es) {
     free(es->stack);
     free(es);
 }
@@ -111,15 +111,15 @@ void errorstack_free(Errorstack_t *es) {
  * @param message the message the error should display when thrown.
  * @param line the line number of this error. NOTE: can easily be optained
  * with parser->line
- * @param line the character position of this error. NOTE: can easily be
+ * @param character the character position of this error. NOTE: can easily be
  * optained with parser->character
  */
-void errorstack_push(Errorstack_t *es, const char *message, uint32_t line,
+void errorstack_push(errorstack_t *es, const char *message, uint32_t line,
                      uint32_t character) {
-    es->stack[es->filled++] = (Error_t){line, character, message};
+    es->stack[es->filled++] = (error_t){line, character, message};
     if (es->filled >= es->size) {
         es->size <<= 1;
-        es->stack = realloc(es->stack, es->size * sizeof(Error_t));
+        es->stack = realloc(es->stack, es->size * sizeof(error_t));
     }
 }
 
@@ -128,7 +128,7 @@ void errorstack_push(Errorstack_t *es, const char *message, uint32_t line,
  * @param es the errorstack to find the length of
  * @return the length of the stack.
  */
-uint32_t errorstack_length(Errorstack_t *es) {
+uint32_t errorstack_length(errorstack_t *es) {
     return es->filled;
 }
 
@@ -139,7 +139,7 @@ uint32_t errorstack_length(Errorstack_t *es) {
  * @param es the errorstack to pop
  * @return the top of the errorstack.
  */
-Error_t errorstack_pop(Errorstack_t *es) {
+error_t errorstack_pop(errorstack_t *es) {
     return es->stack[--es->filled];
 }
 
@@ -152,7 +152,7 @@ Error_t errorstack_pop(Errorstack_t *es) {
  * length is already reached or the length is lower than the desired
  * length.
  */
-void errorstack_popuntil(Errorstack_t *es, uint32_t length) {
+void errorstack_popuntil(errorstack_t *es, uint32_t length) {
     while (es->filled > length) {
         errorstack_pop(es);
     }
@@ -163,7 +163,7 @@ void errorstack_popuntil(Errorstack_t *es, uint32_t length) {
  * @param es the errorstack to find the top of.
  * @return the top element of the errorstack.
  */
-Error_t errorstack_top(Errorstack_t *es) {
+error_t errorstack_top(errorstack_t *es) {
     return es->stack[es->filled - 1];
 }
 
@@ -172,7 +172,7 @@ Error_t errorstack_top(Errorstack_t *es) {
  * @param es the errorstack to check.
  * @return a boolean if the errorstack is empty.
  */
-bool errorstack_empty(Errorstack_t *es) {
+bool errorstack_empty(errorstack_t *es) {
     return es->filled == 0;
 }
 
@@ -183,7 +183,7 @@ bool errorstack_empty(Errorstack_t *es) {
  * @param code the code to display when throwing errors. NOTE: ignored when
  * NULL.
  */
-void errorstack_traceback(Errorstack_t *es, const char *code) {
+void errorstack_traceback(errorstack_t *es, const char *code) {
     error_throw(errorstack_top(es), code, false);
     for (int32_t i = es->filled - 2; i >= 0; i--) {
         printf("due to: ");

@@ -71,39 +71,24 @@ $(function() {
 <div class="contents">
 
 <p><code>#include &lt;<a class="el" href="token_8h_source.html">token.h</a>&gt;</code></p>
+<div class="dynheader">
+Collaboration diagram for Token_t:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="structToken__t__coll__graph.svg" width="110" height="127"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
 <tr class="memitem:a49d2c041cd8bad8a98943938e228eed6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="token_8h.html#ae5a0083ddd5589f62186ab1292cdd438">TOKENTYPE</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structToken__t.html#a49d2c041cd8bad8a98943938e228eed6">t</a></td></tr>
 <tr class="separator:a49d2c041cd8bad8a98943938e228eed6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a966459c88de8e470dbf76f30f5835943"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structToken__t.html#a966459c88de8e470dbf76f30f5835943">value</a></td></tr>
-<tr class="separator:a966459c88de8e470dbf76f30f5835943"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa8262396dec426d5049c49dad78bfa85"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structToken__t.html#aa8262396dec426d5049c49dad78bfa85">canfree</a></td></tr>
-<tr class="separator:aa8262396dec426d5049c49dad78bfa85"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa9aac7cb16f824bf10c748e5c2f7665c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structhelios__object.html">helios_object</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structToken__t.html#aa9aac7cb16f824bf10c748e5c2f7665c">value</a></td></tr>
+<tr class="separator:aa9aac7cb16f824bf10c748e5c2f7665c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>This struct represents a token object. </p>
 
-<p class="definition">Definition at line <a class="el" href="token_8h_source.html#l00041">41</a> of file <a class="el" href="token_8h_source.html">token.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="token_8h_source.html#l00043">43</a> of file <a class="el" href="token_8h_source.html">token.h</a>.</p>
 </div><h2 class="groupheader">Member Data Documentation</h2>
-<a id="aa8262396dec426d5049c49dad78bfa85"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa8262396dec426d5049c49dad78bfa85">&#9670;&nbsp;</a></span>canfree</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool Token_t::canfree</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>true if the value is freeable </p>
-
-<p class="definition">Definition at line <a class="el" href="token_8h_source.html#l00049">49</a> of file <a class="el" href="token_8h_source.html">token.h</a>.</p>
-
-</div>
-</div>
 <a id="a49d2c041cd8bad8a98943938e228eed6"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a49d2c041cd8bad8a98943938e228eed6">&#9670;&nbsp;</a></span>t</h2>
 
@@ -118,26 +103,23 @@ Public Attributes</h2></td></tr>
 
 <p>the type of this token </p>
 
-<p class="definition">Definition at line <a class="el" href="token_8h_source.html#l00042">42</a> of file <a class="el" href="token_8h_source.html">token.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="token_8h_source.html#l00044">44</a> of file <a class="el" href="token_8h_source.html">token.h</a>.</p>
 
 </div>
 </div>
-<a id="a966459c88de8e470dbf76f30f5835943"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a966459c88de8e470dbf76f30f5835943">&#9670;&nbsp;</a></span>value</h2>
+<a id="aa9aac7cb16f824bf10c748e5c2f7665c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa9aac7cb16f824bf10c748e5c2f7665c">&#9670;&nbsp;</a></span>value</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void* Token_t::value</td>
+          <td class="memname"><a class="el" href="structhelios__object.html">helios_object</a>* Token_t::value</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>the value of this token. </p>
-<p>Void pointer to allow for any datatype, but generally assumed to be a string. If it's not a string the printing routine may error. For this a special printing case can be defined in <a class="el" href="token_8c.html">token.c</a> (token_print). </p>
-
-<p class="definition">Definition at line <a class="el" href="token_8h_source.html#l00044">44</a> of file <a class="el" href="token_8h_source.html">token.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="token_8h_source.html#l00045">45</a> of file <a class="el" href="token_8h_source.html">token.h</a>.</p>
 
 </div>
 </div>
@@ -147,7 +129,7 @@ Public Attributes</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Mar 11 2019 22:44:03 for Helios-Language by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Mar 26 2019 11:50:19 for Helios-Language by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.15
 </small></address>

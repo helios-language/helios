@@ -1,16 +1,16 @@
 <map id="PARSERFUNC" name="PARSERFUNC">
 <area shape="rect" id="node1" title="Accepts an integer of any (supported) base." alt="" coords="5,232,120,259"/>
 <area shape="rect" id="node2" href="$parser_8h.html#a8c4c57eca60b2cec9a372a04abea456d" title="Advances the parser as long as it can find whitespace." alt="" coords="181,5,287,32"/>
-<area shape="rect" id="node5" href="$error_8c.html#a28e1cff59ef8560afa8ede4b201938c6" title="Find the length of an errorstack." alt="" coords="173,56,295,83"/>
+<area shape="rect" id="node5" href="$error_8c.html#ac348843496d6fe5024df7b11724d71c2" title="Find the length of an errorstack." alt="" coords="173,56,295,83"/>
 <area shape="rect" id="node6" href="$parser_8h.html#aecf4b8bdaae9ca8435542900cf024f4e" title="Copy a parser." alt="" coords="187,107,281,133"/>
 <area shape="rect" id="node7" href="$parser_8h.html#ab62454c7986532e03ea36b14956b5ad1" title="Simple parser destructor." alt="" coords="168,157,300,184"/>
 <area shape="rect" id="node8" href="$AST_8c.html#adc8be8765bd5abffeef1f5649587cb45" title="Destructor for ast objects." alt="" coords="195,232,273,259"/>
-<area shape="rect" id="node10" href="$error_8c.html#ade2d9bb9a151b899f16f096d482a9f0e" title="pop the errorstack until it has a desired length." alt="" coords="168,283,300,309"/>
+<area shape="rect" id="node10" href="$error_8c.html#a4b3b88945de18cbfb783a3e8f76b573d" title="pop the errorstack until it has a desired length." alt="" coords="168,283,300,309"/>
 <area shape="rect" id="node12" href="$parser_8h.html#a1f1841a636bfe529466c99e3db9999cd" title="Restores a parser to another parser&#39;s position." alt="" coords="181,333,287,360"/>
-<area shape="rect" id="node13" href="$error_8c.html#afe624477a33ab8814a9454f58a0bc1fa" title="Construct a new error object out of parameters, and push it to the errorstack." alt="" coords="177,384,291,411"/>
+<area shape="rect" id="node13" href="$error_8c.html#a1febf822c4d9249dd4afd09c5d5f87bb" title="Construct a new error object out of parameters, and push it to the errorstack." alt="" coords="177,384,291,411"/>
 <area shape="rect" id="node14" href="$AST_8c.html#a3a1c70c232e669f02ef0a4e171ee6ab2" title="Constructore for ast objects." alt="" coords="195,435,273,461"/>
 <area shape="rect" id="node3" href="$parserutil_8c.html#a2d9e8c20025b7b883c4e87790685a6ad" title="Proxy to parser_next." alt="" coords="348,5,463,32"/>
 <area shape="rect" id="node4" href="$parserutil_8c.html#ab25a97ff31329fe9461666bfe2dc6f2c" title="Iterate the parser." alt="" coords="511,5,601,32"/>
-<area shape="rect" id="node9" href="$token_8h.html#a863ec10d282f1f7e0dbbbaae6cec4f15" title=" " alt="" coords="364,232,447,259"/>
-<area shape="rect" id="node11" href="$error_8c.html#afbf47f2a1edae9c81dcaced1f61515b6" title="Pop and return the top element of the errorstack." alt="" coords="351,283,459,309"/>
+<area shape="rect" id="node9" href="$token_8h.html#a863ec10d282f1f7e0dbbbaae6cec4f15" title="Destroys a token object.Also frees the token&#39;s value." alt="" coords="364,232,447,259"/>
+<area shape="rect" id="node11" href="$error_8c.html#a97e94bccb231e66498eb7b2b72d8ec87" title="Pop and return the top element of the errorstack." alt="" coords="351,283,459,309"/>
 </map>

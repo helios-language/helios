@@ -66,7 +66,7 @@
 <!-- Node44 -->
 <g id="node7" class="node">
 <title>Node44</title>
-<g id="a_node7"><a xlink:href="error_8c.html#abd91e0920f6396db920ea38a4d701613" target="_top" xlink:title="Return true if a given errorstack is empty.">
+<g id="a_node7"><a xlink:href="error_8c.html#aece17809d86b1b3c7548254beab5b5c1" target="_top" xlink:title="Return true if a given errorstack is empty.">
 <polygon fill="#ffffff" stroke="#000000" points="142,-76.5 142,-95.5 234,-95.5 234,-76.5 142,-76.5"/>
 <text text-anchor="middle" x="188" y="-83.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">errorstack_empty</text>
 </a>
@@ -81,7 +81,7 @@
 <!-- Node45 -->
 <g id="node8" class="node">
 <title>Node45</title>
-<g id="a_node8"><a xlink:href="error_8c.html#a92a76599dc7f44ae25eb33a79f8c1268" target="_top" xlink:title="Throw all errors on the errorstack.">
+<g id="a_node8"><a xlink:href="error_8c.html#af86905f178f9caa084c7a4de6ff9ff8a" target="_top" xlink:title="Throw all errors on the errorstack.">
 <polygon fill="#ffffff" stroke="#000000" points="134,-38.5 134,-57.5 242,-57.5 242,-38.5 134,-38.5"/>
 <text text-anchor="middle" x="188" y="-45.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">errorstack_traceback</text>
 </a>
@@ -111,7 +111,7 @@
 <!-- Node40 -->
 <g id="node3" class="node">
 <title>Node40</title>
-<g id="a_node3"><a xlink:href="error_8c.html#a801707ae606a85c72383643bf3ce5875" target="_top" xlink:title="Creates a new errorstack object.">
+<g id="a_node3"><a xlink:href="error_8c.html#ab400e9a29e066e1bbe7b7893e1eb767e" target="_top" xlink:title="Creates a new errorstack object.">
 <polygon fill="#ffffff" stroke="#000000" points="278,-190.5 278,-209.5 361,-209.5 361,-190.5 278,-190.5"/>
 <text text-anchor="middle" x="319.5" y="-197.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">errorstack_new</text>
 </a>
@@ -141,7 +141,7 @@
 <!-- Node46 -->
 <g id="node9" class="node">
 <title>Node46</title>
-<g id="a_node9"><a xlink:href="error_8c.html#adc799734c0f6f7e223ee20590c3b46e8" target="_top" xlink:title=" ">
+<g id="a_node9"><a xlink:href="error_8c.html#a2e581dee0de155b88d33f98ddd006189" target="_top" xlink:title=" ">
 <polygon fill="#ffffff" stroke="#000000" points="287,-76.5 287,-95.5 352,-95.5 352,-76.5 287,-76.5"/>
 <text text-anchor="middle" x="319.5" y="-83.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">error_throw</text>
 </a>
@@ -156,7 +156,7 @@
 <!-- Node48 -->
 <g id="node11" class="node">
 <title>Node48</title>
-<g id="a_node11"><a xlink:href="error_8c.html#a08f836642a23e867f57c5f849f26443c" target="_top" xlink:title="Return the top error of the errorstack.">
+<g id="a_node11"><a xlink:href="error_8c.html#a0289b490436a23262d094c6a624ef7f0" target="_top" xlink:title="Return the top error of the errorstack.">
 <polygon fill="#ffffff" stroke="#000000" points="280,-38.5 280,-57.5 359,-57.5 359,-38.5 280,-38.5"/>
 <text text-anchor="middle" x="319.5" y="-45.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">errorstack_top</text>
 </a>
@@ -171,7 +171,7 @@
 <!-- Node47 -->
 <g id="node10" class="node">
 <title>Node47</title>
-<g id="a_node10"><a xlink:href="error_8c.html#a661c01cb3d40abca57dc9d223e3d6381" target="_top" xlink:title="prints an error struct">
+<g id="a_node10"><a xlink:href="error_8c.html#a225bd87ba0491415a1ef1aec28912809" target="_top" xlink:title="prints an error struct">
 <polygon fill="#ffffff" stroke="#000000" points="397,-76.5 397,-95.5 457,-95.5 457,-76.5 397,-76.5"/>
 <text text-anchor="middle" x="427" y="-83.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">error_print</text>
 </a>
@@ -186,7 +186,7 @@
 <!-- Node50 -->
 <g id="node13" class="node">
 <title>Node50</title>
-<g id="a_node13"><a xlink:href="error_8c.html#a307900324127113f505e2011b6fa2c45" target="_top" xlink:title=" ">
+<g id="a_node13"><a xlink:href="error_8c.html#a56c6e945b508072de3181f78dbc0cfe3" target="_top" xlink:title=" ">
 <polygon fill="#ffffff" stroke="#000000" points="278.5,-.5 278.5,-19.5 360.5,-19.5 360.5,-.5 278.5,-.5"/>
 <text text-anchor="middle" x="319.5" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">errorstack_free</text>
 </a>

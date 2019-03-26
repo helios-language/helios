@@ -1,24 +1,19 @@
 <map id="PARSERFUNC" name="PARSERFUNC">
-<area shape="rect" id="node1" title="Accepts a floating point constant in the format of." alt="" coords="5,316,120,343"/>
-<area shape="rect" id="node2" href="$parser_8h.html#a8c4c57eca60b2cec9a372a04abea456d" title="Advances the parser as long as it can find whitespace." alt="" coords="365,101,471,128"/>
-<area shape="rect" id="node5" href="$error_8c.html#a28e1cff59ef8560afa8ede4b201938c6" title="Find the length of an errorstack." alt="" coords="175,39,297,65"/>
-<area shape="rect" id="node6" href="$parser_8h.html#aecf4b8bdaae9ca8435542900cf024f4e" title="Copy a parser." alt="" coords="189,89,283,116"/>
-<area shape="rect" id="node7" href="$AST_8c.html#a3a1c70c232e669f02ef0a4e171ee6ab2" title="Constructore for ast objects." alt="" coords="197,140,275,167"/>
-<area shape="rect" id="node8" href="$token_8h.html#a6df9cba793453cf8281c9843e576fe40" title="Constructor for token objects." alt="" coords="193,191,279,217"/>
-<area shape="rect" id="node9" href="$AST_8c.html#adc8be8765bd5abffeef1f5649587cb45" title="Destructor for ast objects." alt="" coords="197,265,275,292"/>
-<area shape="rect" id="node11" href="$error_8c.html#ade2d9bb9a151b899f16f096d482a9f0e" title="pop the errorstack until it has a desired length." alt="" coords="170,316,302,343"/>
-<area shape="rect" id="node13" href="$parser_8h.html#a1f1841a636bfe529466c99e3db9999cd" title="Restores a parser to another parser&#39;s position." alt="" coords="183,367,289,393"/>
-<area shape="rect" id="node14" href="$AST_8c.html#a5f9c0bcd1d544aac044f4acf93c27ddb" title="Adds a child ast node to a parent ast node." alt="" coords="183,417,289,444"/>
-<area shape="rect" id="node15" href="$parser_8h.html#ad7f3825521eb3e5bd3af734357caa4d6" title="If the parser can accept the given character, accept it, else push an error on the parsers errorstack..." alt="" coords="171,519,301,545"/>
-<area shape="rect" id="node17" href="$error_8c.html#afe624477a33ab8814a9454f58a0bc1fa" title="Construct a new error object out of parameters, and push it to the errorstack." alt="" coords="361,468,475,495"/>
-<area shape="rect" id="node18" href="$parser_8h.html#a3c9c52258898d196f76b4d58595b33b9" title="Advances the parser only if the next n characters (where n is the length of the string) matches the s..." alt="" coords="168,569,304,596"/>
-<area shape="rect" id="node22" href="$parser_8h.html#ab62454c7986532e03ea36b14956b5ad1" title="Simple parser destructor." alt="" coords="170,620,302,647"/>
-<area shape="rect" id="node3" href="$parserutil_8c.html#a2d9e8c20025b7b883c4e87790685a6ad" title="Proxy to parser_next." alt="" coords="532,311,647,337"/>
-<area shape="rect" id="node4" href="$parserutil_8c.html#ab25a97ff31329fe9461666bfe2dc6f2c" title="Iterate the parser." alt="" coords="695,311,785,337"/>
-<area shape="rect" id="node10" href="$token_8h.html#a863ec10d282f1f7e0dbbbaae6cec4f15" title=" " alt="" coords="377,265,459,292"/>
-<area shape="rect" id="node12" href="$error_8c.html#afbf47f2a1edae9c81dcaced1f61515b6" title="Pop and return the top element of the errorstack." alt="" coords="364,316,472,343"/>
-<area shape="rect" id="node16" href="$parserutil_8c.html#a1a00af051004cb18edac760f39982eea" title="Searches for the given character, advances the parser if it found it." alt="" coords="353,519,483,545"/>
-<area shape="rect" id="node19" href="$parserutil_8c.html#aecf4b8bdaae9ca8435542900cf024f4e" title="Copy a parser." alt="" coords="371,569,465,596"/>
-<area shape="rect" id="node20" href="$parserutil_8c.html#a1f1841a636bfe529466c99e3db9999cd" title="Restores a parser to another parser&#39;s position." alt="" coords="365,620,471,647"/>
-<area shape="rect" id="node21" href="$parserutil_8c.html#ab62454c7986532e03ea36b14956b5ad1" title="Simple parser destructor." alt="" coords="352,671,484,697"/>
+<area shape="rect" id="node1" title="Accepts a floating point constant in the format of." alt="" coords="5,208,120,235"/>
+<area shape="rect" id="node2" href="$parser_8h.html#a8c4c57eca60b2cec9a372a04abea456d" title="Advances the parser as long as it can find whitespace." alt="" coords="402,5,509,32"/>
+<area shape="rect" id="node5" href="$parser_8h.html#a3c9c52258898d196f76b4d58595b33b9" title="Advances the parser only if the next n characters (where n is the length of the string) matches the s..." alt="" coords="187,107,323,133"/>
+<area shape="rect" id="node10" href="$AST_8c.html#a3a1c70c232e669f02ef0a4e171ee6ab2" title="Constructore for ast objects." alt="" coords="215,157,294,184"/>
+<area shape="rect" id="node11" href="$token_8h.html#a5f63b7723640416a125433badc7d6563" title="Constructor for token objects." alt="" coords="212,208,297,235"/>
+<area shape="rect" id="node12" href="$helios__float_8c.html#a826b7f7e3b3c75b0161be6e84c349135" title="Create a helios_float object from a c double type." alt="" coords="168,259,341,285"/>
+<area shape="rect" id="node16" href="$error_8c.html#a1febf822c4d9249dd4afd09c5d5f87bb" title="Construct a new error object out of parameters, and push it to the errorstack." alt="" coords="197,309,312,336"/>
+<area shape="rect" id="node17" href="$parser_8h.html#a2d9e8c20025b7b883c4e87790685a6ad" title="Proxy to parser_next." alt="" coords="610,347,725,373"/>
+<area shape="rect" id="node3" href="$parserutil_8c.html#a2d9e8c20025b7b883c4e87790685a6ad" title="Proxy to parser_next." alt="" coords="610,107,725,133"/>
+<area shape="rect" id="node4" href="$parserutil_8c.html#ab25a97ff31329fe9461666bfe2dc6f2c" title="Iterate the parser." alt="" coords="813,233,904,260"/>
+<area shape="rect" id="node6" href="$parserutil_8c.html#aecf4b8bdaae9ca8435542900cf024f4e" title="Copy a parser." alt="" coords="409,56,502,83"/>
+<area shape="rect" id="node7" href="$parserutil_8c.html#a1a00af051004cb18edac760f39982eea" title="Searches for the given character, advances the parser if it found it." alt="" coords="391,107,520,133"/>
+<area shape="rect" id="node8" href="$parserutil_8c.html#a1f1841a636bfe529466c99e3db9999cd" title="Restores a parser to another parser&#39;s position." alt="" coords="403,157,508,184"/>
+<area shape="rect" id="node9" href="$parserutil_8c.html#ab62454c7986532e03ea36b14956b5ad1" title="Simple parser destructor." alt="" coords="389,208,521,235"/>
+<area shape="rect" id="node13" href="$helios__float_8c.html#a6b9f18063c74a36f08d05c6310bc45da" title="Constructor of a helios_float object." alt="" coords="399,259,511,285"/>
+<area shape="rect" id="node14" href="$helios__memory_8h.html#af87f0050f8e236d0945592fa4e54dc94" title="Allocates a new helios object (and performs all the GC steps associated with that action)." alt="" coords="592,233,743,260"/>
+<area shape="rect" id="node15" href="$helios__memory_8h.html#ab14fb1c046aae61ab06eda8eeaf2cd85" title=" " alt="" coords="569,284,765,311"/>
 </map>

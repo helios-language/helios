@@ -1,0 +1,4 @@
+<map id="execstack_delete" name="execstack_delete">
+<area shape="rect" id="node1" title="Deletes an execute stack." alt="" coords="5,5,129,32"/>
+<area shape="rect" id="node2" href="$helios__memory_8h.html#a48e4eb31a7e7d92b0e015ae68c01bb3a" title="Perform a GC cleanup cycle." alt="" coords="177,5,332,32"/>
+</map>

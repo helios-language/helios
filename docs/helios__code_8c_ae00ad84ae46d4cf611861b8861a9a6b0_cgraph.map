@@ -1,0 +1,8 @@
+<map id="helios_code_copy" name="helios_code_copy">
+<area shape="rect" id="node1" title=" " alt="" coords="5,81,132,108"/>
+<area shape="rect" id="node2" href="$helios__code_8c.html#ab47a14436bfa855c861f5cd333cd1dfd" title=" " alt="" coords="216,31,331,57"/>
+<area shape="rect" id="node5" href="$helios__code_8c.html#ae826a551bc568e53f64610757587e23c" title=" " alt="" coords="185,81,361,108"/>
+<area shape="rect" id="node6" href="$helios__code_8c.html#a71d2ab8c6616394cc8cb48702bb02e80" title=" " alt="" coords="180,132,367,159"/>
+<area shape="rect" id="node3" href="$helios__memory_8h.html#af87f0050f8e236d0945592fa4e54dc94" title="Allocates a new helios object (and performs all the GC steps associated with that action)." alt="" coords="437,5,588,32"/>
+<area shape="rect" id="node4" href="$helios__memory_8h.html#ab14fb1c046aae61ab06eda8eeaf2cd85" title=" " alt="" coords="415,56,611,83"/>
+</map>
