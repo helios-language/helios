@@ -10,8 +10,9 @@
 #include <string.h>
 
 /**
- * Removes comments from a string. Note: frees old string and allocates new
- * string.
+ * Removes comments from strings. Inserts indent/dedent tokens (DC1 and DC2
+ * ascii control characters) and removes carriage returns to speed up parsing a
+ * bit later.
  *
  * In helios every character on a line, after a hashtag (#) is a comment.
  *
@@ -112,7 +113,6 @@ char *parser_preprocess(char *code) {
         }
     }
 
-    free(code);
     return res;
 }
 
@@ -137,23 +137,11 @@ AST *parser_parseString(char *str) {
     parser_advance(parser);
     AST *ast = parser_root(parser);
 
-    // this used to be in there to find cases where the statement ended
-    // halfway through the compilation process to prevent it just exiting
-    // without error. however, now the root of the recursive descent can
-    // only exit errorless when it finds the end of the code. Because of
-    // this i believe this code is not needed anymore. More testing is
-    // required to verify this.
-
-    // if (ast == NULL ||
-    // !parser_exhausted(parser)) {
-    //     errorstack_push(parser->es, "invalid syntax", parser->line,
-    //                     parser->character);
-    // }
-
     if (!errorstack_empty(parser->es)) {
         errorstack_traceback(parser->es, str);
     }
 
+    free(parser->code);
     parser_free(parser);
 
     return ast;

@@ -1,5 +1,7 @@
 var searchData=
 [
+  ['helios_5fboolean_2ec',['helios_boolean.c',['../helios__boolean_8c.html',1,'']]],
+  ['helios_5fboolean_2eh',['helios_boolean.h',['../helios__boolean_8h.html',1,'']]],
   ['helios_5fcode_2ec',['helios_code.c',['../helios__code_8c.html',1,'']]],
   ['helios_5fcode_2eh',['helios_code.h',['../helios__code_8h.html',1,'']]],
   ['helios_5ffloat_2ec',['helios_float.c',['../helios__float_8c.html',1,'']]],

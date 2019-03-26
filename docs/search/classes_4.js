@@ -1,6 +1,7 @@
 var searchData=
 [
   ['hashmap_5fentry',['hashmap_entry',['../structhashmap__entry.html',1,'']]],
+  ['helios_5fboolean',['helios_boolean',['../structhelios__boolean.html',1,'']]],
   ['helios_5fcode',['helios_code',['../structhelios__code.html',1,'']]],
   ['helios_5ffloat',['helios_float',['../structhelios__float.html',1,'']]],
   ['helios_5fhashmap',['helios_hashmap',['../structhelios__hashmap.html',1,'']]],

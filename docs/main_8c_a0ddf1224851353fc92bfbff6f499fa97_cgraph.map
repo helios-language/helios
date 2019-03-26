@@ -9,36 +9,36 @@
 <area shape="rect" id="node30" href="$hvm_8c.html#ae66b9feb0d741459ae33e01d37d1dafd" title=" " alt="" coords="119,705,289,732"/>
 <area shape="rect" id="node39" href="$AST_8c.html#adc8be8765bd5abffeef1f5649587cb45" title="Destructor for ast objects." alt="" coords="165,813,243,840"/>
 <area shape="rect" id="node41" href="$helios__memory_8h.html#a0ba47c8ed7e1be60f1c360e33a0aff15" title="Free a garbagecollector object." alt="" coords="104,932,304,959"/>
-<area shape="rect" id="node6" href="$parserutil_8c.html#a0ad4e3c832d2917e22db175046272a8a" title="Removes comments from a string." alt="" coords="352,5,528,32"/>
-<area shape="rect" id="node7" href="$parserutil_8c.html#aeabb62e46d4414de7848d31d805ab834" title="Parser constructor." alt="" coords="395,56,485,83"/>
-<area shape="rect" id="node9" href="$parserutil_8c.html#a2d9e8c20025b7b883c4e87790685a6ad" title="Proxy to parser_next." alt="" coords="383,107,497,133"/>
-<area shape="rect" id="node11" href="$parser_8h.html#a909b31712182aae737a48cd819f43a2d" title=" " alt="" coords="397,157,483,184"/>
-<area shape="rect" id="node12" href="$error_8c.html#aece17809d86b1b3c7548254beab5b5c1" title="Return true if a given errorstack is empty." alt="" coords="379,208,501,235"/>
-<area shape="rect" id="node13" href="$error_8c.html#af86905f178f9caa084c7a4de6ff9ff8a" title="Throw all errors on the errorstack." alt="" coords="368,259,512,285"/>
-<area shape="rect" id="node17" href="$parserutil_8c.html#a1ddd27828ac4848a4b9c05eb6190852f" title="Parser destructor." alt="" coords="397,309,483,336"/>
-<area shape="rect" id="node8" href="$error_8c.html#ab400e9a29e066e1bbe7b7893e1eb767e" title="Creates a new errorstack object." alt="" coords="619,56,729,83"/>
-<area shape="rect" id="node10" href="$parserutil_8c.html#ab25a97ff31329fe9461666bfe2dc6f2c" title="Iterate the parser." alt="" coords="629,107,719,133"/>
-<area shape="rect" id="node14" href="$error_8c.html#a2e581dee0de155b88d33f98ddd006189" title=" " alt="" coords="631,191,717,217"/>
-<area shape="rect" id="node16" href="$error_8c.html#a0289b490436a23262d094c6a624ef7f0" title="Return the top error of the errorstack." alt="" coords="621,241,727,268"/>
-<area shape="rect" id="node15" href="$error_8c.html#a225bd87ba0491415a1ef1aec28912809" title="prints an error struct" alt="" coords="856,191,936,217"/>
-<area shape="rect" id="node18" href="$error_8c.html#a56c6e945b508072de3181f78dbc0cfe3" title=" " alt="" coords="619,292,729,319"/>
-<area shape="rect" id="node20" href="$AST_8c.html#aec2b1350d43ba95c45e32469270abd46" title="Recursively prints an ast." alt="" coords="379,360,501,387"/>
-<area shape="rect" id="node21" href="$token_8h.html#a347371dbade2f4df7ca01fd60f226951" title="Prints a token object." alt="" coords="631,343,717,369"/>
-<area shape="rect" id="node22" href="$helios__string_8c.html#a9d2005b1762ff6459a22a115549a08f5" title="Create a cstring from a helios_string object." alt="" coords="820,495,972,521"/>
-<area shape="rect" id="node24" href="$helios__code_8c.html#ab47a14436bfa855c861f5cd333cd1dfd" title=" " alt="" coords="383,428,497,455"/>
-<area shape="rect" id="node27" href="$helios__code_8c.html#a7f71fb27d10c5bf81cbdb3ac0c0210b6" title=" " alt="" coords="361,479,519,521"/>
-<area shape="rect" id="node29" href="$helios__code_8c.html#a71d2ab8c6616394cc8cb48702bb02e80" title=" " alt="" coords="581,545,767,572"/>
-<area shape="rect" id="node25" href="$helios__memory_8h.html#af87f0050f8e236d0945592fa4e54dc94" title="Allocates a new helios object (and performs all the GC steps associated with that action)." alt="" coords="599,393,749,420"/>
-<area shape="rect" id="node26" href="$helios__memory_8h.html#ab14fb1c046aae61ab06eda8eeaf2cd85" title=" " alt="" coords="576,444,772,471"/>
-<area shape="rect" id="node28" href="$helios__code_8c.html#ae826a551bc568e53f64610757587e23c" title=" " alt="" coords="586,495,762,521"/>
-<area shape="rect" id="node31" href="$executestack_8c.html#a72ae26f9dec7953504a21aed7b894aca" title="Creates a new stack for executing bytecode on." alt="" coords="387,596,493,623"/>
-<area shape="rect" id="node33" href="$executestack_8c.html#a9343a4cdfb1aee0c4bbd340a09f75b75" title="Print an execstack using the print functions of the objects on it." alt="" coords="617,647,731,673"/>
-<area shape="rect" id="node34" href="$helios__instruction_8c.html#acbbf462394d0b4c811e6d3214121b1a9" title=" " alt="" coords="379,698,501,739"/>
-<area shape="rect" id="node35" href="$executestack_8c.html#aad1e7afec264b72e249c35c80510bb8c" title="Pushes a helios_object onto the stack." alt="" coords="381,764,499,791"/>
-<area shape="rect" id="node36" href="$executestack_8c.html#a00b8d0e56e3754f23f19037c3b4070f4" title="Pops the top of the executestack and returns it." alt="" coords="385,815,495,841"/>
-<area shape="rect" id="node37" href="$executestack_8c.html#a4a019c6c395ae846c7f903671d874891" title="Deletes an execute stack." alt="" coords="378,865,502,892"/>
-<area shape="rect" id="node32" href="$helios__memory_8h.html#a27b2da5d6954fd6e7aa0d2f352336c25" title="Get the global current garbage collector." alt="" coords="583,596,765,623"/>
-<area shape="rect" id="node38" href="$helios__memory_8h.html#a48e4eb31a7e7d92b0e015ae68c01bb3a" title="Perform a GC cleanup cycle." alt="" coords="597,865,751,892"/>
-<area shape="rect" id="node40" href="$token_8h.html#a863ec10d282f1f7e0dbbbaae6cec4f15" title="Destroys a token object.Also frees the token&#39;s value." alt="" coords="399,916,481,943"/>
-<area shape="rect" id="node42" href="$refcount_8c.html#a5dcd65b50eabfe133b9fcf6206b2bd1e" title="Frees all tracked objects of a garbagecollector without freeing the GC itself." alt="" coords="363,967,517,993"/>
+<area shape="rect" id="node6" href="$parserutil_8c.html#a0caab33d4f000ec42c3ee0c70bc98d9e" title="Removes comments from strings." alt="" coords="366,5,495,32"/>
+<area shape="rect" id="node7" href="$parserutil_8c.html#aeabb62e46d4414de7848d31d805ab834" title="Parser constructor." alt="" coords="386,56,475,83"/>
+<area shape="rect" id="node9" href="$parserutil_8c.html#a2d9e8c20025b7b883c4e87790685a6ad" title="Proxy to parser_next." alt="" coords="373,107,488,133"/>
+<area shape="rect" id="node11" href="$parser_8h.html#a909b31712182aae737a48cd819f43a2d" title=" " alt="" coords="387,157,474,184"/>
+<area shape="rect" id="node12" href="$error_8c.html#aece17809d86b1b3c7548254beab5b5c1" title="Return true if a given errorstack is empty." alt="" coords="369,208,492,235"/>
+<area shape="rect" id="node13" href="$error_8c.html#af86905f178f9caa084c7a4de6ff9ff8a" title="Throw all errors on the errorstack." alt="" coords="359,259,503,285"/>
+<area shape="rect" id="node17" href="$parserutil_8c.html#a1ddd27828ac4848a4b9c05eb6190852f" title="Parser destructor." alt="" coords="387,309,474,336"/>
+<area shape="rect" id="node8" href="$error_8c.html#ab400e9a29e066e1bbe7b7893e1eb767e" title="Creates a new errorstack object." alt="" coords="600,56,711,83"/>
+<area shape="rect" id="node10" href="$parserutil_8c.html#ab25a97ff31329fe9461666bfe2dc6f2c" title="Iterate the parser." alt="" coords="610,107,701,133"/>
+<area shape="rect" id="node14" href="$error_8c.html#a2e581dee0de155b88d33f98ddd006189" title=" " alt="" coords="612,191,699,217"/>
+<area shape="rect" id="node16" href="$error_8c.html#a0289b490436a23262d094c6a624ef7f0" title="Return the top error of the errorstack." alt="" coords="603,241,708,268"/>
+<area shape="rect" id="node15" href="$error_8c.html#a225bd87ba0491415a1ef1aec28912809" title="prints an error struct" alt="" coords="837,191,917,217"/>
+<area shape="rect" id="node18" href="$error_8c.html#a56c6e945b508072de3181f78dbc0cfe3" title=" " alt="" coords="601,292,710,319"/>
+<area shape="rect" id="node20" href="$AST_8c.html#aec2b1350d43ba95c45e32469270abd46" title="Recursively prints an ast." alt="" coords="369,360,492,387"/>
+<area shape="rect" id="node21" href="$token_8h.html#a347371dbade2f4df7ca01fd60f226951" title="Prints a token object." alt="" coords="612,343,699,369"/>
+<area shape="rect" id="node22" href="$helios__string_8c.html#a9d2005b1762ff6459a22a115549a08f5" title="Create a cstring from a helios_string object." alt="" coords="801,495,953,521"/>
+<area shape="rect" id="node24" href="$helios__code_8c.html#ab47a14436bfa855c861f5cd333cd1dfd" title=" " alt="" coords="373,428,488,455"/>
+<area shape="rect" id="node27" href="$helios__code_8c.html#a7f71fb27d10c5bf81cbdb3ac0c0210b6" title=" " alt="" coords="352,479,509,521"/>
+<area shape="rect" id="node29" href="$helios__code_8c.html#a71d2ab8c6616394cc8cb48702bb02e80" title=" " alt="" coords="562,545,749,572"/>
+<area shape="rect" id="node25" href="$helios__memory_8h.html#af87f0050f8e236d0945592fa4e54dc94" title="Allocates a new helios object (and performs all the GC steps associated with that action)." alt="" coords="580,393,731,420"/>
+<area shape="rect" id="node26" href="$helios__memory_8h.html#ab14fb1c046aae61ab06eda8eeaf2cd85" title=" " alt="" coords="557,444,753,471"/>
+<area shape="rect" id="node28" href="$helios__code_8c.html#ae826a551bc568e53f64610757587e23c" title=" " alt="" coords="567,495,743,521"/>
+<area shape="rect" id="node31" href="$executestack_8c.html#a72ae26f9dec7953504a21aed7b894aca" title="Creates a new stack for executing bytecode on." alt="" coords="377,596,484,623"/>
+<area shape="rect" id="node33" href="$executestack_8c.html#a9343a4cdfb1aee0c4bbd340a09f75b75" title="Print an execstack using the print functions of the objects on it." alt="" coords="598,647,713,673"/>
+<area shape="rect" id="node34" href="$helios__instruction_8c.html#acbbf462394d0b4c811e6d3214121b1a9" title=" " alt="" coords="369,698,492,739"/>
+<area shape="rect" id="node35" href="$executestack_8c.html#aad1e7afec264b72e249c35c80510bb8c" title="Pushes a helios_object onto the stack." alt="" coords="372,764,489,791"/>
+<area shape="rect" id="node36" href="$executestack_8c.html#a00b8d0e56e3754f23f19037c3b4070f4" title="Pops the top of the executestack and returns it." alt="" coords="375,815,486,841"/>
+<area shape="rect" id="node37" href="$executestack_8c.html#a4a019c6c395ae846c7f903671d874891" title="Deletes an execute stack." alt="" coords="369,865,493,892"/>
+<area shape="rect" id="node32" href="$helios__memory_8h.html#a27b2da5d6954fd6e7aa0d2f352336c25" title="Get the global current garbage collector." alt="" coords="564,596,747,623"/>
+<area shape="rect" id="node38" href="$helios__memory_8h.html#a48e4eb31a7e7d92b0e015ae68c01bb3a" title="Perform a GC cleanup cycle." alt="" coords="578,865,733,892"/>
+<area shape="rect" id="node40" href="$token_8h.html#a863ec10d282f1f7e0dbbbaae6cec4f15" title="Destroys a token object.Also frees the token&#39;s value." alt="" coords="389,916,472,943"/>
+<area shape="rect" id="node42" href="$refcount_8c.html#a5dcd65b50eabfe133b9fcf6206b2bd1e" title="Frees all tracked objects of a garbagecollector without freeing the GC itself." alt="" coords="353,967,508,993"/>
 </map>

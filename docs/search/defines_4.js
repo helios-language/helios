@@ -1,5 +1,7 @@
 var searchData=
 [
+  ['helios_5fboolean_5fdefault_5fvalue',['HELIOS_BOOLEAN_DEFAULT_VALUE',['../helios__boolean_8h.html#af1aa188bd7bedf14653f0d1f0a8d8ca2',1,'helios_boolean.h']]],
+  ['helios_5fboolean_5fis_5ftrue',['HELIOS_BOOLEAN_IS_TRUE',['../helios__boolean_8h.html#af37a56ce488967de596b36417a631ef6',1,'helios_boolean.h']]],
   ['helios_5fcall_5fmember',['HELIOS_CALL_MEMBER',['../builtinutils_8h.html#aa862687a707dcd3bf49ff4ffc91871e4',1,'builtinutils.h']]],
   ['helios_5fcode_5fdefault_5fconstant_5fsize',['HELIOS_CODE_DEFAULT_CONSTANT_SIZE',['../helios__code_8h.html#a8e4559278e4e0eed361bac703e955483',1,'helios_code.h']]],
   ['helios_5fcode_5fdefault_5finstruction_5fsize',['HELIOS_CODE_DEFAULT_INSTRUCTION_SIZE',['../helios__code_8h.html#ae58205f26c3d2bd65b8288d965d3ea8c',1,'helios_code.h']]],
@@ -32,6 +34,8 @@ var searchData=
   ['helios_5fobject_5fbinops_5ffields_5fsubtract',['HELIOS_OBJECT_BINOPS_FIELDS_SUBTRACT',['../helios__type_8h.html#a25c3ba27192c2d955e6f7366afb77756',1,'helios_type.h']]],
   ['helios_5fobject_5fcommon_5fbase',['HELIOS_OBJECT_COMMON_BASE',['../helios__type_8h.html#a471093d72523f865faf7ad611c297a09',1,'helios_type.h']]],
   ['helios_5fobject_5fcommon_5fbase_5finit',['HELIOS_OBJECT_COMMON_BASE_INIT',['../helios__type_8h.html#a8b07031bb02b4e368f8534876a0f28a9',1,'helios_type.h']]],
+  ['helios_5fobject_5fstatic',['HELIOS_OBJECT_STATIC',['../helios__type_8h.html#a70022692e940cd98f1a08ea8f8e56b89',1,'helios_type.h']]],
+  ['helios_5fobject_5fstatic_5ffield',['HELIOS_OBJECT_STATIC_FIELD',['../helios__type_8h.html#a1380bf686eececb0061bae51b1edce49',1,'helios_type.h']]],
   ['helios_5fobject_5funaryops_5ffields',['HELIOS_OBJECT_UNARYOPS_FIELDS',['../helios__type_8h.html#ab99487aa93740dee413ff52a5c69633c',1,'helios_type.h']]],
   ['helios_5fobject_5funaryops_5ffields_5finvert',['HELIOS_OBJECT_UNARYOPS_FIELDS_INVERT',['../helios__type_8h.html#ae4dbf95d3fe7562707d0989647bc8f72',1,'helios_type.h']]],
   ['helios_5fobject_5funaryops_5ffields_5fminus',['HELIOS_OBJECT_UNARYOPS_FIELDS_MINUS',['../helios__type_8h.html#a9a717f76a897603c368af33cff0cff96',1,'helios_type.h']]],

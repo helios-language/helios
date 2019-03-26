@@ -1,0 +1,8 @@
+<map id="PARSERFUNC" name="PARSERFUNC">
+<area shape="rect" id="node1" title=" " alt="" coords="5,80,120,107"/>
+<area shape="rect" id="node2" href="$error_8c.html#ac348843496d6fe5024df7b11724d71c2" title="Find the length of an errorstack." alt="" coords="173,5,295,32"/>
+<area shape="rect" id="node3" href="$AST_8c.html#adc8be8765bd5abffeef1f5649587cb45" title="Destructor for ast objects." alt="" coords="195,80,273,107"/>
+<area shape="rect" id="node5" href="$error_8c.html#a4b3b88945de18cbfb783a3e8f76b573d" title="pop the errorstack until it has a desired length." alt="" coords="168,131,300,157"/>
+<area shape="rect" id="node4" href="$token_8h.html#a863ec10d282f1f7e0dbbbaae6cec4f15" title="Destroys a token object.Also frees the token&#39;s value." alt="" coords="361,80,443,107"/>
+<area shape="rect" id="node6" href="$error_8c.html#a97e94bccb231e66498eb7b2b72d8ec87" title="Pop and return the top element of the errorstack." alt="" coords="348,131,456,157"/>
+</map>

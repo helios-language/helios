@@ -1,0 +1,4 @@
+<map id="helios_boolean_from_cbool" name="helios_boolean_from_cbool">
+<area shape="rect" id="node1" title="Create a helios_boolean object from a c boolean type." alt="" coords="5,5,147,47"/>
+<area shape="rect" id="node2" href="$helios__boolean_8c.html#ab172c15c28782b45e824c42601484606" title="Create a helios_boolean object from a c integer type." alt="" coords="195,13,364,39"/>
+</map>

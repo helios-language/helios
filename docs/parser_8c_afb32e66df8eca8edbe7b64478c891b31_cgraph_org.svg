@@ -9,255 +9,255 @@
 <g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 384)">
 <title>PARSERFUNC</title>
 <polygon fill="#ffffff" stroke="transparent" points="-4,4 -4,-384 584,-384 584,4 -4,4"/>
-<!-- Node4 -->
+<!-- Node11 -->
 <g id="node1" class="node">
-<title>Node4</title>
-<g id="a_node1"><a xlink:title=" ">
+<title>Node11</title>
+<g id="a_node1"><a xlink:title="statement: simple_statement (&quot;;&quot; simple_statement)* &quot;;&quot;?">
 <polygon fill="#bfbfbf" stroke="#000000" points="0,-208.5 0,-227.5 86,-227.5 86,-208.5 0,-208.5"/>
 <text text-anchor="middle" x="43" y="-215.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">PARSERFUNC</text>
 </a>
 </g>
 </g>
-<!-- Node5 -->
+<!-- Node12 -->
 <g id="node2" class="node">
-<title>Node5</title>
+<title>Node12</title>
 <g id="a_node2"><a xlink:href="AST_8c.html#a3a1c70c232e669f02ef0a4e171ee6ab2" target="_top" xlink:title="Constructore for ast objects.">
 <polygon fill="#ffffff" stroke="#000000" points="142,-360.5 142,-379.5 201,-379.5 201,-360.5 142,-360.5"/>
 <text text-anchor="middle" x="171.5" y="-367.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">AST_new</text>
 </a>
 </g>
 </g>
-<!-- Node4&#45;&gt;Node5 -->
+<!-- Node11&#45;&gt;Node12 -->
 <g id="edge1" class="edge">
-<title>Node4&#45;&gt;Node5</title>
+<title>Node11&#45;&gt;Node12</title>
 <path fill="none" stroke="#191970" d="M46.1459,-227.5062C54.5727,-251.571 79.9142,-315.5046 122,-351 125.2456,-353.7374 128.9286,-356.1051 132.786,-358.1476"/>
 <polygon fill="#191970" stroke="#191970" points="131.4288,-361.3755 141.9793,-362.3439 134.3355,-355.0075 131.4288,-361.3755"/>
 </g>
-<!-- Node6 -->
+<!-- Node13 -->
 <g id="node3" class="node">
-<title>Node6</title>
+<title>Node13</title>
 <g id="a_node3"><a xlink:href="token_8h.html#a5f63b7723640416a125433badc7d6563" target="_top" xlink:title="Constructor for token objects.">
 <polygon fill="#ffffff" stroke="#000000" points="139.5,-322.5 139.5,-341.5 203.5,-341.5 203.5,-322.5 139.5,-322.5"/>
 <text text-anchor="middle" x="171.5" y="-329.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">token_new</text>
 </a>
 </g>
 </g>
-<!-- Node4&#45;&gt;Node6 -->
+<!-- Node11&#45;&gt;Node13 -->
 <g id="edge2" class="edge">
-<title>Node4&#45;&gt;Node6</title>
+<title>Node11&#45;&gt;Node13</title>
 <path fill="none" stroke="#191970" d="M49.3896,-227.5274C61.6846,-245.2814 90.2443,-283.8128 122,-308 126.8186,-311.6702 132.2878,-314.9948 137.7895,-317.92"/>
 <polygon fill="#191970" stroke="#191970" points="136.4541,-321.1641 146.9699,-322.456 139.5549,-314.8883 136.4541,-321.1641"/>
 </g>
-<!-- Node7 -->
+<!-- Node14 -->
 <g id="node4" class="node">
-<title>Node7</title>
+<title>Node14</title>
 <g id="a_node4"><a xlink:href="parser_8h.html#a8c4c57eca60b2cec9a372a04abea456d" target="_top" xlink:title="Advances the parser as long as it can find whitespace.">
 <polygon fill="#ffffff" stroke="#000000" points="265.5,-265.5 265.5,-284.5 345.5,-284.5 345.5,-265.5 265.5,-265.5"/>
 <text text-anchor="middle" x="305.5" y="-272.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">parser_skipws</text>
 </a>
 </g>
 </g>
-<!-- Node4&#45;&gt;Node7 -->
+<!-- Node11&#45;&gt;Node14 -->
 <g id="edge3" class="edge">
-<title>Node4&#45;&gt;Node7</title>
+<title>Node11&#45;&gt;Node14</title>
 <path fill="none" stroke="#191970" d="M52.0946,-227.6135C65.7437,-241.2628 93.0318,-265.6404 122,-275 165.3653,-289.0113 217.5638,-287.3638 255.183,-283.1825"/>
 <polygon fill="#191970" stroke="#191970" points="255.8807,-286.6237 265.3874,-281.9469 255.0392,-279.6744 255.8807,-286.6237"/>
 </g>
-<!-- Node10 -->
+<!-- Node17 -->
 <g id="node7" class="node">
-<title>Node10</title>
+<title>Node17</title>
 <g id="a_node7"><a xlink:href="AST_8c.html#a5f9c0bcd1d544aac044f4acf93c27ddb" target="_top" xlink:title="Adds a child ast node to a parent ast node.">
 <polygon fill="#ffffff" stroke="#000000" points="131.5,-246.5 131.5,-265.5 211.5,-265.5 211.5,-246.5 131.5,-246.5"/>
 <text text-anchor="middle" x="171.5" y="-253.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">AST_addChild</text>
 </a>
 </g>
 </g>
-<!-- Node4&#45;&gt;Node10 -->
+<!-- Node11&#45;&gt;Node17 -->
 <g id="edge6" class="edge">
-<title>Node4&#45;&gt;Node10</title>
+<title>Node11&#45;&gt;Node17</title>
 <path fill="none" stroke="#191970" d="M75.426,-227.589C91.7097,-232.4044 111.6421,-238.2988 129.122,-243.468"/>
 <polygon fill="#191970" stroke="#191970" points="128.5024,-246.9345 139.0844,-246.4141 130.4875,-240.2219 128.5024,-246.9345"/>
 </g>
-<!-- Node11 -->
+<!-- Node18 -->
 <g id="node8" class="node">
-<title>Node11</title>
+<title>Node18</title>
 <g id="a_node8"><a xlink:href="parser_8h.html#a1a00af051004cb18edac760f39982eea" target="_top" xlink:title="Searches for the given character, advances the parser if it found it.">
 <polygon fill="#ffffff" stroke="#000000" points="257,-208.5 257,-227.5 354,-227.5 354,-208.5 257,-208.5"/>
 <text text-anchor="middle" x="305.5" y="-215.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">parser_acceptchar</text>
 </a>
 </g>
 </g>
-<!-- Node4&#45;&gt;Node11 -->
+<!-- Node11&#45;&gt;Node18 -->
 <g id="edge7" class="edge">
-<title>Node4&#45;&gt;Node11</title>
+<title>Node11&#45;&gt;Node18</title>
 <path fill="none" stroke="#191970" d="M86.0526,-218C129.7774,-218 197.8084,-218 246.5296,-218"/>
 <polygon fill="#191970" stroke="#191970" points="246.6174,-221.5001 256.6174,-218 246.6174,-214.5001 246.6174,-221.5001"/>
 </g>
-<!-- Node12 -->
+<!-- Node19 -->
 <g id="node9" class="node">
-<title>Node12</title>
+<title>Node19</title>
 <g id="a_node9"><a xlink:href="error_8c.html#ac348843496d6fe5024df7b11724d71c2" target="_top" xlink:title="Find the length of an errorstack.">
 <polygon fill="#ffffff" stroke="#000000" points="125.5,-170.5 125.5,-189.5 217.5,-189.5 217.5,-170.5 125.5,-170.5"/>
 <text text-anchor="middle" x="171.5" y="-177.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">errorstack_length</text>
 </a>
 </g>
 </g>
-<!-- Node4&#45;&gt;Node12 -->
+<!-- Node11&#45;&gt;Node19 -->
 <g id="edge9" class="edge">
-<title>Node4&#45;&gt;Node12</title>
+<title>Node11&#45;&gt;Node19</title>
 <path fill="none" stroke="#191970" d="M75.426,-208.411C91.7097,-203.5956 111.6421,-197.7012 129.122,-192.532"/>
 <polygon fill="#191970" stroke="#191970" points="130.4875,-195.7781 139.0844,-189.5859 128.5024,-189.0655 130.4875,-195.7781"/>
 </g>
-<!-- Node13 -->
+<!-- Node20 -->
 <g id="node10" class="node">
-<title>Node13</title>
+<title>Node20</title>
 <g id="a_node10"><a xlink:href="AST_8c.html#adc8be8765bd5abffeef1f5649587cb45" target="_top" xlink:title="Destructor for ast objects.">
 <polygon fill="#ffffff" stroke="#000000" points="142.5,-114.5 142.5,-133.5 200.5,-133.5 200.5,-114.5 142.5,-114.5"/>
 <text text-anchor="middle" x="171.5" y="-121.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">AST_free</text>
 </a>
 </g>
 </g>
-<!-- Node4&#45;&gt;Node13 -->
+<!-- Node11&#45;&gt;Node20 -->
 <g id="edge10" class="edge">
-<title>Node4&#45;&gt;Node13</title>
+<title>Node11&#45;&gt;Node20</title>
 <path fill="none" stroke="#191970" d="M56.2678,-208.2944C78.5058,-192.0269 123.4855,-159.1235 150.1968,-139.5837"/>
 <polygon fill="#191970" stroke="#191970" points="152.4912,-142.2418 158.4958,-133.5128 148.3583,-136.5921 152.4912,-142.2418"/>
 </g>
-<!-- Node15 -->
+<!-- Node22 -->
 <g id="node12" class="node">
-<title>Node15</title>
+<title>Node22</title>
 <g id="a_node12"><a xlink:href="error_8c.html#a4b3b88945de18cbfb783a3e8f76b573d" target="_top" xlink:title="pop the errorstack until it has a desired length.">
 <polygon fill="#ffffff" stroke="#000000" points="122,-76.5 122,-95.5 221,-95.5 221,-76.5 122,-76.5"/>
 <text text-anchor="middle" x="171.5" y="-83.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">errorstack_popuntil</text>
 </a>
 </g>
 </g>
-<!-- Node4&#45;&gt;Node15 -->
+<!-- Node11&#45;&gt;Node22 -->
 <g id="edge13" class="edge">
-<title>Node4&#45;&gt;Node15</title>
+<title>Node11&#45;&gt;Node22</title>
 <path fill="none" stroke="#191970" d="M47.2728,-208.3771C57.2821,-186.8705 84.2854,-134.4875 122,-105 124.2775,-103.2193 126.7412,-101.5896 129.3111,-100.1006"/>
 <polygon fill="#191970" stroke="#191970" points="130.9762,-103.181 138.3417,-95.5653 127.8346,-96.9256 130.9762,-103.181"/>
 </g>
-<!-- Node17 -->
+<!-- Node24 -->
 <g id="node14" class="node">
-<title>Node17</title>
+<title>Node24</title>
 <g id="a_node14"><a xlink:href="parser_8h.html#ad7f3825521eb3e5bd3af734357caa4d6" target="_top" xlink:title="If the parser can accept the given character, accept it, else push an error on the parsers errorstack...">
 <polygon fill="#ffffff" stroke="#000000" points="123,-38.5 123,-57.5 220,-57.5 220,-38.5 123,-38.5"/>
 <text text-anchor="middle" x="171.5" y="-45.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">parser_expectchar</text>
 </a>
 </g>
 </g>
-<!-- Node4&#45;&gt;Node17 -->
+<!-- Node11&#45;&gt;Node24 -->
 <g id="edge15" class="edge">
-<title>Node4&#45;&gt;Node17</title>
+<title>Node11&#45;&gt;Node24</title>
 <path fill="none" stroke="#191970" d="M45.4438,-208.3818C52.6147,-182.0325 76.0455,-107.9304 122,-67 123.8946,-65.3125 125.9551,-63.7682 128.1237,-62.3557"/>
 <polygon fill="#191970" stroke="#191970" points="129.8198,-65.4173 136.9021,-57.5375 126.4517,-59.2809 129.8198,-65.4173"/>
 </g>
-<!-- Node8 -->
+<!-- Node15 -->
 <g id="node5" class="node">
-<title>Node8</title>
+<title>Node15</title>
 <g id="a_node5"><a xlink:href="parserutil_8c.html#a2d9e8c20025b7b883c4e87790685a6ad" target="_top" xlink:title="Proxy to parser_next.">
 <polygon fill="#ffffff" stroke="#000000" points="390,-208.5 390,-227.5 476,-227.5 476,-208.5 390,-208.5"/>
 <text text-anchor="middle" x="433" y="-215.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">parser_advance</text>
 </a>
 </g>
 </g>
-<!-- Node7&#45;&gt;Node8 -->
+<!-- Node14&#45;&gt;Node15 -->
 <g id="edge4" class="edge">
-<title>Node7&#45;&gt;Node8</title>
+<title>Node14&#45;&gt;Node15</title>
 <path fill="none" stroke="#191970" d="M326.8406,-265.4595C347.5264,-256.2117 379.1148,-242.0898 402.4599,-231.6532"/>
 <polygon fill="#191970" stroke="#191970" points="403.889,-234.8482 411.5897,-227.5716 401.032,-228.4578 403.889,-234.8482"/>
 </g>
-<!-- Node9 -->
+<!-- Node16 -->
 <g id="node6" class="node">
-<title>Node9</title>
+<title>Node16</title>
 <g id="a_node6"><a xlink:href="parserutil_8c.html#ab25a97ff31329fe9461666bfe2dc6f2c" target="_top" xlink:title="Iterate the parser.">
 <polygon fill="#ffffff" stroke="#000000" points="512,-208.5 512,-227.5 580,-227.5 580,-208.5 512,-208.5"/>
 <text text-anchor="middle" x="546" y="-215.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">parser_next</text>
 </a>
 </g>
 </g>
-<!-- Node8&#45;&gt;Node9 -->
+<!-- Node15&#45;&gt;Node16 -->
 <g id="edge5" class="edge">
-<title>Node8&#45;&gt;Node9</title>
+<title>Node15&#45;&gt;Node16</title>
 <path fill="none" stroke="#191970" d="M476.0428,-218C484.4677,-218 493.3165,-218 501.7791,-218"/>
 <polygon fill="#191970" stroke="#191970" points="501.8556,-221.5001 511.8556,-218 501.8555,-214.5001 501.8556,-221.5001"/>
 </g>
-<!-- Node11&#45;&gt;Node8 -->
+<!-- Node18&#45;&gt;Node15 -->
 <g id="edge8" class="edge">
-<title>Node11&#45;&gt;Node8</title>
+<title>Node18&#45;&gt;Node15</title>
 <path fill="none" stroke="#191970" d="M354.066,-218C362.4713,-218 371.2505,-218 379.7717,-218"/>
 <polygon fill="#191970" stroke="#191970" points="379.9954,-221.5001 389.9954,-218 379.9954,-214.5001 379.9954,-221.5001"/>
 </g>
-<!-- Node13&#45;&gt;Node13 -->
+<!-- Node20&#45;&gt;Node20 -->
 <g id="edge11" class="edge">
-<title>Node13&#45;&gt;Node13</title>
+<title>Node20&#45;&gt;Node20</title>
 <path fill="none" stroke="#191970" d="M151.7715,-133.7571C142.1738,-142.5653 148.75,-152 171.5,-152 186.0742,-152 194.0107,-148.128 195.3094,-143.0292"/>
 <polygon fill="#191970" stroke="#191970" points="198.4604,-141.4998 191.2285,-133.7571 192.0535,-144.3197 198.4604,-141.4998"/>
 </g>
-<!-- Node14 -->
+<!-- Node21 -->
 <g id="node11" class="node">
-<title>Node14</title>
+<title>Node21</title>
 <g id="a_node11"><a xlink:href="token_8h.html#a863ec10d282f1f7e0dbbbaae6cec4f15" target="_top" xlink:title="Destroys a token object.Also frees the token&#39;s value.">
 <polygon fill="#ffffff" stroke="#000000" points="274.5,-114.5 274.5,-133.5 336.5,-133.5 336.5,-114.5 274.5,-114.5"/>
 <text text-anchor="middle" x="305.5" y="-121.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">token_free</text>
 </a>
 </g>
 </g>
-<!-- Node13&#45;&gt;Node14 -->
+<!-- Node20&#45;&gt;Node21 -->
 <g id="edge12" class="edge">
-<title>Node13&#45;&gt;Node14</title>
+<title>Node20&#45;&gt;Node21</title>
 <path fill="none" stroke="#191970" d="M200.576,-124C219.1453,-124 243.5096,-124 264.0855,-124"/>
 <polygon fill="#191970" stroke="#191970" points="264.1438,-127.5001 274.1438,-124 264.1437,-120.5001 264.1438,-127.5001"/>
 </g>
-<!-- Node16 -->
+<!-- Node23 -->
 <g id="node13" class="node">
-<title>Node16</title>
+<title>Node23</title>
 <g id="a_node13"><a xlink:href="error_8c.html#a97e94bccb231e66498eb7b2b72d8ec87" target="_top" xlink:title="Pop and return the top element of the errorstack.">
 <polygon fill="#ffffff" stroke="#000000" points="265,-76.5 265,-95.5 346,-95.5 346,-76.5 265,-76.5"/>
 <text text-anchor="middle" x="305.5" y="-83.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">errorstack_pop</text>
 </a>
 </g>
 </g>
-<!-- Node15&#45;&gt;Node16 -->
+<!-- Node22&#45;&gt;Node23 -->
 <g id="edge14" class="edge">
-<title>Node15&#45;&gt;Node16</title>
+<title>Node22&#45;&gt;Node23</title>
 <path fill="none" stroke="#191970" d="M221.0159,-86C231.9765,-86 243.6083,-86 254.6222,-86"/>
 <polygon fill="#191970" stroke="#191970" points="254.9505,-89.5001 264.9504,-86 254.9504,-82.5001 254.9505,-89.5001"/>
 </g>
-<!-- Node18 -->
+<!-- Node25 -->
 <g id="node15" class="node">
-<title>Node18</title>
+<title>Node25</title>
 <g id="a_node15"><a xlink:href="parserutil_8c.html#a1a00af051004cb18edac760f39982eea" target="_top" xlink:title="Searches for the given character, advances the parser if it found it.">
 <polygon fill="#ffffff" stroke="#000000" points="257,-38.5 257,-57.5 354,-57.5 354,-38.5 257,-38.5"/>
 <text text-anchor="middle" x="305.5" y="-45.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">parser_acceptchar</text>
 </a>
 </g>
 </g>
-<!-- Node17&#45;&gt;Node18 -->
+<!-- Node24&#45;&gt;Node25 -->
 <g id="edge16" class="edge">
-<title>Node17&#45;&gt;Node18</title>
+<title>Node24&#45;&gt;Node25</title>
 <path fill="none" stroke="#191970" d="M220.2561,-48C228.7542,-48 237.6762,-48 246.4159,-48"/>
 <polygon fill="#191970" stroke="#191970" points="246.5556,-51.5001 256.5556,-48 246.5556,-44.5001 246.5556,-51.5001"/>
 </g>
-<!-- Node19 -->
+<!-- Node26 -->
 <g id="node16" class="node">
-<title>Node19</title>
+<title>Node26</title>
 <g id="a_node16"><a xlink:href="error_8c.html#a1febf822c4d9249dd4afd09c5d5f87bb" target="_top" xlink:title="Construct a new error object out of parameters, and push it to the errorstack.">
 <polygon fill="#ffffff" stroke="#000000" points="262.5,-.5 262.5,-19.5 348.5,-19.5 348.5,-.5 262.5,-.5"/>
 <text text-anchor="middle" x="305.5" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">errorstack_push</text>
 </a>
 </g>
 </g>
-<!-- Node17&#45;&gt;Node19 -->
+<!-- Node24&#45;&gt;Node26 -->
 <g id="edge18" class="edge">
-<title>Node17&#45;&gt;Node19</title>
+<title>Node24&#45;&gt;Node26</title>
 <path fill="none" stroke="#191970" d="M205.3139,-38.411C222.5326,-33.5281 243.6637,-27.5357 262.0733,-22.315"/>
 <polygon fill="#191970" stroke="#191970" points="263.0312,-25.6815 271.697,-19.5859 261.1214,-18.947 263.0312,-25.6815"/>
 </g>
-<!-- Node18&#45;&gt;Node8 -->
+<!-- Node25&#45;&gt;Node15 -->
 <g id="edge17" class="edge">
-<title>Node18&#45;&gt;Node8</title>
+<title>Node25&#45;&gt;Node15</title>
 <path fill="none" stroke="#191970" d="M339.151,-57.5103C344.5058,-60.0161 349.6914,-63.1357 354,-67 394.9816,-103.7547 418.1234,-166.8477 427.7091,-198.5777"/>
 <polygon fill="#191970" stroke="#191970" points="424.4073,-199.7599 430.5414,-208.3985 431.1332,-197.8202 424.4073,-199.7599"/>
 </g>

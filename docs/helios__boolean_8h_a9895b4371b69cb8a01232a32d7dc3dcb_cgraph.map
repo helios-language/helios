@@ -1,0 +1,8 @@
+<map id="helios_boolean_represent" name="helios_boolean_represent">
+<area shape="rect" id="node1" title="Alias of helios_boolean_tostring for completeness." alt="" coords="5,31,175,57"/>
+<area shape="rect" id="node2" href="$helios__boolean_8c.html#ad10068c0d33dd1c2cd19173af2744bcf" title="Create a helios_string object which represents the helios_boolean object&#39;s value." alt="" coords="223,31,381,57"/>
+<area shape="rect" id="node3" href="$helios__string_8c.html#a4338910535421a24735fc7eb3123495c" title="Create a helios_string object from a c string." alt="" coords="429,23,557,65"/>
+<area shape="rect" id="node4" href="$helios__string_8c.html#af727ca5352482ab7e542510f178a9f85" title="Constructor of a helios_string." alt="" coords="605,31,724,57"/>
+<area shape="rect" id="node5" href="$helios__memory_8h.html#af87f0050f8e236d0945592fa4e54dc94" title="Allocates a new helios object (and performs all the GC steps associated with that action)." alt="" coords="795,5,945,32"/>
+<area shape="rect" id="node6" href="$helios__memory_8h.html#ab14fb1c046aae61ab06eda8eeaf2cd85" title=" " alt="" coords="772,56,968,83"/>
+</map>

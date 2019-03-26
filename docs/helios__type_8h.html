@@ -84,7 +84,8 @@ Include dependency graph for helios_type.h:</div>
 </div><div class="textblock"><div class="dynheader">
 This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="helios__type_8h__dep__incl.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="helios__type_8h__dep__incl.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
 </div>
 </div>
 <p><a href="helios__type_8h_source.html">Go to the source code of this file.</a></p>
@@ -144,6 +145,10 @@ Macros</h2></td></tr>
 <tr class="separator:ae4dbf95d3fe7562707d0989647bc8f72"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0569c6a9fe0300d2d03c594a47637c88"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="helios__type_8h.html#a0569c6a9fe0300d2d03c594a47637c88">HELIOS_OBJECT_UNARYOPS_FIELDS_PLUS</a>(function)&#160;&#160;&#160;.plus = function</td></tr>
 <tr class="separator:a0569c6a9fe0300d2d03c594a47637c88"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1380bf686eececb0061bae51b1edce49"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="helios__type_8h.html#a1380bf686eececb0061bae51b1edce49">HELIOS_OBJECT_STATIC_FIELD</a>&#160;&#160;&#160;bool staticobj;</td></tr>
+<tr class="separator:a1380bf686eececb0061bae51b1edce49"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a70022692e940cd98f1a08ea8f8e56b89"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="helios__type_8h.html#a70022692e940cd98f1a08ea8f8e56b89">HELIOS_OBJECT_STATIC</a>()&#160;&#160;&#160;.staticobj = true</td></tr>
+<tr class="separator:a70022692e940cd98f1a08ea8f8e56b89"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Macro Definition Documentation</h2>
 <a id="a88b3cb317a48eb70fc4ac7a5647b93ed"></a>
@@ -553,6 +558,46 @@ Macros</h2></td></tr>
 
 </div>
 </div>
+<a id="a70022692e940cd98f1a08ea8f8e56b89"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a70022692e940cd98f1a08ea8f8e56b89">&#9670;&nbsp;</a></span>HELIOS_OBJECT_STATIC</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define HELIOS_OBJECT_STATIC</td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td>&#160;&#160;&#160;.staticobj = true</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>sets this static field </p>
+
+<p class="definition">Definition at line <a class="el" href="helios__type_8h_source.html#l00171">171</a> of file <a class="el" href="helios__type_8h_source.html">helios_type.h</a>.</p>
+
+</div>
+</div>
+<a id="a1380bf686eececb0061bae51b1edce49"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1380bf686eececb0061bae51b1edce49">&#9670;&nbsp;</a></span>HELIOS_OBJECT_STATIC_FIELD</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define HELIOS_OBJECT_STATIC_FIELD&#160;&#160;&#160;bool staticobj;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>If this field is true, instances of this object can never be freed. </p>
+<p>This is for example done with the True and False objects. </p>
+
+<p class="definition">Definition at line <a class="el" href="helios__type_8h_source.html#l00168">168</a> of file <a class="el" href="helios__type_8h_source.html">helios_type.h</a>.</p>
+
+</div>
+</div>
 <a id="ab99487aa93740dee413ff52a5c69633c"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab99487aa93740dee413ff52a5c69633c">&#9670;&nbsp;</a></span>HELIOS_OBJECT_UNARYOPS_FIELDS</h2>
 
@@ -662,7 +707,7 @@ Macros</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Mar 26 2019 12:39:43 for Helios-Language by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Mar 26 2019 18:41:41 for Helios-Language by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.15
 </small></address>

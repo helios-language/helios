@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['indent',['indent',['../structParser__t.html#a9677e7d6187e6557d517d3e548cae6bf',1,'Parser_t']]],
   ['index',['index',['../structParser__t.html#a4acd7ad76071abb55dc86d16071939d8',1,'Parser_t']]],
   ['instr_5fadd',['INSTR_ADD',['../helios__code_8h.html#aa70d58368c6f0de14fbacb2b24cfa678ad921138b550d6fca1d77e1f341c7d313',1,'helios_code.h']]],
   ['instr_5fdiv',['INSTR_DIV',['../helios__code_8h.html#aa70d58368c6f0de14fbacb2b24cfa678a299cbd25f4c99c7758b274a28d43bfb6',1,'helios_code.h']]],
@@ -13,6 +12,7 @@ var searchData=
   ['instructions',['instructions',['../structhelios__code.html#ad4ac5efc5c3e7746ac1a1d650e097c52',1,'helios_code']]],
   ['instructionsize',['instructionsize',['../structhelios__code.html#a416fbc3d2fc3d1c0b7b0604da5204a31',1,'helios_code']]],
   ['integers_2ec',['integers.c',['../integers_8c.html',1,'']]],
+  ['is_5fhelios_5fboolean',['IS_HELIOS_BOOLEAN',['../helios__boolean_8h.html#a9234afff5ccf549d253be0fd0e475047',1,'helios_boolean.h']]],
   ['is_5fhelios_5fcode',['IS_HELIOS_CODE',['../helios__code_8h.html#ab63fadc7ba8d13035e618015fdad6dca',1,'helios_code.h']]],
   ['is_5fhelios_5ffloat',['IS_HELIOS_FLOAT',['../helios__float_8h.html#acc70a320d72a7523c68494fc4a1b1a65',1,'helios_float.h']]],
   ['is_5fhelios_5fhashmap',['IS_HELIOS_HASHMAP',['../helios__hashmap_8h.html#a61756c87c9fddf2d5d279abb1e03a19a',1,'helios_hashmap.h']]],

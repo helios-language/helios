@@ -1,5 +1,5 @@
 <map id="PARSERFUNC" name="PARSERFUNC">
-<area shape="rect" id="node1" title=" " alt="" coords="5,208,120,235"/>
+<area shape="rect" id="node1" title="statement: simple_statement (&quot;;&quot; simple_statement)* &quot;;&quot;?" alt="" coords="5,208,120,235"/>
 <area shape="rect" id="node2" href="$AST_8c.html#a3a1c70c232e669f02ef0a4e171ee6ab2" title="Constructore for ast objects." alt="" coords="195,5,273,32"/>
 <area shape="rect" id="node3" href="$token_8h.html#a5f63b7723640416a125433badc7d6563" title="Constructor for token objects." alt="" coords="191,56,277,83"/>
 <area shape="rect" id="node4" href="$parser_8h.html#a8c4c57eca60b2cec9a372a04abea456d" title="Advances the parser as long as it can find whitespace." alt="" coords="359,132,466,159"/>
