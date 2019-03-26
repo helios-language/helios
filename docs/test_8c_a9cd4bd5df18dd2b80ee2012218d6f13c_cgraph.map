@@ -1,7 +1,0 @@
-<map id="testmain" name="testmain">
-<area shape="rect" id="node1" title=" " alt="" coords="5,56,77,83"/>
-<area shape="rect" id="node2" href="$helios__memory_8h.html#aaabde550780f37dc19f59b3e8bc9c514" title="Creates a new garbagecollector object." alt="" coords="134,5,317,32"/>
-<area shape="rect" id="node3" href="$helios__memory_8h.html#a0352d829134eb27df2d9e088062e987d" title="Points the global garbagecollector pointer to a new garbagecollector." alt="" coords="134,56,317,83"/>
-<area shape="rect" id="node4" href="$helios__memory_8h.html#a0ba47c8ed7e1be60f1c360e33a0aff15" title="Free a garbagecollector object." alt="" coords="125,107,325,133"/>
-<area shape="rect" id="node5" href="$refcount_8c.html#a5dcd65b50eabfe133b9fcf6206b2bd1e" title="Frees all tracked objects of a garbagecollector without freeing the GC itself." alt="" coords="373,107,528,133"/>
-</map>

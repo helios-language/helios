@@ -1,5 +1,0 @@
-<map id="helios_free_object" name="helios_free_object">
-<area shape="rect" id="node1" title="Frees a helios object." alt="" coords="197,31,324,57"/>
-<area shape="rect" id="node2" href="$helios__integer_8h.html#ac7731385ec91b5f6fdf7ef205eba7ded" title="Destructor of a helios_integer object." alt="" coords="5,5,149,32"/>
-<area shape="rect" id="node3" href="$helios__string_8h.html#aa95b3f21f6ec9f9c19dd873193c473f9" title="Destructor of a helios_string object." alt="" coords="9,56,146,83"/>
-</map>
