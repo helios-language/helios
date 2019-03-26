@@ -9,4 +9,13 @@ jobs:
 
       - run:
           name: Build
-          command: make
+          command: make -B
+
+      - run:
+          name: Memory
+          command: make leaktest -B
+
+
+      - run:
+          name: Test
+          command: make test -B
