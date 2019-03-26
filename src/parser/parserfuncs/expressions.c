@@ -55,9 +55,9 @@ PARSERFUNC(atom) {
  * Either accepts an atom or a bracketed expression
  *
  * rule:
- * atomexpression = ("(" expr ")") | atom
+ * bracketexpression = ("(" expr ")") | atom
  */
-PARSERFUNC(atomexpression) {
+PARSERFUNC(bracketexpression) {
     parser_skipws(parser);
 
     if (parser_acceptchar(parser, '(')) {
@@ -75,11 +75,11 @@ PARSERFUNC(atomexpression) {
  * in them.
  *
  * rule:
- * power = atomexpression ["**" power]
+ * power = bracketexpression ["**" power]
  */
 PARSERFUNC(power) {
     parser_skipws(parser);
-    AST *left = PARSERCALL(atomexpression);
+    AST *left = PARSERCALL(bracketexpression);
     AST *res = left;
     parser_skipws(parser);
     if (parser_acceptstring(parser, "**")) {

@@ -1,6 +1,30 @@
 
 
 
+root = ("\n" | "\r" | statement)* end
+statement = simple_statement (";" simple_statement)* ";"? _nl
+
+simple_statement = compound_statement | single_statement
+
+
+single_statement = ....
+
+
+expr = term (("+" | "-") term)*
+term = factor (("*" | "/" | "//") factor)*
+factor = (("+" | "-" | "~") factor) | power
+power = bracketexpression ["**" power]
+bracketexpression = ("(" expr ")") | atom
+atom = floatconst | intconst
+
+
+intconst = hexconst | decconst | binconst | octconst
+
+
+
+
+block = indent statement+ dedent
+
 
 
 
