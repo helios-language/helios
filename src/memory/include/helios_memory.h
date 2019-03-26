@@ -11,6 +11,7 @@
 
 #define GC_DEFAULT_LENGTH 10
 #define GC_REHASH_PERCENT ((double)55)
+#define GC_REHASH_LOWER_PERCENT ((double)30)
 
 struct __helios_object_s;
 

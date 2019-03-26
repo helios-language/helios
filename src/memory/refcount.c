@@ -119,56 +119,64 @@ static uint64_t __hashfunction(uint64_t key) {
  * @param gc the garbage collection to check
  */
 static void rehash(garbagecollector *gc) {
+    uint32_t newsize;
     if (((double)gc->filled / (double)gc->size) > (GC_REHASH_PERCENT / 100.0)) {
-        // create a new array but not a new gc itself
-        __helios_gc_hashmap_node *newtrackedobjects =
-            malloc((gc->size << 1) * sizeof(__helios_gc_hashmap_node));
-        if (newtrackedobjects == NULL) {
-            printf("allocation error in rehash");
-            exit(-1);
-        }
-
-#if HELIOS_MEMORY_DEBUG
-        printf("\x1b[34mrehashing: to size %i\x1b[0m\n", gc->size << 1);
-        int32_t objectsfound = 0;
-#endif
-        // set all the entries in this new array to not be used
-        for (uint32_t i = 0; i < gc->size << 1; i++) {
-            newtrackedobjects[i].obj = 0;
-            newtrackedobjects[i].used = NULL;
-        }
-
-        for (uint32_t i = 0; i < gc->size; i++) {
-            if (gc->allocated_objects[i].used == true) {
-                helios_object *obj = gc->allocated_objects[i].obj;
-
-                uint64_t index =
-                    __hashfunction((uint64_t)obj) % (gc->size << 1);
-
-                // linear probing
-                while (newtrackedobjects[index].used == true) {
-                    index = (index + 1) % (gc->size << 1);
-                }
-#if HELIOS_MEMORY_DEBUG
-                printf("\x1b[36mrehashing: object at 0x%lx from %i to % ld "
-                       "\x1b[0m\n",
-                       (uint64_t)obj, i, index);
-                objectsfound++;
-#endif
-                newtrackedobjects[index].used = true;
-                newtrackedobjects[index].obj = obj;
-            }
-        }
-
-#if HELIOS_MEMORY_DEBUG
-        printf("\x1b[37mrehashed %i/%i objects\n\x1b[37m", objectsfound,
-               __MEMDEBUG_objectsallocated);
-#endif
-
-        free(gc->allocated_objects);
-        gc->allocated_objects = newtrackedobjects;
-        gc->size <<= 1;
+        newsize = gc->size << 1;
+    } else if (((double)gc->filled / (double)gc->size) <
+               (GC_REHASH_LOWER_PERCENT / 100.0)) {
+        newsize = gc->size >> 1;
+        return;
+    } else {
+        return;
     }
+    // create a new array but not a new gc itself
+
+    __helios_gc_hashmap_node *newtrackedobjects =
+        malloc(newsize * sizeof(__helios_gc_hashmap_node));
+    if (newtrackedobjects == NULL) {
+        printf("allocation error in rehash");
+        exit(-1);
+    }
+
+#if HELIOS_MEMORY_DEBUG
+    printf("\x1b[34mrehashing: to size %i\x1b[0m\n", newsize);
+    int32_t objectsfound = 0;
+#endif
+    // set all the entries in this new array to not be used
+    for (uint32_t i = 0; i < newsize; i++) {
+        newtrackedobjects[i].obj = 0;
+        newtrackedobjects[i].used = NULL;
+    }
+
+    for (uint32_t i = 0; i < gc->size; i++) {
+        if (gc->allocated_objects[i].used == true) {
+            helios_object *obj = gc->allocated_objects[i].obj;
+
+            uint64_t index = __hashfunction((uint64_t)obj) % (newsize);
+
+            // linear probing
+            while (newtrackedobjects[index].used == true) {
+                index = (index + 1) % (newsize);
+            }
+#if HELIOS_MEMORY_DEBUG
+            printf("\x1b[36mrehashing: object at 0x%lx from %i to % ld "
+                   "\x1b[0m\n",
+                   (uint64_t)obj, i, index);
+            objectsfound++;
+#endif
+            newtrackedobjects[index].used = true;
+            newtrackedobjects[index].obj = obj;
+        }
+    }
+
+#if HELIOS_MEMORY_DEBUG
+    printf("\x1b[37mrehashed %i/%i objects\n\x1b[37m", objectsfound,
+           __MEMDEBUG_objectsallocated);
+#endif
+
+    free(gc->allocated_objects);
+    gc->allocated_objects = newtrackedobjects;
+    gc->size = newsize;
 }
 
 /**
