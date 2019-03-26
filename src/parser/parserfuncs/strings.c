@@ -19,7 +19,6 @@
  * variations.
  */
 static AST *string_internal(Parser_t *parser, char endchar) {
-    parser_advance(parser);
     char *res = malloc(10 * sizeof(char));
     uint32_t filled = 0;
     uint32_t size = 10;

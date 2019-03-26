@@ -14,6 +14,7 @@ void helios_code_from_AST_helper(helios_object *codeobject, AST *ast) {
         break;
     }
     case TOK_INT: // fall through
+    case TOK_STRING:
     case TOK_FLOAT: {
         uint32_t location = helios_code_add_constant(
             codeobject, HELIOS_CALL_MEMBER(copy, ast->value->value));
