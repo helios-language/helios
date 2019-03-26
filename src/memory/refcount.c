@@ -38,9 +38,13 @@
 
 garbagecollector *__GC_CURRENT = NULL;
 
+#if HELIOS_MEMORY_DEBUG
+int32_t __MEMDEBUG_objectsallocated = 0;
+#endif
+
 /**
- * Get the global current garbage collector. Errors whenever this value is not
- * set.
+ * Get the global current garbage collector. Errors whenever this value is
+ * not set.
  *
  * @return the current GC
  */
@@ -78,6 +82,7 @@ garbagecollector *helios_init_garbagecollector() {
         malloc(GC_DEFAULT_LENGTH * sizeof(__helios_gc_hashmap_node))};
     for (uint32_t i = 0; i < gc->size; i++) {
         gc->allocated_objects[i].used = false;
+        gc->allocated_objects[i].obj = NULL;
     }
     return gc;
 }
@@ -115,11 +120,22 @@ static uint64_t __hashfunction(uint64_t key) {
  */
 static void rehash(garbagecollector *gc) {
     if (((double)gc->filled / (double)gc->size) > (GC_REHASH_PERCENT / 100.0)) {
+        // create a new array but not a new gc itself
         __helios_gc_hashmap_node *newtrackedobjects =
-            malloc(gc->size << 1 * sizeof(__helios_gc_hashmap_node));
+            malloc((gc->size << 1) * sizeof(__helios_gc_hashmap_node));
+        if (newtrackedobjects == NULL) {
+            printf("allocation error in rehash");
+            exit(-1);
+        }
 
-        for (uint32_t i = 0; i < gc->size; i++) {
-            gc->allocated_objects[i].used = false;
+#if HELIOS_MEMORY_DEBUG
+        printf("\x1b[34mrehashing: to size %i\x1b[0m\n", gc->size << 1);
+        int32_t objectsfound = 0;
+#endif
+        // set all the entries in this new array to not be used
+        for (uint32_t i = 0; i < gc->size << 1; i++) {
+            newtrackedobjects[i].obj = 0;
+            newtrackedobjects[i].used = NULL;
         }
 
         for (uint32_t i = 0; i < gc->size; i++) {
@@ -129,14 +145,25 @@ static void rehash(garbagecollector *gc) {
                 uint64_t index =
                     __hashfunction((uint64_t)obj) % (gc->size << 1);
 
+                // linear probing
                 while (newtrackedobjects[index].used == true) {
-                    index = (index + 1) % gc->size;
+                    index = (index + 1) % (gc->size << 1);
                 }
-
-                gc->allocated_objects[index].used = true;
-                gc->allocated_objects[index].obj = obj;
+#if HELIOS_MEMORY_DEBUG
+                printf("\x1b[36mrehashing: object at 0x%lx from %i to % ld "
+                       "\x1b[0m\n",
+                       (uint64_t)obj, i, index);
+                objectsfound++;
+#endif
+                newtrackedobjects[index].used = true;
+                newtrackedobjects[index].obj = obj;
             }
         }
+
+#if HELIOS_MEMORY_DEBUG
+        printf("\x1b[37mrehashed %i/%i objects\n\x1b[37m", objectsfound,
+               __MEMDEBUG_objectsallocated);
+#endif
 
         free(gc->allocated_objects);
         gc->allocated_objects = newtrackedobjects;
@@ -157,6 +184,10 @@ static void helios_track_object(helios_object *obj) {
     while (gc->allocated_objects[index].used == true) {
         index = (index + 1) % gc->size;
     }
+#if HELIOS_MEMORY_DEBUG
+    printf("\x1b[35massigned object %s to index: %li of %i\x1b[0m\n",
+           obj->class->classname, index, gc->size);
+#endif
 
     gc->filled++;
 
@@ -166,10 +197,22 @@ static void helios_track_object(helios_object *obj) {
     rehash(gc);
 }
 
+/**
+ * Registers an object in the garbagecollector to be freed later.
+ *
+ * @param obj the object to start tracking
+ */
 void helios_set_garbagecollectable(helios_object *obj) {
     obj->gc = helios_get_garbagecollector();
     HELIOS_INCREF(obj);
     helios_track_object(obj);
+
+#if HELIOS_MEMORY_DEBUG
+    printf("\x1b[31mhelios memory debug: assigned gc at 0x%lx to object of "
+           "type %s\x1b[0m\n",
+           (uint64_t)obj->gc, obj->class->classname);
+    printf("\x1b[33mgc size: %i/%i\x1b[0m\n", obj->gc->filled, obj->gc->size);
+#endif
 }
 
 /**
@@ -179,7 +222,10 @@ void helios_set_garbagecollectable(helios_object *obj) {
  * @param gc the garbagecollector to free all tracked objects from
  */
 void helios_free_all_tracked(garbagecollector *gc) {
-    for (uint32_t i = 0; i < gc->filled; i++) {
+#if HELIOS_MEMORY_DEBUG
+    printf("\x1b[31mfreeing all tracked objects.\n\x1b[0m\n");
+#endif
+    for (uint32_t i = 0; i < gc->size; i++) {
         if (gc->allocated_objects[i].used == true) {
             HELIOS_CALL_MEMBER(destructor, gc->allocated_objects[i].obj);
         }
@@ -196,7 +242,7 @@ void helios_free_all_tracked(garbagecollector *gc) {
 void helios_garbage_collect(garbagecollector *gc) {
     for (uint32_t i = 0; i < gc->filled; i++) {
         if (gc->allocated_objects[i].used == true &&
-            HELIOS_GETREF(gc->allocated_objects[i].obj) == 0) {
+            HELIOS_GETREF(gc->allocated_objects[i].obj) <= 0) {
             HELIOS_CALL_MEMBER(destructor, gc->allocated_objects[i].obj);
         }
     }
@@ -206,30 +252,22 @@ void helios_garbage_collect(garbagecollector *gc) {
  * Allocates a new helios object (and performs all the GC steps associated with
  * that action). Use this instead of malloc whenever a helios object is created.
  *
- * NOTE: Automatically assigns the object's gc to be the current global GC
- * pointer. If this is not desired use helios_allocate_object_on_gc.
  *
  * @param size the size in bytes of an object to allocate
  * @return the newly allocated object
  */
 helios_object *helios_allocate_object(size_t size) {
-    helios_object *res = (helios_object *)malloc(size);
-    return res;
-}
+#if HELIOS_MEMORY_DEBUG
+    printf("\x1b[31mhelios memory debug: allocated %ld bytes (%i objects "
+           "allocated)\x1b[0m\n",
+           size, ++__MEMDEBUG_objectsallocated);
+#endif
 
-/**
- * Allocates a new helios object (and performs all the GC steps associated with
- * that action). Use this instead of malloc whenever a helios object is created.
- * Sets the object's GC to whichever GC is passed in as the first argument.
- *
- * @param gc the garbagecollector to use for the allocated object.
- * @param size the size in bytes of an object to allocate
- * @return the newly allocated object
- */
-helios_object *helios_allocate_object_on_gc(garbagecollector *gc, size_t size) {
     helios_object *res = (helios_object *)malloc(size);
-    res->gc = gc;
-    helios_track_object(res);
+#if HELIOS_MEMORY_DEBUG
+    printf("\x1b[31mallocated at 0x%lx\x1b[0m\n", (uint64_t)res);
+#endif
+
     return res;
 }
 
@@ -241,13 +279,36 @@ helios_object *helios_allocate_object_on_gc(garbagecollector *gc, size_t size) {
 void helios_free_object(helios_object *obj) {
     garbagecollector *gc = HELIOS_GET_OBJ_GC(obj);
 
+#if HELIOS_MEMORY_DEBUG
+    printf("\x1b[31mhelios memory debug: freed %s object (%i objects "
+           "allocated)\x1b[0m\n",
+           obj->class->classname, --__MEMDEBUG_objectsallocated);
+
+    printf("\x1b[31mfreed from 0x%lx\x1b[0m\n", (uint64_t)obj);
+
+#endif
+
     uint64_t index = __hashfunction((uint64_t)obj) % gc->size;
 
-    while (gc->allocated_objects[index].used == true &&
-           gc->allocated_objects[index].obj != obj) {
+    while (1) {
+        if (gc->allocated_objects[index].used) {
+            if (gc->allocated_objects[index].obj == obj) {
+                break;
+            }
+        }
         index = (index + 1) % gc->size;
     }
+
+#if HELIOS_MEMORY_DEBUG
+    printf("\x1b[34mat index %li\x1b[0m\n", index);
+#endif
+
     gc->allocated_objects[index].used = false;
+    gc->allocated_objects[index].obj = NULL;
     gc->filled--;
     free(obj);
+
+#if HELIOS_MEMORY_DEBUG
+    printf("\x1b[33mgc size: %i/%i\x1b[0m\n", obj->gc->filled, obj->gc->size);
+#endif
 }

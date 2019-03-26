@@ -2,6 +2,7 @@
 #include <helios_memory.h>
 #include <helios_object.h>
 #include <helios_string.h>
+#include <stdio.h>
 #include <string.h>
 
 /**
@@ -53,7 +54,19 @@ helios_object *helios_string_from_charp(char *value) {
  * attempted.
  */
 char *helios_string_to_charp(helios_object *obj) {
-    return TO_HELIOS_STRING(obj)->value;
+    if (IS_HELIOS_STRING(obj)) {
+        helios_string *str = TO_HELIOS_STRING(obj);
+        char *res = malloc(str->filled + 1);
+        uint32_t i;
+        for (i = 0; i < str->filled; i++) {
+            res[i] = str->value[i];
+        }
+        res[i] = '\0';
+        return res;
+    } else {
+        printf("object has to be instance of helios_string");
+        exit(-1);
+    }
 }
 
 /**
@@ -116,6 +129,18 @@ helios_object *helios_string_represent(helios_object *obj) {
 }
 
 /**
+ * Copies a helios string object.
+ */
+helios_object *helios_string_copy(helios_object *obj) {
+    helios_string *old = TO_HELIOS_STRING(obj);
+    helios_string *new = TO_HELIOS_STRING(helios_string_init());
+    for (uint32_t i = 0; i < old->filled; i++) {
+        helios_string_append_char(TO_HELIOS_OBJECT(new), old->value[i]);
+    }
+    return TO_HELIOS_OBJECT(new);
+}
+
+/**
  * Definition of the type of any helios_string object.
  */
 helios_type helios_string_type = {
@@ -124,6 +149,7 @@ helios_type helios_string_type = {
     HELIOS_OBJECT_BASIC_FIELDS_CONSTRUCTOR(helios_string_init),
     HELIOS_OBJECT_BASIC_FIELDS_DESTRUCTOR(helios_string_delete),
     HELIOS_OBJECT_BASIC_FIELDS_CLASSNAME("string"),
+    HELIOS_OBJECT_BASIC_FIELDS_COPY(helios_string_copy),
 
     HELIOS_OBJECT_BASIC_FIELDS_TOSTRING(helios_string_tostring),
     HELIOS_OBJECT_BASIC_FIELDS_REPRESENT(helios_string_represent),

@@ -49,4 +49,5 @@ helios_object *helios_string_from_charp(char *value);
 helios_object *helios_string_tostring(helios_object *obj);
 helios_object *helios_string_represent(helios_object *obj);
 char *helios_string_to_charp(helios_object *obj);
+helios_object *helios_string_copy(helios_object *obj);
 #endif

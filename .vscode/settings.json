@@ -21,7 +21,13 @@
         "helios_integer.h": "c",
         "program.h": "c",
         "instruction.h": "c",
-        "inttypes.h": "c"
+        "inttypes.h": "c",
+        "helios_memory.h": "c",
+        "helios_object.h": "c",
+        "string.h": "c",
+        "helios_serializeutils.h": "c",
+        "serialize.h": "c",
+        "stdint.h": "c"
     },
     "python.pythonPath": "/usr/bin/python3"
 }

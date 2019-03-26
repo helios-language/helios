@@ -1,3 +1,4 @@
+#include <builtins.h>
 #include <stdbool.h>
 #include <stdint.h>
 #include <stdio.h>
@@ -17,13 +18,20 @@
  * values.
  */
 const char *tokennames[] = {
-    enumtostring(TOK_DECINT),    enumtostring(TOK_HEXINT),
-    enumtostring(TOK_BININT),    enumtostring(TOK_OCTINT),
-    enumtostring(TOK_UNARYOP),   enumtostring(TOK_BINARYOP),
-    enumtostring(TOK_EPART),     enumtostring(TOK_FPART),
-    enumtostring(TOK_IPART),     enumtostring(TOK_FLOAT),
-    enumtostring(TOK_NONE),      enumtostring(TOK_BLOCK),
+    enumtostring(TOK_INT),
+    enumtostring(TOK_FLOAT),
+    enumtostring(TOK_NONE),
+    enumtostring(TOK_BLOCK),
     enumtostring(TOK_ROOTBLOCK),
+    enumtostring(TOK_DIVIDE),
+    enumtostring(TOK_INTEGER_DIVIDE),
+    enumtostring(TOK_PLUS),
+    enumtostring(TOK_MINUS),
+    enumtostring(TOK_MULTIPLY),
+    enumtostring(TOK_UNARY_MINUS),
+    enumtostring(TOK_UNARY_NOT),
+    enumtostring(TOK_UNARY_PLUS),
+    enumtostring(TOK_POWER),
 
 };
 
@@ -34,7 +42,16 @@ const char *tokennames[] = {
 void token_print(Token_t *token) {
     switch (token->t) {
     default:
-        printf("Token <%s> : %s", tokennames[token->t], (char *)token->value);
+        if (token->value != NULL) {
+            helios_object *string = HELIOS_CALL_MEMBER(represent, token->value);
+            char *res = helios_string_to_charp(string);
+            printf("Token <%s> : %s", tokennames[token->t], res);
+            free(res);
+            HELIOS_CALL_MEMBER(destructor, string);
+        } else {
+            printf("Token <%s> : NULL", tokennames[token->t]);
+        }
+
         break;
     }
 }
@@ -47,9 +64,9 @@ void token_print(Token_t *token) {
  * @return the newly created token.
  *  WARNING: never use string constants as values for tokens
  */
-Token_t *token_new(TOKENTYPE t, void *value, bool canfree) {
+Token_t *token_new(TOKENTYPE t, helios_object *value) {
     Token_t *token = malloc(sizeof(Token_t));
-    *token = (Token_t){t, value, canfree};
+    *token = (Token_t){t, value};
     return token;
 }
 
@@ -59,9 +76,11 @@ void token_free(Token_t *token) {
      *
      * @param token the token to free
      */
-
-    if (token != NULL && token->canfree) {
-        free(token->value);
+    if (token == NULL) {
+        return;
+    }
+    if (token->value != NULL) {
+        HELIOS_CALL_MEMBER(destructor, token->value);
     }
     free(token);
 }

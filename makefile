@@ -49,15 +49,26 @@ c_object_files := $(patsubst src/%.c, \
     build/%.o, $(c_source_files))
 #qemu
 
-.PHONY: all clean run test install
+.PHONY: all clean run test install leaktest memgraph
 
 all: $(executable)
 
 install:
 	pacman -S built-essential doxygen graphviz
 
-leaktest $(executable):
-	valgrind --leak-check=yes $(executable) $(TESTFILE) $(TESTRES)
+
+
+memgraph: $(executable)
+	valgrind --tool=massif --massif-out-file=massif.out.1 $(executable) $(TESTFILE) $(TESTRES)
+	massif-visualizer massif.out.1
+
+leaktest: $(executable)
+	valgrind --leak-check=full --show-leak-kinds=all $(executable) $(TESTFILE) $(TESTRES)
+
+debug: $(executable)
+	gdb --args $(executable) $(TESTFILE) $(TESTRES)
+
+
 
 clean:
 	@rm -r build

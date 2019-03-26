@@ -1,4 +1,6 @@
 
+#include <assert.h>
+#include <ctype.h>
 #include <helios_float.h>
 #include <helios_memory.h>
 #include <helios_object.h>
@@ -6,28 +8,12 @@
 #include <math.h>
 #include <stdio.h>
 
-// typedef struct {
-//     uint64_t mantisa : 52;
-//     uint64_t exponent : 11;
-//     uint64_t sign : 1;
-// } doubleparts;
-
-// typedef union {
-//     double f;
-//     doubleparts d;
-// } doublehelper;
-
-// helios_object *helios_float_from_ife(uint32_t intpart, uint32_t floatpart,
-//                                      uint32_t exponent) {
-
-//     doublehelper d;
-// }
-
 /**
- * Create a helios_float object from a c double type. Alternate constructor
- * for helios_float.
+ * Create a helios_float object from a c double type. Alternate
+ * constructor for helios_float.
  *
- * @param value the value contained in the newly created helios_float object
+ * @param value the value contained in the newly created helios_float
+ * object
  * @return a new helios_float object.
  */
 helios_object *helios_float_from_cdouble(double value) {
@@ -47,7 +33,8 @@ void helios_float_delete(helios_object *self) {
 
 /**
  * Constructor of a helios_float object.
- * The value is set to HELIOS_float_DEFAULT_VALUE defined in helios_float.h
+ * The value is set to HELIOS_float_DEFAULT_VALUE defined in
+ * helios_float.h
  *
  * @return a new helios_float object.
  */
@@ -62,8 +49,8 @@ helios_object *helios_float_init() {
 }
 
 /**
- * Create a helios_string object which represents the helios_float object's
- * value.
+ * Create a helios_string object which represents the helios_float
+ * object's value.
  *
  * @param a helios_float object to stringify.
  * @return a helios_string object with the string representation of the
@@ -88,6 +75,16 @@ helios_object *helios_float_represent(helios_object *self) {
 }
 
 /**
+ * Copy a helios float object.
+ */
+helios_object *helios_float_copy(helios_object *obj) {
+    helios_float *old = TO_HELIOS_FLOAT(obj);
+    helios_float *new = TO_HELIOS_FLOAT(helios_float_init());
+    new->value = old->value;
+    return TO_HELIOS_OBJECT(new);
+}
+
+/**
  * Definition of the type of any helios_float object.
  */
 helios_type helios_float_type = {
@@ -98,6 +95,7 @@ helios_type helios_float_type = {
     HELIOS_OBJECT_BASIC_FIELDS_CLASSNAME("Float"),
     HELIOS_OBJECT_BASIC_FIELDS_REPRESENT(helios_float_tostring),
     HELIOS_OBJECT_BASIC_FIELDS_TOSTRING(helios_float_tostring),
+    HELIOS_OBJECT_BASIC_FIELDS_COPY(helios_float_copy),
 
     HELIOS_OBJECT_BINOPS_FIELDS_ADD(helios_float_add),
     HELIOS_OBJECT_BINOPS_FIELDS_SUBTRACT(helios_float_subtract),

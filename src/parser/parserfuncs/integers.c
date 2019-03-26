@@ -47,7 +47,12 @@ PARSERFUNC(binconst) {
 
     res[filled] = '\0';
 
-    return AST_new(token_new(TOK_BININT, res, true));
+    // TODO: error handling
+    uint32_t value = (uint32_t)strtol(res, (char **)NULL, 2);
+
+    AST *ast = AST_new(token_new(TOK_INT, helios_integer_from_cint(value)));
+    free(res);
+    return ast;
 }
 
 /**
@@ -90,7 +95,12 @@ PARSERFUNC(hexconst) {
 
     res[filled] = '\0';
 
-    return AST_new(token_new(TOK_HEXINT, res, true));
+    // TODO: error handling
+    uint32_t value = (uint32_t)strtol(res, (char **)NULL, 16);
+
+    AST *ast = AST_new(token_new(TOK_INT, helios_integer_from_cint(value)));
+    free(res);
+    return ast;
 }
 
 /**
@@ -130,7 +140,12 @@ PARSERFUNC(octconst) {
 
     res[filled] = '\0';
 
-    return AST_new(token_new(TOK_OCTINT, res, true));
+    // TODO: error handling
+    uint32_t value = (uint32_t)strtol(res, (char **)NULL, 8);
+
+    AST *ast = AST_new(token_new(TOK_INT, helios_integer_from_cint(value)));
+    free(res);
+    return ast;
 }
 /**
  * Accepts a decimal constant.
@@ -165,7 +180,11 @@ PARSERFUNC(decconst) {
 
     res[filled] = '\0';
 
-    return AST_new(token_new(TOK_DECINT, res, true));
+    uint32_t value = (uint32_t)strtol(res, (char **)NULL, 10);
+
+    AST *ast = AST_new(token_new(TOK_INT, helios_integer_from_cint(value)));
+    free(res);
+    return ast;
 }
 
 /**

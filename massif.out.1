@@ -1,0 +1,1632 @@
+desc: --massif-out-file=massif.out.1
+cmd: bin/helios-0.0.1-x86_64 test.hel test.helc
+time_unit: i
+#-----------
+snapshot=0
+#-----------
+time=0
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=1
+#-----------
+time=185441
+mem_heap_B=1024
+mem_heap_extra_B=8
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=2
+#-----------
+time=192436
+mem_heap_B=5748
+mem_heap_extra_B=44
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=3
+#-----------
+time=197906
+mem_heap_B=1348
+mem_heap_extra_B=60
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=4
+#-----------
+time=205633
+mem_heap_B=1738
+mem_heap_extra_B=230
+mem_stacks_B=0
+heap_tree=detailed
+n12: 1738 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 1024 0x4A5878F: _IO_file_doallocate (in /usr/lib/libc-2.28.so)
+  n2: 1024 0x4A66BBE: _IO_doallocbuf (in /usr/lib/libc-2.28.so)
+   n1: 1024 0x4A65E46: _IO_file_overflow@@GLIBC_2.2.5 (in /usr/lib/libc-2.28.so)
+    n1: 1024 0x4A64F35: _IO_file_xsputn@@GLIBC_2.2.5 (in /usr/lib/libc-2.28.so)
+     n1: 1024 0x4A38874: vfprintf (in /usr/lib/libc-2.28.so)
+      n1: 1024 0x4A41448: printf (in /usr/lib/libc-2.28.so)
+       n0: 1024 0x10F64B: main (main.c:15)
+   n0: 0 in 1 place, below massif's threshold (1.00%)
+ n1: 160 0x10EFB1: helios_init_garbagecollector (refcount.c:82)
+  n0: 160 0x10F688: main (main.c:23)
+ n1: 100 0x10A8AE: parser_new (parserutil.c:80)
+  n1: 100 0x10A7F2: parser_parseString (parserutil.c:24)
+   n0: 100 0x10F6A4: main (main.c:26)
+ n1: 76 0x10E65B: readfiletostring (files.c:14)
+  n0: 76 0x10F67A: main (main.c:21)
+ n3: 72 0x10B0D6: AST_new (AST.c:18)
+  n1: 24 0x10BE69: parser_floatconst (floats.c:50)
+   n1: 24 0x10B4C1: parser_atom (expressions.c:40)
+    n1: 24 0x10B5BC: parser_atomexpression (expressions.c:71)
+     n1: 24 0x10B5E2: parser_power (expressions.c:82)
+      n1: 24 0x10B8E4: parser_factor (expressions.c:142)
+       n1: 24 0x10B90A: parser_term (expressions.c:156)
+        n1: 24 0x10BB24: parser_expr (expressions.c:196)
+         n1: 24 0x10BEC7: parser_simple_statement (parser.c:21)
+          n1: 24 0x10BF08: parser_statement (parser.c:28)
+           n1: 24 0x10C088: parser_root (parser.c:76)
+            n1: 24 0x10A80E: parser_parseString (parserutil.c:27)
+             n0: 24 0x10F6A4: main (main.c:26)
+  n1: 24 0x10BEEC: parser_statement (parser.c:26)
+   n1: 24 0x10C088: parser_root (parser.c:76)
+    n1: 24 0x10A80E: parser_parseString (parserutil.c:27)
+     n0: 24 0x10F6A4: main (main.c:26)
+  n1: 24 0x10C037: parser_root (parser.c:63)
+   n1: 24 0x10A80E: parser_parseString (parserutil.c:27)
+    n0: 24 0x10F6A4: main (main.c:26)
+ n1: 56 0x10A867: parser_new (parserutil.c:61)
+  n1: 56 0x10A7F2: parser_parseString (parserutil.c:24)
+   n0: 56 0x10F6A4: main (main.c:26)
+ n2: 56 0x10AA5F: parser_copy (parserutil.c:166)
+  n1: 56 0x10B4B1: parser_atom (expressions.c:38)
+   n1: 56 0x10B5BC: parser_atomexpression (expressions.c:71)
+    n1: 56 0x10B5E2: parser_power (expressions.c:82)
+     n1: 56 0x10B8E4: parser_factor (expressions.c:142)
+      n2: 56 0x10B90A: parser_term (expressions.c:156)
+       n1: 56 0x10BB84: parser_expr (expressions.c:202)
+        n1: 56 0x10BEC7: parser_simple_statement (parser.c:21)
+         n1: 56 0x10BF08: parser_statement (parser.c:28)
+          n1: 56 0x10C088: parser_root (parser.c:76)
+           n1: 56 0x10A80E: parser_parseString (parserutil.c:27)
+            n0: 56 0x10F6A4: main (main.c:26)
+       n0: 0 in 1 place, below massif's threshold (1.00%)
+  n0: 0 in 1 place, below massif's threshold (1.00%)
+ n1: 48 0x10B054: token_new (token.c:68)
+  n0: 48 in 3 places, all below massif's threshold (1.00%)
+ n1: 48 0x10B0E4: AST_new (AST.c:20)
+  n0: 48 in 3 places, all below massif's threshold (1.00%)
+ n0: 34 in 4 places, all below massif's threshold (1.00%)
+ n1: 32 0x10A59A: errorstack_new (error.c:94)
+  n1: 32 0x10A8A1: parser_new (parserutil.c:71)
+   n1: 32 0x10A7F2: parser_parseString (parserutil.c:24)
+    n0: 32 0x10F6A4: main (main.c:26)
+ n1: 32 0x10F528: helios_allocate_object (refcount.c:266)
+  n1: 32 0x10D7FA: helios_float_init (helios_float.c:43)
+   n1: 32 0x10D7B5: helios_float_from_cdouble (helios_float.c:20)
+    n1: 32 0x10BE54: parser_floatconst (floats.c:50)
+     n1: 32 0x10B4C1: parser_atom (expressions.c:40)
+      n1: 32 0x10B5BC: parser_atomexpression (expressions.c:71)
+       n1: 32 0x10B5E2: parser_power (expressions.c:82)
+        n1: 32 0x10B8E4: parser_factor (expressions.c:142)
+         n1: 32 0x10B90A: parser_term (expressions.c:156)
+          n1: 32 0x10BB24: parser_expr (expressions.c:196)
+           n1: 32 0x10BEC7: parser_simple_statement (parser.c:21)
+            n1: 32 0x10BF08: parser_statement (parser.c:28)
+             n1: 32 0x10C088: parser_root (parser.c:76)
+              n1: 32 0x10A80E: parser_parseString (parserutil.c:27)
+               n0: 32 0x10F6A4: main (main.c:26)
+#-----------
+snapshot=5
+#-----------
+time=209205
+mem_heap_B=1810
+mem_heap_extra_B=286
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=6
+#-----------
+time=215596
+mem_heap_B=2158
+mem_heap_extra_B=466
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=7
+#-----------
+time=220388
+mem_heap_B=2528
+mem_heap_extra_B=568
+mem_stacks_B=0
+heap_tree=detailed
+n14: 2528 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 1024 0x4A5878F: _IO_file_doallocate (in /usr/lib/libc-2.28.so)
+  n2: 1024 0x4A66BBE: _IO_doallocbuf (in /usr/lib/libc-2.28.so)
+   n1: 1024 0x4A65E46: _IO_file_overflow@@GLIBC_2.2.5 (in /usr/lib/libc-2.28.so)
+    n1: 1024 0x4A64F35: _IO_file_xsputn@@GLIBC_2.2.5 (in /usr/lib/libc-2.28.so)
+     n1: 1024 0x4A38874: vfprintf (in /usr/lib/libc-2.28.so)
+      n1: 1024 0x4A41448: printf (in /usr/lib/libc-2.28.so)
+       n0: 1024 0x10F64B: main (main.c:15)
+   n0: 0 in 1 place, below massif's threshold (1.00%)
+ n1: 320 0x10F173: rehash (refcount.c:125)
+  n1: 320 0x10F3BE: helios_track_object (refcount.c:197)
+   n1: 320 0x10F3FF: helios_set_garbagecollectable (refcount.c:208)
+    n1: 320 0x10D83B: helios_float_init (helios_float.c:46)
+     n1: 320 0x10D7B5: helios_float_from_cdouble (helios_float.c:20)
+      n1: 320 0x10BE54: parser_floatconst (floats.c:50)
+       n1: 320 0x10B4C1: parser_atom (expressions.c:40)
+        n1: 320 0x10B5BC: parser_atomexpression (expressions.c:71)
+         n1: 320 0x10B5E2: parser_power (expressions.c:82)
+          n1: 320 0x10B8E4: parser_factor (expressions.c:142)
+           n1: 320 0x10B90A: parser_term (expressions.c:156)
+            n1: 320 0x10BB84: parser_expr (expressions.c:202)
+             n1: 320 0x10BEC7: parser_simple_statement (parser.c:21)
+              n1: 320 0x10BF08: parser_statement (parser.c:28)
+               n1: 320 0x10C088: parser_root (parser.c:76)
+                n1: 320 0x10A80E: parser_parseString (parserutil.c:27)
+                 n0: 320 0x10F6A4: main (main.c:26)
+ n2: 248 0x10F528: helios_allocate_object (refcount.c:266)
+  n1: 128 0x10D7FA: helios_float_init (helios_float.c:43)
+   n1: 128 0x10D7B5: helios_float_from_cdouble (helios_float.c:20)
+    n1: 128 0x10BE54: parser_floatconst (floats.c:50)
+     n1: 128 0x10B4C1: parser_atom (expressions.c:40)
+      n1: 128 0x10B5BC: parser_atomexpression (expressions.c:71)
+       n1: 128 0x10B5E2: parser_power (expressions.c:82)
+        n1: 128 0x10B8E4: parser_factor (expressions.c:142)
+         n2: 128 0x10B90A: parser_term (expressions.c:156)
+          n1: 96 0x10BB84: parser_expr (expressions.c:202)
+           n1: 96 0x10BEC7: parser_simple_statement (parser.c:21)
+            n1: 96 0x10BF08: parser_statement (parser.c:28)
+             n1: 96 0x10C088: parser_root (parser.c:76)
+              n1: 96 0x10A80E: parser_parseString (parserutil.c:27)
+               n0: 96 0x10F6A4: main (main.c:26)
+          n1: 32 0x10BB24: parser_expr (expressions.c:196)
+           n1: 32 0x10BEC7: parser_simple_statement (parser.c:21)
+            n1: 32 0x10BF08: parser_statement (parser.c:28)
+             n1: 32 0x10C088: parser_root (parser.c:76)
+              n1: 32 0x10A80E: parser_parseString (parserutil.c:27)
+               n0: 32 0x10F6A4: main (main.c:26)
+  n1: 120 0x10D641: helios_string_init (helios_string.c:91)
+   n1: 120 0x10D513: helios_string_from_charp (helios_string.c:36)
+    n1: 120 0x10BBAB: parser_expr (expressions.c:204)
+     n1: 120 0x10BEC7: parser_simple_statement (parser.c:21)
+      n1: 120 0x10BF08: parser_statement (parser.c:28)
+       n1: 120 0x10C088: parser_root (parser.c:76)
+        n1: 120 0x10A80E: parser_parseString (parserutil.c:27)
+         n0: 120 0x10F6A4: main (main.c:26)
+ n3: 216 0x10B0D6: AST_new (AST.c:18)
+  n1: 96 0x10BE69: parser_floatconst (floats.c:50)
+   n1: 96 0x10B4C1: parser_atom (expressions.c:40)
+    n1: 96 0x10B5BC: parser_atomexpression (expressions.c:71)
+     n1: 96 0x10B5E2: parser_power (expressions.c:82)
+      n1: 96 0x10B8E4: parser_factor (expressions.c:142)
+       n2: 96 0x10B90A: parser_term (expressions.c:156)
+        n1: 72 0x10BB84: parser_expr (expressions.c:202)
+         n1: 72 0x10BEC7: parser_simple_statement (parser.c:21)
+          n1: 72 0x10BF08: parser_statement (parser.c:28)
+           n1: 72 0x10C088: parser_root (parser.c:76)
+            n1: 72 0x10A80E: parser_parseString (parserutil.c:27)
+             n0: 72 0x10F6A4: main (main.c:26)
+        n0: 24 in 1 place, below massif's threshold (1.00%)
+  n1: 72 0x10BBC0: parser_expr (expressions.c:204)
+   n1: 72 0x10BEC7: parser_simple_statement (parser.c:21)
+    n1: 72 0x10BF08: parser_statement (parser.c:28)
+     n1: 72 0x10C088: parser_root (parser.c:76)
+      n1: 72 0x10A80E: parser_parseString (parserutil.c:27)
+       n0: 72 0x10F6A4: main (main.c:26)
+  n0: 48 in 2 places, all below massif's threshold (1.00%)
+ n3: 144 0x10B054: token_new (token.c:68)
+  n1: 64 0x10BE61: parser_floatconst (floats.c:50)
+   n1: 64 0x10B4C1: parser_atom (expressions.c:40)
+    n1: 64 0x10B5BC: parser_atomexpression (expressions.c:71)
+     n1: 64 0x10B5E2: parser_power (expressions.c:82)
+      n1: 64 0x10B8E4: parser_factor (expressions.c:142)
+       n2: 64 0x10B90A: parser_term (expressions.c:156)
+        n1: 48 0x10BB84: parser_expr (expressions.c:202)
+         n1: 48 0x10BEC7: parser_simple_statement (parser.c:21)
+          n1: 48 0x10BF08: parser_statement (parser.c:28)
+           n1: 48 0x10C088: parser_root (parser.c:76)
+            n1: 48 0x10A80E: parser_parseString (parserutil.c:27)
+             n0: 48 0x10F6A4: main (main.c:26)
+        n0: 16 in 1 place, below massif's threshold (1.00%)
+  n1: 48 0x10BBB8: parser_expr (expressions.c:204)
+   n1: 48 0x10BEC7: parser_simple_statement (parser.c:21)
+    n1: 48 0x10BF08: parser_statement (parser.c:28)
+     n1: 48 0x10C088: parser_root (parser.c:76)
+      n1: 48 0x10A80E: parser_parseString (parserutil.c:27)
+       n0: 48 0x10F6A4: main (main.c:26)
+  n0: 32 in 2 places, all below massif's threshold (1.00%)
+ n1: 100 0x10A8AE: parser_new (parserutil.c:80)
+  n1: 100 0x10A7F2: parser_parseString (parserutil.c:24)
+   n0: 100 0x10F6A4: main (main.c:26)
+ n2: 96 0x10B0E4: AST_new (AST.c:20)
+  n1: 64 0x10BE69: parser_floatconst (floats.c:50)
+   n1: 64 0x10B4C1: parser_atom (expressions.c:40)
+    n1: 64 0x10B5BC: parser_atomexpression (expressions.c:71)
+     n1: 64 0x10B5E2: parser_power (expressions.c:82)
+      n1: 64 0x10B8E4: parser_factor (expressions.c:142)
+       n2: 64 0x10B90A: parser_term (expressions.c:156)
+        n1: 48 0x10BB84: parser_expr (expressions.c:202)
+         n1: 48 0x10BEC7: parser_simple_statement (parser.c:21)
+          n1: 48 0x10BF08: parser_statement (parser.c:28)
+           n1: 48 0x10C088: parser_root (parser.c:76)
+            n1: 48 0x10A80E: parser_parseString (parserutil.c:27)
+             n0: 48 0x10F6A4: main (main.c:26)
+        n0: 16 in 1 place, below massif's threshold (1.00%)
+  n0: 32 in 3 places, all below massif's threshold (1.00%)
+ n1: 96 0x10B307: AST_addChild (AST.c:86)
+  n1: 96 0x10BC80: parser_expr (expressions.c:218)
+   n1: 96 0x10BEC7: parser_simple_statement (parser.c:21)
+    n1: 96 0x10BF08: parser_statement (parser.c:28)
+     n1: 96 0x10C088: parser_root (parser.c:76)
+      n1: 96 0x10A80E: parser_parseString (parserutil.c:27)
+       n0: 96 0x10F6A4: main (main.c:26)
+ n1: 76 0x10E65B: readfiletostring (files.c:14)
+  n0: 76 0x10F67A: main (main.c:21)
+ n1: 56 0x10A867: parser_new (parserutil.c:61)
+  n1: 56 0x10A7F2: parser_parseString (parserutil.c:24)
+   n0: 56 0x10F6A4: main (main.c:26)
+ n2: 56 0x10AA5F: parser_copy (parserutil.c:166)
+  n1: 56 0x10B4B1: parser_atom (expressions.c:38)
+   n1: 56 0x10B5BC: parser_atomexpression (expressions.c:71)
+    n1: 56 0x10B5E2: parser_power (expressions.c:82)
+     n1: 56 0x10B8E4: parser_factor (expressions.c:142)
+      n2: 56 0x10B90A: parser_term (expressions.c:156)
+       n1: 56 0x10BB84: parser_expr (expressions.c:202)
+        n1: 56 0x10BEC7: parser_simple_statement (parser.c:21)
+         n1: 56 0x10BF08: parser_statement (parser.c:28)
+          n1: 56 0x10C088: parser_root (parser.c:76)
+           n1: 56 0x10A80E: parser_parseString (parserutil.c:27)
+            n0: 56 0x10F6A4: main (main.c:26)
+       n0: 0 in 1 place, below massif's threshold (1.00%)
+  n0: 0 in 1 place, below massif's threshold (1.00%)
+ n0: 34 in 5 places, all below massif's threshold (1.00%)
+ n1: 32 0x10A59A: errorstack_new (error.c:94)
+  n1: 32 0x10A8A1: parser_new (parserutil.c:71)
+   n1: 32 0x10A7F2: parser_parseString (parserutil.c:24)
+    n0: 32 0x10F6A4: main (main.c:26)
+ n1: 30 0x10D64F: helios_string_init (helios_string.c:95)
+  n1: 30 0x10D513: helios_string_from_charp (helios_string.c:36)
+   n1: 30 0x10BBAB: parser_expr (expressions.c:204)
+    n1: 30 0x10BEC7: parser_simple_statement (parser.c:21)
+     n1: 30 0x10BF08: parser_statement (parser.c:28)
+      n1: 30 0x10C088: parser_root (parser.c:76)
+       n1: 30 0x10A80E: parser_parseString (parserutil.c:27)
+        n0: 30 0x10F6A4: main (main.c:26)
+#-----------
+snapshot=8
+#-----------
+time=228617
+mem_heap_B=3620
+mem_heap_extra_B=820
+mem_stacks_B=0
+heap_tree=detailed
+n13: 3620 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 1024 0x4A5878F: _IO_file_doallocate (in /usr/lib/libc-2.28.so)
+  n2: 1024 0x4A66BBE: _IO_doallocbuf (in /usr/lib/libc-2.28.so)
+   n1: 1024 0x4A65E46: _IO_file_overflow@@GLIBC_2.2.5 (in /usr/lib/libc-2.28.so)
+    n1: 1024 0x4A64F35: _IO_file_xsputn@@GLIBC_2.2.5 (in /usr/lib/libc-2.28.so)
+     n1: 1024 0x4A38874: vfprintf (in /usr/lib/libc-2.28.so)
+      n1: 1024 0x4A41448: printf (in /usr/lib/libc-2.28.so)
+       n0: 1024 0x10F64B: main (main.c:15)
+   n0: 0 in 1 place, below massif's threshold (1.00%)
+ n1: 960 0x10F173: rehash (refcount.c:125)
+  n1: 960 0x10F3BE: helios_track_object (refcount.c:197)
+   n1: 960 0x10F3FF: helios_set_garbagecollectable (refcount.c:208)
+    n1: 960 0x10D83B: helios_float_init (helios_float.c:46)
+     n1: 960 0x10D7B5: helios_float_from_cdouble (helios_float.c:20)
+      n1: 960 0x10BE54: parser_floatconst (floats.c:50)
+       n1: 960 0x10B4C1: parser_atom (expressions.c:40)
+        n1: 960 0x10B5BC: parser_atomexpression (expressions.c:71)
+         n1: 960 0x10B5E2: parser_power (expressions.c:82)
+          n1: 960 0x10B8E4: parser_factor (expressions.c:142)
+           n1: 960 0x10B90A: parser_term (expressions.c:156)
+            n1: 960 0x10BB84: parser_expr (expressions.c:202)
+             n1: 960 0x10BEC7: parser_simple_statement (parser.c:21)
+              n1: 960 0x10BF08: parser_statement (parser.c:28)
+               n1: 960 0x10C088: parser_root (parser.c:76)
+                n1: 960 0x10A80E: parser_parseString (parserutil.c:27)
+                 n0: 960 0x10F6A4: main (main.c:26)
+ n2: 424 0x10F528: helios_allocate_object (refcount.c:266)
+  n1: 224 0x10D7FA: helios_float_init (helios_float.c:43)
+   n1: 224 0x10D7B5: helios_float_from_cdouble (helios_float.c:20)
+    n1: 224 0x10BE54: parser_floatconst (floats.c:50)
+     n1: 224 0x10B4C1: parser_atom (expressions.c:40)
+      n1: 224 0x10B5BC: parser_atomexpression (expressions.c:71)
+       n1: 224 0x10B5E2: parser_power (expressions.c:82)
+        n1: 224 0x10B8E4: parser_factor (expressions.c:142)
+         n2: 224 0x10B90A: parser_term (expressions.c:156)
+          n1: 192 0x10BB84: parser_expr (expressions.c:202)
+           n1: 192 0x10BEC7: parser_simple_statement (parser.c:21)
+            n1: 192 0x10BF08: parser_statement (parser.c:28)
+             n1: 192 0x10C088: parser_root (parser.c:76)
+              n1: 192 0x10A80E: parser_parseString (parserutil.c:27)
+               n0: 192 0x10F6A4: main (main.c:26)
+          n0: 32 in 1 place, below massif's threshold (1.00%)
+  n1: 200 0x10D641: helios_string_init (helios_string.c:91)
+   n1: 200 0x10D513: helios_string_from_charp (helios_string.c:36)
+    n1: 200 0x10BBAB: parser_expr (expressions.c:204)
+     n1: 200 0x10BEC7: parser_simple_statement (parser.c:21)
+      n1: 200 0x10BF08: parser_statement (parser.c:28)
+       n1: 200 0x10C088: parser_root (parser.c:76)
+        n1: 200 0x10A80E: parser_parseString (parserutil.c:27)
+         n0: 200 0x10F6A4: main (main.c:26)
+ n3: 312 0x10B0D6: AST_new (AST.c:18)
+  n1: 144 0x10BE69: parser_floatconst (floats.c:50)
+   n1: 144 0x10B4C1: parser_atom (expressions.c:40)
+    n1: 144 0x10B5BC: parser_atomexpression (expressions.c:71)
+     n1: 144 0x10B5E2: parser_power (expressions.c:82)
+      n1: 144 0x10B8E4: parser_factor (expressions.c:142)
+       n2: 144 0x10B90A: parser_term (expressions.c:156)
+        n1: 120 0x10BB84: parser_expr (expressions.c:202)
+         n1: 120 0x10BEC7: parser_simple_statement (parser.c:21)
+          n1: 120 0x10BF08: parser_statement (parser.c:28)
+           n1: 120 0x10C088: parser_root (parser.c:76)
+            n1: 120 0x10A80E: parser_parseString (parserutil.c:27)
+             n0: 120 0x10F6A4: main (main.c:26)
+        n0: 24 in 1 place, below massif's threshold (1.00%)
+  n1: 120 0x10BBC0: parser_expr (expressions.c:204)
+   n1: 120 0x10BEC7: parser_simple_statement (parser.c:21)
+    n1: 120 0x10BF08: parser_statement (parser.c:28)
+     n1: 120 0x10C088: parser_root (parser.c:76)
+      n1: 120 0x10A80E: parser_parseString (parserutil.c:27)
+       n0: 120 0x10F6A4: main (main.c:26)
+  n0: 48 in 2 places, all below massif's threshold (1.00%)
+ n3: 208 0x10B054: token_new (token.c:68)
+  n1: 96 0x10BE61: parser_floatconst (floats.c:50)
+   n1: 96 0x10B4C1: parser_atom (expressions.c:40)
+    n1: 96 0x10B5BC: parser_atomexpression (expressions.c:71)
+     n1: 96 0x10B5E2: parser_power (expressions.c:82)
+      n1: 96 0x10B8E4: parser_factor (expressions.c:142)
+       n2: 96 0x10B90A: parser_term (expressions.c:156)
+        n1: 80 0x10BB84: parser_expr (expressions.c:202)
+         n1: 80 0x10BEC7: parser_simple_statement (parser.c:21)
+          n1: 80 0x10BF08: parser_statement (parser.c:28)
+           n1: 80 0x10C088: parser_root (parser.c:76)
+            n1: 80 0x10A80E: parser_parseString (parserutil.c:27)
+             n0: 80 0x10F6A4: main (main.c:26)
+        n0: 16 in 1 place, below massif's threshold (1.00%)
+  n1: 80 0x10BBB8: parser_expr (expressions.c:204)
+   n1: 80 0x10BEC7: parser_simple_statement (parser.c:21)
+    n1: 80 0x10BF08: parser_statement (parser.c:28)
+     n1: 80 0x10C088: parser_root (parser.c:76)
+      n1: 80 0x10A80E: parser_parseString (parserutil.c:27)
+       n0: 80 0x10F6A4: main (main.c:26)
+  n0: 32 in 2 places, all below massif's threshold (1.00%)
+ n1: 160 0x10B307: AST_addChild (AST.c:86)
+  n1: 160 0x10BC80: parser_expr (expressions.c:218)
+   n1: 160 0x10BEC7: parser_simple_statement (parser.c:21)
+    n1: 160 0x10BF08: parser_statement (parser.c:28)
+     n1: 160 0x10C088: parser_root (parser.c:76)
+      n1: 160 0x10A80E: parser_parseString (parserutil.c:27)
+       n0: 160 0x10F6A4: main (main.c:26)
+ n2: 128 0x10B0E4: AST_new (AST.c:20)
+  n1: 96 0x10BE69: parser_floatconst (floats.c:50)
+   n1: 96 0x10B4C1: parser_atom (expressions.c:40)
+    n1: 96 0x10B5BC: parser_atomexpression (expressions.c:71)
+     n1: 96 0x10B5E2: parser_power (expressions.c:82)
+      n1: 96 0x10B8E4: parser_factor (expressions.c:142)
+       n2: 96 0x10B90A: parser_term (expressions.c:156)
+        n1: 80 0x10BB84: parser_expr (expressions.c:202)
+         n1: 80 0x10BEC7: parser_simple_statement (parser.c:21)
+          n1: 80 0x10BF08: parser_statement (parser.c:28)
+           n1: 80 0x10C088: parser_root (parser.c:76)
+            n1: 80 0x10A80E: parser_parseString (parserutil.c:27)
+             n0: 80 0x10F6A4: main (main.c:26)
+        n0: 16 in 1 place, below massif's threshold (1.00%)
+  n0: 32 in 3 places, all below massif's threshold (1.00%)
+ n1: 100 0x10A8AE: parser_new (parserutil.c:80)
+  n1: 100 0x10A7F2: parser_parseString (parserutil.c:24)
+   n0: 100 0x10F6A4: main (main.c:26)
+ n1: 76 0x10E65B: readfiletostring (files.c:14)
+  n0: 76 0x10F67A: main (main.c:21)
+ n0: 66 in 6 places, all below massif's threshold (1.00%)
+ n1: 56 0x10A867: parser_new (parserutil.c:61)
+  n1: 56 0x10A7F2: parser_parseString (parserutil.c:24)
+   n0: 56 0x10F6A4: main (main.c:26)
+ n2: 56 0x10AA5F: parser_copy (parserutil.c:166)
+  n1: 56 0x10B4B1: parser_atom (expressions.c:38)
+   n1: 56 0x10B5BC: parser_atomexpression (expressions.c:71)
+    n1: 56 0x10B5E2: parser_power (expressions.c:82)
+     n1: 56 0x10B8E4: parser_factor (expressions.c:142)
+      n2: 56 0x10B90A: parser_term (expressions.c:156)
+       n1: 56 0x10BB84: parser_expr (expressions.c:202)
+        n1: 56 0x10BEC7: parser_simple_statement (parser.c:21)
+         n1: 56 0x10BF08: parser_statement (parser.c:28)
+          n1: 56 0x10C088: parser_root (parser.c:76)
+           n1: 56 0x10A80E: parser_parseString (parserutil.c:27)
+            n0: 56 0x10F6A4: main (main.c:26)
+       n0: 0 in 1 place, below massif's threshold (1.00%)
+  n0: 0 in 1 place, below massif's threshold (1.00%)
+ n1: 50 0x10D64F: helios_string_init (helios_string.c:95)
+  n1: 50 0x10D513: helios_string_from_charp (helios_string.c:36)
+   n1: 50 0x10BBAB: parser_expr (expressions.c:204)
+    n1: 50 0x10BEC7: parser_simple_statement (parser.c:21)
+     n1: 50 0x10BF08: parser_statement (parser.c:28)
+      n1: 50 0x10C088: parser_root (parser.c:76)
+       n1: 50 0x10A80E: parser_parseString (parserutil.c:27)
+        n0: 50 0x10F6A4: main (main.c:26)
+#-----------
+snapshot=9
+#-----------
+time=234860
+mem_heap_B=3510
+mem_heap_extra_B=962
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=10
+#-----------
+time=244391
+mem_heap_B=4108
+mem_heap_extra_B=1292
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=11
+#-----------
+time=250286
+mem_heap_B=5680
+mem_heap_extra_B=1488
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=12
+#-----------
+time=258459
+mem_heap_B=4890
+mem_heap_extra_B=1422
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=13
+#-----------
+time=263351
+mem_heap_B=4890
+mem_heap_extra_B=1422
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=14
+#-----------
+time=269235
+mem_heap_B=4890
+mem_heap_extra_B=1422
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=15
+#-----------
+time=276111
+mem_heap_B=4890
+mem_heap_extra_B=1422
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=16
+#-----------
+time=283979
+mem_heap_B=4890
+mem_heap_extra_B=1422
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=17
+#-----------
+time=288285
+mem_heap_B=4890
+mem_heap_extra_B=1422
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=18
+#-----------
+time=294183
+mem_heap_B=4900
+mem_heap_extra_B=1436
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=19
+#-----------
+time=302847
+mem_heap_B=4890
+mem_heap_extra_B=1422
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=20
+#-----------
+time=309820
+mem_heap_B=4890
+mem_heap_extra_B=1422
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=21
+#-----------
+time=316552
+mem_heap_B=4890
+mem_heap_extra_B=1422
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=22
+#-----------
+time=323040
+mem_heap_B=4890
+mem_heap_extra_B=1422
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=23
+#-----------
+time=329276
+mem_heap_B=4890
+mem_heap_extra_B=1422
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=24
+#-----------
+time=335264
+mem_heap_B=4890
+mem_heap_extra_B=1422
+mem_stacks_B=0
+heap_tree=detailed
+n10: 4890 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 1280 0x10F173: rehash (refcount.c:125)
+  n1: 1280 0x10F3BE: helios_track_object (refcount.c:197)
+   n2: 1280 0x10F3FF: helios_set_garbagecollectable (refcount.c:208)
+    n1: 1280 0x10D6AA: helios_string_init (helios_string.c:96)
+     n1: 1280 0x10D513: helios_string_from_charp (helios_string.c:36)
+      n1: 1280 0x10BBAB: parser_expr (expressions.c:204)
+       n1: 1280 0x10BEC7: parser_simple_statement (parser.c:21)
+        n1: 1280 0x10BF08: parser_statement (parser.c:28)
+         n1: 1280 0x10C088: parser_root (parser.c:76)
+          n1: 1280 0x10A80E: parser_parseString (parserutil.c:27)
+           n0: 1280 0x10F6A4: main (main.c:26)
+    n0: 0 in 1 place, below massif's threshold (1.00%)
+ n1: 1024 0x4A5878F: _IO_file_doallocate (in /usr/lib/libc-2.28.so)
+  n2: 1024 0x4A66BBE: _IO_doallocbuf (in /usr/lib/libc-2.28.so)
+   n1: 1024 0x4A65E46: _IO_file_overflow@@GLIBC_2.2.5 (in /usr/lib/libc-2.28.so)
+    n1: 1024 0x4A64F35: _IO_file_xsputn@@GLIBC_2.2.5 (in /usr/lib/libc-2.28.so)
+     n1: 1024 0x4A38874: vfprintf (in /usr/lib/libc-2.28.so)
+      n1: 1024 0x4A41448: printf (in /usr/lib/libc-2.28.so)
+       n0: 1024 0x10F64B: main (main.c:15)
+   n0: 0 in 1 place, below massif's threshold (1.00%)
+ n2: 864 0x10F528: helios_allocate_object (refcount.c:266)
+  n2: 480 0x10D641: helios_string_init (helios_string.c:91)
+   n2: 480 0x10D513: helios_string_from_charp (helios_string.c:36)
+    n1: 440 0x10BBAB: parser_expr (expressions.c:204)
+     n1: 440 0x10BEC7: parser_simple_statement (parser.c:21)
+      n1: 440 0x10BF08: parser_statement (parser.c:28)
+       n1: 440 0x10C088: parser_root (parser.c:76)
+        n1: 440 0x10A80E: parser_parseString (parserutil.c:27)
+         n0: 440 0x10F6A4: main (main.c:26)
+    n0: 40 in 1 place, below massif's threshold (1.00%)
+   n0: 0 in 1 place, below massif's threshold (1.00%)
+  n1: 384 0x10D7FA: helios_float_init (helios_float.c:43)
+   n1: 384 0x10D7B5: helios_float_from_cdouble (helios_float.c:20)
+    n1: 384 0x10BE54: parser_floatconst (floats.c:50)
+     n1: 384 0x10B4C1: parser_atom (expressions.c:40)
+      n1: 384 0x10B5BC: parser_atomexpression (expressions.c:71)
+       n1: 384 0x10B5E2: parser_power (expressions.c:82)
+        n1: 384 0x10B8E4: parser_factor (expressions.c:142)
+         n2: 384 0x10B90A: parser_term (expressions.c:156)
+          n1: 352 0x10BB84: parser_expr (expressions.c:202)
+           n1: 352 0x10BEC7: parser_simple_statement (parser.c:21)
+            n1: 352 0x10BF08: parser_statement (parser.c:28)
+             n1: 352 0x10C088: parser_root (parser.c:76)
+              n1: 352 0x10A80E: parser_parseString (parserutil.c:27)
+               n0: 352 0x10F6A4: main (main.c:26)
+          n0: 32 in 1 place, below massif's threshold (1.00%)
+ n3: 576 0x10B0D6: AST_new (AST.c:18)
+  n1: 288 0x10BE69: parser_floatconst (floats.c:50)
+   n1: 288 0x10B4C1: parser_atom (expressions.c:40)
+    n1: 288 0x10B5BC: parser_atomexpression (expressions.c:71)
+     n1: 288 0x10B5E2: parser_power (expressions.c:82)
+      n1: 288 0x10B8E4: parser_factor (expressions.c:142)
+       n2: 288 0x10B90A: parser_term (expressions.c:156)
+        n1: 264 0x10BB84: parser_expr (expressions.c:202)
+         n1: 264 0x10BEC7: parser_simple_statement (parser.c:21)
+          n1: 264 0x10BF08: parser_statement (parser.c:28)
+           n1: 264 0x10C088: parser_root (parser.c:76)
+            n1: 264 0x10A80E: parser_parseString (parserutil.c:27)
+             n0: 264 0x10F6A4: main (main.c:26)
+        n0: 24 in 1 place, below massif's threshold (1.00%)
+  n1: 264 0x10BBC0: parser_expr (expressions.c:204)
+   n1: 264 0x10BEC7: parser_simple_statement (parser.c:21)
+    n1: 264 0x10BF08: parser_statement (parser.c:28)
+     n1: 264 0x10C088: parser_root (parser.c:76)
+      n1: 264 0x10A80E: parser_parseString (parserutil.c:27)
+       n0: 264 0x10F6A4: main (main.c:26)
+  n0: 24 in 2 places, all below massif's threshold (1.00%)
+ n3: 384 0x10B054: token_new (token.c:68)
+  n1: 192 0x10BE61: parser_floatconst (floats.c:50)
+   n1: 192 0x10B4C1: parser_atom (expressions.c:40)
+    n1: 192 0x10B5BC: parser_atomexpression (expressions.c:71)
+     n1: 192 0x10B5E2: parser_power (expressions.c:82)
+      n1: 192 0x10B8E4: parser_factor (expressions.c:142)
+       n2: 192 0x10B90A: parser_term (expressions.c:156)
+        n1: 176 0x10BB84: parser_expr (expressions.c:202)
+         n1: 176 0x10BEC7: parser_simple_statement (parser.c:21)
+          n1: 176 0x10BF08: parser_statement (parser.c:28)
+           n1: 176 0x10C088: parser_root (parser.c:76)
+            n1: 176 0x10A80E: parser_parseString (parserutil.c:27)
+             n0: 176 0x10F6A4: main (main.c:26)
+        n0: 16 in 1 place, below massif's threshold (1.00%)
+  n1: 176 0x10BBB8: parser_expr (expressions.c:204)
+   n1: 176 0x10BEC7: parser_simple_statement (parser.c:21)
+    n1: 176 0x10BF08: parser_statement (parser.c:28)
+     n1: 176 0x10C088: parser_root (parser.c:76)
+      n1: 176 0x10A80E: parser_parseString (parserutil.c:27)
+       n0: 176 0x10F6A4: main (main.c:26)
+  n0: 16 in 2 places, all below massif's threshold (1.00%)
+ n1: 352 0x10B307: AST_addChild (AST.c:86)
+  n1: 352 0x10BC80: parser_expr (expressions.c:218)
+   n1: 352 0x10BEC7: parser_simple_statement (parser.c:21)
+    n1: 352 0x10BF08: parser_statement (parser.c:28)
+     n1: 352 0x10C088: parser_root (parser.c:76)
+      n1: 352 0x10A80E: parser_parseString (parserutil.c:27)
+       n0: 352 0x10F6A4: main (main.c:26)
+ n2: 208 0x10B0E4: AST_new (AST.c:20)
+  n1: 192 0x10BE69: parser_floatconst (floats.c:50)
+   n1: 192 0x10B4C1: parser_atom (expressions.c:40)
+    n1: 192 0x10B5BC: parser_atomexpression (expressions.c:71)
+     n1: 192 0x10B5E2: parser_power (expressions.c:82)
+      n1: 192 0x10B8E4: parser_factor (expressions.c:142)
+       n2: 192 0x10B90A: parser_term (expressions.c:156)
+        n1: 176 0x10BB84: parser_expr (expressions.c:202)
+         n1: 176 0x10BEC7: parser_simple_statement (parser.c:21)
+          n1: 176 0x10BF08: parser_statement (parser.c:28)
+           n1: 176 0x10C088: parser_root (parser.c:76)
+            n1: 176 0x10A80E: parser_parseString (parserutil.c:27)
+             n0: 176 0x10F6A4: main (main.c:26)
+        n0: 16 in 1 place, below massif's threshold (1.00%)
+  n0: 16 in 3 places, all below massif's threshold (1.00%)
+ n2: 110 0x10D64F: helios_string_init (helios_string.c:95)
+  n2: 110 0x10D513: helios_string_from_charp (helios_string.c:36)
+   n1: 110 0x10BBAB: parser_expr (expressions.c:204)
+    n1: 110 0x10BEC7: parser_simple_statement (parser.c:21)
+     n1: 110 0x10BF08: parser_statement (parser.c:28)
+      n1: 110 0x10C088: parser_root (parser.c:76)
+       n1: 110 0x10A80E: parser_parseString (parserutil.c:27)
+        n0: 110 0x10F6A4: main (main.c:26)
+   n0: 0 in 1 place, below massif's threshold (1.00%)
+  n0: 0 in 1 place, below massif's threshold (1.00%)
+ n1: 76 0x10E65B: readfiletostring (files.c:14)
+  n0: 76 0x10F67A: main (main.c:21)
+ n0: 16 in 10 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=25
+#-----------
+time=341004
+mem_heap_B=4890
+mem_heap_extra_B=1422
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=26
+#-----------
+time=346500
+mem_heap_B=4890
+mem_heap_extra_B=1422
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=27
+#-----------
+time=351744
+mem_heap_B=4890
+mem_heap_extra_B=1422
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=28
+#-----------
+time=356740
+mem_heap_B=4890
+mem_heap_extra_B=1422
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=29
+#-----------
+time=365992
+mem_heap_B=4890
+mem_heap_extra_B=1422
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=30
+#-----------
+time=374178
+mem_heap_B=5794
+mem_heap_extra_B=1550
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=31
+#-----------
+time=380261
+mem_heap_B=14026
+mem_heap_extra_B=1574
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=32
+#-----------
+time=388751
+mem_heap_B=14126
+mem_heap_extra_B=1634
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=33
+#-----------
+time=394648
+mem_heap_B=14144
+mem_heap_extra_B=1656
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=34
+#-----------
+time=399945
+mem_heap_B=14194
+mem_heap_extra_B=1686
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=35
+#-----------
+time=405733
+mem_heap_B=14286
+mem_heap_extra_B=1738
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=36
+#-----------
+time=414650
+mem_heap_B=14312
+mem_heap_extra_B=1784
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=37
+#-----------
+time=424351
+mem_heap_B=14380
+mem_heap_extra_B=1852
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=38
+#-----------
+time=433529
+mem_heap_B=14480
+mem_heap_extra_B=1944
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=39
+#-----------
+time=441553
+mem_heap_B=17050
+mem_heap_extra_B=1966
+mem_stacks_B=0
+heap_tree=detailed
+n11: 17050 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 8192 0x10E709: execstack_init (executestack.c:13)
+  n1: 8192 0x10EA4F: hvm_execute_codeobject (hvm.c:10)
+   n0: 8192 0x10F6D0: main (main.c:30)
+ n1: 3840 0x10F173: rehash (refcount.c:125)
+  n1: 3840 0x10F3BE: helios_track_object (refcount.c:197)
+   n2: 3840 0x10F3FF: helios_set_garbagecollectable (refcount.c:208)
+    n1: 3840 0x10D6AA: helios_string_init (helios_string.c:96)
+     n2: 3840 0x10D513: helios_string_from_charp (helios_string.c:36)
+      n1: 2560 0x10D920: helios_float_tostring (helios_float.c:63)
+       n1: 2560 0x10E9DD: execstack_print (executestack.c:80)
+        n1: 2560 0x10EA88: hvm_execute_codeobject (hvm.c:18)
+         n0: 2560 0x10F6D0: main (main.c:30)
+      n1: 1280 0x10BBAB: parser_expr (expressions.c:204)
+       n1: 1280 0x10BEC7: parser_simple_statement (parser.c:21)
+        n1: 1280 0x10BF08: parser_statement (parser.c:28)
+         n1: 1280 0x10C088: parser_root (parser.c:76)
+          n1: 1280 0x10A80E: parser_parseString (parserutil.c:27)
+           n0: 1280 0x10F6A4: main (main.c:26)
+    n0: 0 in 1 place, below massif's threshold (1.00%)
+ n3: 1648 0x10F528: helios_allocate_object (refcount.c:266)
+  n2: 920 0x10D641: helios_string_init (helios_string.c:91)
+   n2: 920 0x10D513: helios_string_from_charp (helios_string.c:36)
+    n2: 480 0x10D920: helios_float_tostring (helios_float.c:63)
+     n1: 480 0x10E9DD: execstack_print (executestack.c:80)
+      n1: 480 0x10EA88: hvm_execute_codeobject (hvm.c:18)
+       n0: 480 0x10F6D0: main (main.c:30)
+     n0: 0 in 1 place, below massif's threshold (1.00%)
+    n1: 440 0x10BBAB: parser_expr (expressions.c:204)
+     n1: 440 0x10BEC7: parser_simple_statement (parser.c:21)
+      n1: 440 0x10BF08: parser_statement (parser.c:28)
+       n1: 440 0x10C088: parser_root (parser.c:76)
+        n1: 440 0x10A80E: parser_parseString (parserutil.c:27)
+         n0: 440 0x10F6A4: main (main.c:26)
+   n0: 0 in 1 place, below massif's threshold (1.00%)
+  n3: 672 0x10D7FA: helios_float_init (helios_float.c:43)
+   n1: 384 0x10D7B5: helios_float_from_cdouble (helios_float.c:20)
+    n1: 384 0x10BE54: parser_floatconst (floats.c:50)
+     n1: 384 0x10B4C1: parser_atom (expressions.c:40)
+      n1: 384 0x10B5BC: parser_atomexpression (expressions.c:71)
+       n1: 384 0x10B5E2: parser_power (expressions.c:82)
+        n1: 384 0x10B8E4: parser_factor (expressions.c:142)
+         n2: 384 0x10B90A: parser_term (expressions.c:156)
+          n1: 352 0x10BB84: parser_expr (expressions.c:202)
+           n1: 352 0x10BEC7: parser_simple_statement (parser.c:21)
+            n1: 352 0x10BF08: parser_statement (parser.c:28)
+             n1: 352 0x10C088: parser_root (parser.c:76)
+              n1: 352 0x10A80E: parser_parseString (parserutil.c:27)
+               n0: 352 0x10F6A4: main (main.c:26)
+          n0: 32 in 1 place, below massif's threshold (1.00%)
+   n1: 256 0x10D97E: helios_float_copy (helios_float.c:82)
+    n1: 256 0x10E162: helios_code_from_AST_helper (helios_code.c:19)
+     n1: 256 0x10E0FC: helios_code_from_AST_helper (helios_code.c:10)
+      n2: 256 0x10E0FC: helios_code_from_AST_helper (helios_code.c:10)
+       n2: 224 0x10E0FC: helios_code_from_AST_helper (helios_code.c:10)
+        n1: 192 0x10E0FC: helios_code_from_AST_helper (helios_code.c:10)
+         n0: 192 in 2 places, all below massif's threshold (1.00%)
+        n0: 32 in 1 place, below massif's threshold (1.00%)
+       n0: 32 in 1 place, below massif's threshold (1.00%)
+   n0: 32 in 1 place, below massif's threshold (1.00%)
+  n0: 56 in 1 place, below massif's threshold (1.00%)
+ n1: 1024 0x4A5878F: _IO_file_doallocate (in /usr/lib/libc-2.28.so)
+  n2: 1024 0x4A66BBE: _IO_doallocbuf (in /usr/lib/libc-2.28.so)
+   n1: 1024 0x4A65E46: _IO_file_overflow@@GLIBC_2.2.5 (in /usr/lib/libc-2.28.so)
+    n1: 1024 0x4A64F35: _IO_file_xsputn@@GLIBC_2.2.5 (in /usr/lib/libc-2.28.so)
+     n1: 1024 0x4A38874: vfprintf (in /usr/lib/libc-2.28.so)
+      n1: 1024 0x4A41448: printf (in /usr/lib/libc-2.28.so)
+       n0: 1024 0x10F64B: main (main.c:15)
+   n0: 0 in 1 place, below massif's threshold (1.00%)
+ n3: 576 0x10B0D6: AST_new (AST.c:18)
+  n1: 288 0x10BE69: parser_floatconst (floats.c:50)
+   n1: 288 0x10B4C1: parser_atom (expressions.c:40)
+    n1: 288 0x10B5BC: parser_atomexpression (expressions.c:71)
+     n1: 288 0x10B5E2: parser_power (expressions.c:82)
+      n1: 288 0x10B8E4: parser_factor (expressions.c:142)
+       n2: 288 0x10B90A: parser_term (expressions.c:156)
+        n1: 264 0x10BB84: parser_expr (expressions.c:202)
+         n1: 264 0x10BEC7: parser_simple_statement (parser.c:21)
+          n1: 264 0x10BF08: parser_statement (parser.c:28)
+           n1: 264 0x10C088: parser_root (parser.c:76)
+            n1: 264 0x10A80E: parser_parseString (parserutil.c:27)
+             n0: 264 0x10F6A4: main (main.c:26)
+        n0: 24 in 1 place, below massif's threshold (1.00%)
+  n1: 264 0x10BBC0: parser_expr (expressions.c:204)
+   n1: 264 0x10BEC7: parser_simple_statement (parser.c:21)
+    n1: 264 0x10BF08: parser_statement (parser.c:28)
+     n1: 264 0x10C088: parser_root (parser.c:76)
+      n1: 264 0x10A80E: parser_parseString (parserutil.c:27)
+       n0: 264 0x10F6A4: main (main.c:26)
+  n0: 24 in 2 places, all below massif's threshold (1.00%)
+ n2: 384 0x10B054: token_new (token.c:68)
+  n0: 192 in 3 places, all below massif's threshold (1.00%)
+  n1: 192 0x10BE61: parser_floatconst (floats.c:50)
+   n1: 192 0x10B4C1: parser_atom (expressions.c:40)
+    n1: 192 0x10B5BC: parser_atomexpression (expressions.c:71)
+     n1: 192 0x10B5E2: parser_power (expressions.c:82)
+      n1: 192 0x10B8E4: parser_factor (expressions.c:142)
+       n1: 192 0x10B90A: parser_term (expressions.c:156)
+        n0: 192 in 2 places, all below massif's threshold (1.00%)
+ n1: 352 0x10B307: AST_addChild (AST.c:86)
+  n1: 352 0x10BC80: parser_expr (expressions.c:218)
+   n1: 352 0x10BEC7: parser_simple_statement (parser.c:21)
+    n1: 352 0x10BF08: parser_statement (parser.c:28)
+     n1: 352 0x10C088: parser_root (parser.c:76)
+      n1: 352 0x10A80E: parser_parseString (parserutil.c:27)
+       n0: 352 0x10F6A4: main (main.c:26)
+ n1: 320 0x10E36A: helios_code_add_instruction (helios_code.c:67)
+  n1: 320 0x10E1A6: helios_code_from_AST_helper (helios_code.c:21)
+   n1: 320 0x10E0FC: helios_code_from_AST_helper (helios_code.c:10)
+    n1: 320 0x10E0FC: helios_code_from_AST_helper (helios_code.c:10)
+     n2: 320 0x10E0FC: helios_code_from_AST_helper (helios_code.c:10)
+      n1: 320 0x10E2AE: helios_code_from_AST (helios_code.c:54)
+       n0: 320 0x10F6C0: main (main.c:29)
+      n0: 0 in 1 place, below massif's threshold (1.00%)
+ n0: 276 in 15 places, all below massif's threshold (1.00%)
+ n2: 230 0x10D64F: helios_string_init (helios_string.c:95)
+  n1: 230 0x10D513: helios_string_from_charp (helios_string.c:36)
+   n0: 230 in 2 places, all below massif's threshold (1.00%)
+  n0: 0 in 1 place, below massif's threshold (1.00%)
+ n2: 208 0x10B0E4: AST_new (AST.c:20)
+  n1: 192 0x10BE69: parser_floatconst (floats.c:50)
+   n1: 192 0x10B4C1: parser_atom (expressions.c:40)
+    n1: 192 0x10B5BC: parser_atomexpression (expressions.c:71)
+     n1: 192 0x10B5E2: parser_power (expressions.c:82)
+      n1: 192 0x10B8E4: parser_factor (expressions.c:142)
+       n1: 192 0x10B90A: parser_term (expressions.c:156)
+        n0: 192 in 2 places, all below massif's threshold (1.00%)
+  n0: 16 in 3 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=40
+#-----------
+time=447976
+mem_heap_B=15778
+mem_heap_extra_B=1966
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=41
+#-----------
+time=454054
+mem_heap_B=15828
+mem_heap_extra_B=2012
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=42
+#-----------
+time=463774
+mem_heap_B=15896
+mem_heap_extra_B=2080
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=43
+#-----------
+time=469854
+mem_heap_B=15946
+mem_heap_extra_B=2126
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=44
+#-----------
+time=475761
+mem_heap_B=16038
+mem_heap_extra_B=2194
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=45
+#-----------
+time=479656
+mem_heap_B=16014
+mem_heap_extra_B=2194
+mem_stacks_B=0
+heap_tree=detailed
+n11: 16014 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 8192 0x10E709: execstack_init (executestack.c:13)
+  n1: 8192 0x10EA4F: hvm_execute_codeobject (hvm.c:10)
+   n0: 8192 0x10F6D0: main (main.c:30)
+ n1: 2560 0x10F173: rehash (refcount.c:125)
+  n1: 2560 0x10F3BE: helios_track_object (refcount.c:197)
+   n2: 2560 0x10F3FF: helios_set_garbagecollectable (refcount.c:208)
+    n1: 2560 0x10D6AA: helios_string_init (helios_string.c:96)
+     n2: 2560 0x10D513: helios_string_from_charp (helios_string.c:36)
+      n1: 2560 0x10D920: helios_float_tostring (helios_float.c:63)
+       n1: 2560 0x10E9DD: execstack_print (executestack.c:80)
+        n1: 2560 0x10EA88: hvm_execute_codeobject (hvm.c:18)
+         n0: 2560 0x10F6D0: main (main.c:30)
+      n0: 0 in 1 place, below massif's threshold (1.00%)
+    n0: 0 in 1 place, below massif's threshold (1.00%)
+ n3: 1832 0x10F528: helios_allocate_object (refcount.c:266)
+  n2: 1200 0x10D641: helios_string_init (helios_string.c:91)
+   n2: 1200 0x10D513: helios_string_from_charp (helios_string.c:36)
+    n2: 760 0x10D920: helios_float_tostring (helios_float.c:63)
+     n1: 760 0x10E9DD: execstack_print (executestack.c:80)
+      n1: 760 0x10EA88: hvm_execute_codeobject (hvm.c:18)
+       n0: 760 0x10F6D0: main (main.c:30)
+     n0: 0 in 1 place, below massif's threshold (1.00%)
+    n1: 440 0x10BBAB: parser_expr (expressions.c:204)
+     n1: 440 0x10BEC7: parser_simple_statement (parser.c:21)
+      n1: 440 0x10BF08: parser_statement (parser.c:28)
+       n1: 440 0x10C088: parser_root (parser.c:76)
+        n1: 440 0x10A80E: parser_parseString (parserutil.c:27)
+         n0: 440 0x10F6A4: main (main.c:26)
+   n0: 0 in 1 place, below massif's threshold (1.00%)
+  n2: 576 0x10D7FA: helios_float_init (helios_float.c:43)
+   n1: 384 0x10D7B5: helios_float_from_cdouble (helios_float.c:20)
+    n1: 384 0x10BE54: parser_floatconst (floats.c:50)
+     n1: 384 0x10B4C1: parser_atom (expressions.c:40)
+      n1: 384 0x10B5BC: parser_atomexpression (expressions.c:71)
+       n1: 384 0x10B5E2: parser_power (expressions.c:82)
+        n1: 384 0x10B8E4: parser_factor (expressions.c:142)
+         n2: 384 0x10B90A: parser_term (expressions.c:156)
+          n1: 352 0x10BB84: parser_expr (expressions.c:202)
+           n1: 352 0x10BEC7: parser_simple_statement (parser.c:21)
+            n1: 352 0x10BF08: parser_statement (parser.c:28)
+             n1: 352 0x10C088: parser_root (parser.c:76)
+              n1: 352 0x10A80E: parser_parseString (parserutil.c:27)
+               n0: 352 0x10F6A4: main (main.c:26)
+          n0: 32 in 1 place, below massif's threshold (1.00%)
+   n0: 192 in 2 places, all below massif's threshold (1.00%)
+  n0: 56 in 1 place, below massif's threshold (1.00%)
+ n1: 1024 0x4A5878F: _IO_file_doallocate (in /usr/lib/libc-2.28.so)
+  n2: 1024 0x4A66BBE: _IO_doallocbuf (in /usr/lib/libc-2.28.so)
+   n1: 1024 0x4A65E46: _IO_file_overflow@@GLIBC_2.2.5 (in /usr/lib/libc-2.28.so)
+    n1: 1024 0x4A64F35: _IO_file_xsputn@@GLIBC_2.2.5 (in /usr/lib/libc-2.28.so)
+     n1: 1024 0x4A38874: vfprintf (in /usr/lib/libc-2.28.so)
+      n1: 1024 0x4A41448: printf (in /usr/lib/libc-2.28.so)
+       n0: 1024 0x10F64B: main (main.c:15)
+   n0: 0 in 1 place, below massif's threshold (1.00%)
+ n3: 576 0x10B0D6: AST_new (AST.c:18)
+  n1: 288 0x10BE69: parser_floatconst (floats.c:50)
+   n1: 288 0x10B4C1: parser_atom (expressions.c:40)
+    n1: 288 0x10B5BC: parser_atomexpression (expressions.c:71)
+     n1: 288 0x10B5E2: parser_power (expressions.c:82)
+      n1: 288 0x10B8E4: parser_factor (expressions.c:142)
+       n2: 288 0x10B90A: parser_term (expressions.c:156)
+        n1: 264 0x10BB84: parser_expr (expressions.c:202)
+         n1: 264 0x10BEC7: parser_simple_statement (parser.c:21)
+          n1: 264 0x10BF08: parser_statement (parser.c:28)
+           n1: 264 0x10C088: parser_root (parser.c:76)
+            n1: 264 0x10A80E: parser_parseString (parserutil.c:27)
+             n0: 264 0x10F6A4: main (main.c:26)
+        n0: 24 in 1 place, below massif's threshold (1.00%)
+  n1: 264 0x10BBC0: parser_expr (expressions.c:204)
+   n1: 264 0x10BEC7: parser_simple_statement (parser.c:21)
+    n1: 264 0x10BF08: parser_statement (parser.c:28)
+     n1: 264 0x10C088: parser_root (parser.c:76)
+      n1: 264 0x10A80E: parser_parseString (parserutil.c:27)
+       n0: 264 0x10F6A4: main (main.c:26)
+  n0: 24 in 2 places, all below massif's threshold (1.00%)
+ n2: 384 0x10B054: token_new (token.c:68)
+  n0: 192 in 3 places, all below massif's threshold (1.00%)
+  n1: 192 0x10BE61: parser_floatconst (floats.c:50)
+   n1: 192 0x10B4C1: parser_atom (expressions.c:40)
+    n1: 192 0x10B5BC: parser_atomexpression (expressions.c:71)
+     n1: 192 0x10B5E2: parser_power (expressions.c:82)
+      n1: 192 0x10B8E4: parser_factor (expressions.c:142)
+       n1: 192 0x10B90A: parser_term (expressions.c:156)
+        n0: 192 in 2 places, all below massif's threshold (1.00%)
+ n1: 352 0x10B307: AST_addChild (AST.c:86)
+  n1: 352 0x10BC80: parser_expr (expressions.c:218)
+   n1: 352 0x10BEC7: parser_simple_statement (parser.c:21)
+    n1: 352 0x10BF08: parser_statement (parser.c:28)
+     n1: 352 0x10C088: parser_root (parser.c:76)
+      n1: 352 0x10A80E: parser_parseString (parserutil.c:27)
+       n0: 352 0x10F6A4: main (main.c:26)
+ n1: 320 0x10E36A: helios_code_add_instruction (helios_code.c:67)
+  n1: 320 0x10E1A6: helios_code_from_AST_helper (helios_code.c:21)
+   n1: 320 0x10E0FC: helios_code_from_AST_helper (helios_code.c:10)
+    n1: 320 0x10E0FC: helios_code_from_AST_helper (helios_code.c:10)
+     n2: 320 0x10E0FC: helios_code_from_AST_helper (helios_code.c:10)
+      n1: 320 0x10E2AE: helios_code_from_AST (helios_code.c:54)
+       n0: 320 0x10F6C0: main (main.c:29)
+      n0: 0 in 1 place, below massif's threshold (1.00%)
+ n2: 290 0x10D64F: helios_string_init (helios_string.c:95)
+  n1: 290 0x10D513: helios_string_from_charp (helios_string.c:36)
+   n0: 290 in 2 places, all below massif's threshold (1.00%)
+  n0: 0 in 1 place, below massif's threshold (1.00%)
+ n0: 276 in 15 places, all below massif's threshold (1.00%)
+ n2: 208 0x10B0E4: AST_new (AST.c:20)
+  n1: 192 0x10BE69: parser_floatconst (floats.c:50)
+   n1: 192 0x10B4C1: parser_atom (expressions.c:40)
+    n1: 192 0x10B5BC: parser_atomexpression (expressions.c:71)
+     n1: 192 0x10B5E2: parser_power (expressions.c:82)
+      n1: 192 0x10B8E4: parser_factor (expressions.c:142)
+       n1: 192 0x10B90A: parser_term (expressions.c:156)
+        n0: 192 in 2 places, all below massif's threshold (1.00%)
+  n0: 16 in 3 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=46
+#-----------
+time=485725
+mem_heap_B=16064
+mem_heap_extra_B=2240
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=47
+#-----------
+time=491573
+mem_heap_B=16156
+mem_heap_extra_B=2308
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=48
+#-----------
+time=495566
+mem_heap_B=16132
+mem_heap_extra_B=2308
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=49
+#-----------
+time=501647
+mem_heap_B=16182
+mem_heap_extra_B=2354
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=50
+#-----------
+time=505404
+mem_heap_B=16251
+mem_heap_extra_B=2429
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=51
+#-----------
+time=511627
+mem_heap_B=16250
+mem_heap_extra_B=2438
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=52
+#-----------
+time=517712
+mem_heap_B=16300
+mem_heap_extra_B=2484
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=53
+#-----------
+time=521435
+mem_heap_B=16369
+mem_heap_extra_B=2543
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=54
+#-----------
+time=527392
+mem_heap_B=16368
+mem_heap_extra_B=2536
+mem_stacks_B=0
+heap_tree=detailed
+n11: 16368 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 8192 0x10E709: execstack_init (executestack.c:13)
+  n1: 8192 0x10EA4F: hvm_execute_codeobject (hvm.c:10)
+   n0: 8192 0x10F6D0: main (main.c:30)
+ n1: 2560 0x10F173: rehash (refcount.c:125)
+  n1: 2560 0x10F3BE: helios_track_object (refcount.c:197)
+   n2: 2560 0x10F3FF: helios_set_garbagecollectable (refcount.c:208)
+    n1: 2560 0x10D6AA: helios_string_init (helios_string.c:96)
+     n2: 2560 0x10D513: helios_string_from_charp (helios_string.c:36)
+      n1: 2560 0x10D920: helios_float_tostring (helios_float.c:63)
+       n1: 2560 0x10E9DD: execstack_print (executestack.c:80)
+        n1: 2560 0x10EA88: hvm_execute_codeobject (hvm.c:18)
+         n0: 2560 0x10F6D0: main (main.c:30)
+      n0: 0 in 1 place, below massif's threshold (1.00%)
+    n0: 0 in 1 place, below massif's threshold (1.00%)
+ n3: 2096 0x10F528: helios_allocate_object (refcount.c:266)
+  n2: 1560 0x10D641: helios_string_init (helios_string.c:91)
+   n2: 1560 0x10D513: helios_string_from_charp (helios_string.c:36)
+    n2: 1120 0x10D920: helios_float_tostring (helios_float.c:63)
+     n1: 1120 0x10E9DD: execstack_print (executestack.c:80)
+      n1: 1120 0x10EA88: hvm_execute_codeobject (hvm.c:18)
+       n0: 1120 0x10F6D0: main (main.c:30)
+     n0: 0 in 1 place, below massif's threshold (1.00%)
+    n1: 440 0x10BBAB: parser_expr (expressions.c:204)
+     n1: 440 0x10BEC7: parser_simple_statement (parser.c:21)
+      n1: 440 0x10BF08: parser_statement (parser.c:28)
+       n1: 440 0x10C088: parser_root (parser.c:76)
+        n1: 440 0x10A80E: parser_parseString (parserutil.c:27)
+         n0: 440 0x10F6A4: main (main.c:26)
+   n0: 0 in 1 place, below massif's threshold (1.00%)
+  n2: 480 0x10D7FA: helios_float_init (helios_float.c:43)
+   n1: 384 0x10D7B5: helios_float_from_cdouble (helios_float.c:20)
+    n1: 384 0x10BE54: parser_floatconst (floats.c:50)
+     n1: 384 0x10B4C1: parser_atom (expressions.c:40)
+      n1: 384 0x10B5BC: parser_atomexpression (expressions.c:71)
+       n1: 384 0x10B5E2: parser_power (expressions.c:82)
+        n1: 384 0x10B8E4: parser_factor (expressions.c:142)
+         n2: 384 0x10B90A: parser_term (expressions.c:156)
+          n1: 352 0x10BB84: parser_expr (expressions.c:202)
+           n1: 352 0x10BEC7: parser_simple_statement (parser.c:21)
+            n1: 352 0x10BF08: parser_statement (parser.c:28)
+             n1: 352 0x10C088: parser_root (parser.c:76)
+              n1: 352 0x10A80E: parser_parseString (parserutil.c:27)
+               n0: 352 0x10F6A4: main (main.c:26)
+          n0: 32 in 1 place, below massif's threshold (1.00%)
+   n0: 96 in 2 places, all below massif's threshold (1.00%)
+  n0: 56 in 1 place, below massif's threshold (1.00%)
+ n1: 1024 0x4A5878F: _IO_file_doallocate (in /usr/lib/libc-2.28.so)
+  n2: 1024 0x4A66BBE: _IO_doallocbuf (in /usr/lib/libc-2.28.so)
+   n1: 1024 0x4A65E46: _IO_file_overflow@@GLIBC_2.2.5 (in /usr/lib/libc-2.28.so)
+    n1: 1024 0x4A64F35: _IO_file_xsputn@@GLIBC_2.2.5 (in /usr/lib/libc-2.28.so)
+     n1: 1024 0x4A38874: vfprintf (in /usr/lib/libc-2.28.so)
+      n1: 1024 0x4A41448: printf (in /usr/lib/libc-2.28.so)
+       n0: 1024 0x10F64B: main (main.c:15)
+   n0: 0 in 1 place, below massif's threshold (1.00%)
+ n3: 576 0x10B0D6: AST_new (AST.c:18)
+  n1: 288 0x10BE69: parser_floatconst (floats.c:50)
+   n1: 288 0x10B4C1: parser_atom (expressions.c:40)
+    n1: 288 0x10B5BC: parser_atomexpression (expressions.c:71)
+     n1: 288 0x10B5E2: parser_power (expressions.c:82)
+      n1: 288 0x10B8E4: parser_factor (expressions.c:142)
+       n2: 288 0x10B90A: parser_term (expressions.c:156)
+        n1: 264 0x10BB84: parser_expr (expressions.c:202)
+         n1: 264 0x10BEC7: parser_simple_statement (parser.c:21)
+          n1: 264 0x10BF08: parser_statement (parser.c:28)
+           n1: 264 0x10C088: parser_root (parser.c:76)
+            n1: 264 0x10A80E: parser_parseString (parserutil.c:27)
+             n0: 264 0x10F6A4: main (main.c:26)
+        n0: 24 in 1 place, below massif's threshold (1.00%)
+  n1: 264 0x10BBC0: parser_expr (expressions.c:204)
+   n1: 264 0x10BEC7: parser_simple_statement (parser.c:21)
+    n1: 264 0x10BF08: parser_statement (parser.c:28)
+     n1: 264 0x10C088: parser_root (parser.c:76)
+      n1: 264 0x10A80E: parser_parseString (parserutil.c:27)
+       n0: 264 0x10F6A4: main (main.c:26)
+  n0: 24 in 2 places, all below massif's threshold (1.00%)
+ n2: 384 0x10B054: token_new (token.c:68)
+  n0: 192 in 3 places, all below massif's threshold (1.00%)
+  n1: 192 0x10BE61: parser_floatconst (floats.c:50)
+   n1: 192 0x10B4C1: parser_atom (expressions.c:40)
+    n1: 192 0x10B5BC: parser_atomexpression (expressions.c:71)
+     n1: 192 0x10B5E2: parser_power (expressions.c:82)
+      n1: 192 0x10B8E4: parser_factor (expressions.c:142)
+       n1: 192 0x10B90A: parser_term (expressions.c:156)
+        n0: 192 in 2 places, all below massif's threshold (1.00%)
+ n2: 380 0x10D64F: helios_string_init (helios_string.c:95)
+  n2: 380 0x10D513: helios_string_from_charp (helios_string.c:36)
+   n2: 270 0x10D920: helios_float_tostring (helios_float.c:63)
+    n1: 270 0x10E9DD: execstack_print (executestack.c:80)
+     n1: 270 0x10EA88: hvm_execute_codeobject (hvm.c:18)
+      n0: 270 0x10F6D0: main (main.c:30)
+    n0: 0 in 1 place, below massif's threshold (1.00%)
+   n0: 110 in 1 place, below massif's threshold (1.00%)
+  n0: 0 in 1 place, below massif's threshold (1.00%)
+ n1: 352 0x10B307: AST_addChild (AST.c:86)
+  n1: 352 0x10BC80: parser_expr (expressions.c:218)
+   n1: 352 0x10BEC7: parser_simple_statement (parser.c:21)
+    n1: 352 0x10BF08: parser_statement (parser.c:28)
+     n1: 352 0x10C088: parser_root (parser.c:76)
+      n1: 352 0x10A80E: parser_parseString (parserutil.c:27)
+       n0: 352 0x10F6A4: main (main.c:26)
+ n1: 320 0x10E36A: helios_code_add_instruction (helios_code.c:67)
+  n1: 320 0x10E1A6: helios_code_from_AST_helper (helios_code.c:21)
+   n1: 320 0x10E0FC: helios_code_from_AST_helper (helios_code.c:10)
+    n1: 320 0x10E0FC: helios_code_from_AST_helper (helios_code.c:10)
+     n2: 320 0x10E0FC: helios_code_from_AST_helper (helios_code.c:10)
+      n1: 320 0x10E2AE: helios_code_from_AST (helios_code.c:54)
+       n0: 320 0x10F6C0: main (main.c:29)
+      n0: 0 in 1 place, below massif's threshold (1.00%)
+ n0: 276 in 15 places, all below massif's threshold (1.00%)
+ n2: 208 0x10B0E4: AST_new (AST.c:20)
+  n1: 192 0x10BE69: parser_floatconst (floats.c:50)
+   n1: 192 0x10B4C1: parser_atom (expressions.c:40)
+    n1: 192 0x10B5BC: parser_atomexpression (expressions.c:71)
+     n1: 192 0x10B5E2: parser_power (expressions.c:82)
+      n1: 192 0x10B8E4: parser_factor (expressions.c:142)
+       n1: 192 0x10B90A: parser_term (expressions.c:156)
+        n0: 192 in 2 places, all below massif's threshold (1.00%)
+  n0: 16 in 3 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=55
+#-----------
+time=533460
+mem_heap_B=16418
+mem_heap_extra_B=2582
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=56
+#-----------
+time=537179
+mem_heap_B=16487
+mem_heap_extra_B=2657
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=57
+#-----------
+time=543163
+mem_heap_B=16486
+mem_heap_extra_B=2650
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=58
+#-----------
+time=544374
+mem_heap_B=16506
+mem_heap_extra_B=2710
+mem_stacks_B=0
+heap_tree=detailed
+n11: 16506 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 8192 0x10E709: execstack_init (executestack.c:13)
+  n1: 8192 0x10EA4F: hvm_execute_codeobject (hvm.c:10)
+   n0: 8192 0x10F6D0: main (main.c:30)
+ n1: 2560 0x10F173: rehash (refcount.c:125)
+  n1: 2560 0x10F3BE: helios_track_object (refcount.c:197)
+   n2: 2560 0x10F3FF: helios_set_garbagecollectable (refcount.c:208)
+    n1: 2560 0x10D6AA: helios_string_init (helios_string.c:96)
+     n2: 2560 0x10D513: helios_string_from_charp (helios_string.c:36)
+      n1: 2560 0x10D920: helios_float_tostring (helios_float.c:63)
+       n1: 2560 0x10E9DD: execstack_print (executestack.c:80)
+        n1: 2560 0x10EA88: hvm_execute_codeobject (hvm.c:18)
+         n0: 2560 0x10F6D0: main (main.c:30)
+      n0: 0 in 1 place, below massif's threshold (1.00%)
+    n0: 0 in 1 place, below massif's threshold (1.00%)
+ n3: 2184 0x10F528: helios_allocate_object (refcount.c:266)
+  n2: 1680 0x10D641: helios_string_init (helios_string.c:91)
+   n2: 1680 0x10D513: helios_string_from_charp (helios_string.c:36)
+    n2: 1240 0x10D920: helios_float_tostring (helios_float.c:63)
+     n1: 1240 0x10E9DD: execstack_print (executestack.c:80)
+      n1: 1240 0x10EA88: hvm_execute_codeobject (hvm.c:18)
+       n0: 1240 0x10F6D0: main (main.c:30)
+     n0: 0 in 1 place, below massif's threshold (1.00%)
+    n1: 440 0x10BBAB: parser_expr (expressions.c:204)
+     n1: 440 0x10BEC7: parser_simple_statement (parser.c:21)
+      n1: 440 0x10BF08: parser_statement (parser.c:28)
+       n1: 440 0x10C088: parser_root (parser.c:76)
+        n1: 440 0x10A80E: parser_parseString (parserutil.c:27)
+         n0: 440 0x10F6A4: main (main.c:26)
+   n0: 0 in 1 place, below massif's threshold (1.00%)
+  n2: 448 0x10D7FA: helios_float_init (helios_float.c:43)
+   n1: 384 0x10D7B5: helios_float_from_cdouble (helios_float.c:20)
+    n1: 384 0x10BE54: parser_floatconst (floats.c:50)
+     n1: 384 0x10B4C1: parser_atom (expressions.c:40)
+      n1: 384 0x10B5BC: parser_atomexpression (expressions.c:71)
+       n1: 384 0x10B5E2: parser_power (expressions.c:82)
+        n1: 384 0x10B8E4: parser_factor (expressions.c:142)
+         n2: 384 0x10B90A: parser_term (expressions.c:156)
+          n1: 352 0x10BB84: parser_expr (expressions.c:202)
+           n1: 352 0x10BEC7: parser_simple_statement (parser.c:21)
+            n1: 352 0x10BF08: parser_statement (parser.c:28)
+             n1: 352 0x10C088: parser_root (parser.c:76)
+              n1: 352 0x10A80E: parser_parseString (parserutil.c:27)
+               n0: 352 0x10F6A4: main (main.c:26)
+          n0: 32 in 1 place, below massif's threshold (1.00%)
+   n0: 64 in 2 places, all below massif's threshold (1.00%)
+  n0: 56 in 1 place, below massif's threshold (1.00%)
+ n1: 1024 0x4A5878F: _IO_file_doallocate (in /usr/lib/libc-2.28.so)
+  n2: 1024 0x4A66BBE: _IO_doallocbuf (in /usr/lib/libc-2.28.so)
+   n1: 1024 0x4A65E46: _IO_file_overflow@@GLIBC_2.2.5 (in /usr/lib/libc-2.28.so)
+    n1: 1024 0x4A64F35: _IO_file_xsputn@@GLIBC_2.2.5 (in /usr/lib/libc-2.28.so)
+     n1: 1024 0x4A38874: vfprintf (in /usr/lib/libc-2.28.so)
+      n1: 1024 0x4A41448: printf (in /usr/lib/libc-2.28.so)
+       n0: 1024 0x10F64B: main (main.c:15)
+   n0: 0 in 1 place, below massif's threshold (1.00%)
+ n3: 576 0x10B0D6: AST_new (AST.c:18)
+  n1: 288 0x10BE69: parser_floatconst (floats.c:50)
+   n1: 288 0x10B4C1: parser_atom (expressions.c:40)
+    n1: 288 0x10B5BC: parser_atomexpression (expressions.c:71)
+     n1: 288 0x10B5E2: parser_power (expressions.c:82)
+      n1: 288 0x10B8E4: parser_factor (expressions.c:142)
+       n2: 288 0x10B90A: parser_term (expressions.c:156)
+        n1: 264 0x10BB84: parser_expr (expressions.c:202)
+         n1: 264 0x10BEC7: parser_simple_statement (parser.c:21)
+          n1: 264 0x10BF08: parser_statement (parser.c:28)
+           n1: 264 0x10C088: parser_root (parser.c:76)
+            n1: 264 0x10A80E: parser_parseString (parserutil.c:27)
+             n0: 264 0x10F6A4: main (main.c:26)
+        n0: 24 in 1 place, below massif's threshold (1.00%)
+  n1: 264 0x10BBC0: parser_expr (expressions.c:204)
+   n1: 264 0x10BEC7: parser_simple_statement (parser.c:21)
+    n1: 264 0x10BF08: parser_statement (parser.c:28)
+     n1: 264 0x10C088: parser_root (parser.c:76)
+      n1: 264 0x10A80E: parser_parseString (parserutil.c:27)
+       n0: 264 0x10F6A4: main (main.c:26)
+  n0: 24 in 2 places, all below massif's threshold (1.00%)
+ n2: 420 0x10D64F: helios_string_init (helios_string.c:95)
+  n2: 420 0x10D513: helios_string_from_charp (helios_string.c:36)
+   n2: 310 0x10D920: helios_float_tostring (helios_float.c:63)
+    n1: 310 0x10E9DD: execstack_print (executestack.c:80)
+     n1: 310 0x10EA88: hvm_execute_codeobject (hvm.c:18)
+      n0: 310 0x10F6D0: main (main.c:30)
+    n0: 0 in 1 place, below massif's threshold (1.00%)
+   n0: 110 in 1 place, below massif's threshold (1.00%)
+  n0: 0 in 1 place, below massif's threshold (1.00%)
+ n2: 384 0x10B054: token_new (token.c:68)
+  n0: 192 in 3 places, all below massif's threshold (1.00%)
+  n1: 192 0x10BE61: parser_floatconst (floats.c:50)
+   n1: 192 0x10B4C1: parser_atom (expressions.c:40)
+    n1: 192 0x10B5BC: parser_atomexpression (expressions.c:71)
+     n1: 192 0x10B5E2: parser_power (expressions.c:82)
+      n1: 192 0x10B8E4: parser_factor (expressions.c:142)
+       n1: 192 0x10B90A: parser_term (expressions.c:156)
+        n0: 192 in 2 places, all below massif's threshold (1.00%)
+ n1: 352 0x10B307: AST_addChild (AST.c:86)
+  n1: 352 0x10BC80: parser_expr (expressions.c:218)
+   n1: 352 0x10BEC7: parser_simple_statement (parser.c:21)
+    n1: 352 0x10BF08: parser_statement (parser.c:28)
+     n1: 352 0x10C088: parser_root (parser.c:76)
+      n1: 352 0x10A80E: parser_parseString (parserutil.c:27)
+       n0: 352 0x10F6A4: main (main.c:26)
+ n1: 320 0x10E36A: helios_code_add_instruction (helios_code.c:67)
+  n1: 320 0x10E1A6: helios_code_from_AST_helper (helios_code.c:21)
+   n1: 320 0x10E0FC: helios_code_from_AST_helper (helios_code.c:10)
+    n1: 320 0x10E0FC: helios_code_from_AST_helper (helios_code.c:10)
+     n2: 320 0x10E0FC: helios_code_from_AST_helper (helios_code.c:10)
+      n1: 320 0x10E2AE: helios_code_from_AST (helios_code.c:54)
+       n0: 320 0x10F6C0: main (main.c:29)
+      n0: 0 in 1 place, below massif's threshold (1.00%)
+ n0: 286 in 15 places, all below massif's threshold (1.00%)
+ n2: 208 0x10B0E4: AST_new (AST.c:20)
+  n1: 192 0x10BE69: parser_floatconst (floats.c:50)
+   n1: 192 0x10B4C1: parser_atom (expressions.c:40)
+    n1: 192 0x10B5BC: parser_atomexpression (expressions.c:71)
+     n1: 192 0x10B5E2: parser_power (expressions.c:82)
+      n1: 192 0x10B8E4: parser_factor (expressions.c:142)
+       n1: 192 0x10B90A: parser_term (expressions.c:156)
+        n0: 192 in 2 places, all below massif's threshold (1.00%)
+  n0: 16 in 3 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=59
+#-----------
+time=549262
+mem_heap_B=16536
+mem_heap_extra_B=2696
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=60
+#-----------
+time=552985
+mem_heap_B=16605
+mem_heap_extra_B=2771
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=61
+#-----------
+time=558990
+mem_heap_B=16604
+mem_heap_extra_B=2764
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=62
+#-----------
+time=560218
+mem_heap_B=16624
+mem_heap_extra_B=2824
+mem_stacks_B=0
+heap_tree=peak
+n11: 16624 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 8192 0x10E709: execstack_init (executestack.c:13)
+  n1: 8192 0x10EA4F: hvm_execute_codeobject (hvm.c:10)
+   n0: 8192 0x10F6D0: main (main.c:30)
+ n1: 2560 0x10F173: rehash (refcount.c:125)
+  n1: 2560 0x10F3BE: helios_track_object (refcount.c:197)
+   n2: 2560 0x10F3FF: helios_set_garbagecollectable (refcount.c:208)
+    n1: 2560 0x10D6AA: helios_string_init (helios_string.c:96)
+     n2: 2560 0x10D513: helios_string_from_charp (helios_string.c:36)
+      n1: 2560 0x10D920: helios_float_tostring (helios_float.c:63)
+       n1: 2560 0x10E9DD: execstack_print (executestack.c:80)
+        n1: 2560 0x10EA88: hvm_execute_codeobject (hvm.c:18)
+         n0: 2560 0x10F6D0: main (main.c:30)
+      n0: 0 in 1 place, below massif's threshold (1.00%)
+    n0: 0 in 1 place, below massif's threshold (1.00%)
+ n3: 2272 0x10F528: helios_allocate_object (refcount.c:266)
+  n2: 1800 0x10D641: helios_string_init (helios_string.c:91)
+   n2: 1800 0x10D513: helios_string_from_charp (helios_string.c:36)
+    n2: 1360 0x10D920: helios_float_tostring (helios_float.c:63)
+     n1: 1360 0x10E9DD: execstack_print (executestack.c:80)
+      n1: 1360 0x10EA88: hvm_execute_codeobject (hvm.c:18)
+       n0: 1360 0x10F6D0: main (main.c:30)
+     n0: 0 in 1 place, below massif's threshold (1.00%)
+    n1: 440 0x10BBAB: parser_expr (expressions.c:204)
+     n1: 440 0x10BEC7: parser_simple_statement (parser.c:21)
+      n1: 440 0x10BF08: parser_statement (parser.c:28)
+       n1: 440 0x10C088: parser_root (parser.c:76)
+        n1: 440 0x10A80E: parser_parseString (parserutil.c:27)
+         n0: 440 0x10F6A4: main (main.c:26)
+   n0: 0 in 1 place, below massif's threshold (1.00%)
+  n2: 416 0x10D7FA: helios_float_init (helios_float.c:43)
+   n1: 384 0x10D7B5: helios_float_from_cdouble (helios_float.c:20)
+    n1: 384 0x10BE54: parser_floatconst (floats.c:50)
+     n1: 384 0x10B4C1: parser_atom (expressions.c:40)
+      n1: 384 0x10B5BC: parser_atomexpression (expressions.c:71)
+       n1: 384 0x10B5E2: parser_power (expressions.c:82)
+        n1: 384 0x10B8E4: parser_factor (expressions.c:142)
+         n2: 384 0x10B90A: parser_term (expressions.c:156)
+          n1: 352 0x10BB84: parser_expr (expressions.c:202)
+           n1: 352 0x10BEC7: parser_simple_statement (parser.c:21)
+            n1: 352 0x10BF08: parser_statement (parser.c:28)
+             n1: 352 0x10C088: parser_root (parser.c:76)
+              n1: 352 0x10A80E: parser_parseString (parserutil.c:27)
+               n0: 352 0x10F6A4: main (main.c:26)
+          n0: 32 in 1 place, below massif's threshold (1.00%)
+   n0: 32 in 2 places, all below massif's threshold (1.00%)
+  n0: 56 in 1 place, below massif's threshold (1.00%)
+ n1: 1024 0x4A5878F: _IO_file_doallocate (in /usr/lib/libc-2.28.so)
+  n2: 1024 0x4A66BBE: _IO_doallocbuf (in /usr/lib/libc-2.28.so)
+   n1: 1024 0x4A65E46: _IO_file_overflow@@GLIBC_2.2.5 (in /usr/lib/libc-2.28.so)
+    n1: 1024 0x4A64F35: _IO_file_xsputn@@GLIBC_2.2.5 (in /usr/lib/libc-2.28.so)
+     n1: 1024 0x4A38874: vfprintf (in /usr/lib/libc-2.28.so)
+      n1: 1024 0x4A41448: printf (in /usr/lib/libc-2.28.so)
+       n0: 1024 0x10F64B: main (main.c:15)
+   n0: 0 in 1 place, below massif's threshold (1.00%)
+ n3: 576 0x10B0D6: AST_new (AST.c:18)
+  n1: 288 0x10BE69: parser_floatconst (floats.c:50)
+   n1: 288 0x10B4C1: parser_atom (expressions.c:40)
+    n1: 288 0x10B5BC: parser_atomexpression (expressions.c:71)
+     n1: 288 0x10B5E2: parser_power (expressions.c:82)
+      n1: 288 0x10B8E4: parser_factor (expressions.c:142)
+       n2: 288 0x10B90A: parser_term (expressions.c:156)
+        n1: 264 0x10BB84: parser_expr (expressions.c:202)
+         n1: 264 0x10BEC7: parser_simple_statement (parser.c:21)
+          n1: 264 0x10BF08: parser_statement (parser.c:28)
+           n1: 264 0x10C088: parser_root (parser.c:76)
+            n1: 264 0x10A80E: parser_parseString (parserutil.c:27)
+             n0: 264 0x10F6A4: main (main.c:26)
+        n0: 24 in 1 place, below massif's threshold (1.00%)
+  n1: 264 0x10BBC0: parser_expr (expressions.c:204)
+   n1: 264 0x10BEC7: parser_simple_statement (parser.c:21)
+    n1: 264 0x10BF08: parser_statement (parser.c:28)
+     n1: 264 0x10C088: parser_root (parser.c:76)
+      n1: 264 0x10A80E: parser_parseString (parserutil.c:27)
+       n0: 264 0x10F6A4: main (main.c:26)
+  n0: 24 in 2 places, all below massif's threshold (1.00%)
+ n2: 450 0x10D64F: helios_string_init (helios_string.c:95)
+  n2: 450 0x10D513: helios_string_from_charp (helios_string.c:36)
+   n2: 340 0x10D920: helios_float_tostring (helios_float.c:63)
+    n1: 340 0x10E9DD: execstack_print (executestack.c:80)
+     n1: 340 0x10EA88: hvm_execute_codeobject (hvm.c:18)
+      n0: 340 0x10F6D0: main (main.c:30)
+    n0: 0 in 1 place, below massif's threshold (1.00%)
+   n0: 110 in 1 place, below massif's threshold (1.00%)
+  n0: 0 in 1 place, below massif's threshold (1.00%)
+ n1: 384 0x10B054: token_new (token.c:68)
+  n0: 384 in 4 places, all below massif's threshold (1.00%)
+ n1: 352 0x10B307: AST_addChild (AST.c:86)
+  n1: 352 0x10BC80: parser_expr (expressions.c:218)
+   n1: 352 0x10BEC7: parser_simple_statement (parser.c:21)
+    n1: 352 0x10BF08: parser_statement (parser.c:28)
+     n1: 352 0x10C088: parser_root (parser.c:76)
+      n1: 352 0x10A80E: parser_parseString (parserutil.c:27)
+       n0: 352 0x10F6A4: main (main.c:26)
+ n1: 320 0x10E36A: helios_code_add_instruction (helios_code.c:67)
+  n1: 320 0x10E1A6: helios_code_from_AST_helper (helios_code.c:21)
+   n1: 320 0x10E0FC: helios_code_from_AST_helper (helios_code.c:10)
+    n1: 320 0x10E0FC: helios_code_from_AST_helper (helios_code.c:10)
+     n2: 320 0x10E0FC: helios_code_from_AST_helper (helios_code.c:10)
+      n1: 320 0x10E2AE: helios_code_from_AST (helios_code.c:54)
+       n0: 320 0x10F6C0: main (main.c:29)
+      n0: 0 in 1 place, below massif's threshold (1.00%)
+ n0: 286 in 15 places, all below massif's threshold (1.00%)
+ n1: 208 0x10B0E4: AST_new (AST.c:20)
+  n0: 208 in 4 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=63
+#-----------
+time=563852
+mem_heap_B=8096
+mem_heap_extra_B=2632
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=64
+#-----------
+time=567433
+mem_heap_B=6764
+mem_heap_extra_B=1892
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=65
+#-----------
+time=571090
+mem_heap_B=5172
+mem_heap_extra_B=1236
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=66
+#-----------
+time=574759
+mem_heap_B=4400
+mem_heap_extra_B=632
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=67
+#-----------
+time=578351
+mem_heap_B=3650
+mem_heap_extra_B=54
+mem_stacks_B=0
+heap_tree=empty

@@ -28,10 +28,12 @@ helios_object *helios_float_multiply(helios_object *self, helios_object *other);
 
 void helios_float_delete(helios_object *self);
 helios_object *helios_float_init();
+helios_object *helios_float_copy(helios_object *obj);
 
 helios_object *helios_float_tostring(helios_object *self);
 helios_object *helios_float_represent(helios_object *self);
 
 helios_object *helios_float_from_cdouble(double value);
+helios_object *helios_float_from_cstring(char *value);
 
 #endif

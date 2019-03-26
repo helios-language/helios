@@ -7,6 +7,8 @@
 #include <stddef.h>
 #include <stdint.h>
 
+#define HELIOS_MEMORY_DEBUG false
+
 #define GC_DEFAULT_LENGTH 10
 #define GC_REHASH_PERCENT ((double)55)
 
@@ -31,8 +33,7 @@ void helios_delete_garbagecollector(garbagecollector *gc);
 void helios_free_all_tracked(garbagecollector *gc);
 void helios_garbage_collect(garbagecollector *gc);
 struct __helios_object_s *helios_allocate_object(size_t size);
-struct __helios_object_s *helios_allocate_object_on_gc(garbagecollector *gc,
-                                                       size_t size);
+
 void helios_free_object(struct __helios_object_s *obj);
 void helios_set_garbagecollectable(struct __helios_object_s *obj);
 
@@ -64,7 +65,7 @@ garbagecollector *__GC_CURRENT;
     do {                                                                       \
         ((struct __helios_object_s *)obj)->refcount--;                         \
         if (((struct __helios_object_s *)obj)->refcount <= 0) {                \
-            HELIOS_CALL_MEMBER(destructor, obj)                                \
+            HELIOS_CALL_MEMBER(destructor, obj);                               \
         }                                                                      \
     } while (0);
 

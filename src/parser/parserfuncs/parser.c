@@ -23,7 +23,7 @@ PARSERFUNC(simple_statement) {
 
 PARSERFUNC(statement) {
     // statement:  simple_statement (";" simple_statement)* ";"? _nl
-    AST *ast = AST_new(token_new(TOK_NONE, (char *)"", false));
+    AST *ast = AST_new(token_new(TOK_NONE, NULL));
     parser_skipws(parser);
     AST_addChild(ast, PARSERCALL(simple_statement));
     parser_skipws(parser);
@@ -60,7 +60,7 @@ PARSERFUNC(statement) {
  */
 PARSERFUNC(root) {
     uint32_t eslength1 = errorstack_length(parser->es);
-    AST *result = AST_new(token_new(TOK_ROOTBLOCK, "rootblock", false));
+    AST *result = AST_new(token_new(TOK_ROOTBLOCK, NULL));
 
     do {
         parser_skipws(parser);

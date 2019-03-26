@@ -11,4 +11,7 @@
 #define HELIOS_CALL_MEMBER(func, obj, ...)                                     \
     (obj->class->func(obj, ##__VA_ARGS__))
 
+#define HELIOS_GET_MEMBER(member, obj) (obj->class->member)
+#define HELIOS_HAS_MEMBER(member, obj) (obj->class->member != NULL)
+
 #endif

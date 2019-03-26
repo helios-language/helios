@@ -30,6 +30,7 @@ helios_object *helios_integer_multiply(helios_object *self,
 
 void helios_integer_delete(helios_object *self);
 helios_object *helios_integer_init();
+helios_object *helios_integer_copy(helios_object *obj);
 
 helios_object *helios_integer_tostring(helios_object *self);
 helios_object *helios_integer_represent(helios_object *self);

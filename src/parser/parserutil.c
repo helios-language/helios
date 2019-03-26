@@ -59,6 +59,14 @@ AST *parser_parseString(char *str) {
  */
 Parser_t *parser_new(char *code) {
     Parser_t *parser = malloc(sizeof(Parser_t));
+
+    if (parser == NULL) {
+        printf("malloc error\n");
+        exit(-1);
+    }
+
+    uint32_t codelength = strlen(code);
+
     *parser = (Parser_t){
         errorstack_new(),
         1,    // line
@@ -67,7 +75,7 @@ Parser_t *parser_new(char *code) {
         '\0', // curr
         '\0', // next
         code,
-        strlen(code),                                      // codelength
+        codelength,                                        // codelength
         0,                                                 // index
         malloc(PARSER_ACCEPTED_MAX_STRLEN * sizeof(char)), // accepted
         0,

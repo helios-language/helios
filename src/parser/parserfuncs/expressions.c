@@ -89,16 +89,19 @@ PARSERFUNC(power) {
         AST *right = PARSERCALL(factor);
         parser_skipws(parser);
 
+        AST *res = NULL;
         if (strcmp(op, "**") == 0) {
-            AST *res = AST_new(token_new(TOK_UNARYOP, op, true));
-            AST_addChild(res, left);
-            AST_addChild(res, right);
-            return res;
+            res = AST_new(token_new(TOK_POWER, helios_string_from_charp(op)));
         } else {
+            free(op);
             errorstack_push(parser->es, "invalid operator bbb", parser->line,
                             parser->character);
             return AST_new(NULL);
         }
+        free(op);
+        AST_addChild(res, left);
+        AST_addChild(res, right);
+        return res;
     }
     parser_skipws(parser);
     return res;
@@ -119,16 +122,22 @@ PARSERFUNC(factor) {
         strcpy(op, parser->accepted);
         AST *child = PARSERCALL(factor);
         parser_skipws(parser);
-        if (strcmp(op, "+") == 0 || strcmp(op, "-") == 0 ||
-            strcmp(op, "~") == 0) {
-            AST *res = AST_new(token_new(TOK_UNARYOP, op, true));
-            AST_addChild(res, child);
-            return res;
+        AST *res = NULL;
+        if (strcmp(op, "+") == 0) {
+            res = AST_new(token_new(TOK_UNARY_PLUS, NULL));
+        } else if (strcmp(op, "-") == 0) {
+            res = AST_new(token_new(TOK_UNARY_MINUS, NULL));
+        } else if (strcmp(op, "~") == 0) {
+            res = AST_new(token_new(TOK_UNARY_NOT, NULL));
         } else {
+            free(op);
             errorstack_push(parser->es, "invalid operator aaa", parser->line,
                             parser->character);
             return AST_new(NULL);
         }
+        free(op);
+        AST_addChild(res, child);
+        return res;
     }
     return PARSERCALL(power);
 }
@@ -152,19 +161,26 @@ PARSERFUNC(term) {
         char *op = malloc(strlen(parser->accepted) + 1);
         strcpy(op, parser->accepted);
         AST *right = PARSERCALL(factor);
-        if (strcmp(op, "//") == 0 || strcmp(op, "*") == 0 ||
-            strcmp(op, "/") == 0) {
-            res = AST_new(token_new(TOK_BINARYOP, op, true));
-            AST_addChild(res, left);
-            AST_addChild(res, right);
-            left = res;
+        if (strcmp(op, "//") == 0) {
+            res = AST_new(
+                token_new(TOK_INTEGER_DIVIDE, helios_string_from_charp(op)));
+        } else if (strcmp(op, "*") == 0) {
+            res =
+                AST_new(token_new(TOK_MULTIPLY, helios_string_from_charp(op)));
+        } else if (strcmp(op, "/") == 0) {
+            res = AST_new(token_new(TOK_DIVIDE, helios_string_from_charp(op)));
         } else {
-            errorstack_push(parser->es, "invalid operator eee", parser->line,
+            errorstack_push(parser->es, "invalid operator", parser->line,
                             parser->character);
             if (res == NULL) {
                 res = AST_new(NULL);
             }
+            break;
         }
+        free(op);
+        AST_addChild(res, left);
+        AST_addChild(res, right);
+        left = res;
     }
     return res;
 }
@@ -184,18 +200,23 @@ PARSERFUNC(expr) {
         char *op = malloc(strlen(parser->accepted) + 1);
         strcpy(op, parser->accepted);
         AST *right = PARSERCALL(term);
-        if (strcmp(op, "+") == 0 || strcmp(op, "-") == 0) {
-            res = AST_new(token_new(TOK_BINARYOP, op, true));
-            AST_addChild(res, left);
-            AST_addChild(res, right);
-            left = res;
+        if (strcmp(op, "+") == 0) {
+            res = AST_new(token_new(TOK_PLUS, helios_string_from_charp(op)));
+        } else if (strcmp(op, "-") == 0) {
+            res = AST_new(token_new(TOK_MINUS, helios_string_from_charp(op)));
         } else {
             errorstack_push(parser->es, "invalid operator ccc", parser->line,
                             parser->character);
             if (res == NULL) {
                 res = AST_new(NULL);
             }
+            free(op);
+            break;
         }
+        free(op);
+        AST_addChild(res, left);
+        AST_addChild(res, right);
+        left = res;
     }
     return res;
 }

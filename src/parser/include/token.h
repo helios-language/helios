@@ -3,6 +3,7 @@
 #ifndef TOKEN_H
 #define TOKEN_H
 
+#include <builtins.h>
 #include <stdbool.h>
 #include <stdint.h>
 
@@ -11,21 +12,22 @@
  */
 typedef enum {
 
-    // integers
-    TOK_DECINT,
-    TOK_HEXINT,
-    TOK_BININT,
-    TOK_OCTINT,
-
-    // float
+    // numbers
+    TOK_INT,
     TOK_FLOAT,
-    TOK_FPART,
-    TOK_EPART,
-    TOK_IPART,
 
-    // operators
-    TOK_BINARYOP,
-    TOK_UNARYOP,
+    // unary operators
+    TOK_UNARY_MINUS,
+    TOK_UNARY_PLUS,
+    TOK_UNARY_NOT,
+
+    // binary operators
+    TOK_PLUS,
+    TOK_MINUS,
+    TOK_DIVIDE,
+    TOK_INTEGER_DIVIDE,
+    TOK_MULTIPLY,
+    TOK_POWER,
 
     // lines
     TOK_NONE, // use when there's no real token, or it will eventually be
@@ -40,17 +42,12 @@ typedef enum {
  */
 typedef struct Token {
     TOKENTYPE t; //!< the type of this token
-    void
-        *value; //!< the value of this token. Void pointer to allow for any
-                //!< datatype, but generally assumed to be a string. If it's not
-                //!< a string the printing routine may error. For this a special
-                //!< printing case can be defined in token.c (token_print).
+    helios_object *value;
 
-    bool canfree; //!< true if the value is freeable
 } Token_t;
 
 void token_print(Token_t *token);
-Token_t *token_new(TOKENTYPE t, void *value, bool canfree);
+Token_t *token_new(TOKENTYPE t, helios_object *value);
 void token_free(Token_t *token);
 void token_free_simple(Token_t *token);
 

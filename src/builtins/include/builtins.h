@@ -9,6 +9,7 @@
 
 #include <builtinutils.h>
 
+#include <helios_code.h>
 #include <helios_float.h>
 #include <helios_hashmap.h>
 #include <helios_integer.h>
@@ -16,5 +17,6 @@
 #include <helios_string.h>
 
 #include <helios_memory.h>
+#include <serialize.h>
 
 #endif

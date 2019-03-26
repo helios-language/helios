@@ -72,6 +72,16 @@ helios_object *helios_integer_represent(helios_object *self) {
 }
 
 /**
+ * Copy a helios integer object.
+ */
+helios_object *helios_integer_copy(helios_object *obj) {
+    helios_integer *old = TO_HELIOS_INTEGER(obj);
+    helios_integer *new = TO_HELIOS_INTEGER(helios_integer_init());
+    new->value = old->value;
+    return TO_HELIOS_OBJECT(new);
+}
+
+/**
  * Definition of the type of any helios_integer object.
  */
 helios_type helios_integer_type = {
@@ -82,9 +92,11 @@ helios_type helios_integer_type = {
     HELIOS_OBJECT_BASIC_FIELDS_CLASSNAME("Integer"),
     HELIOS_OBJECT_BASIC_FIELDS_REPRESENT(helios_integer_tostring),
     HELIOS_OBJECT_BASIC_FIELDS_TOSTRING(helios_integer_tostring),
+    HELIOS_OBJECT_BASIC_FIELDS_COPY(helios_integer_copy),
 
     HELIOS_OBJECT_BINOPS_FIELDS_ADD(helios_integer_add),
     HELIOS_OBJECT_BINOPS_FIELDS_SUBTRACT(helios_integer_subtract),
     HELIOS_OBJECT_BINOPS_FIELDS_DIVIDE(helios_integer_divide),
     HELIOS_OBJECT_BINOPS_FIELDS_MULTIPLY(helios_integer_multiply),
+
 };

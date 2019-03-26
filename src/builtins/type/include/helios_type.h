@@ -34,7 +34,8 @@ struct __helios_type_s;
     void (*destructor)(struct __helios_object_s * obj);                        \
     char *classname;                                                           \
     struct __helios_object_s *(*represent)(struct __helios_object_s * obj);    \
-    struct __helios_object_s *(*tostring)(struct __helios_object_s * obj);
+    struct __helios_object_s *(*tostring)(struct __helios_object_s * obj);     \
+    struct __helios_object_s *(*copy)(struct __helios_object_s * obj);
 
 /**
  * Initializes all HELIOS_OBJECT_BASIC_FIELDS to NULL. Technically not needed as
@@ -42,7 +43,8 @@ struct __helios_type_s;
  */
 #define HELIOS_OBJECT_BASIC_FIELDS_NULL()                                      \
     .constructor = NULL, .destructor = NULL, .classname = NULL,                \
-    .tostring = NULL, .represent = NULL
+    .tostring = NULL, .represent = NULL, .copy = NULL
+
 /**
  * Set the constructor in a struct initialization.
  */
@@ -63,6 +65,10 @@ struct __helios_type_s;
  * Set the represent function in a struct initialization.
  */
 #define HELIOS_OBJECT_BASIC_FIELDS_REPRESENT(function) .represent = function
+/**
+ * Set the copy function in a struct initialization.
+ */
+#define HELIOS_OBJECT_BASIC_FIELDS_COPY(function) .copy = function
 
 /**
  * Define the fields corresponding to binary number operators for helios object
@@ -176,6 +182,7 @@ typedef struct __helios_type_s {
     HELIOS_OBJECT_COMMON_BASE;
     HELIOS_OBJECT_BASIC_FIELDS;
     HELIOS_OBJECT_BINOPS_FIELDS;
+    HELIOS_OBJECT_UNARYOPS_FIELDS;
 } helios_type;
 
 #endif

@@ -16,12 +16,12 @@
  * This struct represents an AST node object, and recursively defines an
  * AST.
  */
-typedef struct AST {
+typedef struct __AST_s {
     Token_t *value;  //!< the token stored in this node.
     uint32_t size;   //!< the allocated size of the children array.
     uint32_t filled; //!< the actual amount of used space in this array. Always
                      //!< less than the size attribute.
-    struct AST **children; //!< the children array.
+    struct __AST_s **children; //!< the children array.
 } AST;
 
 AST *AST_new(Token_t *value);

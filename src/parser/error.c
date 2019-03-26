@@ -66,10 +66,9 @@ void error_throw(Error_t err, const char *code, bool hard) {
         }
         line[end] = '\0';
 
-        if (line != NULL && *line != '\0' &&
-            (err.character - 1) < strlen(line)) {
+        if (line != NULL && *line != '\0' && (err.character) < strlen(line)) {
             printf("%s\n", line);
-            for (uint32_t i = 0; i < err.character - 1; i++) {
+            for (uint32_t i = 0; i < err.character; i++) {
                 printf(" ");
             }
             printf("^\n");

@@ -3,33 +3,35 @@
 #include <stdlib.h>
 
 #include <AST.h>
+#include <builtins.h>
 #include <error.h>
-#include <generator.h>
+#include <hvm.h>
 #include <parser.h>
 
 #include <files.h>
 
 int main(int argc, char *argv[]) {
-    printf("%i\n", argc);
-    if (argc < 3) {
-        printf("please give the helios compiler a file to compile and a file "
-               "to write to.\n");
-        exit(-1);
+    for (uint32_t i = 0; i < 1; i++) {
+        printf("iteration: %i\n", i);
+
+        if (argc < 2) {
+            printf("please give the helios compiler a file to compile.\n");
+            exit(-1);
+        }
+        char *file = readfiletostring(argv[1]);
+
+        garbagecollector *gc = helios_init_garbagecollector();
+        helios_set_garbagecollector(gc);
+
+        AST *ast = parser_parseString(file);
+        AST_print(ast);
+
+        helios_object *code = helios_code_from_AST(ast);
+        hvm_execute_codeobject(code);
+
+        free(file);
+        AST_free(ast);
+        helios_delete_garbagecollector(gc);
     }
-    char *file = readfiletostring(argv[1]);
-
-    AST *ast = parser_parseString(file);
-    AST_print(ast);
-
-    printf("\n\n\n");
-    program *prgm = generate_bytecode_from_ast(ast);
-
-    writeprogramtofile(argv[2], prgm);
-
-    AST_free(ast);
-    program_delete(prgm);
-
-    free(file);
-
     return 0;
 }
