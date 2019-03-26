@@ -1,32 +1,15 @@
 
-a = [
-    [1,2],
-    [3,4],
-    [5,6]
-]
+import time
 
-b = [
-    [1,2,3],
-    [4,5,6]
-]
+t = time.time()
 
-def matmul(a,b):
-    if len(a) != len(b[0]):
-        raise ValueError
+with open("test.txt", "w") as f:
+    for i in range(1000000):
+        f.write("hello world! {}".format(i))
 
-    resultrows = len(a[0])
-    resultcols = len(b)
+with open("test.txt") as f:
+    res = f.readlines()
 
-    res = []
+print(time.time() - t)
 
-    for i in range(resultrows):
-        temprow = []
-        for j in range(resultcols):
-            tempsum = 0
-            for k in range(len(a)):
-                tempsum += a[k][i]*b[j][k]
-            temprow.append(tempsum)
-        res.append(temprow)
-    return res
-
-print(matmul(a,b))
+# print(res)

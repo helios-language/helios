@@ -18,16 +18,98 @@
  * @param code the code with comments.
  * @return the transformed code without comments.
  */
-char *parser_remove_comments(char *code) {
-    char *res = calloc(strlen(code) + 1, 1);
-    uint32_t resindex = 0;
+char *parser_preprocess(char *code) {
+    uint32_t size = 100;
+    uint32_t filled = 0;
+    char *res = malloc(size * sizeof(char));
+
+    uint32_t indent = 0;
+    uint32_t line = 1;
 
     for (char *i = code; *i != '\0'; i++) {
         if (*i == '#') {
             while ((*++i) != '\n')
                 ;
         }
-        res[resindex++] = *i;
+        if (*i == '\r') { // filter out carriage returns
+            continue;
+        }
+
+        if (*i == PARSER_INDENT) { // DC1 will be indent so if it is in the code
+                                   // before
+            // applying indent syntax it has to be removed.
+            continue;
+        }
+        if (*i == PARSER_DEDENT) { // DC2 will be dedent so if it is in the code
+                                   // before
+            // applying indent syntax it has to be removed.
+            continue;
+        }
+
+        if (*i == '\n') {
+            uint32_t n = 0;
+            uint32_t spaces = 0;
+
+            line++;
+
+            while (1) {
+                n++;
+                char next = *(i + n);
+                if (next == '\t') {
+                    spaces += PARSER_SPACES_PER_TAB;
+                    continue;
+                } else if (next == ' ') {
+                    spaces += 1;
+                    continue;
+                }
+                break;
+            }
+            if (spaces % PARSER_SPACES_PER_TAB != 0) {
+                printf("expected %i spaces per tab but found inconsistent "
+                       "indent on line %i\n",
+                       PARSER_SPACES_PER_TAB, line);
+                exit(-1);
+            }
+            uint32_t new_indent = (uint32_t)(spaces / PARSER_SPACES_PER_TAB);
+
+            // put the newline in the old place
+            res[filled++] = '\n';
+            if (filled >= size) {
+                size <<= 1;
+                res = realloc(res, size * sizeof(char));
+            }
+
+            if (new_indent < indent) {
+                for (uint32_t counter = new_indent; counter < indent;
+                     counter++) {
+                    res[filled++] = PARSER_DEDENT;
+                    if (filled >= size) {
+                        size <<= 1;
+                        res = realloc(res, size * sizeof(char));
+                    }
+                }
+            } else if (new_indent > indent) {
+                for (uint32_t counter = indent; counter < new_indent;
+                     counter++) {
+                    res[filled++] = PARSER_INDENT;
+                    if (filled >= size) {
+                        size <<= 1;
+                        res = realloc(res, size * sizeof(char));
+                    }
+                }
+            }
+
+            i += (n - 1);
+            indent = new_indent;
+
+            continue;
+        }
+
+        res[filled++] = *i;
+        if (filled >= size) {
+            size <<= 1;
+            res = realloc(res, size * sizeof(char));
+        }
     }
 
     free(code);
@@ -46,7 +128,9 @@ char *parser_remove_comments(char *code) {
  * which recursively represents the parsed syntax
  */
 AST *parser_parseString(char *str) {
-    str = parser_remove_comments(str);
+    str = parser_preprocess(str);
+
+    printf("%s\n", str);
 
     Parser_t *parser = parser_new(str);
 
@@ -106,7 +190,6 @@ Parser_t *parser_new(char *code) {
         codelength,                                        // codelength
         0,                                                 // index
         malloc(PARSER_ACCEPTED_MAX_STRLEN * sizeof(char)), // accepted
-        0,
     };
     return parser;
 }
@@ -204,7 +287,6 @@ Parser_t *parser_copy(Parser_t *parser) {
         parser->codelength, // codelength
         parser->index,      // index
         parser->accepted,   // accepted
-        parser->indent,     // indent level
     };
     return newparser;
 }
@@ -229,7 +311,6 @@ void parser_restore(Parser_t *parser, Parser_t *other) {
         other->codelength, // codelength
         other->index,      // index
         other->accepted,   // accepted
-        other->indent,     // indent level
     };
 }
 
@@ -358,7 +439,6 @@ bool parser_acceptstring(Parser_t *parser, char *str) {
  */
 bool parser_expectchar(Parser_t *parser, char character) {
     if (!parser_acceptchar(parser, character)) {
-        printf(">%i\n", character);
         errorstack_push(parser->es, "unexpected character", parser->line,
                         parser->character);
         return false;

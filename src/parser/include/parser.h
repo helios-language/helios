@@ -30,6 +30,11 @@
  * The maximum length of the parsers accepted character string.
  */
 #define PARSER_ACCEPTED_MAX_STRLEN 100
+#define PARSER_INDENT_STACK_DEFAULT_SIZE 10
+#define PARSER_SPACES_PER_TAB 4
+
+#define PARSER_INDENT 17 // ascii character DC1 will be an indent
+#define PARSER_DEDENT 18 // ascii character DC2 will be a dedent
 
 /**
  *  This struct represents the state of the parser.
@@ -53,7 +58,6 @@ typedef struct Parser {
                     //!< accept[char,anychar,string] has found so it can be
                     //!< added to an ast.
 
-    uint32_t indent; //!< the current indentation level
 } Parser_t;
 
 Parser_t *parser_new(char *code);

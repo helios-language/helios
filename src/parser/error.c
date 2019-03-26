@@ -10,8 +10,7 @@
  *  @param err the error to print
  */
 void error_print(error_t err) {
-    printf("%s in line %i character %i\n", err.message, err.line,
-           err.character);
+    printf("%s in line %i\n", err.message, err.line);
 }
 
 /*
@@ -72,6 +71,11 @@ void error_throw(error_t err, const char *code, bool hard) {
                 printf(" ");
             }
             printf("^\n");
+
+            for (uint32_t i = 0; i < strlen(line); i++) {
+                printf("%i,", line[i]);
+            }
+            printf("\n");
         } else {
             printf("line or character index out of bounds. could not display "
                    "error line information.\n");

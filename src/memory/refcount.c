@@ -287,6 +287,10 @@ helios_object *helios_allocate_object(size_t size) {
 void helios_free_object(helios_object *obj) {
     garbagecollector *gc = HELIOS_GET_OBJ_GC(obj);
 
+    if (obj->class->staticobj) {
+        return;
+    }
+
 #if HELIOS_MEMORY_DEBUG
     printf("\x1b[31mhelios memory debug: freed %s object (%i objects "
            "allocated)\x1b[0m\n",

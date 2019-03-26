@@ -11,18 +11,24 @@
 #include <string.h>
 
 DECLARE_PARSERFUNC(expr);
-
-// PARSERFUNC(block) {
-//     // indent line+ dedent
-
-// }
+DECLARE_PARSERFUNC(compound_statement);
 
 PARSERFUNC(simple_statement) {
+    uint32_t length1 = errorstack_length(parser->es);
+    AST *res = PARSERCALL(compound_statement);
+    if (length1 == errorstack_length(parser->es)) {
+        return res;
+    }
+    AST_free(res);
+    errorstack_popuntil(parser->es, length1);
     return PARSERCALL(expr);
 }
 
+/**
+ * statement:  simple_statement (";" simple_statement)* ";"? \n
+ *
+ */
 PARSERFUNC(statement) {
-    // statement:  simple_statement (";" simple_statement)* ";"? _nl
     AST *ast = AST_new(token_new(TOK_NONE, NULL));
     parser_skipws(parser);
     AST_addChild(ast, PARSERCALL(simple_statement));
@@ -43,7 +49,6 @@ PARSERFUNC(statement) {
     while (parser_acceptchar(parser, ';'))
         ;
 
-    parser_acceptchar(parser, '\r');
     parser_expectchar(parser, '\n');
     return ast;
 }
@@ -56,7 +61,7 @@ PARSERFUNC(statement) {
  * work fine i guess???
  *
  * rule:
- * ("\n" | "\r" | statement)* end.
+ * ("\n" | statement)* end.
  */
 PARSERFUNC(root) {
     uint32_t eslength1 = errorstack_length(parser->es);
@@ -65,7 +70,7 @@ PARSERFUNC(root) {
     do {
         parser_skipws(parser);
 
-        while (parser_acceptanychar(parser, "\r\n")) {
+        while (parser_acceptchar(parser, '\n')) {
             parser_skipws(parser);
         }
 

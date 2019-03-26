@@ -162,6 +162,15 @@ struct __helios_type_s;
 #define HELIOS_OBJECT_UNARYOPS_FIELDS_PLUS(function) .plus = function
 
 /**
+ * If this field is true, instances of this object can never be freed. This is
+ * for example done with the True and False objects.
+ */
+#define HELIOS_OBJECT_STATIC_FIELD bool staticobj;
+
+//! sets this static field
+#define HELIOS_OBJECT_STATIC() .staticobj = true
+
+/**
  * The definition of a helios type struct. This is the part in any helios
  * object defining what type it is. Any helios struct must define a type and
  * use it in the HELIOS_OBJECT_COMMON_BASE which tells the object system
@@ -183,6 +192,8 @@ typedef struct __helios_type_s {
     HELIOS_OBJECT_BASIC_FIELDS;
     HELIOS_OBJECT_BINOPS_FIELDS;
     HELIOS_OBJECT_UNARYOPS_FIELDS;
+
+    HELIOS_OBJECT_STATIC_FIELD;
 } helios_type;
 
 #endif

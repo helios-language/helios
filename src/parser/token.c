@@ -32,6 +32,13 @@ const char *tokennames[] = {
     enumtostring(TOK_UNARY_NOT),
     enumtostring(TOK_UNARY_PLUS),
     enumtostring(TOK_POWER),
+    enumtostring(TOK_IF_STMT),
+
+    enumtostring(TOK_ELIF_STMT),
+    enumtostring(TOK_ELSE_STMT),
+    enumtostring(TOK_WHILE_STMT),
+    enumtostring(TOK_SWITCH_STMT),
+    enumtostring(TOK_FOR_STMT),
 
 };
 

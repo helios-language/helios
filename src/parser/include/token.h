@@ -35,6 +35,14 @@ typedef enum {
     TOK_BLOCK,
     TOK_ROOTBLOCK,
 
+    // statements
+    TOK_IF_STMT,
+    TOK_ELIF_STMT,
+    TOK_ELSE_STMT,
+    TOK_WHILE_STMT,
+    TOK_SWITCH_STMT,
+    TOK_FOR_STMT,
+
 } TOKENTYPE;
 
 /**
