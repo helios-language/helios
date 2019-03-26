@@ -18,27 +18,22 @@
  * values.
  */
 const char *tokennames[] = {
-    enumtostring(TOK_INT),
-    enumtostring(TOK_FLOAT),
-    enumtostring(TOK_NONE),
-    enumtostring(TOK_BLOCK),
+    enumtostring(TOK_INT),         enumtostring(TOK_FLOAT),
+    enumtostring(TOK_TRUE),        enumtostring(TOK_FALSE),
+    enumtostring(TOK_NAME),        enumtostring(TOK_NONE),
+    enumtostring(TOK_STRING),      enumtostring(TOK_BLOCK),
     enumtostring(TOK_ROOTBLOCK),
-    enumtostring(TOK_DIVIDE),
-    enumtostring(TOK_INTEGER_DIVIDE),
-    enumtostring(TOK_PLUS),
-    enumtostring(TOK_MINUS),
-    enumtostring(TOK_MULTIPLY),
-    enumtostring(TOK_UNARY_MINUS),
-    enumtostring(TOK_UNARY_NOT),
-    enumtostring(TOK_UNARY_PLUS),
-    enumtostring(TOK_POWER),
-    enumtostring(TOK_IF_STMT),
 
-    enumtostring(TOK_ELIF_STMT),
-    enumtostring(TOK_ELSE_STMT),
-    enumtostring(TOK_WHILE_STMT),
-    enumtostring(TOK_SWITCH_STMT),
-    enumtostring(TOK_FOR_STMT),
+    enumtostring(TOK_DIVIDE),      enumtostring(TOK_INTEGER_DIVIDE),
+    enumtostring(TOK_PLUS),        enumtostring(TOK_MINUS),
+    enumtostring(TOK_MULTIPLY),    enumtostring(TOK_POWER),
+
+    enumtostring(TOK_UNARY_MINUS), enumtostring(TOK_UNARY_NOT),
+    enumtostring(TOK_UNARY_PLUS),
+
+    enumtostring(TOK_IF_STMT),     enumtostring(TOK_ELIF_STMT),
+    enumtostring(TOK_ELSE_STMT),   enumtostring(TOK_WHILE_STMT),
+    enumtostring(TOK_SWITCH_STMT), enumtostring(TOK_FOR_STMT),
 
 };
 

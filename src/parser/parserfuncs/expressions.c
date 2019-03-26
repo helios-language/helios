@@ -19,6 +19,7 @@ DECLARE_PARSERFUNC(expr);
 DECLARE_PARSERFUNC(factor);
 DECLARE_PARSERFUNC(intconst);
 DECLARE_PARSERFUNC(floatconst);
+DECLARE_PARSERFUNC(stringconst);
 
 /**
  * Tries to accept a floating point constant. if it couldn't find one it
@@ -37,17 +38,29 @@ PARSERFUNC(atom) {
     uint32_t eslength1 = errorstack_length(parser->es);
     Parser_t *parsercp1 = parser_copy(parser);
 
-    AST *res = PARSERCALL(floatconst);
+    AST *res = PARSERCALL(stringconst);
     if (errorstack_length(parser->es) == eslength1) {
         parser_free_simple(parsercp1);
         return res;
     }
     AST_free(res);
+    res = NULL;
 
     errorstack_popuntil(parser->es, eslength1);
     parser_restore(parser, parsercp1);
-    parser_free_simple(parsercp1);
 
+    res = PARSERCALL(floatconst);
+    if (errorstack_length(parser->es) == eslength1) {
+        parser_free_simple(parsercp1);
+        return res;
+    }
+    AST_free(res);
+    res = NULL;
+
+    errorstack_popuntil(parser->es, eslength1);
+    parser_restore(parser, parsercp1);
+
+    parser_free_simple(parsercp1);
     return PARSERCALL(intconst);
 }
 

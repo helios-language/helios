@@ -15,6 +15,11 @@ typedef enum {
     // numbers
     TOK_INT,
     TOK_FLOAT,
+    TOK_NONE,
+    TOK_TRUE,
+    TOK_FALSE,
+    TOK_NAME,
+    TOK_STRING,
 
     // unary operators
     TOK_UNARY_MINUS,
@@ -29,9 +34,6 @@ typedef enum {
     TOK_MULTIPLY,
     TOK_POWER,
 
-    // lines
-    TOK_NONE, // use when there's no real token, or it will eventually be
-              // merged.
     TOK_BLOCK,
     TOK_ROOTBLOCK,
 

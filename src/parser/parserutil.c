@@ -113,6 +113,8 @@ char *parser_preprocess(char *code) {
         }
     }
 
+    res[filled] = 0;
+
     return res;
 }
 
