@@ -2,14 +2,11 @@ version: 2
 jobs:
   build:
     docker:
-      - image: gcc:latest
+      - image: jonay2000/helios-test:latest
 
     steps:
       - checkout
 
-      - run:
-          name: Install
-          command: add-apt-repository universe && apt update && apt install cmocka
 
       - run:
           name: Build
