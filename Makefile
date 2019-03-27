@@ -74,8 +74,10 @@ run: $(executable)
 	@echo starting
 	@./$(executable) $(TESTFILE) $(TESTRES)
 
+
+#test and find leaks at the same time.
 test: $(executable)
-	@./$(executable)
+	@valgrind --error-exitcode=1 --leak-check=full --show-leak-kinds=all ./$(executable)
 
 $(executable): $(assembly_object_files) $(c_object_files) $(nassembly_object_files)
 	@echo linking...

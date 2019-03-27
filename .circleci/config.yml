@@ -13,10 +13,5 @@ jobs:
           command: make -B
 
       - run:
-          name: Memory
-          command: make leaktest -B
-
-
-      - run:
           name: Test
           command: make test -B
