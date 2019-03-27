@@ -2,14 +2,14 @@ version: 2
 jobs:
   build:
     docker:
-      - image: apk add cmocka
+      - image: continuul/build-essential:latest
 
     steps:
       - checkout
 
       - run:
           name: Build
-          command: apt install cmocka
+          command: apk add cmocka
 
       - run:
           name: Build
