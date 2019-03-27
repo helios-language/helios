@@ -2,6 +2,7 @@
 
 #include <builtins_test.h>
 
-void builtins_test() {
-    integer_test();
+int builtins_test() {
+    return integer_test() + float_test() + float_math_test() +
+           integer_math_test();
 }

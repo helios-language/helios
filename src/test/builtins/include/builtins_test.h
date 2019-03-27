@@ -2,8 +2,9 @@
 #ifndef BUILTINS_TEST_H
 #define BUILTINS_TEST_H
 
+#include <float_test.h>
 #include <integer_test.h>
 
-void builtins_test();
+int builtins_test();
 
 #endif

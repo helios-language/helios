@@ -4,7 +4,10 @@
 #include <stdio.h>
 
 helios_object *helios_integer_add(helios_object *self, helios_object *other) {
-    if (IS_HELIOS_INTEGER(other)) {
+    if (other == NULL) {
+        printf("can't add NULL to number\n");
+        exit(-1);
+    } else if (IS_HELIOS_INTEGER(other)) {
         helios_object *res = helios_integer_type.constructor();
         TO_HELIOS_INTEGER(res)->value =
             TO_HELIOS_INTEGER(self)->value + TO_HELIOS_INTEGER(other)->value;
@@ -22,7 +25,10 @@ helios_object *helios_integer_add(helios_object *self, helios_object *other) {
 
 helios_object *helios_integer_subtract(helios_object *self,
                                        helios_object *other) {
-    if (IS_HELIOS_INTEGER(other)) {
+    if (other == NULL) {
+        printf("can't subtract NULL from number\n");
+        exit(-1);
+    } else if (IS_HELIOS_INTEGER(other)) {
         helios_object *res = helios_integer_type.constructor();
         TO_HELIOS_INTEGER(res)->value =
             TO_HELIOS_INTEGER(self)->value - TO_HELIOS_INTEGER(other)->value;
@@ -40,7 +46,10 @@ helios_object *helios_integer_subtract(helios_object *self,
 
 helios_object *helios_integer_divide(helios_object *self,
                                      helios_object *other) {
-    if (IS_HELIOS_INTEGER(other)) {
+    if (other == NULL) {
+        printf("can't djivide NULL by number\n");
+        exit(-1);
+    } else if (IS_HELIOS_INTEGER(other)) {
         helios_object *res = helios_float_type.constructor();
         TO_HELIOS_FLOAT(res)->value = (double)TO_HELIOS_INTEGER(self)->value /
                                       (double)TO_HELIOS_INTEGER(other)->value;
@@ -58,7 +67,10 @@ helios_object *helios_integer_divide(helios_object *self,
 
 helios_object *helios_integer_multiply(helios_object *self,
                                        helios_object *other) {
-    if (IS_HELIOS_INTEGER(other)) {
+    if (other == NULL) {
+        printf("can't multiply NULL with number\n");
+        exit(-1);
+    } else if (IS_HELIOS_INTEGER(other)) {
         helios_object *res = helios_integer_type.constructor();
         TO_HELIOS_INTEGER(res)->value =
             TO_HELIOS_INTEGER(self)->value * TO_HELIOS_INTEGER(other)->value;
