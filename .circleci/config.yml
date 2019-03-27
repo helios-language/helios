@@ -9,9 +9,7 @@ jobs:
 
       - run:
           name: Install
-          command: add-apt-repository universe
-          command: apt update
-          command: apt install cmocka
+          command: add-apt-repository universe && apt update && apt install cmocka
 
       - run:
           name: Build
