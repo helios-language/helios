@@ -19,8 +19,8 @@ dirs = $(shell find src/ -type d -print)
 includedirs :=  $(sort $(foreach dir, $(foreach dir1, $(dirs), $(shell dirname $(dir1))), $(wildcard $(dir)/include)))
 
 #linkerflags (include lm (math.h) for advanced math)
-LFLAGS = -lm
-LIBRARIES = -lcmocka
+LFLAGS = 
+LIBRARIES = -lm -lcmocka
 
 #cflags
 CFLAGS= -g -O2 -Wall $(foreach dir, $(includedirs), -I./$(dir))
