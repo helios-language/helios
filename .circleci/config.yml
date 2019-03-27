@@ -8,7 +8,9 @@ jobs:
       - checkout
 
       - run:
-          name: Build
+          name: Install
+          command: add-apt-repository universe
+          command: apt update
           command: apt install cmocka
 
       - run:
