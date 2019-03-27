@@ -21,11 +21,8 @@ includedirs :=  $(sort $(foreach dir, $(foreach dir1, $(dirs), $(shell dirname $
 #linkerflags (include lm (math.h) for advanced math)
 LFLAGS = 
 LIBRARIES = -lm -lcmocka
-<<<<<<< HEAD
 test: LIBRARIES = -lm -lcmocka -lgcov --coverage
 
-=======
->>>>>>> 6d1a2a1cc828dabc14660c7322a45760b2cd3d9c
 
 #cflags
 CFLAGS= -g -O2 -Wall $(foreach dir, $(includedirs), -I./$(dir))
