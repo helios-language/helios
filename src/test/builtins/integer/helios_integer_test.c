@@ -2,7 +2,6 @@
 #include <stdarg.h>
 #include <stddef.h>
 
-#define UNIT_TESTING 1
 #include <cmocka.h>
 
 #include <builtins.h>

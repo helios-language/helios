@@ -2,23 +2,15 @@ version: 2
 jobs:
   build:
     docker:
-      - image: continuul/build-essential:latest
+      - image: jonay2000/helios-test:latest
 
     steps:
       - checkout
 
-      - run:
-          name: Build
-          command: apt install cmocka
 
       - run:
           name: Build
           command: make -B
-
-      - run:
-          name: Memory
-          command: make leaktest -B
-
 
       - run:
           name: Test

@@ -19,8 +19,8 @@ dirs = $(shell find src/ -type d -print)
 includedirs :=  $(sort $(foreach dir, $(foreach dir1, $(dirs), $(shell dirname $(dir1))), $(wildcard $(dir)/include)))
 
 #linkerflags (include lm (math.h) for advanced math)
-LFLAGS = -lm
-LIBRARIES = -lcmocka
+LFLAGS = 
+LIBRARIES = -lm -lcmocka
 
 #cflags
 CFLAGS= -g -O2 -Wall $(foreach dir, $(includedirs), -I./$(dir))
@@ -74,8 +74,10 @@ run: $(executable)
 	@echo starting
 	@./$(executable) $(TESTFILE) $(TESTRES)
 
+
+#test and find leaks at the same time.
 test: $(executable)
-	@./$(executable)
+	@valgrind --error-exitcode=1 --leak-check=full --show-leak-kinds=all ./$(executable)
 
 $(executable): $(assembly_object_files) $(c_object_files) $(nassembly_object_files)
 	@echo linking...
