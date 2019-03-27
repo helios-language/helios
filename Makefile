@@ -21,12 +21,12 @@ includedirs :=  $(sort $(foreach dir, $(foreach dir1, $(dirs), $(shell dirname $
 #linkerflags (include lm (math.h) for advanced math)
 LFLAGS = 
 LIBRARIES = -lm -lcmocka
+test: LIBRARIES = -lm -lcmocka -lgcov --coverage
+
 
 #cflags
 CFLAGS= -g -O2 -Wall $(foreach dir, $(includedirs), -I./$(dir))
-test: CFLAGS= -g -O2 -Wall -DTEST $(foreach dir, $(includedirs), -I./$(dir))
-
-
+test: CFLAGS= -g -O2 -Wall -DTEST -fprofile-arcs -ftest-coverage $(foreach dir, $(includedirs), -I./$(dir)) 
 
 #assembly
 ASMFLAGS = $(foreach dir, $(includedirs), -I./$(dir))
@@ -74,10 +74,10 @@ run: $(executable)
 	@echo starting
 	@./$(executable) $(TESTFILE) $(TESTRES)
 
-
+# gcov $(executable)
 #test and find leaks at the same time.
 test: $(executable)
-	@valgrind --error-exitcode=1 --leak-check=full --show-leak-kinds=all ./$(executable)
+	@valgrind --error-exitcode=1 --leak-check=full --show-leak-kinds=all $(executable)
 
 $(executable): $(assembly_object_files) $(c_object_files) $(nassembly_object_files)
 	@echo linking...

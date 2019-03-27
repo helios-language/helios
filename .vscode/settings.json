@@ -31,7 +31,9 @@
         "stdarg.h": "c",
         "builtins_test.h": "c",
         "parser_error.h": "c",
-        "error.h": "c"
+        "error.h": "c",
+        "integer_test.h": "c",
+        "stddef.h": "c"
     },
     "python.pythonPath": "/usr/bin/python3"
 }

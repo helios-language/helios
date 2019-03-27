@@ -9,6 +9,5 @@
 #undef main // this makes it so testmain becomes main
 
 int testmain(int argc, char *argv[]) {
-    builtins_test();
-    return 0;
+    return builtins_test();
 }
