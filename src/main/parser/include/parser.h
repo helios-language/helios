@@ -31,10 +31,7 @@
  */
 #define PARSER_ACCEPTED_MAX_STRLEN 100
 #define PARSER_INDENT_STACK_DEFAULT_SIZE 10
-#define PARSER_SPACES_PER_TAB 4
 
-#define PARSER_INDENT 17 // ascii character DC1 will be an indent
-#define PARSER_DEDENT 18 // ascii character DC2 will be a dedent
 
 /**
  *  This struct represents the state of the parser.
@@ -85,5 +82,6 @@ bool parser_acceptanychar(Parser_t *parser, char *characters);
 bool parser_acceptstring(Parser_t *parser, char *str);
 bool parser_expectchar(Parser_t *parser, char character);
 bool parser_expectstring(Parser_t *parser, char *str);
+char *parser_preprocess(char *code);
 
 #endif

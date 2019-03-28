@@ -16,8 +16,7 @@ PARSERFUNC(block) { // '\r'?'\n' indent statement+ dedent
     uint32_t eslength1 = errorstack_length(parser->es);
     AST *result = AST_new(token_new(TOK_BLOCK, NULL));
 
-    parser_expectchar(parser, '\n');
-    parser_expectchar(parser, PARSER_INDENT);
+    parser_expectchar(parser, '{');
     do {
         parser_skipws(parser);
 
@@ -25,7 +24,7 @@ PARSERFUNC(block) { // '\r'?'\n' indent statement+ dedent
             parser_skipws(parser);
         }
 
-        if (parser_acceptchar(parser, PARSER_DEDENT)) {
+        if (parser_acceptchar(parser, '}')) {
             break;
         }
 

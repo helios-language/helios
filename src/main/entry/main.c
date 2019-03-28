@@ -30,5 +30,6 @@ int main(int argc, char *argv[]) {
     free(file);
     AST_free(ast);
     helios_delete_garbagecollector(gc);
+
     return 0;
 }
