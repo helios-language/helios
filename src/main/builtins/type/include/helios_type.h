@@ -35,7 +35,8 @@ struct __helios_type_s;
     char *classname;                                                           \
     struct __helios_object_s *(*represent)(struct __helios_object_s * obj);    \
     struct __helios_object_s *(*tostring)(struct __helios_object_s * obj);     \
-    struct __helios_object_s *(*copy)(struct __helios_object_s * obj);
+    struct __helios_object_s *(*copy)(struct __helios_object_s * obj);         \
+    struct __helios_object_s *(*hash)(struct __helios_object_s * self);
 
 /**
  * Initializes all HELIOS_OBJECT_BASIC_FIELDS to NULL. Technically not needed as
@@ -43,7 +44,7 @@ struct __helios_type_s;
  */
 #define HELIOS_OBJECT_BASIC_FIELDS_NULL()                                      \
     .constructor = NULL, .destructor = NULL, .classname = NULL,                \
-    .tostring = NULL, .represent = NULL, .copy = NULL
+    .tostring = NULL, .represent = NULL, .copy = NULL, .hash = NULL
 
 /**
  * Set the constructor in a struct initialization.
@@ -69,6 +70,10 @@ struct __helios_type_s;
  * Set the copy function in a struct initialization.
  */
 #define HELIOS_OBJECT_BASIC_FIELDS_COPY(function) .copy = function
+/**
+ * Set the hash function in a struct initialization.
+ */
+#define HELIOS_OBJECT_BASIC_FIELDS_HASH(function) .hash = function
 
 /**
  * Define the fields corresponding to binary number operators for helios object
@@ -171,27 +176,80 @@ struct __helios_type_s;
 #define HELIOS_OBJECT_STATIC() .staticobj = true
 
 /**
- * The definition of a helios type struct. This is the part in any helios
- * object defining what type it is. Any helios struct must define a type and
- * use it in the HELIOS_OBJECT_COMMON_BASE which tells the object system
- * what type the object is. It has pointers to all the functions and fields
- * acting on the type which are standardized. Non standard functions can
- * still be exported (example: helios_string_from_charp).
+ * These fields define methods which compare objects.
+ */
+#define HELIOS_OBJECT_COMPARISON_FIELDS                                        \
+    struct __helios_object_s *(*equals)(struct __helios_object_s * self,       \
+                                        struct __helios_object * other);       \
+    struct __helios_object_s *(*greater)(struct __helios_object_s * self,      \
+                                         struct __helios_object * other);      \
+    struct __helios_object_s *(*less)(struct __helios_object_s * self,         \
+                                      struct __helios_object * other);         \
+    struct __helios_object_s *(*greaterequals)(                                \
+        struct __helios_object_s * self, struct __helios_object * other);      \
+    struct __helios_object_s *(*lessequals)(struct __helios_object_s * self,   \
+                                            struct __helios_object * other);   \
+    struct __helios_object_s *(*notequals)(struct __helios_object_s * self,    \
+                                           struct __helios_object * other);
+
+/**
+ * These fields define methods applying on sequences.
+ */
+#define HELIOS_OBJECT_SEQUENCE_FIELDS                                          \
+    struct __helios_object_s *(*length)(struct __helios_object_s * self);      \
+    struct __helios_object_s *(*iter)(struct __helios_object_s * self);        \
+    struct __helios_object_s *(*getitem)(struct __helios_object_s * self,      \
+                                         struct __helios_object_s * item);     \
+    struct __helios_object_s *(*getattr)(struct __helios_object_s * self,      \
+                                         struct __helios_object_s * attr);     \
+    struct __helios_object_s *(*setitem)(struct __helios_object_s * self,      \
+                                         struct __helios_object_s * item,      \
+                                         struct __helios_object_s * value);    \
+    struct __helios_object_s *(*setattr)(struct __helios_object_s * self,      \
+                                         struct __helios_object_s * attr,      \
+                                         struct __helios_object_s * value);    \
+    struct __helios_object_s *(*append)(struct __helios_object_s * self,       \
+                                        struct __helios_object_s * other);     \
+    struct __helios_object_s *(*extend)(struct __helios_object_s * self,       \
+                                        struct __helios_object_s * other);     \
+    struct __helios_object_s *(*repeat)(struct __helios_object_s * self,       \
+                                        struct __helios_object_s * other);     \
+    struct __helios_object_s *(*contains)(struct __helios_object_s * self,     \
+                                          struct __helios_object_s * other)
+
+/**
+ * The definition of a helios type struct.
+ * This is the part in any helios object
+ * defining what type it is. Any helios
+ * struct must define a type and use it in
+ * the HELIOS_OBJECT_COMMON_BASE which tells
+ * the object system what type the object
+ * is. It has pointers to all the functions
+ * and fields acting on the type which are
+ * standardized. Non standard functions can
+ * still be exported (example:
+ * helios_string_from_charp).
  *
  * Inheritance system:
- * Any object has an helios_type object in it of which the object is an
- * instance. helios_type is always instance of itself. By putting a pointer
- * to the type of an object in the first field of the struct, any
- * helios_object can be cast to the msot basic object possible
- * (helios_object), and using the type it's type can be determined and the
- * object can be cast back. This makes it possible to use helios_object as
- * type for any helios object.
+ * Any object has an helios_type object in
+ * it of which the object is an instance.
+ * helios_type is always instance of itself.
+ * By putting a pointer to the type of an
+ * object in the first field of the struct,
+ * any helios_object can be cast to the msot
+ * basic object possible (helios_object),
+ * and using the type it's type can be
+ * determined and the object can be cast
+ * back. This makes it possible to use
+ * helios_object as type for any helios
+ * object.
  */
 typedef struct __helios_type_s {
     HELIOS_OBJECT_COMMON_BASE;
     HELIOS_OBJECT_BASIC_FIELDS;
     HELIOS_OBJECT_BINOPS_FIELDS;
     HELIOS_OBJECT_UNARYOPS_FIELDS;
+    HELIOS_OBJECT_SEQUENCE_FIELDS;
 
     HELIOS_OBJECT_STATIC_FIELD;
 } helios_type;

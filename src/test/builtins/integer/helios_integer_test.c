@@ -9,6 +9,7 @@
 void helios_integer_init_test(void **state) {
     helios_object *obj = helios_integer_init();
 
+    assert_true(IS_HELIOS_INTEGER(obj));
     assert_string_equal("Integer", obj->class->classname);
 
     helios_integer *intobj = TO_HELIOS_INTEGER(obj);

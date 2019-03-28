@@ -9,6 +9,7 @@
 void helios_float_init_test(void **state) {
     helios_object *obj = helios_float_init();
 
+    assert_true(IS_HELIOS_FLOAT(obj));
     assert_string_equal("Float", obj->class->classname);
 
     helios_float *intobj = TO_HELIOS_FLOAT(obj);

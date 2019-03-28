@@ -228,15 +228,30 @@ void helios_set_garbagecollectable(helios_object *obj) {
  * Frees all tracked objects of a garbagecollector without freeing the GC
  * itself.
  *
+ * The system to free all objects looks very weird but the program will crash
+ * when the contents of a container are freed before the container themselves.
+ * This is because the containers decref their contents. This is only possible
+ * when there are contents. The complex solution would be to sort the objects
+ * based on their refcount and free them in that order. But there is an easier
+ * method: just decref all objects in the system one at a time until they are
+ * all gone from the system. When a refcount reaches 0 its removed from the
+ * system. This makes items with high refcounts (those in containers) get freed
+ * after the containers themselves as they have a guaranteed lower refcount. The
+ * only problem would be cycles but this is a TODO.
+ *
+ *
  * @param gc the garbagecollector to free all tracked objects from
  */
 void helios_free_all_tracked(garbagecollector *gc) {
 #if HELIOS_MEMORY_DEBUG
     printf("\x1b[31mfreeing all tracked objects.\n\x1b[0m\n");
 #endif
-    for (uint32_t i = 0; i < gc->size; i++) {
-        if (gc->allocated_objects[i].used == true) {
-            HELIOS_CALL_MEMBER(destructor, gc->allocated_objects[i].obj);
+
+    while (gc->filled > 0) {
+        for (uint32_t i = 0; i < gc->size; i++) {
+            if (gc->allocated_objects[i].used == true) {
+                HELIOS_DECREF(gc->allocated_objects[i].obj);
+            }
         }
     }
 }

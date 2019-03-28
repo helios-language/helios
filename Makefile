@@ -26,8 +26,10 @@ test: LIBRARIES = -lm -lcmocka -lgcov --coverage
 
 
 #cflags
-CFLAGS= -g -O2 -Wall $(foreach dir, $(includedirs), -I./$(dir))
+CFLAGS= -O2 -Wall $(foreach dir, $(includedirs), -I./$(dir))
+debug: CFLAGS= -g -O0 -Wall $(foreach dir, $(includedirs), -I./$(dir))
 test: CFLAGS= -g -O2 -Wall -DTEST -fprofile-arcs -ftest-coverage $(foreach dir, $(includedirs), -I./$(dir)) 
+testmemgraph: CFLAGS=-g -O2 -Wall -DTEST $(foreach dir, $(includedirs), -I./$(dir)) 
 
 #assembly
 ASMFLAGS = $(foreach dir, $(includedirs), -I./$(dir))
@@ -55,7 +57,7 @@ c_object_files := $(patsubst src/%.c, \
 all: $(executable)
 
 install:
-	sudo pacman -S base-devel doxygen graphviz valgrind cmocka
+	sudo pacman -S base-devel doxygen graphviz valgrind cmocka massif-visualizer
 
 memgraph: $(executable)
 	valgrind --tool=massif --massif-out-file=massif.out.1 $(executable) $(TESTFILE) $(TESTRES)
@@ -80,6 +82,10 @@ run: $(executable)
 #test and find leaks at the same time.
 test: $(executable)
 	@valgrind --error-exitcode=1 --leak-check=full --show-leak-kinds=all $(executable)
+
+testmemgraph: $(executable)
+	@valgrind --tool=massif --massif-out-file=massif.out.1 $(executable)
+	massif-visualizer massif.out.1
 
 
 $(executable): $(assembly_object_files) $(c_object_files) $(nassembly_object_files)

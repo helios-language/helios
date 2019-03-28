@@ -13,10 +13,24 @@
  * @param value the value contained in the newly created helios_integer object
  * @return a new helios_integer object.
  */
-helios_object *helios_integer_from_cint(int32_t value) {
+helios_object *helios_integer_from_cint(int64_t value) {
     helios_object *res = helios_integer_init();
     TO_HELIOS_INTEGER(res)->value = value;
     return res;
+}
+
+/**
+ * Extract the c integer (long) from a helios object.
+ *
+ * @param obj the object to extract the int outof
+ * @return the cint
+ */
+int64_t helios_integer_to_cint(helios_object *obj) {
+    if (!IS_HELIOS_INTEGER(obj)) {
+        printf("has to be helios integer\n");
+        exit(-1);
+    }
+    return TO_HELIOS_INTEGER(obj)->value;
 }
 
 /**
@@ -54,9 +68,9 @@ helios_object *helios_integer_init() {
  * helios_integer
  */
 helios_object *helios_integer_tostring(helios_object *self) {
-    uint32_t digits = floor(log10(abs(TO_HELIOS_INTEGER(self)->value))) + 2;
+    int64_t digits = floor(log10(abs(TO_HELIOS_INTEGER(self)->value))) + 2;
     char str[digits];
-    sprintf(str, "%d", TO_HELIOS_INTEGER(self)->value);
+    sprintf(str, "%ld", TO_HELIOS_INTEGER(self)->value);
     return helios_string_from_charp(str);
 }
 

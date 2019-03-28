@@ -8,7 +8,7 @@
 
 typedef struct __helios_integer_s {
     HELIOS_OBJECT_COMMON_BASE;
-    int32_t value;
+    int64_t value;
 } helios_integer;
 
 helios_type helios_integer_type;
@@ -35,6 +35,7 @@ helios_object *helios_integer_copy(helios_object *obj);
 helios_object *helios_integer_tostring(helios_object *self);
 helios_object *helios_integer_represent(helios_object *self);
 
-helios_object *helios_integer_from_cint(int32_t value);
+helios_object *helios_integer_from_cint(int64_t value);
+int64_t helios_integer_to_cint(helios_object *obj);
 
 #endif
