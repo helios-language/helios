@@ -5,13 +5,16 @@
 #include <helios_object.h>
 #include <stdbool.h>
 
-#define HELIOS_HASHMAP_DEFAULT_SIZE 10
+//! Keep this a power of 2. This is important so the HELIOS_HASH_NEXT algorithm
+//! keeps working.
+#define HELIOS_HASHMAP_DEFAULT_SIZE 8
 //! This is a feature that consumes 8 bytes more memory per stored hashmap item.
 //! However, rehashing of hashmaps is considerably faster.
 #define STORE_HASH_OPTIMIZATION true
 
 #define HELIOS_HASHMAP_PERTURB_SHIFT 5
 
+//! 5 * curr + 1 + perturb % mod where mod is the size of the hashmap
 #define HELIOS_HASH_NEXT(curr, mod, perturb)                                   \
     (((curr << 2) + curr + perturb + 1) % mod)
 

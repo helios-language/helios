@@ -16,6 +16,7 @@ int main(int argc, char *argv[]) {
         printf("please give the helios compiler a file to compile.\n");
         exit(-1);
     }
+
     char *file = readfiletostring(argv[1]);
 
     garbagecollector *gc = helios_init_garbagecollector();

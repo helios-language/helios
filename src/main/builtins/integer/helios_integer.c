@@ -99,6 +99,31 @@ helios_object *helios_integer_copy(helios_object *obj) {
 }
 
 /**
+ * Hash a helios integer object. (just returns a copy of the int itself)
+ *
+ * @param obj the object to hash
+ * @return the hash
+ */
+helios_object *helios_integer_hash(helios_object *self) {
+    HELIOS_INCREF(self); // incref so the object can never be gone as long as
+                         // the hash is still somewhere
+
+    return self;
+}
+
+helios_object *helios_integer_equal(helios_object *self, helios_object *other);
+helios_object *helios_integer_less(helios_object *self, helios_object *other);
+helios_object *helios_integer_greater(helios_object *self,
+                                      helios_object *other);
+helios_object *helios_integer_notequal(helios_object *self,
+                                       helios_object *other);
+helios_object *helios_integer_greaterequal(helios_object *self,
+                                           helios_object *other);
+helios_object *helios_integer_lessequal(helios_object *self,
+                                        helios_object *other);
+helios_object *helios_integer_boolean(helios_object *self);
+
+/**
  * Definition of the type of any helios_integer object.
  */
 helios_type helios_integer_type = {
@@ -110,6 +135,7 @@ helios_type helios_integer_type = {
     HELIOS_OBJECT_BASIC_FIELDS_REPRESENT(helios_integer_tostring),
     HELIOS_OBJECT_BASIC_FIELDS_TOSTRING(helios_integer_tostring),
     HELIOS_OBJECT_BASIC_FIELDS_COPY(helios_integer_copy),
+    HELIOS_OBJECT_BASIC_FIELDS_HASH(helios_integer_hash),
 
     HELIOS_OBJECT_BINOPS_FIELDS_ADD(helios_integer_add),
     HELIOS_OBJECT_BINOPS_FIELDS_SUBTRACT(helios_integer_subtract),

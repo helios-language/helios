@@ -179,18 +179,60 @@ struct __helios_type_s;
  * These fields define methods which compare objects.
  */
 #define HELIOS_OBJECT_COMPARISON_FIELDS                                        \
-    struct __helios_object_s *(*equals)(struct __helios_object_s * self,       \
-                                        struct __helios_object * other);       \
+    struct __helios_object_s *(*equal)(struct __helios_object_s * self,        \
+                                       struct __helios_object_s * other);      \
     struct __helios_object_s *(*greater)(struct __helios_object_s * self,      \
-                                         struct __helios_object * other);      \
+                                         struct __helios_object_s * other);    \
     struct __helios_object_s *(*less)(struct __helios_object_s * self,         \
-                                      struct __helios_object * other);         \
-    struct __helios_object_s *(*greaterequals)(                                \
-        struct __helios_object_s * self, struct __helios_object * other);      \
-    struct __helios_object_s *(*lessequals)(struct __helios_object_s * self,   \
-                                            struct __helios_object * other);   \
-    struct __helios_object_s *(*notequals)(struct __helios_object_s * self,    \
-                                           struct __helios_object * other);
+                                      struct __helios_object_s * other);       \
+    struct __helios_object_s *(*greaterequal)(                                 \
+        struct __helios_object_s * self, struct __helios_object_s * other);    \
+    struct __helios_object_s *(*lessequal)(struct __helios_object_s * self,    \
+                                           struct __helios_object_s * other);  \
+    struct __helios_object_s *(*notequal)(struct __helios_object_s * self,     \
+                                          struct __helios_object_s * other);   \
+    struct __helios_object_s *(*boolean)(struct __helios_object_s * self)
+
+/**
+ * Zero out all HELIOS_OBJECT_COMPARISON_FIELDS. Technically not needed as
+ * struct fields are nulled automatically. But it does make stuff much
+ * clearer.
+ */
+#define HELIOS_OBJECT_COMPARISON_FIELDS_NULL()                                 \
+    .equals = NULL, .greater = NULL, .less = NULL, .greaterequal = NULL,       \
+    .lessequal = NULL, .notequal = NULL, .boolean = NULL
+
+/**
+ * Set the equals function in a struct initialization.
+ */
+#define HELIOS_OBJECT_COMPARISON_FIELDS_EQUALS(function) .equal = function
+
+/**
+ * Set the greater function in a struct initialization.
+ */
+#define HELIOS_OBJECT_COMPARISON_FIELDS_GREATER(function) .greater = function
+
+/**
+ * Set the less function in a struct initialization.
+ */
+#define HELIOS_OBJECT_COMPARISON_FIELDS_LESS(function) .less = function
+
+/**
+ * Set the greaterequals function in a struct initialization.
+ */
+#define HELIOS_OBJECT_COMPARISON_FIELDS_GREATEREQUALS(function)                \
+    .greaterequal = function
+
+/**
+ * Set the lessequals function in a struct initialization.
+ */
+#define HELIOS_OBJECT_COMPARISON_FIELDS_LESSEQUALS(function)                   \
+    .lessequal = function
+
+/**
+ * Set the notequals function in a struct initialization.
+ */
+#define HELIOS_OBJECT_COMPARISON_FIELDS_NOTEQUALS(function) .notequal = function
 
 /**
  * These fields define methods applying on sequences.
@@ -250,6 +292,7 @@ typedef struct __helios_type_s {
     HELIOS_OBJECT_BINOPS_FIELDS;
     HELIOS_OBJECT_UNARYOPS_FIELDS;
     HELIOS_OBJECT_SEQUENCE_FIELDS;
+    HELIOS_OBJECT_COMPARISON_FIELDS;
 
     HELIOS_OBJECT_STATIC_FIELD;
 } helios_type;

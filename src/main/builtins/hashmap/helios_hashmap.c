@@ -44,8 +44,7 @@ static void helios_hashmap_rehash(helios_object *self) {
 #if STORE_HASH_OPTIMIZATION
         uint64_t hash = abs(hmself->value[i]->cachedhash);
 #else
-        uint64_t hash =
-            helios_integer_to_cint(helios_hash(hmself->value[i].key));
+        uint64_t hash = helios_hash_cint(hmself->value[i].key);
 #endif
         uint64_t newindex = hash % newsize;
 
@@ -75,7 +74,7 @@ void helios_hashmap_put(helios_object *self, helios_object *key,
                         helios_object *value) {
     helios_hashmap *hmself = TO_HELIOS_HASHMAP(self);
     uint32_t size = hmself->size;
-    uint64_t hash = abs(helios_integer_to_cint(helios_hash(key)));
+    uint64_t hash = abs(helios_hash_cint(key));
     int64_t index = hash % size;
 
     // search for this first non used value. so either defunct or null

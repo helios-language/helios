@@ -27,5 +27,6 @@ helios_object *helios_notequal(helios_object *self, helios_object *other);
 helios_object *helios_greaterequal(helios_object *self, helios_object *other);
 helios_object *helios_lessequal(helios_object *self, helios_object *other);
 helios_object *helios_hash(helios_object *obj);
+int64_t helios_hash_cint(helios_object *obj);
 
 #endif

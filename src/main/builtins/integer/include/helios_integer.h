@@ -31,9 +31,22 @@ helios_object *helios_integer_multiply(helios_object *self,
 void helios_integer_delete(helios_object *self);
 helios_object *helios_integer_init();
 helios_object *helios_integer_copy(helios_object *obj);
+helios_object *helios_integer_hash(helios_object *self);
 
 helios_object *helios_integer_tostring(helios_object *self);
 helios_object *helios_integer_represent(helios_object *self);
+
+helios_object *helios_integer_equal(helios_object *self, helios_object *other);
+helios_object *helios_integer_less(helios_object *self, helios_object *other);
+helios_object *helios_integer_greater(helios_object *self,
+                                      helios_object *other);
+helios_object *helios_integer_notequal(helios_object *self,
+                                       helios_object *other);
+helios_object *helios_integer_greaterequal(helios_object *self,
+                                           helios_object *other);
+helios_object *helios_integer_lessequal(helios_object *self,
+                                        helios_object *other);
+helios_object *helios_integer_boolean(helios_object *self);
 
 helios_object *helios_integer_from_cint(int64_t value);
 int64_t helios_integer_to_cint(helios_object *obj);

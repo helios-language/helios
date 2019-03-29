@@ -26,6 +26,9 @@ helios_type helios_boolean_type;
 //! true if the object is helios_boolean_true
 #define HELIOS_BOOLEAN_IS_TRUE(obj) (obj == helios_boolean_true)
 
+//! true if the object is helios_boolean_true
+#define HELIOS_BOOLEAN_IS_FALSE(obj) (obj == helios_boolean_false)
+
 // global export of boolean functions
 
 void helios_boolean_delete(helios_object *self);
