@@ -17,6 +17,8 @@ helios_object *helios_integer_equal(helios_object *self, helios_object *other) {
         } else {
             return helios_boolean_false;
         }
+    } else if (IS_HELIOS_BOOLEAN(other)) {
+        return helios_integer_equal(self, helios_boolean_integer(other));
     } else {
         return helios_boolean_false;
     }
@@ -29,6 +31,8 @@ helios_object *helios_integer_less(helios_object *self, helios_object *other) {
     } else if (IS_HELIOS_FLOAT(other)) {
         return helios_boolean_from_cbool(TO_HELIOS_INTEGER(self)->value <
                                          TO_HELIOS_FLOAT(other)->value);
+    } else if (IS_HELIOS_BOOLEAN(other)) {
+        return helios_integer_less(self, helios_boolean_integer(other));
     } else {
         return helios_boolean_false;
     }
@@ -42,6 +46,8 @@ helios_object *helios_integer_greater(helios_object *self,
     } else if (IS_HELIOS_FLOAT(other)) {
         return helios_boolean_from_cbool(TO_HELIOS_INTEGER(self)->value >
                                          TO_HELIOS_FLOAT(other)->value);
+    } else if (IS_HELIOS_BOOLEAN(other)) {
+        return helios_integer_greater(self, helios_boolean_integer(other));
     } else {
         return helios_boolean_false;
     }
@@ -60,6 +66,8 @@ helios_object *helios_integer_notequal(helios_object *self,
         } else {
             return helios_boolean_true;
         }
+    } else if (IS_HELIOS_BOOLEAN(other)) {
+        return helios_integer_notequal(self, helios_boolean_integer(other));
     } else {
         return helios_boolean_false;
     }
@@ -76,6 +84,8 @@ helios_object *helios_integer_greaterequal(helios_object *self,
         // doesnt need the ceil stuff needed for equals.
         return helios_boolean_from_cbool(
             !(TO_HELIOS_INTEGER(self)->value < TO_HELIOS_FLOAT(other)->value));
+    } else if (IS_HELIOS_BOOLEAN(other)) {
+        return helios_integer_greaterequal(self, helios_boolean_integer(other));
     } else {
         return helios_boolean_false;
     }
@@ -89,6 +99,8 @@ helios_object *helios_integer_lessequal(helios_object *self,
     } else if (IS_HELIOS_FLOAT(other)) {
         return helios_boolean_from_cbool(
             !(TO_HELIOS_INTEGER(self)->value > TO_HELIOS_FLOAT(other)->value));
+    } else if (IS_HELIOS_BOOLEAN(other)) {
+        return helios_integer_lessequal(self, helios_boolean_integer(other));
     } else {
         return helios_boolean_false;
     }
@@ -96,7 +108,7 @@ helios_object *helios_integer_lessequal(helios_object *self,
 
 helios_object *helios_integer_boolean(helios_object *self) {
     if (TO_HELIOS_INTEGER(self)->value == 0) {
-        return helios_boolean_true;
+        return helios_boolean_false;
     }
-    return helios_boolean_false;
+    return helios_boolean_true;
 }

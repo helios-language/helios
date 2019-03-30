@@ -38,6 +38,19 @@ helios_object *helios_boolean_copy(helios_object *obj);
 helios_object *helios_boolean_tostring(helios_object *self);
 helios_object *helios_boolean_represent(helios_object *self);
 
+helios_object *helios_boolean_equal(helios_object *self, helios_object *other);
+helios_object *helios_boolean_less(helios_object *self, helios_object *other);
+helios_object *helios_boolean_greater(helios_object *self,
+                                      helios_object *other);
+helios_object *helios_boolean_notequal(helios_object *self,
+                                       helios_object *other);
+helios_object *helios_boolean_greaterequal(helios_object *self,
+                                           helios_object *other);
+helios_object *helios_boolean_lessequal(helios_object *self,
+                                        helios_object *other);
+helios_object *helios_boolean_boolean(helios_object *self);
+
+helios_object *helios_boolean_integer(helios_object *self);
 helios_object *helios_boolean_from_cint(int32_t value);
 helios_object *helios_boolean_from_cbool(bool value);
 

@@ -111,18 +111,6 @@ helios_object *helios_integer_hash(helios_object *self) {
     return self;
 }
 
-helios_object *helios_integer_equal(helios_object *self, helios_object *other);
-helios_object *helios_integer_less(helios_object *self, helios_object *other);
-helios_object *helios_integer_greater(helios_object *self,
-                                      helios_object *other);
-helios_object *helios_integer_notequal(helios_object *self,
-                                       helios_object *other);
-helios_object *helios_integer_greaterequal(helios_object *self,
-                                           helios_object *other);
-helios_object *helios_integer_lessequal(helios_object *self,
-                                        helios_object *other);
-helios_object *helios_integer_boolean(helios_object *self);
-
 /**
  * Definition of the type of any helios_integer object.
  */
@@ -136,6 +124,14 @@ helios_type helios_integer_type = {
     HELIOS_OBJECT_BASIC_FIELDS_TOSTRING(helios_integer_tostring),
     HELIOS_OBJECT_BASIC_FIELDS_COPY(helios_integer_copy),
     HELIOS_OBJECT_BASIC_FIELDS_HASH(helios_integer_hash),
+
+    HELIOS_OBJECT_COMPARISON_FIELDS_EQUAL(helios_integer_equal),
+    HELIOS_OBJECT_COMPARISON_FIELDS_LESS(helios_integer_less),
+    HELIOS_OBJECT_COMPARISON_FIELDS_GREATER(helios_integer_greater),
+    HELIOS_OBJECT_COMPARISON_FIELDS_NOTEQUAL(helios_integer_notequal),
+    HELIOS_OBJECT_COMPARISON_FIELDS_GREATEREQUAL(helios_integer_greaterequal),
+    HELIOS_OBJECT_COMPARISON_FIELDS_LESSEQUAL(helios_integer_lessequal),
+    HELIOS_OBJECT_COMPARISON_FIELDS_BOOLEAN(helios_integer_boolean),
 
     HELIOS_OBJECT_BINOPS_FIELDS_ADD(helios_integer_add),
     HELIOS_OBJECT_BINOPS_FIELDS_SUBTRACT(helios_integer_subtract),

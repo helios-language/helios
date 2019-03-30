@@ -2,11 +2,13 @@
 #include <assert.h>
 #include <ctype.h>
 #include <helios_float.h>
+#include <helios_integer.h>
 #include <helios_memory.h>
 #include <helios_object.h>
 #include <helios_string.h>
 #include <math.h>
 #include <stdio.h>
+#include <string.h>
 
 /**
  * Create a helios_float object from a c double type. Alternate
@@ -87,6 +89,18 @@ helios_object *helios_float_copy(helios_object *obj) {
     return TO_HELIOS_OBJECT(new);
 }
 
+helios_object *helios_float_hash(helios_object *self) {
+    // round to n decimal places before hashing
+    double rounded = floor(pow(10, FLOAT_HASH_CUTOFF_PRECISION) *
+                           TO_HELIOS_FLOAT(self)->value) /
+                     pow(10, FLOAT_HASH_CUTOFF_PRECISION);
+
+    uint64_t floatbits;
+    memcpy(&floatbits, &rounded, sizeof(double));
+
+    return helios_integer_from_cint(floatbits);
+}
+
 /**
  * Definition of the type of any helios_float object.
  */
@@ -99,6 +113,15 @@ helios_type helios_float_type = {
     HELIOS_OBJECT_BASIC_FIELDS_REPRESENT(helios_float_tostring),
     HELIOS_OBJECT_BASIC_FIELDS_TOSTRING(helios_float_tostring),
     HELIOS_OBJECT_BASIC_FIELDS_COPY(helios_float_copy),
+    HELIOS_OBJECT_BASIC_FIELDS_HASH(helios_float_hash),
+
+    HELIOS_OBJECT_COMPARISON_FIELDS_EQUAL(helios_float_equal),
+    HELIOS_OBJECT_COMPARISON_FIELDS_LESS(helios_float_less),
+    HELIOS_OBJECT_COMPARISON_FIELDS_GREATER(helios_float_greater),
+    HELIOS_OBJECT_COMPARISON_FIELDS_NOTEQUAL(helios_float_notequal),
+    HELIOS_OBJECT_COMPARISON_FIELDS_GREATEREQUAL(helios_float_greaterequal),
+    HELIOS_OBJECT_COMPARISON_FIELDS_LESSEQUAL(helios_float_lessequal),
+    HELIOS_OBJECT_COMPARISON_FIELDS_BOOLEAN(helios_float_boolean),
 
     HELIOS_OBJECT_BINOPS_FIELDS_ADD(helios_float_add),
     HELIOS_OBJECT_BINOPS_FIELDS_SUBTRACT(helios_float_subtract),

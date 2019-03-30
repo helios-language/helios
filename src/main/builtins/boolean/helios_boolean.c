@@ -1,5 +1,6 @@
 
 #include <helios_boolean.h>
+#include <helios_integer.h>
 #include <helios_memory.h>
 #include <helios_object.h>
 #include <helios_string.h>
@@ -53,6 +54,19 @@ helios_object *helios_boolean_init() {
 }
 
 /**
+ * Convert a boolean to an integer. True=1, False=0
+ *
+ * @param self the boolean to convert
+ * @return either 1 or 0
+ */
+helios_object *helios_boolean_integer(helios_object *self) {
+    if (HELIOS_BOOLEAN_IS_TRUE(self)) {
+        return helios_integer_from_cint(1);
+    }
+    return helios_integer_from_cint(0);
+}
+
+/**
  * Create a helios_string object which represents the helios_boolean object's
  * value.
  *
@@ -81,11 +95,24 @@ helios_object *helios_boolean_represent(helios_object *self) {
 /**
  * Copy a helios integer object.
  *
- * @param obj the object to copy
+ * @param self the object to copy
  * @return a new helios_boolean with the same value
  */
-helios_object *helios_boolean_copy(helios_object *obj) {
-    return obj;
+helios_object *helios_boolean_copy(helios_object *self) {
+    return self;
+}
+
+/**
+ * Hash a boolean. Either 1 or 0.
+ *
+ * @param self the boolean to hash
+ * @return the hash
+ */
+helios_object *helios_boolean_hash(helios_object *self) {
+    if (HELIOS_BOOLEAN_IS_TRUE(self)) {
+        return helios_integer_from_cint(1);
+    }
+    return helios_integer_from_cint(0);
 }
 
 /**
@@ -100,6 +127,15 @@ helios_type helios_boolean_type = {
     HELIOS_OBJECT_BASIC_FIELDS_REPRESENT(helios_boolean_tostring),
     HELIOS_OBJECT_BASIC_FIELDS_TOSTRING(helios_boolean_tostring),
     HELIOS_OBJECT_BASIC_FIELDS_COPY(helios_boolean_copy),
+    HELIOS_OBJECT_BASIC_FIELDS_HASH(helios_boolean_hash),
+
+    HELIOS_OBJECT_COMPARISON_FIELDS_EQUAL(helios_boolean_equal),
+    HELIOS_OBJECT_COMPARISON_FIELDS_LESS(helios_boolean_less),
+    HELIOS_OBJECT_COMPARISON_FIELDS_GREATER(helios_boolean_greater),
+    HELIOS_OBJECT_COMPARISON_FIELDS_NOTEQUAL(helios_boolean_notequal),
+    HELIOS_OBJECT_COMPARISON_FIELDS_GREATEREQUAL(helios_boolean_greaterequal),
+    HELIOS_OBJECT_COMPARISON_FIELDS_LESSEQUAL(helios_boolean_lessequal),
+    HELIOS_OBJECT_COMPARISON_FIELDS_BOOLEAN(helios_boolean_boolean),
 
     HELIOS_OBJECT_BINOPS_FIELDS_NULL(),
 

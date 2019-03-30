@@ -63,6 +63,30 @@ void helios_float_from_cdouble_test(void **state) {
     assert_int_equal(obj->value, 42.0);
 }
 
+void helios_float_hash_equal_test(void **state) {
+    helios_integer *obj1 =
+        TO_HELIOS_INTEGER(helios_float_hash(helios_float_from_cdouble(42.0)));
+    helios_integer *obj2 =
+        TO_HELIOS_INTEGER(helios_float_hash(helios_float_from_cdouble(42.0)));
+    assert_int_equal(obj1->value, obj2->value);
+}
+
+void helios_float_hash_not_equal_test(void **state) {
+    helios_integer *obj1 =
+        TO_HELIOS_INTEGER(helios_float_hash(helios_float_from_cdouble(42.0)));
+    helios_integer *obj2 =
+        TO_HELIOS_INTEGER(helios_float_hash(helios_float_from_cdouble(10)));
+    assert_false(obj1->value == obj2->value);
+}
+
+void helios_float_hash_close_test(void **state) {
+    helios_integer *obj1 = TO_HELIOS_INTEGER(
+        helios_float_hash(helios_float_from_cdouble(42.00000000000009)));
+    helios_integer *obj2 = TO_HELIOS_INTEGER(
+        helios_float_hash(helios_float_from_cdouble(42.00000000000001)));
+    assert_int_equal(obj1->value, obj2->value);
+}
+
 int helios_float_test_setup(void **state) {
     garbagecollector *gc = helios_init_garbagecollector();
     helios_set_garbagecollector(gc);
@@ -83,6 +107,9 @@ int float_test() {
         cmocka_unit_test(helios_float_tostring_large_test),
         cmocka_unit_test(helios_float_represent_test),
         cmocka_unit_test(helios_float_copy_test),
+        cmocka_unit_test(helios_float_hash_equal_test),
+        cmocka_unit_test(helios_float_hash_not_equal_test),
+        cmocka_unit_test(helios_float_hash_close_test),
     };
     return cmocka_run_group_tests_name("Helios float", tests,
                                        helios_float_test_setup,

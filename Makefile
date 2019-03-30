@@ -12,6 +12,10 @@ TESTRES = test.helc
 
 #names
 executable_fullname := helios-$(version)-$(arch)
+test: executable_fullname := helios-$(version)-$(arch)-test
+testmemgraph: executable_fullname := helios-$(version)-$(arch)-test
+debug: executable_fullname := helios-$(version)-$(arch)-debug
+
 executable := bin/$(executable_fullname)
 
 #include paths
@@ -23,6 +27,7 @@ LFLAGS =
 LIBRARIES = -lm -lcmocka
 
 test: LIBRARIES = -lm -lcmocka -lgcov --coverage
+testmemgraph: LIBRARIES = -lm -lcmocka -lgcov --coverage
 
 
 #cflags

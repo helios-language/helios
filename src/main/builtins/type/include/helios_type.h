@@ -205,7 +205,7 @@ struct __helios_type_s;
 /**
  * Set the equals function in a struct initialization.
  */
-#define HELIOS_OBJECT_COMPARISON_FIELDS_EQUALS(function) .equal = function
+#define HELIOS_OBJECT_COMPARISON_FIELDS_EQUAL(function) .equal = function
 
 /**
  * Set the greater function in a struct initialization.
@@ -220,19 +220,24 @@ struct __helios_type_s;
 /**
  * Set the greaterequals function in a struct initialization.
  */
-#define HELIOS_OBJECT_COMPARISON_FIELDS_GREATEREQUALS(function)                \
+#define HELIOS_OBJECT_COMPARISON_FIELDS_GREATEREQUAL(function)                 \
     .greaterequal = function
 
 /**
  * Set the lessequals function in a struct initialization.
  */
-#define HELIOS_OBJECT_COMPARISON_FIELDS_LESSEQUALS(function)                   \
+#define HELIOS_OBJECT_COMPARISON_FIELDS_LESSEQUAL(function)                    \
     .lessequal = function
 
 /**
  * Set the notequals function in a struct initialization.
  */
-#define HELIOS_OBJECT_COMPARISON_FIELDS_NOTEQUALS(function) .notequal = function
+#define HELIOS_OBJECT_COMPARISON_FIELDS_NOTEQUAL(function) .notequal = function
+
+/**
+ * Set the bool function in a struct initialization.
+ */
+#define HELIOS_OBJECT_COMPARISON_FIELDS_BOOLEAN(function) .boolean = function
 
 /**
  * These fields define methods applying on sequences.

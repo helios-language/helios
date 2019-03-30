@@ -20,6 +20,10 @@
 #include <helios_memory.h>
 #include <serialize.h>
 
+helios_object *helios_lazy_and(helios_object *a, helios_object *b);
+helios_object *helios_lazy_or(helios_object *a, helios_object *b);
+helios_object *helios_not(helios_object *obj);
+
 helios_object *helios_equal(helios_object *self, helios_object *other);
 helios_object *helios_greater(helios_object *self, helios_object *other);
 helios_object *helios_less(helios_object *self, helios_object *other);

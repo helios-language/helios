@@ -34,7 +34,8 @@
         "error.h": "c",
         "integer_test.h": "c",
         "stddef.h": "c",
-        "helios_hashing.h": "c"
+        "helios_hashing.h": "c",
+        "helios_boolean.h": "c"
     },
     "python.pythonPath": "/usr/bin/python3"
 }
