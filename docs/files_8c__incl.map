@@ -1,8 +1,8 @@
-<map id="files/files.c" name="files/files.c">
-<area shape="rect" id="node1" title=" " alt="" coords="197,5,284,32"/>
-<area shape="rect" id="node2" title=" " alt="" coords="5,80,84,107"/>
-<area shape="rect" id="node3" title=" " alt="" coords="109,80,183,107"/>
-<area shape="rect" id="node4" title=" " alt="" coords="208,80,273,107"/>
-<area shape="rect" id="node5" title=" " alt="" coords="298,80,359,107"/>
-<area shape="rect" id="node6" title=" " alt="" coords="383,80,447,107"/>
+<map id="main/files/files.c" name="main/files/files.c">
+<area shape="rect" id="node1" title=" " alt="" coords="195,5,323,32"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,80,92,107"/>
+<area shape="rect" id="node3" title=" " alt="" coords="117,80,199,107"/>
+<area shape="rect" id="node4" title=" " alt="" coords="224,80,295,107"/>
+<area shape="rect" id="node5" title=" " alt="" coords="319,80,386,107"/>
+<area shape="rect" id="node6" title=" " alt="" coords="411,80,481,107"/>
 </map>

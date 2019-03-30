@@ -46,7 +46,7 @@ if (edges && edges.length) {
         </defs>
 
 <script type="text/javascript">
-var viewWidth = 719;
+var viewWidth = 782;
 var viewHeight = 749;
 var sectionId = 'dynsection-1';
 </script>
@@ -54,13 +54,13 @@ var sectionId = 'dynsection-1';
 <svg id="graph" class="graph">
 <g id="viewport">
 <title>main</title>
-<polygon fill="#ffffff" stroke="transparent" points="-4,4 -4,-745 715,-745 715,4 -4,4"/>
+<polygon fill="#ffffff" stroke="transparent" points="-4,4 -4,-745 778,-745 778,4 -4,4"/>
 <!-- Node0 -->
 <g id="node1" class="node">
 <title>Node0</title>
 <g id="a_node1"><a xlink:title=" ">
-<polygon fill="#bfbfbf" stroke="#000000" points="0,-455.5 0,-474.5 38,-474.5 38,-455.5 0,-455.5"/>
-<text text-anchor="middle" x="19" y="-462.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">main</text>
+<polygon fill="#bfbfbf" stroke="#000000" points="0,-455.5 0,-474.5 41,-474.5 41,-455.5 0,-455.5"/>
+<text text-anchor="middle" x="20.5" y="-462.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">main</text>
 </a>
 </g>
 </g>
@@ -68,636 +68,636 @@ var sectionId = 'dynsection-1';
 <g id="node2" class="node">
 <title>Node1</title>
 <g id="a_node2"><a xlink:href="files_8c.html#ad9909e16f65d8f14412653a8674df0d9" target="_top" xlink:title=" ">
-<polygon fill="#ffffff" stroke="#000000" points="109,-645.5 109,-664.5 189,-664.5 189,-645.5 109,-645.5"/>
-<text text-anchor="middle" x="149" y="-652.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">readfiletostring</text>
+<polygon fill="#ffffff" stroke="#000000" points="116,-645.5 116,-664.5 207,-664.5 207,-645.5 116,-645.5"/>
+<text text-anchor="middle" x="161.5" y="-652.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">readfiletostring</text>
 </a>
 </g>
 </g>
 <!-- Node0&#45;&gt;Node1 -->
 <g id="edge1" class="edge">
 <title>Node0&#45;&gt;Node1</title>
-<path fill="none" stroke="#191970" d="M20.8103,-474.5314C27.1714,-507.0587 49.4454,-612.9473 74,-636 80.9039,-642.4816 89.6932,-646.8342 98.806,-649.7389"/>
-<polygon fill="#191970" stroke="#191970" points="98.1858,-653.1948 108.7473,-652.3547 99.9671,-646.4252 98.1858,-653.1948"/>
+<path fill="none" stroke="#191970" d="M22.3748,-474.5587C28.9589,-507.1753 51.9827,-613.3204 77,-636 85.1027,-643.3455 95.4222,-648.0508 106.0449,-651.0232"/>
+<polygon fill="#191970" stroke="#191970" points="105.2986,-654.4429 115.8307,-653.2917 106.8795,-647.6237 105.2986,-654.4429"/>
 </g>
 <!-- Node2 -->
 <g id="node3" class="node">
 <title>Node2</title>
 <g id="a_node3"><a xlink:href="helios__memory_8h.html#aaabde550780f37dc19f59b3e8bc9c514" target="_top" xlink:title="Creates a new garbagecollector object.">
-<polygon fill="#ffffff" stroke="#000000" points="80.5,-607.5 80.5,-626.5 217.5,-626.5 217.5,-607.5 80.5,-607.5"/>
-<text text-anchor="middle" x="149" y="-614.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">helios_init_garbagecollector</text>
+<polygon fill="#ffffff" stroke="#000000" points="84.5,-607.5 84.5,-626.5 238.5,-626.5 238.5,-607.5 84.5,-607.5"/>
+<text text-anchor="middle" x="161.5" y="-614.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">helios_init_garbagecollector</text>
 </a>
 </g>
 </g>
 <!-- Node0&#45;&gt;Node2 -->
 <g id="edge2" class="edge">
 <title>Node0&#45;&gt;Node2</title>
-<path fill="none" stroke="#191970" d="M20.0672,-474.7413C23.299,-499.3579 35.2682,-564.4795 74,-598 75.9552,-599.6921 78.0403,-601.2371 80.225,-602.6477"/>
-<polygon fill="#191970" stroke="#191970" points="78.6201,-605.7588 89.0794,-607.4481 81.9564,-599.605 78.6201,-605.7588"/>
+<path fill="none" stroke="#191970" d="M21.6311,-474.8105C25.0326,-499.5893 37.5039,-565.0604 77,-598 79.0208,-599.6854 81.1602,-601.2291 83.3926,-602.6427"/>
+<polygon fill="#191970" stroke="#191970" points="81.9418,-605.8361 92.4093,-607.474 85.2479,-599.666 81.9418,-605.8361"/>
 </g>
 <!-- Node3 -->
 <g id="node4" class="node">
 <title>Node3</title>
 <g id="a_node4"><a xlink:href="helios__memory_8h.html#a0352d829134eb27df2d9e088062e987d" target="_top" xlink:title="Points the global garbagecollector pointer to a new garbagecollector.">
-<polygon fill="#ffffff" stroke="#000000" points="80.5,-569.5 80.5,-588.5 217.5,-588.5 217.5,-569.5 80.5,-569.5"/>
-<text text-anchor="middle" x="149" y="-576.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">helios_set_garbagecollector</text>
+<polygon fill="#ffffff" stroke="#000000" points="85,-569.5 85,-588.5 238,-588.5 238,-569.5 85,-569.5"/>
+<text text-anchor="middle" x="161.5" y="-576.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">helios_set_garbagecollector</text>
 </a>
 </g>
 </g>
 <!-- Node0&#45;&gt;Node3 -->
 <g id="edge3" class="edge">
 <title>Node0&#45;&gt;Node3</title>
-<path fill="none" stroke="#191970" d="M21.8297,-474.7952C27.9578,-494.203 44.3494,-537.5969 74,-560 76.4917,-561.8827 79.1494,-563.5801 81.9225,-565.1103"/>
-<polygon fill="#191970" stroke="#191970" points="80.5724,-568.3434 91.1092,-569.4511 83.563,-562.0144 80.5724,-568.3434"/>
+<path fill="none" stroke="#191970" d="M23.3395,-474.5692C29.6112,-493.9585 46.5583,-537.9109 77,-560 79.6774,-561.9428 82.5187,-563.692 85.4759,-565.2665"/>
+<polygon fill="#191970" stroke="#191970" points="84.0998,-568.486 94.6474,-569.485 87.0249,-562.1264 84.0998,-568.486"/>
 </g>
 <!-- Node4 -->
 <g id="node5" class="node">
 <title>Node4</title>
 <g id="a_node5"><a xlink:href="parser_8h.html#ac230f189b920bf540a0e14b079c3caf7" target="_top" xlink:title="Parser Entrypoint.">
-<polygon fill="#ffffff" stroke="#000000" points="100,-531.5 100,-550.5 198,-550.5 198,-531.5 100,-531.5"/>
-<text text-anchor="middle" x="149" y="-538.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">parser_parseString</text>
+<polygon fill="#ffffff" stroke="#000000" points="107.5,-531.5 107.5,-550.5 215.5,-550.5 215.5,-531.5 107.5,-531.5"/>
+<text text-anchor="middle" x="161.5" y="-538.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">parser_parseString</text>
 </a>
 </g>
 </g>
 <!-- Node0&#45;&gt;Node4 -->
 <g id="edge4" class="edge">
 <title>Node0&#45;&gt;Node4</title>
-<path fill="none" stroke="#191970" d="M35.4646,-474.6255C57.7356,-487.6454 97.6683,-510.9907 123.7465,-526.2364"/>
-<polygon fill="#191970" stroke="#191970" points="122.2697,-529.4272 132.6691,-531.4527 125.8026,-523.3841 122.2697,-529.4272"/>
+<path fill="none" stroke="#191970" d="M38.3577,-474.6255C62.7251,-487.7597 106.5861,-511.401 134.8505,-526.6358"/>
+<polygon fill="#191970" stroke="#191970" points="133.3239,-529.7889 143.7872,-531.4527 136.6452,-523.627 133.3239,-529.7889"/>
 </g>
 <!-- Node18 -->
 <g id="node19" class="node">
 <title>Node18</title>
 <g id="a_node19"><a xlink:href="AST_8c.html#a58d5ba08d8eda04b6d0414ed3d43a60f" target="_top" xlink:title="Print an ast object.">
-<polygon fill="#ffffff" stroke="#000000" points="119,-455.5 119,-474.5 179,-474.5 179,-455.5 119,-455.5"/>
-<text text-anchor="middle" x="149" y="-462.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">AST_print</text>
+<polygon fill="#ffffff" stroke="#000000" points="130,-455.5 130,-474.5 193,-474.5 193,-455.5 130,-455.5"/>
+<text text-anchor="middle" x="161.5" y="-462.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">AST_print</text>
 </a>
 </g>
 </g>
 <!-- Node0&#45;&gt;Node18 -->
 <g id="edge18" class="edge">
 <title>Node0&#45;&gt;Node18</title>
-<path fill="none" stroke="#191970" d="M38.1819,-465C56.6391,-465 85.1247,-465 108.5932,-465"/>
-<polygon fill="#191970" stroke="#191970" points="108.6336,-468.5001 118.6336,-465 108.6336,-461.5001 108.6336,-468.5001"/>
+<path fill="none" stroke="#191970" d="M41.0026,-465C61.4772,-465 93.5432,-465 119.4503,-465"/>
+<polygon fill="#191970" stroke="#191970" points="119.7615,-468.5001 129.7614,-465 119.7614,-461.5001 119.7615,-468.5001"/>
 </g>
 <!-- Node22 -->
 <g id="node23" class="node">
 <title>Node22</title>
 <g id="a_node23"><a xlink:href="helios__code_8c.html#a7332eea2d2a004766822441fde54a0ed" target="_top" xlink:title=" ">
-<polygon fill="#ffffff" stroke="#000000" points="90,-382.5 90,-401.5 208,-401.5 208,-382.5 90,-382.5"/>
-<text text-anchor="middle" x="149" y="-389.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">helios_code_from_AST</text>
+<polygon fill="#ffffff" stroke="#000000" points="98,-382.5 98,-401.5 225,-401.5 225,-382.5 98,-382.5"/>
+<text text-anchor="middle" x="161.5" y="-389.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">helios_code_from_AST</text>
 </a>
 </g>
 </g>
 <!-- Node0&#45;&gt;Node22 -->
 <g id="edge22" class="edge">
 <title>Node0&#45;&gt;Node22</title>
-<path fill="none" stroke="#191970" d="M35.9952,-455.4565C58.1846,-442.9963 97.2375,-421.0666 123.1175,-406.534"/>
-<polygon fill="#191970" stroke="#191970" points="124.995,-409.4939 132.0006,-401.5458 121.5675,-403.3903 124.995,-409.4939"/>
+<path fill="none" stroke="#191970" d="M38.9333,-455.4565C63.2114,-442.887 106.1022,-420.6811 134.1628,-406.1533"/>
+<polygon fill="#191970" stroke="#191970" points="135.791,-409.2517 143.0622,-401.5458 132.5726,-403.0354 135.791,-409.2517"/>
 </g>
 <!-- Node29 -->
 <g id="node30" class="node">
 <title>Node29</title>
 <g id="a_node30"><a xlink:href="hvm_8c.html#ae66b9feb0d741459ae33e01d37d1dafd" target="_top" xlink:title=" ">
-<polygon fill="#ffffff" stroke="#000000" points="85,-196.5 85,-215.5 213,-215.5 213,-196.5 85,-196.5"/>
-<text text-anchor="middle" x="149" y="-203.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">hvm_execute_codeobject</text>
+<polygon fill="#ffffff" stroke="#000000" points="91,-196.5 91,-215.5 232,-215.5 232,-196.5 91,-196.5"/>
+<text text-anchor="middle" x="161.5" y="-203.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">hvm_execute_codeobject</text>
 </a>
 </g>
 </g>
 <!-- Node0&#45;&gt;Node29 -->
 <g id="edge30" class="edge">
 <title>Node0&#45;&gt;Node29</title>
-<path fill="none" stroke="#191970" d="M23.7809,-455.4749C42.8915,-417.4008 113.9955,-275.7397 139.6744,-224.5796"/>
-<polygon fill="#191970" stroke="#191970" points="142.8177,-226.1192 144.1756,-215.6117 136.5615,-222.979 142.8177,-226.1192"/>
+<path fill="none" stroke="#191970" d="M25.6855,-455.4749C46.4131,-417.4008 123.5336,-275.7397 151.3853,-224.5796"/>
+<polygon fill="#191970" stroke="#191970" points="154.5599,-226.0681 156.2674,-215.6117 148.4119,-222.7211 154.5599,-226.0681"/>
 </g>
 <!-- Node38 -->
 <g id="node39" class="node">
 <title>Node38</title>
 <g id="a_node39"><a xlink:href="AST_8c.html#adc8be8765bd5abffeef1f5649587cb45" target="_top" xlink:title="Destructor for ast objects.">
-<polygon fill="#ffffff" stroke="#000000" points="120,-115.5 120,-134.5 178,-134.5 178,-115.5 120,-115.5"/>
-<text text-anchor="middle" x="149" y="-122.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">AST_free</text>
+<polygon fill="#ffffff" stroke="#000000" points="131.5,-115.5 131.5,-134.5 191.5,-134.5 191.5,-115.5 131.5,-115.5"/>
+<text text-anchor="middle" x="161.5" y="-122.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">AST_free</text>
 </a>
 </g>
 </g>
 <!-- Node0&#45;&gt;Node38 -->
 <g id="edge40" class="edge">
 <title>Node0&#45;&gt;Node38</title>
-<path fill="none" stroke="#191970" d="M20.0405,-455.2732C24.8356,-411.6759 45.78,-234.3287 74,-187 85.753,-167.2887 106.1512,-151.0387 122.7102,-140.1269"/>
-<polygon fill="#191970" stroke="#191970" points="124.8429,-142.9199 131.4354,-134.6259 121.1096,-136.9985 124.8429,-142.9199"/>
+<path fill="none" stroke="#191970" d="M21.5343,-455.2327C26.3105,-411.46 47.2731,-233.4651 77,-187 90.2539,-166.2832 113.068,-150.1591 131.6522,-139.5532"/>
+<polygon fill="#191970" stroke="#191970" points="133.5363,-142.5125 140.6429,-134.6545 130.1871,-136.3656 133.5363,-142.5125"/>
 </g>
 <!-- Node40 -->
 <g id="node41" class="node">
 <title>Node40</title>
 <g id="a_node41"><a xlink:href="helios__memory_8h.html#a0ba47c8ed7e1be60f1c360e33a0aff15" target="_top" xlink:title="Free a garbagecollector object.">
-<polygon fill="#ffffff" stroke="#000000" points="74,-26.5 74,-45.5 224,-45.5 224,-26.5 74,-26.5"/>
-<text text-anchor="middle" x="149" y="-33.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">helios_delete_garbagecollector</text>
+<polygon fill="#ffffff" stroke="#000000" points="77,-26.5 77,-45.5 246,-45.5 246,-26.5 77,-26.5"/>
+<text text-anchor="middle" x="161.5" y="-33.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">helios_delete_garbagecollector</text>
 </a>
 </g>
 </g>
 <!-- Node0&#45;&gt;Node40 -->
 <g id="edge43" class="edge">
 <title>Node0&#45;&gt;Node40</title>
-<path fill="none" stroke="#191970" d="M19.6251,-455.3365C23.0295,-404.6671 40.4284,-169.5597 74,-106 85.9715,-83.3348 108.1853,-64.0307 125.3423,-51.4716"/>
-<polygon fill="#191970" stroke="#191970" points="127.6103,-54.1553 133.7723,-45.5368 123.5806,-48.4315 127.6103,-54.1553"/>
+<path fill="none" stroke="#191970" d="M21.1028,-455.2987C24.3992,-404.4369 41.4149,-168.5071 77,-106 90.5062,-82.2756 115.3701,-63.1772 134.6436,-50.9599"/>
+<polygon fill="#191970" stroke="#191970" points="136.5913,-53.8718 143.3128,-45.6821 132.9511,-47.8927 136.5913,-53.8718"/>
 </g>
 <!-- Node5 -->
 <g id="node6" class="node">
 <title>Node5</title>
 <g id="a_node6"><a xlink:href="parserutil_8c.html#a0caab33d4f000ec42c3ee0c70bc98d9e" target="_top" xlink:title="Removes comments from strings.">
-<polygon fill="#ffffff" stroke="#000000" points="270.5,-721.5 270.5,-740.5 367.5,-740.5 367.5,-721.5 270.5,-721.5"/>
-<text text-anchor="middle" x="319" y="-728.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">parser_preprocess</text>
+<polygon fill="#ffffff" stroke="#000000" points="294,-721.5 294,-740.5 400,-740.5 400,-721.5 294,-721.5"/>
+<text text-anchor="middle" x="347" y="-728.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">parser_preprocess</text>
 </a>
 </g>
 </g>
 <!-- Node4&#45;&gt;Node5 -->
 <g id="edge5" class="edge">
 <title>Node4&#45;&gt;Node5</title>
-<path fill="none" stroke="#191970" d="M198.2486,-545.4152C207.8176,-548.3413 217.0264,-552.917 224,-560 272.7072,-609.4708 212.8861,-661.0095 260,-712 261.2301,-713.3313 262.5537,-714.5696 263.9532,-715.7215"/>
-<polygon fill="#191970" stroke="#191970" points="262.3896,-718.8806 272.6761,-721.4183 266.2173,-713.0198 262.3896,-718.8806"/>
+<path fill="none" stroke="#191970" d="M215.5887,-543.9379C226.8415,-546.8975 237.7666,-551.8598 246,-560 295.3691,-608.8103 234.198,-661.654 282,-712 283.2522,-713.3189 284.5905,-714.5477 285.9997,-715.6926"/>
+<polygon fill="#191970" stroke="#191970" points="284.4511,-718.8603 294.7434,-721.3741 288.2651,-712.9906 284.4511,-718.8603"/>
 </g>
 <!-- Node6 -->
 <g id="node7" class="node">
 <title>Node6</title>
 <g id="a_node7"><a xlink:href="parserutil_8c.html#aeabb62e46d4414de7848d31d805ab834" target="_top" xlink:title="Parser constructor.">
-<polygon fill="#ffffff" stroke="#000000" points="285.5,-683.5 285.5,-702.5 352.5,-702.5 352.5,-683.5 285.5,-683.5"/>
-<text text-anchor="middle" x="319" y="-690.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">parser_new</text>
+<polygon fill="#ffffff" stroke="#000000" points="310.5,-683.5 310.5,-702.5 383.5,-702.5 383.5,-683.5 310.5,-683.5"/>
+<text text-anchor="middle" x="347" y="-690.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">parser_new</text>
 </a>
 </g>
 </g>
 <!-- Node4&#45;&gt;Node6 -->
 <g id="edge6" class="edge">
 <title>Node4&#45;&gt;Node6</title>
-<path fill="none" stroke="#191970" d="M198.2508,-545.9285C207.7065,-548.8327 216.8691,-553.2696 224,-560 262.64,-596.47 222.536,-636.323 260,-674 264.4815,-678.5069 270.0355,-681.9456 275.9287,-684.569"/>
-<polygon fill="#191970" stroke="#191970" points="274.77,-687.8721 285.3633,-688.0568 277.1973,-681.3064 274.77,-687.8721"/>
+<path fill="none" stroke="#191970" d="M215.5983,-544.504C226.7184,-547.4534 237.5845,-552.2688 246,-560 285.1277,-595.9462 244.0277,-636.8353 282,-674 287.2567,-679.1449 293.8261,-682.9099 300.7527,-685.6621"/>
+<polygon fill="#191970" stroke="#191970" points="299.7366,-689.0124 310.3297,-688.8219 301.9299,-682.3649 299.7366,-689.0124"/>
 </g>
 <!-- Node8 -->
 <g id="node9" class="node">
 <title>Node8</title>
 <g id="a_node9"><a xlink:href="parserutil_8c.html#a2d9e8c20025b7b883c4e87790685a6ad" target="_top" xlink:title="Proxy to parser_next.">
-<polygon fill="#ffffff" stroke="#000000" points="276,-645.5 276,-664.5 362,-664.5 362,-645.5 276,-645.5"/>
-<text text-anchor="middle" x="319" y="-652.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">parser_advance</text>
+<polygon fill="#ffffff" stroke="#000000" points="300,-645.5 300,-664.5 394,-664.5 394,-645.5 300,-645.5"/>
+<text text-anchor="middle" x="347" y="-652.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">parser_advance</text>
 </a>
 </g>
 </g>
 <!-- Node4&#45;&gt;Node8 -->
 <g id="edge8" class="edge">
 <title>Node4&#45;&gt;Node8</title>
-<path fill="none" stroke="#191970" d="M198.3532,-546.9355C207.5852,-549.7831 216.6343,-553.9422 224,-560 252.867,-583.741 231.9004,-611.3555 260,-636 262.0175,-637.7695 264.2019,-639.3745 266.5013,-640.8303"/>
-<polygon fill="#191970" stroke="#191970" points="265.3524,-644.1805 275.8321,-645.7381 268.611,-637.9853 265.3524,-644.1805"/>
+<path fill="none" stroke="#191970" d="M215.7261,-545.6146C226.5858,-548.5283 237.3117,-553.0486 246,-560 275.1841,-583.35 253.5683,-611.7394 282,-636 284.6747,-638.2823 287.6115,-640.2906 290.7127,-642.0579"/>
+<polygon fill="#191970" stroke="#191970" points="289.2774,-645.2512 299.8067,-646.4273 292.309,-638.9417 289.2774,-645.2512"/>
 </g>
 <!-- Node10 -->
 <g id="node11" class="node">
 <title>Node10</title>
 <g id="a_node11"><a xlink:href="parser_8h.html#a909b31712182aae737a48cd819f43a2d" target="_top" xlink:title=" ">
-<polygon fill="#ffffff" stroke="#000000" points="286.5,-607.5 286.5,-626.5 351.5,-626.5 351.5,-607.5 286.5,-607.5"/>
-<text text-anchor="middle" x="319" y="-614.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">parser_root</text>
+<polygon fill="#ffffff" stroke="#000000" points="311,-607.5 311,-626.5 383,-626.5 383,-607.5 311,-607.5"/>
+<text text-anchor="middle" x="347" y="-614.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">parser_root</text>
 </a>
 </g>
 </g>
 <!-- Node4&#45;&gt;Node10 -->
 <g id="edge10" class="edge">
 <title>Node4&#45;&gt;Node10</title>
-<path fill="none" stroke="#191970" d="M198.1875,-549.2164C207.1352,-551.8744 216.1205,-555.3804 224,-560 244.0696,-571.7663 240.3136,-585.6032 260,-598 265.1335,-601.2327 270.8673,-603.963 276.6879,-606.2554"/>
-<polygon fill="#191970" stroke="#191970" points="275.8803,-609.682 286.4751,-609.7114 278.2111,-603.0814 275.8803,-609.682"/>
+<path fill="none" stroke="#191970" d="M215.5647,-548.1621C226.0854,-550.9146 236.7183,-554.7251 246,-560 266.2263,-571.4949 262.1471,-585.8717 282,-598 287.8645,-601.5827 294.4398,-604.5199 301.0954,-606.9195"/>
+<polygon fill="#191970" stroke="#191970" points="300.2391,-610.3209 310.8308,-610.0633 302.3902,-603.6596 300.2391,-610.3209"/>
 </g>
 <!-- Node11 -->
 <g id="node12" class="node">
 <title>Node11</title>
-<g id="a_node12"><a xlink:href="error_8c.html#aece17809d86b1b3c7548254beab5b5c1" target="_top" xlink:title="Return true if a given errorstack is empty.">
-<polygon fill="#ffffff" stroke="#000000" points="273,-569.5 273,-588.5 365,-588.5 365,-569.5 273,-569.5"/>
-<text text-anchor="middle" x="319" y="-576.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">errorstack_empty</text>
+<g id="a_node12"><a xlink:href="error_8c.html#afe7704a207cf18fb4e25c47dbdcc9ad1" target="_top" xlink:title="Return true if a given errorstack is empty.">
+<polygon fill="#ffffff" stroke="#000000" points="295.5,-569.5 295.5,-588.5 398.5,-588.5 398.5,-569.5 295.5,-569.5"/>
+<text text-anchor="middle" x="347" y="-576.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">errorstack_empty</text>
 </a>
 </g>
 </g>
 <!-- Node4&#45;&gt;Node11 -->
 <g id="edge11" class="edge">
 <title>Node4&#45;&gt;Node11</title>
-<path fill="none" stroke="#191970" d="M191.8982,-550.589C214.5336,-555.6487 242.4982,-561.8996 266.4287,-567.2488"/>
-<polygon fill="#191970" stroke="#191970" points="265.8876,-570.7141 276.4103,-569.4799 267.4147,-563.8827 265.8876,-570.7141"/>
+<path fill="none" stroke="#191970" d="M208.3095,-550.589C233.3395,-555.7165 264.3414,-562.0672 290.6822,-567.4632"/>
+<polygon fill="#191970" stroke="#191970" points="290.0281,-570.9018 300.5271,-569.4799 291.433,-564.0442 290.0281,-570.9018"/>
 </g>
 <!-- Node12 -->
 <g id="node13" class="node">
 <title>Node12</title>
-<g id="a_node13"><a xlink:href="error_8c.html#af86905f178f9caa084c7a4de6ff9ff8a" target="_top" xlink:title="Throw all errors on the errorstack.">
-<polygon fill="#ffffff" stroke="#000000" points="265,-531.5 265,-550.5 373,-550.5 373,-531.5 265,-531.5"/>
-<text text-anchor="middle" x="319" y="-538.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">errorstack_traceback</text>
+<g id="a_node13"><a xlink:href="error_8c.html#ac1a5f4603993df0ed53c953672a861d9" target="_top" xlink:title="Throw all errors on the errorstack.">
+<polygon fill="#ffffff" stroke="#000000" points="287.5,-531.5 287.5,-550.5 406.5,-550.5 406.5,-531.5 287.5,-531.5"/>
+<text text-anchor="middle" x="347" y="-538.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">errorstack_traceback</text>
 </a>
 </g>
 </g>
 <!-- Node4&#45;&gt;Node12 -->
 <g id="edge12" class="edge">
 <title>Node4&#45;&gt;Node12</title>
-<path fill="none" stroke="#191970" d="M198.171,-541C215.7945,-541 235.9332,-541 254.65,-541"/>
-<polygon fill="#191970" stroke="#191970" points="254.877,-544.5001 264.8769,-541 254.8769,-537.5001 254.877,-544.5001"/>
+<path fill="none" stroke="#191970" d="M215.6529,-541C234.8644,-541 256.7648,-541 277.102,-541"/>
+<polygon fill="#191970" stroke="#191970" points="277.2556,-544.5001 287.2556,-541 277.2555,-537.5001 277.2556,-544.5001"/>
 </g>
 <!-- Node16 -->
 <g id="node17" class="node">
 <title>Node16</title>
 <g id="a_node17"><a xlink:href="parserutil_8c.html#a1ddd27828ac4848a4b9c05eb6190852f" target="_top" xlink:title="Parser destructor.">
-<polygon fill="#ffffff" stroke="#000000" points="286.5,-493.5 286.5,-512.5 351.5,-512.5 351.5,-493.5 286.5,-493.5"/>
-<text text-anchor="middle" x="319" y="-500.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">parser_free</text>
+<polygon fill="#ffffff" stroke="#000000" points="311,-493.5 311,-512.5 383,-512.5 383,-493.5 311,-493.5"/>
+<text text-anchor="middle" x="347" y="-500.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">parser_free</text>
 </a>
 </g>
 </g>
 <!-- Node4&#45;&gt;Node16 -->
 <g id="edge16" class="edge">
 <title>Node4&#45;&gt;Node16</title>
-<path fill="none" stroke="#191970" d="M191.8982,-531.411C217.7749,-525.6268 250.6163,-518.2858 276.4333,-512.5149"/>
-<polygon fill="#191970" stroke="#191970" points="277.3147,-515.9043 286.3103,-510.3071 275.7876,-509.0729 277.3147,-515.9043"/>
+<path fill="none" stroke="#191970" d="M208.3095,-531.411C236.6043,-525.6148 272.5304,-518.2552 300.7278,-512.4789"/>
+<polygon fill="#191970" stroke="#191970" points="301.6441,-515.864 310.7382,-510.4283 300.2392,-509.0064 301.6441,-515.864"/>
 </g>
 <!-- Node7 -->
 <g id="node8" class="node">
 <title>Node7</title>
-<g id="a_node8"><a xlink:href="error_8c.html#ab400e9a29e066e1bbe7b7893e1eb767e" target="_top" xlink:title="Creates a new errorstack object.">
-<polygon fill="#ffffff" stroke="#000000" points="446,-683.5 446,-702.5 529,-702.5 529,-683.5 446,-683.5"/>
-<text text-anchor="middle" x="487.5" y="-690.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">errorstack_new</text>
+<g id="a_node8"><a xlink:href="error_8c.html#a5fb6ae420f7432560b40a73ac2bd6859" target="_top" xlink:title="Creates a new errorstack object.">
+<polygon fill="#ffffff" stroke="#000000" points="484,-683.5 484,-702.5 576,-702.5 576,-683.5 484,-683.5"/>
+<text text-anchor="middle" x="530" y="-690.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">errorstack_new</text>
 </a>
 </g>
 </g>
 <!-- Node6&#45;&gt;Node7 -->
 <g id="edge7" class="edge">
 <title>Node6&#45;&gt;Node7</title>
-<path fill="none" stroke="#191970" d="M352.6935,-693C376.4533,-693 408.726,-693 435.7374,-693"/>
-<polygon fill="#191970" stroke="#191970" points="435.8035,-696.5001 445.8035,-693 435.8035,-689.5001 435.8035,-696.5001"/>
+<path fill="none" stroke="#191970" d="M383.593,-693C409.3448,-693 444.3044,-693 473.6037,-693"/>
+<polygon fill="#191970" stroke="#191970" points="473.7069,-696.5001 483.7068,-693 473.7068,-689.5001 473.7069,-696.5001"/>
 </g>
 <!-- Node9 -->
 <g id="node10" class="node">
 <title>Node9</title>
 <g id="a_node10"><a xlink:href="parserutil_8c.html#ab25a97ff31329fe9461666bfe2dc6f2c" target="_top" xlink:title="Iterate the parser.">
-<polygon fill="#ffffff" stroke="#000000" points="453.5,-645.5 453.5,-664.5 521.5,-664.5 521.5,-645.5 453.5,-645.5"/>
-<text text-anchor="middle" x="487.5" y="-652.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">parser_next</text>
+<polygon fill="#ffffff" stroke="#000000" points="493,-645.5 493,-664.5 567,-664.5 567,-645.5 493,-645.5"/>
+<text text-anchor="middle" x="530" y="-652.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">parser_next</text>
 </a>
 </g>
 </g>
 <!-- Node8&#45;&gt;Node9 -->
 <g id="edge9" class="edge">
 <title>Node8&#45;&gt;Node9</title>
-<path fill="none" stroke="#191970" d="M362.3929,-655C387.1362,-655 418.0831,-655 443.0069,-655"/>
-<polygon fill="#191970" stroke="#191970" points="443.2842,-658.5001 453.2841,-655 443.2841,-651.5001 443.2842,-658.5001"/>
+<path fill="none" stroke="#191970" d="M394.127,-655C421.3595,-655 455.511,-655 482.7622,-655"/>
+<polygon fill="#191970" stroke="#191970" points="482.8398,-658.5001 492.8398,-655 482.8397,-651.5001 482.8398,-658.5001"/>
 </g>
 <!-- Node13 -->
 <g id="node14" class="node">
 <title>Node13</title>
-<g id="a_node14"><a xlink:href="error_8c.html#a2e581dee0de155b88d33f98ddd006189" target="_top" xlink:title=" ">
-<polygon fill="#ffffff" stroke="#000000" points="455,-582.5 455,-601.5 520,-601.5 520,-582.5 455,-582.5"/>
-<text text-anchor="middle" x="487.5" y="-589.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">error_throw</text>
+<g id="a_node14"><a xlink:href="error_8c.html#aadbe92bd95e3d1a125d27b6b30cc048a" target="_top" xlink:title=" ">
+<polygon fill="#ffffff" stroke="#000000" points="493.5,-582.5 493.5,-601.5 566.5,-601.5 566.5,-582.5 493.5,-582.5"/>
+<text text-anchor="middle" x="530" y="-589.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">error_throw</text>
 </a>
 </g>
 </g>
 <!-- Node12&#45;&gt;Node13 -->
 <g id="edge13" class="edge">
 <title>Node12&#45;&gt;Node13</title>
-<path fill="none" stroke="#191970" d="M349.3854,-550.5608C358.5988,-553.5201 368.7328,-556.8356 378,-560 394.0986,-565.497 397.7473,-567.9769 414,-573 423.9163,-576.0648 434.687,-579.042 444.848,-581.6954"/>
-<polygon fill="#191970" stroke="#191970" points="444.1958,-585.1413 454.7515,-584.2322 445.9328,-578.3602 444.1958,-585.1413"/>
+<path fill="none" stroke="#191970" d="M381.1945,-550.5629C391.1656,-553.468 402.0527,-556.7536 412,-560 428.1718,-565.2778 431.6851,-568.1827 448,-573 459.3818,-576.3607 471.7943,-579.5013 483.4383,-582.2231"/>
+<polygon fill="#191970" stroke="#191970" points="482.8997,-585.6901 493.4278,-584.5023 484.4569,-578.8655 482.8997,-585.6901"/>
 </g>
 <!-- Node15 -->
 <g id="node16" class="node">
 <title>Node15</title>
-<g id="a_node16"><a xlink:href="error_8c.html#a0289b490436a23262d094c6a624ef7f0" target="_top" xlink:title="Return the top error of the errorstack.">
-<polygon fill="#ffffff" stroke="#000000" points="448,-544.5 448,-563.5 527,-563.5 527,-544.5 448,-544.5"/>
-<text text-anchor="middle" x="487.5" y="-551.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">errorstack_top</text>
+<g id="a_node16"><a xlink:href="error_8c.html#ada8989f80d38ce7cae1936a543524c3b" target="_top" xlink:title="Return the top error of the errorstack.">
+<polygon fill="#ffffff" stroke="#000000" points="486.5,-544.5 486.5,-563.5 573.5,-563.5 573.5,-544.5 486.5,-544.5"/>
+<text text-anchor="middle" x="530" y="-551.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">errorstack_top</text>
 </a>
 </g>
 </g>
 <!-- Node12&#45;&gt;Node15 -->
 <g id="edge15" class="edge">
 <title>Node12&#45;&gt;Node15</title>
-<path fill="none" stroke="#191970" d="M373.242,-545.1848C393.9821,-546.785 417.513,-548.6004 437.8077,-550.1662"/>
-<polygon fill="#191970" stroke="#191970" points="437.5483,-553.6565 447.7879,-550.9362 438.0868,-546.6772 437.5483,-553.6565"/>
+<path fill="none" stroke="#191970" d="M406.6678,-545.2387C429.0884,-546.8314 454.422,-548.6311 476.2706,-550.1832"/>
+<polygon fill="#191970" stroke="#191970" points="476.1407,-553.6827 486.3636,-550.9001 476.6368,-546.7003 476.1407,-553.6827"/>
 </g>
 <!-- Node14 -->
 <g id="node15" class="node">
 <title>Node14</title>
-<g id="a_node15"><a xlink:href="error_8c.html#a225bd87ba0491415a1ef1aec28912809" target="_top" xlink:title="prints an error struct">
-<polygon fill="#ffffff" stroke="#000000" points="624,-582.5 624,-601.5 684,-601.5 684,-582.5 624,-582.5"/>
-<text text-anchor="middle" x="654" y="-589.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">error_print</text>
+<g id="a_node15"><a xlink:href="error_8c.html#a280084f31295d0ad8646299d4f4db9f2" target="_top" xlink:title="prints an error struct">
+<polygon fill="#ffffff" stroke="#000000" points="677,-582.5 677,-601.5 745,-601.5 745,-582.5 677,-582.5"/>
+<text text-anchor="middle" x="711" y="-589.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">error_print</text>
 </a>
 </g>
 </g>
 <!-- Node13&#45;&gt;Node14 -->
 <g id="edge14" class="edge">
 <title>Node13&#45;&gt;Node14</title>
-<path fill="none" stroke="#191970" d="M520.395,-592C547.2362,-592 585.2639,-592 613.889,-592"/>
-<polygon fill="#191970" stroke="#191970" points="613.9717,-595.5001 623.9716,-592 613.9716,-588.5001 613.9717,-595.5001"/>
+<path fill="none" stroke="#191970" d="M566.6281,-592C595.5839,-592 636.108,-592 666.8542,-592"/>
+<polygon fill="#191970" stroke="#191970" points="666.8756,-595.5001 676.8755,-592 666.8755,-588.5001 666.8756,-595.5001"/>
 </g>
 <!-- Node17 -->
 <g id="node18" class="node">
 <title>Node17</title>
-<g id="a_node18"><a xlink:href="error_8c.html#a56c6e945b508072de3181f78dbc0cfe3" target="_top" xlink:title=" ">
-<polygon fill="#ffffff" stroke="#000000" points="446.5,-506.5 446.5,-525.5 528.5,-525.5 528.5,-506.5 446.5,-506.5"/>
-<text text-anchor="middle" x="487.5" y="-513.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">errorstack_free</text>
+<g id="a_node18"><a xlink:href="error_8c.html#ab3088f45a2042abe4a3fda97af16f552" target="_top" xlink:title=" ">
+<polygon fill="#ffffff" stroke="#000000" points="484.5,-506.5 484.5,-525.5 575.5,-525.5 575.5,-506.5 484.5,-506.5"/>
+<text text-anchor="middle" x="530" y="-513.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">errorstack_free</text>
 </a>
 </g>
 </g>
 <!-- Node16&#45;&gt;Node17 -->
 <g id="edge17" class="edge">
 <title>Node16&#45;&gt;Node17</title>
-<path fill="none" stroke="#191970" d="M351.8885,-505.5374C375.8374,-507.3851 408.74,-509.9236 436.1382,-512.0374"/>
-<polygon fill="#191970" stroke="#191970" points="436.0996,-515.5447 446.3392,-512.8244 436.6381,-508.5654 436.0996,-515.5447"/>
+<path fill="none" stroke="#191970" d="M383.1549,-505.5684C409.0583,-507.4085 444.4408,-509.922 473.9835,-512.0207"/>
+<polygon fill="#191970" stroke="#191970" points="473.9416,-515.5264 484.1645,-512.7439 474.4377,-508.544 473.9416,-515.5264"/>
 </g>
 <!-- Node19 -->
 <g id="node20" class="node">
 <title>Node19</title>
 <g id="a_node20"><a xlink:href="AST_8c.html#aec2b1350d43ba95c45e32469270abd46" target="_top" xlink:title="Recursively prints an ast.">
-<polygon fill="#ffffff" stroke="#000000" points="273,-455.5 273,-474.5 365,-474.5 365,-455.5 273,-455.5"/>
-<text text-anchor="middle" x="319" y="-462.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">AST_print_helper</text>
+<polygon fill="#ffffff" stroke="#000000" points="297.5,-455.5 297.5,-474.5 396.5,-474.5 396.5,-455.5 297.5,-455.5"/>
+<text text-anchor="middle" x="347" y="-462.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">AST_print_helper</text>
 </a>
 </g>
 </g>
 <!-- Node18&#45;&gt;Node19 -->
 <g id="edge19" class="edge">
 <title>Node18&#45;&gt;Node19</title>
-<path fill="none" stroke="#191970" d="M179.0013,-465C202.1773,-465 234.9133,-465 262.9029,-465"/>
-<polygon fill="#191970" stroke="#191970" points="262.9737,-468.5001 272.9737,-465 262.9736,-461.5001 262.9737,-468.5001"/>
+<path fill="none" stroke="#191970" d="M193.3886,-465C219.0752,-465 255.9122,-465 287.0739,-465"/>
+<polygon fill="#191970" stroke="#191970" points="287.3999,-468.5001 297.3999,-465 287.3998,-461.5001 287.3999,-468.5001"/>
 </g>
 <!-- Node20 -->
 <g id="node21" class="node">
 <title>Node20</title>
 <g id="a_node21"><a xlink:href="token_8h.html#a347371dbade2f4df7ca01fd60f226951" target="_top" xlink:title="Prints a token object.">
-<polygon fill="#ffffff" stroke="#000000" points="455,-468.5 455,-487.5 520,-487.5 520,-468.5 455,-468.5"/>
-<text text-anchor="middle" x="487.5" y="-475.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">token_print</text>
+<polygon fill="#ffffff" stroke="#000000" points="494,-468.5 494,-487.5 566,-487.5 566,-468.5 494,-468.5"/>
+<text text-anchor="middle" x="530" y="-475.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">token_print</text>
 </a>
 </g>
 </g>
 <!-- Node19&#45;&gt;Node20 -->
 <g id="edge20" class="edge">
 <title>Node19&#45;&gt;Node20</title>
-<path fill="none" stroke="#191970" d="M365.0434,-468.5523C389.9395,-470.4731 420.4828,-472.8295 444.8374,-474.7085"/>
-<polygon fill="#191970" stroke="#191970" points="444.6221,-478.2022 454.8617,-475.4819 445.1606,-471.223 444.6221,-478.2022"/>
+<path fill="none" stroke="#191970" d="M396.5224,-468.518C423.6222,-470.4431 456.994,-472.8138 483.5897,-474.7031"/>
+<polygon fill="#191970" stroke="#191970" points="483.5692,-478.2104 493.7921,-475.4279 484.0653,-471.228 483.5692,-478.2104"/>
 </g>
 <!-- Node21 -->
 <g id="node22" class="node">
 <title>Node21</title>
 <g id="a_node22"><a xlink:href="helios__string_8c.html#a9d2005b1762ff6459a22a115549a08f5" target="_top" xlink:title="Create a cstring from a helios_string object.">
-<polygon fill="#ffffff" stroke="#000000" points="597,-354.5 597,-373.5 711,-373.5 711,-354.5 597,-354.5"/>
-<text text-anchor="middle" x="654" y="-361.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">helios_string_to_charp</text>
+<polygon fill="#ffffff" stroke="#000000" points="648,-354.5 648,-373.5 774,-373.5 774,-354.5 648,-354.5"/>
+<text text-anchor="middle" x="711" y="-361.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">helios_string_to_charp</text>
 </a>
 </g>
 </g>
 <!-- Node20&#45;&gt;Node21 -->
 <g id="edge21" class="edge">
 <title>Node20&#45;&gt;Node21</title>
-<path fill="none" stroke="#191970" d="M520.0722,-473.5167C533.3945,-470.7067 548.5651,-466.1943 561,-459 595.0872,-439.2787 625.0491,-403.6444 641.2422,-382.0701"/>
-<polygon fill="#191970" stroke="#191970" points="644.2328,-383.9099 647.311,-373.7721 638.5826,-379.7776 644.2328,-383.9099"/>
+<path fill="none" stroke="#191970" d="M566.2062,-473.9021C581.0479,-471.1541 597.9928,-466.5838 612,-459 648.0855,-439.4624 680.4345,-403.2019 697.7358,-381.5715"/>
+<polygon fill="#191970" stroke="#191970" points="700.6061,-383.5824 704.0005,-373.546 695.0882,-379.2751 700.6061,-383.5824"/>
 </g>
 <!-- Node23 -->
 <g id="node24" class="node">
 <title>Node23</title>
 <g id="a_node24"><a xlink:href="helios__code_8c.html#ab47a14436bfa855c861f5cd333cd1dfd" target="_top" xlink:title=" ">
-<polygon fill="#ffffff" stroke="#000000" points="276,-404.5 276,-423.5 362,-423.5 362,-404.5 276,-404.5"/>
-<text text-anchor="middle" x="319" y="-411.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">helios_code_init</text>
+<polygon fill="#ffffff" stroke="#000000" points="299.5,-404.5 299.5,-423.5 394.5,-423.5 394.5,-404.5 299.5,-404.5"/>
+<text text-anchor="middle" x="347" y="-411.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">helios_code_init</text>
 </a>
 </g>
 </g>
 <!-- Node22&#45;&gt;Node23 -->
 <g id="edge23" class="edge">
 <title>Node22&#45;&gt;Node23</title>
-<path fill="none" stroke="#191970" d="M208.4578,-399.6945C227.1137,-402.1088 247.5793,-404.7573 265.7755,-407.1121"/>
-<polygon fill="#191970" stroke="#191970" points="265.543,-410.6111 275.9095,-408.4236 266.4415,-403.669 265.543,-410.6111"/>
+<path fill="none" stroke="#191970" d="M225.0791,-399.5404C245.8944,-402.009 268.8922,-404.7365 289.2527,-407.1513"/>
+<polygon fill="#191970" stroke="#191970" points="288.9806,-410.6434 299.3233,-408.3456 289.8051,-403.6922 288.9806,-410.6434"/>
 </g>
 <!-- Node26 -->
 <g id="node27" class="node">
 <title>Node26</title>
 <g id="a_node27"><a xlink:href="helios__code_8c.html#a7f71fb27d10c5bf81cbdb3ac0c0210b6" target="_top" xlink:title=" ">
-<polygon fill="#ffffff" stroke="#000000" points="260,-355 260,-385 378,-385 378,-355 260,-355"/>
-<text text-anchor="start" x="268" y="-373" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">helios_code_from_AST</text>
-<text text-anchor="middle" x="319" y="-362" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">_helper</text>
+<polygon fill="#ffffff" stroke="#000000" points="283.5,-355 283.5,-385 410.5,-385 410.5,-355 283.5,-355"/>
+<text text-anchor="start" x="291.5" y="-373" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">helios_code_from_AST</text>
+<text text-anchor="middle" x="347" y="-362" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">_helper</text>
 </a>
 </g>
 </g>
 <!-- Node22&#45;&gt;Node26 -->
 <g id="edge26" class="edge">
 <title>Node22&#45;&gt;Node26</title>
-<path fill="none" stroke="#191970" d="M208.4578,-384.3055C221.7338,-382.5874 235.9264,-380.7507 249.5653,-378.9857"/>
-<polygon fill="#191970" stroke="#191970" points="250.3948,-382.4076 259.8629,-377.653 249.4964,-375.4655 250.3948,-382.4076"/>
+<path fill="none" stroke="#191970" d="M225.0791,-384.4596C240.4792,-382.6332 257.0739,-380.6651 272.9114,-378.7868"/>
+<polygon fill="#191970" stroke="#191970" points="273.6711,-382.2213 283.1893,-377.5678 272.8467,-375.27 273.6711,-382.2213"/>
 </g>
 <!-- Node28 -->
 <g id="node29" class="node">
 <title>Node28</title>
 <g id="a_node29"><a xlink:href="helios__code_8c.html#a71d2ab8c6616394cc8cb48702bb02e80" target="_top" xlink:title=" ">
-<polygon fill="#ffffff" stroke="#000000" points="417.5,-316.5 417.5,-335.5 557.5,-335.5 557.5,-316.5 417.5,-316.5"/>
-<text text-anchor="middle" x="487.5" y="-323.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">helios_code_add_instruction</text>
+<polygon fill="#ffffff" stroke="#000000" points="452.5,-316.5 452.5,-335.5 607.5,-335.5 607.5,-316.5 452.5,-316.5"/>
+<text text-anchor="middle" x="530" y="-323.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">helios_code_add_instruction</text>
 </a>
 </g>
 </g>
 <!-- Node22&#45;&gt;Node28 -->
 <g id="edge29" class="edge">
 <title>Node22&#45;&gt;Node28</title>
-<path fill="none" stroke="#191970" d="M167.265,-382.3867C188.7951,-371.5441 225.9618,-354.3398 260,-346 308.0527,-334.2265 363.3111,-329.1788 407.3344,-327.0973"/>
-<polygon fill="#191970" stroke="#191970" points="407.5687,-330.5906 417.4087,-326.6631 407.2672,-323.597 407.5687,-330.5906"/>
+<path fill="none" stroke="#191970" d="M181.4202,-382.374C204.8795,-371.5196 245.3083,-354.304 282,-346 334.4101,-334.1386 394.4464,-329.0823 442.321,-327.0183"/>
+<polygon fill="#191970" stroke="#191970" points="442.4913,-330.5144 452.3452,-326.6219 442.2147,-323.5198 442.4913,-330.5144"/>
 </g>
 <!-- Node24 -->
 <g id="node25" class="node">
 <title>Node24</title>
 <g id="a_node25"><a xlink:href="helios__memory_8h.html#af87f0050f8e236d0945592fa4e54dc94" target="_top" xlink:title="Allocates a new helios object (and performs all the GC steps associated with that action).">
-<polygon fill="#ffffff" stroke="#000000" points="431,-430.5 431,-449.5 544,-449.5 544,-430.5 431,-430.5"/>
-<text text-anchor="middle" x="487.5" y="-437.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">helios_allocate_object</text>
+<polygon fill="#ffffff" stroke="#000000" points="467.5,-430.5 467.5,-449.5 592.5,-449.5 592.5,-430.5 467.5,-430.5"/>
+<text text-anchor="middle" x="530" y="-437.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">helios_allocate_object</text>
 </a>
 </g>
 </g>
 <!-- Node23&#45;&gt;Node24 -->
 <g id="edge24" class="edge">
 <title>Node23&#45;&gt;Node24</title>
-<path fill="none" stroke="#191970" d="M362.3929,-420.6956C380.1627,-423.4376 401.132,-426.6732 420.7722,-429.7037"/>
-<polygon fill="#191970" stroke="#191970" points="420.4807,-433.2001 430.8975,-431.2661 421.5483,-426.282 420.4807,-433.2001"/>
+<path fill="none" stroke="#191970" d="M394.6034,-420.7633C413.8023,-423.491 436.3804,-426.6989 457.5376,-429.7048"/>
+<polygon fill="#191970" stroke="#191970" points="457.0708,-433.1735 467.4637,-431.1151 458.0555,-426.2431 457.0708,-433.1735"/>
 </g>
 <!-- Node25 -->
 <g id="node26" class="node">
 <title>Node25</title>
 <g id="a_node26"><a xlink:href="helios__memory_8h.html#ab14fb1c046aae61ab06eda8eeaf2cd85" target="_top" xlink:title=" ">
-<polygon fill="#ffffff" stroke="#000000" points="414,-392.5 414,-411.5 561,-411.5 561,-392.5 414,-392.5"/>
-<text text-anchor="middle" x="487.5" y="-399.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">helios_set_garbagecollectable</text>
+<polygon fill="#ffffff" stroke="#000000" points="448,-392.5 448,-411.5 612,-411.5 612,-392.5 448,-392.5"/>
+<text text-anchor="middle" x="530" y="-399.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">helios_set_garbagecollectable</text>
 </a>
 </g>
 </g>
 <!-- Node23&#45;&gt;Node25 -->
 <g id="edge25" class="edge">
 <title>Node23&#45;&gt;Node25</title>
-<path fill="none" stroke="#191970" d="M362.3929,-410.9097C375.0259,-410.01 389.2759,-408.9952 403.5158,-407.9811"/>
-<polygon fill="#191970" stroke="#191970" points="404.1336,-411.446 413.8596,-407.2444 403.6362,-404.4637 404.1336,-411.446"/>
+<path fill="none" stroke="#191970" d="M394.6034,-410.8785C407.8544,-410.0095 422.7152,-409.0351 437.6075,-408.0585"/>
+<polygon fill="#191970" stroke="#191970" points="438.1536,-411.5303 447.9031,-407.3834 437.6955,-404.5453 438.1536,-411.5303"/>
 </g>
 <!-- Node27 -->
 <g id="node28" class="node">
 <title>Node27</title>
 <g id="a_node28"><a xlink:href="helios__code_8c.html#ae826a551bc568e53f64610757587e23c" target="_top" xlink:title=" ">
-<polygon fill="#ffffff" stroke="#000000" points="421.5,-354.5 421.5,-373.5 553.5,-373.5 553.5,-354.5 421.5,-354.5"/>
-<text text-anchor="middle" x="487.5" y="-361.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">helios_code_add_constant</text>
+<polygon fill="#ffffff" stroke="#000000" points="457.5,-354.5 457.5,-373.5 602.5,-373.5 602.5,-354.5 457.5,-354.5"/>
+<text text-anchor="middle" x="530" y="-361.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">helios_code_add_constant</text>
 </a>
 </g>
 </g>
 <!-- Node26&#45;&gt;Node27 -->
 <g id="edge27" class="edge">
 <title>Node26&#45;&gt;Node27</title>
-<path fill="none" stroke="#191970" d="M378.4068,-367.8846C389.0706,-367.5049 400.3177,-367.1044 411.3762,-366.7106"/>
-<polygon fill="#191970" stroke="#191970" points="411.5878,-370.2054 421.4569,-366.3517 411.3386,-363.2099 411.5878,-370.2054"/>
+<path fill="none" stroke="#191970" d="M410.7476,-367.9099C422.5134,-367.5242 434.9553,-367.1162 447.1882,-366.7151"/>
+<polygon fill="#191970" stroke="#191970" points="447.5154,-370.2064 457.3953,-366.3805 447.286,-363.2101 447.5154,-370.2064"/>
 </g>
 <!-- Node26&#45;&gt;Node28 -->
 <g id="edge28" class="edge">
 <title>Node26&#45;&gt;Node28</title>
-<path fill="none" stroke="#191970" d="M376.0065,-354.9551C388.5214,-351.6643 401.7057,-348.2067 414,-345 422.6174,-342.7523 431.8063,-340.3675 440.6647,-338.0745"/>
-<polygon fill="#191970" stroke="#191970" points="441.6723,-341.4292 450.4775,-335.5369 439.9197,-334.6521 441.6723,-341.4292"/>
+<path fill="none" stroke="#191970" d="M407.0468,-354.9802C420.5124,-351.6557 434.7371,-348.1778 448,-345 457.8056,-342.6506 468.2825,-340.1873 478.3563,-337.8423"/>
+<polygon fill="#191970" stroke="#191970" points="479.306,-341.215 488.2561,-335.5453 477.7238,-334.3962 479.306,-341.215"/>
 </g>
 <!-- Node30 -->
 <g id="node31" class="node">
 <title>Node30</title>
 <g id="a_node31"><a xlink:href="executestack_8c.html#a72ae26f9dec7953504a21aed7b894aca" target="_top" xlink:title="Creates a new stack for executing bytecode on.">
-<polygon fill="#ffffff" stroke="#000000" points="279,-278.5 279,-297.5 359,-297.5 359,-278.5 279,-278.5"/>
-<text text-anchor="middle" x="319" y="-285.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">execstack_init</text>
+<polygon fill="#ffffff" stroke="#000000" points="303.5,-278.5 303.5,-297.5 390.5,-297.5 390.5,-278.5 303.5,-278.5"/>
+<text text-anchor="middle" x="347" y="-285.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">execstack_init</text>
 </a>
 </g>
 </g>
 <!-- Node29&#45;&gt;Node30 -->
 <g id="edge31" class="edge">
 <title>Node29&#45;&gt;Node30</title>
-<path fill="none" stroke="#191970" d="M166.05,-215.5573C187.6249,-227.4995 226.0679,-248.2767 260,-264 267.9326,-267.6757 276.5928,-271.3702 284.7747,-274.7212"/>
-<polygon fill="#191970" stroke="#191970" points="283.5042,-277.9827 294.0875,-278.4756 286.1215,-271.4904 283.5042,-277.9827"/>
+<path fill="none" stroke="#191970" d="M180.0327,-215.5992C203.4783,-227.5848 245.2364,-248.4067 282,-264 290.8647,-267.76 300.5408,-271.5151 309.6542,-274.9008"/>
+<polygon fill="#191970" stroke="#191970" points="308.6635,-278.2651 319.2573,-278.4123 311.0676,-271.6908 308.6635,-278.2651"/>
 </g>
 <!-- Node32 -->
 <g id="node33" class="node">
 <title>Node32</title>
 <g id="a_node33"><a xlink:href="executestack_8c.html#a9343a4cdfb1aee0c4bbd340a09f75b75" target="_top" xlink:title="Print an execstack using the print functions of the objects on it.">
-<polygon fill="#ffffff" stroke="#000000" points="444.5,-240.5 444.5,-259.5 530.5,-259.5 530.5,-240.5 444.5,-240.5"/>
-<text text-anchor="middle" x="487.5" y="-247.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">execstack_print</text>
+<polygon fill="#ffffff" stroke="#000000" points="483,-240.5 483,-259.5 577,-259.5 577,-240.5 483,-240.5"/>
+<text text-anchor="middle" x="530" y="-247.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">execstack_print</text>
 </a>
 </g>
 </g>
 <!-- Node29&#45;&gt;Node32 -->
 <g id="edge33" class="edge">
 <title>Node29&#45;&gt;Node32</title>
-<path fill="none" stroke="#191970" d="M185.5048,-215.5587C207.0418,-220.862 234.911,-227.1459 260,-231 319.1826,-240.0915 387.7425,-245.0695 434.0013,-247.6228"/>
-<polygon fill="#191970" stroke="#191970" points="433.9283,-251.1238 444.1005,-248.1613 434.3011,-244.1337 433.9283,-251.1238"/>
+<path fill="none" stroke="#191970" d="M200.895,-215.5035C224.3256,-220.822 254.71,-227.1399 282,-231 347.0006,-240.1942 422.2596,-245.1689 472.6699,-247.6933"/>
+<polygon fill="#191970" stroke="#191970" points="472.5656,-251.1922 482.7234,-248.1807 472.9046,-244.2004 472.5656,-251.1922"/>
 </g>
 <!-- Node33 -->
 <g id="node34" class="node">
 <title>Node33</title>
 <g id="a_node34"><a xlink:href="helios__instruction_8c.html#acbbf462394d0b4c811e6d3214121b1a9" target="_top" xlink:title=" ">
-<polygon fill="#ffffff" stroke="#000000" points="273,-191 273,-221 365,-221 365,-191 273,-191"/>
-<text text-anchor="start" x="281" y="-209" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">helios_instruction</text>
-<text text-anchor="middle" x="319" y="-198" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">_print</text>
+<polygon fill="#ffffff" stroke="#000000" points="295.5,-191 295.5,-221 398.5,-221 398.5,-191 295.5,-191"/>
+<text text-anchor="start" x="303.5" y="-209" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">helios_instruction</text>
+<text text-anchor="middle" x="347" y="-198" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">_print</text>
 </a>
 </g>
 </g>
 <!-- Node29&#45;&gt;Node33 -->
 <g id="edge35" class="edge">
 <title>Node29&#45;&gt;Node33</title>
-<path fill="none" stroke="#191970" d="M213.2697,-206C229.5442,-206 246.8985,-206 262.7425,-206"/>
-<polygon fill="#191970" stroke="#191970" points="262.9098,-209.5001 272.9097,-206 262.9097,-202.5001 262.9098,-209.5001"/>
+<path fill="none" stroke="#191970" d="M232.1588,-206C249.5406,-206 268.0215,-206 284.9616,-206"/>
+<polygon fill="#191970" stroke="#191970" points="285.2865,-209.5001 295.2865,-206 285.2865,-202.5001 285.2865,-209.5001"/>
 </g>
 <!-- Node34 -->
 <g id="node35" class="node">
 <title>Node34</title>
 <g id="a_node35"><a xlink:href="executestack_8c.html#aad1e7afec264b72e249c35c80510bb8c" target="_top" xlink:title="Pushes a helios_object onto the stack.">
-<polygon fill="#ffffff" stroke="#000000" points="275,-152.5 275,-171.5 363,-171.5 363,-152.5 275,-152.5"/>
-<text text-anchor="middle" x="319" y="-159.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">execstack_push</text>
+<polygon fill="#ffffff" stroke="#000000" points="299.5,-152.5 299.5,-171.5 394.5,-171.5 394.5,-152.5 299.5,-152.5"/>
+<text text-anchor="middle" x="347" y="-159.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">execstack_push</text>
 </a>
 </g>
 </g>
 <!-- Node29&#45;&gt;Node34 -->
 <g id="edge36" class="edge">
 <title>Node29&#45;&gt;Node34</title>
-<path fill="none" stroke="#191970" d="M185.8875,-196.4527C211.2834,-189.8796 245.2231,-181.0952 272.4751,-174.0417"/>
-<polygon fill="#191970" stroke="#191970" points="273.3805,-177.4228 282.1845,-171.5287 271.6265,-170.6461 273.3805,-177.4228"/>
+<path fill="none" stroke="#191970" d="M201.7507,-196.4527C229.7052,-189.8219 267.1468,-180.9409 297.014,-173.8565"/>
+<polygon fill="#191970" stroke="#191970" points="297.9056,-177.2422 306.8278,-171.5287 296.29,-170.4312 297.9056,-177.2422"/>
 </g>
 <!-- Node35 -->
 <g id="node36" class="node">
 <title>Node35</title>
 <g id="a_node36"><a xlink:href="executestack_8c.html#a00b8d0e56e3754f23f19037c3b4070f4" target="_top" xlink:title="Pops the top of the executestack and returns it.">
-<polygon fill="#ffffff" stroke="#000000" points="277.5,-114.5 277.5,-133.5 360.5,-133.5 360.5,-114.5 277.5,-114.5"/>
-<text text-anchor="middle" x="319" y="-121.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">execstack_pop</text>
+<polygon fill="#ffffff" stroke="#000000" points="302.5,-114.5 302.5,-133.5 391.5,-133.5 391.5,-114.5 302.5,-114.5"/>
+<text text-anchor="middle" x="347" y="-121.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">execstack_pop</text>
 </a>
 </g>
 </g>
 <!-- Node29&#45;&gt;Node35 -->
 <g id="edge37" class="edge">
 <title>Node29&#45;&gt;Node35</title>
-<path fill="none" stroke="#191970" d="M165.4079,-196.4409C193.8877,-179.8857 250.3635,-147.233 260,-143 264.9878,-140.809 270.3102,-138.7416 275.6398,-136.8345"/>
-<polygon fill="#191970" stroke="#191970" points="276.836,-140.1246 285.17,-133.5829 274.5755,-133.4996 276.836,-140.1246"/>
+<path fill="none" stroke="#191970" d="M179.9773,-196.4161C197.1066,-187.5225 223.2942,-173.9033 246,-162 262.0233,-153.5999 265.2327,-149.7946 282,-143 287.5844,-140.7371 293.5379,-138.6187 299.4889,-136.6777"/>
+<polygon fill="#191970" stroke="#191970" points="300.9265,-139.8961 309.4362,-133.5845 298.8479,-133.2118 300.9265,-139.8961"/>
 </g>
 <!-- Node36 -->
 <g id="node37" class="node">
 <title>Node36</title>
 <g id="a_node37"><a xlink:href="executestack_8c.html#a4a019c6c395ae846c7f903671d874891" target="_top" xlink:title="Deletes an execute stack.">
-<polygon fill="#ffffff" stroke="#000000" points="272.5,-76.5 272.5,-95.5 365.5,-95.5 365.5,-76.5 272.5,-76.5"/>
-<text text-anchor="middle" x="319" y="-83.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">execstack_delete</text>
+<polygon fill="#ffffff" stroke="#000000" points="296,-76.5 296,-95.5 398,-95.5 398,-76.5 296,-76.5"/>
+<text text-anchor="middle" x="347" y="-83.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">execstack_delete</text>
 </a>
 </g>
 </g>
 <!-- Node29&#45;&gt;Node36 -->
 <g id="edge38" class="edge">
 <title>Node29&#45;&gt;Node36</title>
-<path fill="none" stroke="#191970" d="M171.2081,-196.4637C187.2048,-188.815 208.5958,-176.9077 224,-162 245.5312,-141.1629 236.3206,-123.3593 260,-105 262.4304,-103.1157 265.0534,-101.4152 267.7958,-99.8812"/>
-<polygon fill="#191970" stroke="#191970" points="269.3694,-103.0082 276.8709,-95.5264 266.341,-96.6972 269.3694,-103.0082"/>
+<path fill="none" stroke="#191970" d="M188.1025,-196.4232C205.9603,-189.0327 229.2028,-177.4542 246,-162 268.0502,-141.7129 258.0734,-123.036 282,-105 284.5011,-103.1146 287.1856,-101.4159 289.9882,-99.8854"/>
+<polygon fill="#191970" stroke="#191970" points="291.6865,-102.955 299.2612,-95.5473 288.7203,-96.6145 291.6865,-102.955"/>
 </g>
 <!-- Node31 -->
 <g id="node32" class="node">
 <title>Node31</title>
 <g id="a_node32"><a xlink:href="helios__memory_8h.html#a27b2da5d6954fd6e7aa0d2f352336c25" target="_top" xlink:title="Get the global current garbage collector.">
-<polygon fill="#ffffff" stroke="#000000" points="419,-278.5 419,-297.5 556,-297.5 556,-278.5 419,-278.5"/>
-<text text-anchor="middle" x="487.5" y="-285.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">helios_get_garbagecollector</text>
+<polygon fill="#ffffff" stroke="#000000" points="453,-278.5 453,-297.5 607,-297.5 607,-278.5 453,-278.5"/>
+<text text-anchor="middle" x="530" y="-285.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">helios_get_garbagecollector</text>
 </a>
 </g>
 </g>
 <!-- Node30&#45;&gt;Node31 -->
 <g id="edge32" class="edge">
 <title>Node30&#45;&gt;Node31</title>
-<path fill="none" stroke="#191970" d="M359.3599,-288C374.254,-288 391.6871,-288 408.8124,-288"/>
-<polygon fill="#191970" stroke="#191970" points="408.8384,-291.5001 418.8384,-288 408.8383,-284.5001 408.8384,-291.5001"/>
+<path fill="none" stroke="#191970" d="M390.8331,-288C406.4628,-288 424.6669,-288 442.6564,-288"/>
+<polygon fill="#191970" stroke="#191970" points="442.9054,-291.5001 452.9053,-288 442.9053,-284.5001 442.9054,-291.5001"/>
 </g>
 <!-- Node32&#45;&gt;Node21 -->
 <g id="edge34" class="edge">
 <title>Node32&#45;&gt;Node21</title>
-<path fill="none" stroke="#191970" d="M530.6271,-257.0024C541.0081,-259.7886 551.7594,-263.6538 561,-269 595.0872,-288.7213 625.0491,-324.3556 641.2422,-345.9299"/>
-<polygon fill="#191970" stroke="#191970" points="638.5826,-348.2224 647.311,-354.2279 644.2328,-344.0901 638.5826,-348.2224"/>
+<path fill="none" stroke="#191970" d="M577.1174,-256.3916C588.9645,-259.1977 601.334,-263.2251 612,-269 648.0855,-288.5376 680.4345,-324.7981 697.7358,-346.4285"/>
+<polygon fill="#191970" stroke="#191970" points="695.0882,-348.7249 704.0005,-354.454 700.6061,-344.4176 695.0882,-348.7249"/>
 </g>
 <!-- Node37 -->
 <g id="node38" class="node">
 <title>Node37</title>
 <g id="a_node38"><a xlink:href="helios__memory_8h.html#a48e4eb31a7e7d92b0e015ae68c01bb3a" target="_top" xlink:title="Perform a GC cleanup cycle.">
-<polygon fill="#ffffff" stroke="#000000" points="429.5,-76.5 429.5,-95.5 545.5,-95.5 545.5,-76.5 429.5,-76.5"/>
-<text text-anchor="middle" x="487.5" y="-83.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">helios_garbage_collect</text>
+<polygon fill="#ffffff" stroke="#000000" points="466,-76.5 466,-95.5 594,-95.5 594,-76.5 466,-76.5"/>
+<text text-anchor="middle" x="530" y="-83.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">helios_garbage_collect</text>
 </a>
 </g>
 </g>
 <!-- Node36&#45;&gt;Node37 -->
 <g id="edge39" class="edge">
 <title>Node36&#45;&gt;Node37</title>
-<path fill="none" stroke="#191970" d="M365.9366,-86C382.4568,-86 401.3755,-86 419.2896,-86"/>
-<polygon fill="#191970" stroke="#191970" points="419.405,-89.5001 429.405,-86 419.4049,-82.5001 419.405,-89.5001"/>
+<path fill="none" stroke="#191970" d="M398.4627,-86C416.2057,-86 436.4507,-86 455.6508,-86"/>
+<polygon fill="#191970" stroke="#191970" points="455.881,-89.5001 465.881,-86 455.881,-82.5001 455.881,-89.5001"/>
 </g>
 <!-- Node38&#45;&gt;Node38 -->
 <g id="edge41" class="edge">
 <title>Node38&#45;&gt;Node38</title>
-<path fill="none" stroke="#191970" d="M128.9632,-134.7571C119.2156,-143.5653 125.8945,-153 149,-153 163.8019,-153 171.8624,-149.128 173.1814,-144.0292"/>
-<polygon fill="#191970" stroke="#191970" points="176.313,-142.4582 169.0368,-134.7571 169.9224,-145.3148 176.313,-142.4582"/>
+<path fill="none" stroke="#191970" d="M139.9219,-134.7571C129.4245,-143.5653 136.6172,-153 161.5,-153 177.4406,-153 186.1211,-149.128 187.5416,-144.0292"/>
+<polygon fill="#191970" stroke="#191970" points="190.5692,-142.2493 183.0781,-134.7571 184.262,-145.2855 190.5692,-142.2493"/>
 </g>
 <!-- Node39 -->
 <g id="node40" class="node">
 <title>Node39</title>
 <g id="a_node40"><a xlink:href="token_8h.html#a863ec10d282f1f7e0dbbbaae6cec4f15" target="_top" xlink:title="Destroys a token object.Also frees the token&#39;s value.">
-<polygon fill="#ffffff" stroke="#000000" points="288,-38.5 288,-57.5 350,-57.5 350,-38.5 288,-38.5"/>
-<text text-anchor="middle" x="319" y="-45.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">token_free</text>
+<polygon fill="#ffffff" stroke="#000000" points="312.5,-38.5 312.5,-57.5 381.5,-57.5 381.5,-38.5 312.5,-38.5"/>
+<text text-anchor="middle" x="347" y="-45.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">token_free</text>
 </a>
 </g>
 </g>
 <!-- Node38&#45;&gt;Node39 -->
 <g id="edge42" class="edge">
 <title>Node38&#45;&gt;Node39</title>
-<path fill="none" stroke="#191970" d="M165.1286,-115.4573C186.3647,-103.1551 225.1027,-81.6116 260,-67 265.7975,-64.5726 272.0206,-62.2638 278.1735,-60.1459"/>
-<polygon fill="#191970" stroke="#191970" points="279.3214,-63.4527 287.7131,-56.9852 277.1197,-56.808 279.3214,-63.4527"/>
+<path fill="none" stroke="#191970" d="M179.0609,-115.4157C202.1706,-103.0685 244.2846,-81.4764 282,-67 288.4897,-64.5091 295.4488,-62.1552 302.3145,-60.0081"/>
+<polygon fill="#191970" stroke="#191970" points="303.6753,-63.2536 312.2409,-57.0182 301.6564,-56.551 303.6753,-63.2536"/>
 </g>
 <!-- Node41 -->
 <g id="node42" class="node">
 <title>Node41</title>
 <g id="a_node42"><a xlink:href="refcount_8c.html#a5dcd65b50eabfe133b9fcf6206b2bd1e" target="_top" xlink:title="Frees all tracked objects of a garbagecollector without freeing the GC itself.">
-<polygon fill="#ffffff" stroke="#000000" points="261,-.5 261,-19.5 377,-19.5 377,-.5 261,-.5"/>
-<text text-anchor="middle" x="319" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">helios_free_all_tracked</text>
+<polygon fill="#ffffff" stroke="#000000" points="282,-.5 282,-19.5 412,-19.5 412,-.5 282,-.5"/>
+<text text-anchor="middle" x="347" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">helios_free_all_tracked</text>
 </a>
 </g>
 </g>
 <!-- Node40&#45;&gt;Node41 -->
 <g id="edge44" class="edge">
 <title>Node40&#45;&gt;Node41</title>
-<path fill="none" stroke="#191970" d="M211.3364,-26.4662C224.2492,-24.4913 237.9147,-22.4013 251.0177,-20.3973"/>
-<polygon fill="#191970" stroke="#191970" points="251.5503,-23.8566 260.9062,-18.8849 250.4919,-16.9371 251.5503,-23.8566"/>
+<path fill="none" stroke="#191970" d="M229.52,-26.4662C243.249,-24.5419 257.7579,-22.5083 271.7188,-20.5515"/>
+<polygon fill="#191970" stroke="#191970" points="272.3514,-23.9972 281.7688,-19.1429 271.3798,-17.0649 272.3514,-23.9972"/>
 </g>
 </g>
 </svg>

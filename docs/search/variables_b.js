@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['message',['message',['../structerror__t.html#a5bd59b9f317b715016ef6f421040b7ec',1,'error_t']]]
+  ['message',['message',['../structparser__error.html#aebc84820c7fca4efed0f84c17350f618',1,'parser_error']]]
 ];

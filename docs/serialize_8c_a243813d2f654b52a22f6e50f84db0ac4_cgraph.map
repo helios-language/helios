@@ -1,9 +1,9 @@
 <map id="helios_deserialize_object" name="helios_deserialize_object">
-<area shape="rect" id="node1" title=" " alt="" coords="5,23,131,65"/>
-<area shape="rect" id="node2" href="$helios__integer_8c.html#a64070d52d78c6e1bba2bcadd6a55b002" title="Create a helios_integer object from a c integer type." alt="" coords="184,5,347,32"/>
-<area shape="rect" id="node6" href="$helios__float_8c.html#a826b7f7e3b3c75b0161be6e84c349135" title="Create a helios_float object from a c double type." alt="" coords="179,56,352,83"/>
-<area shape="rect" id="node3" href="$helios__integer_8c.html#a50a26b1e9578164839f3a5bb17e04051" title="Constructor of a helios_integer object." alt="" coords="400,5,527,32"/>
-<area shape="rect" id="node4" href="$helios__memory_8h.html#af87f0050f8e236d0945592fa4e54dc94" title="Allocates a new helios object (and performs all the GC steps associated with that action)." alt="" coords="597,5,748,32"/>
-<area shape="rect" id="node5" href="$helios__memory_8h.html#ab14fb1c046aae61ab06eda8eeaf2cd85" title=" " alt="" coords="575,56,771,83"/>
-<area shape="rect" id="node7" href="$helios__float_8c.html#a6b9f18063c74a36f08d05c6310bc45da" title="Constructor of a helios_float object." alt="" coords="407,56,519,83"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,23,144,65"/>
+<area shape="rect" id="node2" href="$helios__integer_8c.html#af677316afd6536844aeb027f14c198cf" title="Create a helios_integer object from a c integer type." alt="" coords="197,5,380,32"/>
+<area shape="rect" id="node6" href="$helios__float_8c.html#a826b7f7e3b3c75b0161be6e84c349135" title="Create a helios_float object from a c double type." alt="" coords="192,56,385,83"/>
+<area shape="rect" id="node3" href="$helios__integer_8c.html#a50a26b1e9578164839f3a5bb17e04051" title="Constructor of a helios_integer object." alt="" coords="433,5,576,32"/>
+<area shape="rect" id="node4" href="$helios__memory_8h.html#af87f0050f8e236d0945592fa4e54dc94" title="Allocates a new helios object (and performs all the GC steps associated with that action)." alt="" coords="650,5,817,32"/>
+<area shape="rect" id="node5" href="$helios__memory_8h.html#ab14fb1c046aae61ab06eda8eeaf2cd85" title=" " alt="" coords="624,56,843,83"/>
+<area shape="rect" id="node7" href="$helios__float_8c.html#a6b9f18063c74a36f08d05c6310bc45da" title="Constructor of a helios_float object." alt="" coords="442,56,567,83"/>
 </map>

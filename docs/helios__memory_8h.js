@@ -1,0 +1,25 @@
+var helios__memory_8h =
+[
+    [ "__helios_gc_hashmap_node", "struct____helios__gc__hashmap__node.html", "struct____helios__gc__hashmap__node" ],
+    [ "garbagecollector", "structgarbagecollector.html", "structgarbagecollector" ],
+    [ "GC_DEFAULT_LENGTH", "helios__memory_8h.html#a5e29bea4269384b13c7e2799b02d4ded", null ],
+    [ "GC_REHASH_LOWER_PERCENT", "helios__memory_8h.html#acf1377fdc0c088c3bea11743f7a3ff18", null ],
+    [ "GC_REHASH_PERCENT", "helios__memory_8h.html#afcb2995864ced8e4d4bfa1672b3a45bf", null ],
+    [ "HELIOS_DECREF", "helios__memory_8h.html#a0ca4ccb924c0070686f0cca8feb0ff27", null ],
+    [ "HELIOS_DECREF_NOGC", "helios__memory_8h.html#aff41a519ebf28356740eeab69721c59a", null ],
+    [ "HELIOS_GET_OBJ_GC", "helios__memory_8h.html#a5301b4c3358268578cde0b330c52efb2", null ],
+    [ "HELIOS_GETREF", "helios__memory_8h.html#a8c172aa0256138d40339d80c3f9a1540", null ],
+    [ "HELIOS_INCREF", "helios__memory_8h.html#ad6a677794da9e4d1890752b20985794b", null ],
+    [ "HELIOS_MEMORY_DEBUG", "helios__memory_8h.html#aacb2e437a5d6d1fac2bfbe176b2099ba", null ],
+    [ "HELIOS_SETREF", "helios__memory_8h.html#a121e8a618c451401f4a74f77ee940cf2", null ],
+    [ "helios_allocate_object", "helios__memory_8h.html#af87f0050f8e236d0945592fa4e54dc94", null ],
+    [ "helios_delete_garbagecollector", "helios__memory_8h.html#a0ba47c8ed7e1be60f1c360e33a0aff15", null ],
+    [ "helios_free_all_tracked", "helios__memory_8h.html#a5dcd65b50eabfe133b9fcf6206b2bd1e", null ],
+    [ "helios_free_object", "helios__memory_8h.html#a08e10d6dde741394f52241662ea01fc4", null ],
+    [ "helios_garbage_collect", "helios__memory_8h.html#a48e4eb31a7e7d92b0e015ae68c01bb3a", null ],
+    [ "helios_get_garbagecollector", "helios__memory_8h.html#a27b2da5d6954fd6e7aa0d2f352336c25", null ],
+    [ "helios_init_garbagecollector", "helios__memory_8h.html#aaabde550780f37dc19f59b3e8bc9c514", null ],
+    [ "helios_set_garbagecollectable", "helios__memory_8h.html#ab14fb1c046aae61ab06eda8eeaf2cd85", null ],
+    [ "helios_set_garbagecollector", "helios__memory_8h.html#a0352d829134eb27df2d9e088062e987d", null ],
+    [ "__GC_CURRENT", "helios__memory_8h.html#ae984dcde75fe497c211fa3e23888dadd", null ]
+];

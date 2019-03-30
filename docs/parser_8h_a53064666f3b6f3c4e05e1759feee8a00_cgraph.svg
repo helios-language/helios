@@ -46,7 +46,7 @@ if (edges && edges.length) {
         </defs>
 
 <script type="text/javascript">
-var viewWidth = 604;
+var viewWidth = 649;
 var viewHeight = 180;
 var sectionId = 'dynsection-7';
 </script>
@@ -54,13 +54,13 @@ var sectionId = 'dynsection-7';
 <svg id="graph" class="graph">
 <g id="viewport">
 <title>parser_expectstring</title>
-<polygon fill="#ffffff" stroke="transparent" points="-4,4 -4,-176 600,-176 600,4 -4,4"/>
+<polygon fill="#ffffff" stroke="transparent" points="-4,4 -4,-176 645,-176 645,4 -4,4"/>
 <!-- Node23 -->
 <g id="node1" class="node">
 <title>Node23</title>
 <g id="a_node1"><a xlink:title="Crossover between acceptstring and expectchar.">
-<polygon fill="#bfbfbf" stroke="#000000" points="0,-76.5 0,-95.5 102,-95.5 102,-76.5 0,-76.5"/>
-<text text-anchor="middle" x="51" y="-83.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">parser_expectstring</text>
+<polygon fill="#bfbfbf" stroke="#000000" points="0,-76.5 0,-95.5 113,-95.5 113,-76.5 0,-76.5"/>
+<text text-anchor="middle" x="56.5" y="-83.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">parser_expectstring</text>
 </a>
 </g>
 </g>
@@ -68,127 +68,127 @@ var sectionId = 'dynsection-7';
 <g id="node2" class="node">
 <title>Node24</title>
 <g id="a_node2"><a xlink:href="parserutil_8c.html#aecf4b8bdaae9ca8435542900cf024f4e" target="_top" xlink:title="Copy a parser.">
-<polygon fill="#ffffff" stroke="#000000" points="152.5,-152.5 152.5,-171.5 222.5,-171.5 222.5,-152.5 152.5,-152.5"/>
-<text text-anchor="middle" x="187.5" y="-159.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">parser_copy</text>
+<polygon fill="#ffffff" stroke="#000000" points="166,-152.5 166,-171.5 242,-171.5 242,-152.5 166,-152.5"/>
+<text text-anchor="middle" x="204" y="-159.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">parser_copy</text>
 </a>
 </g>
 </g>
 <!-- Node23&#45;&gt;Node24 -->
 <g id="edge1" class="edge">
 <title>Node23&#45;&gt;Node24</title>
-<path fill="none" stroke="#191970" d="M63.737,-95.5998C80.2386,-107.7367 110.1944,-128.7618 138,-143 141.8253,-144.9588 145.9017,-146.835 150.0103,-148.5937"/>
-<polygon fill="#191970" stroke="#191970" points="148.9708,-151.9491 159.5529,-152.4675 151.6037,-145.4631 148.9708,-151.9491"/>
+<path fill="none" stroke="#191970" d="M70.0651,-95.6838C87.634,-107.9094 119.5089,-129.0282 149,-143 153.3908,-145.0802 158.0729,-147.0493 162.782,-148.8758"/>
+<polygon fill="#191970" stroke="#191970" points="161.8077,-152.2466 172.4012,-152.4142 164.2244,-145.677 161.8077,-152.2466"/>
 </g>
 <!-- Node25 -->
 <g id="node3" class="node">
 <title>Node25</title>
 <g id="a_node3"><a xlink:href="parserutil_8c.html#ad7f3825521eb3e5bd3af734357caa4d6" target="_top" xlink:title="If the parser can accept the given character, accept it, else push an error on the parsers errorstack...">
-<polygon fill="#ffffff" stroke="#000000" points="139,-114.5 139,-133.5 236,-133.5 236,-114.5 139,-114.5"/>
-<text text-anchor="middle" x="187.5" y="-121.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">parser_expectchar</text>
+<polygon fill="#ffffff" stroke="#000000" points="150.5,-114.5 150.5,-133.5 257.5,-133.5 257.5,-114.5 150.5,-114.5"/>
+<text text-anchor="middle" x="204" y="-121.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">parser_expectchar</text>
 </a>
 </g>
 </g>
 <!-- Node23&#45;&gt;Node25 -->
 <g id="edge2" class="edge">
 <title>Node23&#45;&gt;Node25</title>
-<path fill="none" stroke="#191970" d="M85.4447,-95.589C102.9847,-100.4719 124.51,-106.4643 143.2631,-111.685"/>
-<polygon fill="#191970" stroke="#191970" points="142.494,-115.1039 153.0663,-114.4141 144.3713,-108.3603 142.494,-115.1039"/>
+<path fill="none" stroke="#191970" d="M93.7205,-95.589C113.0093,-100.5583 136.7584,-106.6767 157.271,-111.9613"/>
+<polygon fill="#191970" stroke="#191970" points="156.4902,-115.3744 167.0472,-114.4799 158.2366,-108.5957 156.4902,-115.3744"/>
 </g>
 <!-- Node29 -->
 <g id="node7" class="node">
 <title>Node29</title>
-<g id="a_node7"><a xlink:href="error_8c.html#a1febf822c4d9249dd4afd09c5d5f87bb" target="_top" xlink:title="Construct a new error object out of parameters, and push it to the errorstack.">
-<polygon fill="#ffffff" stroke="#000000" points="278.5,-76.5 278.5,-95.5 364.5,-95.5 364.5,-76.5 278.5,-76.5"/>
-<text text-anchor="middle" x="321.5" y="-83.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">errorstack_push</text>
+<g id="a_node7"><a xlink:href="error_8c.html#ae07365063509d8944da638087336597b" target="_top" xlink:title="Construct a new error object out of parameters, and push it to the errorstack.">
+<polygon fill="#ffffff" stroke="#000000" points="300.5,-76.5 300.5,-95.5 395.5,-95.5 395.5,-76.5 300.5,-76.5"/>
+<text text-anchor="middle" x="348" y="-83.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">errorstack_push</text>
 </a>
 </g>
 </g>
 <!-- Node23&#45;&gt;Node29 -->
 <g id="edge7" class="edge">
 <title>Node23&#45;&gt;Node29</title>
-<path fill="none" stroke="#191970" d="M102.197,-86C149.5718,-86 219.7419,-86 267.8762,-86"/>
-<polygon fill="#191970" stroke="#191970" points="268.0982,-89.5001 278.0981,-86 268.0981,-82.5001 268.0982,-89.5001"/>
+<path fill="none" stroke="#191970" d="M113.0498,-86C164.0102,-86 238.6097,-86 290.0095,-86"/>
+<polygon fill="#191970" stroke="#191970" points="290.2873,-89.5001 300.2872,-86 290.2872,-82.5001 290.2873,-89.5001"/>
 </g>
 <!-- Node30 -->
 <g id="node8" class="node">
 <title>Node30</title>
 <g id="a_node8"><a xlink:href="parserutil_8c.html#a1f1841a636bfe529466c99e3db9999cd" target="_top" xlink:title="Restores a parser to another parser&#39;s position.">
-<polygon fill="#ffffff" stroke="#000000" points="148,-38.5 148,-57.5 227,-57.5 227,-38.5 148,-38.5"/>
-<text text-anchor="middle" x="187.5" y="-45.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">parser_restore</text>
+<polygon fill="#ffffff" stroke="#000000" points="160.5,-38.5 160.5,-57.5 247.5,-57.5 247.5,-38.5 160.5,-38.5"/>
+<text text-anchor="middle" x="204" y="-45.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">parser_restore</text>
 </a>
 </g>
 </g>
 <!-- Node23&#45;&gt;Node30 -->
 <g id="edge8" class="edge">
 <title>Node23&#45;&gt;Node30</title>
-<path fill="none" stroke="#191970" d="M85.4447,-76.411C102.9847,-71.5281 124.51,-65.5357 143.2631,-60.315"/>
-<polygon fill="#191970" stroke="#191970" points="144.3713,-63.6397 153.0663,-57.5859 142.494,-56.8961 144.3713,-63.6397"/>
+<path fill="none" stroke="#191970" d="M93.7205,-76.411C113.0093,-71.4417 136.7584,-65.3233 157.271,-60.0387"/>
+<polygon fill="#191970" stroke="#191970" points="158.2366,-63.4043 167.0472,-57.5201 156.4902,-56.6256 158.2366,-63.4043"/>
 </g>
 <!-- Node31 -->
 <g id="node9" class="node">
 <title>Node31</title>
 <g id="a_node9"><a xlink:href="parserutil_8c.html#ab62454c7986532e03ea36b14956b5ad1" target="_top" xlink:title="Simple parser destructor.">
-<polygon fill="#ffffff" stroke="#000000" points="138,-.5 138,-19.5 237,-19.5 237,-.5 138,-.5"/>
-<text text-anchor="middle" x="187.5" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">parser_free_simple</text>
+<polygon fill="#ffffff" stroke="#000000" points="149,-.5 149,-19.5 259,-19.5 259,-.5 149,-.5"/>
+<text text-anchor="middle" x="204" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">parser_free_simple</text>
 </a>
 </g>
 </g>
 <!-- Node23&#45;&gt;Node31 -->
 <g id="edge9" class="edge">
 <title>Node23&#45;&gt;Node31</title>
-<path fill="none" stroke="#191970" d="M63.737,-76.4002C80.2386,-64.2633 110.1944,-43.2382 138,-29 141.8253,-27.0412 145.9017,-25.165 150.0103,-23.4063"/>
-<polygon fill="#191970" stroke="#191970" points="151.6037,-26.5369 159.5529,-19.5325 148.9708,-20.0509 151.6037,-26.5369"/>
+<path fill="none" stroke="#191970" d="M70.0651,-76.3162C87.634,-64.0906 119.5089,-42.9718 149,-29 153.3908,-26.9198 158.0729,-24.9507 162.782,-23.1242"/>
+<polygon fill="#191970" stroke="#191970" points="164.2244,-26.323 172.4012,-19.5858 161.8077,-19.7534 164.2244,-26.323"/>
 </g>
 <!-- Node26 -->
 <g id="node4" class="node">
 <title>Node26</title>
 <g id="a_node4"><a xlink:href="parserutil_8c.html#a1a00af051004cb18edac760f39982eea" target="_top" xlink:title="Searches for the given character, advances the parser if it found it.">
-<polygon fill="#ffffff" stroke="#000000" points="273,-114.5 273,-133.5 370,-133.5 370,-114.5 273,-114.5"/>
-<text text-anchor="middle" x="321.5" y="-121.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">parser_acceptchar</text>
+<polygon fill="#ffffff" stroke="#000000" points="295,-114.5 295,-133.5 401,-133.5 401,-114.5 295,-114.5"/>
+<text text-anchor="middle" x="348" y="-121.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">parser_acceptchar</text>
 </a>
 </g>
 </g>
 <!-- Node25&#45;&gt;Node26 -->
 <g id="edge3" class="edge">
 <title>Node25&#45;&gt;Node26</title>
-<path fill="none" stroke="#191970" d="M236.2561,-124C244.7542,-124 253.6762,-124 262.4159,-124"/>
-<polygon fill="#191970" stroke="#191970" points="262.5556,-127.5001 272.5556,-124 262.5556,-120.5001 262.5556,-127.5001"/>
+<path fill="none" stroke="#191970" d="M257.6203,-124C266.4512,-124 275.6775,-124 284.7178,-124"/>
+<polygon fill="#191970" stroke="#191970" points="284.8144,-127.5001 294.8144,-124 284.8144,-120.5001 284.8144,-127.5001"/>
 </g>
 <!-- Node25&#45;&gt;Node29 -->
 <g id="edge6" class="edge">
 <title>Node25&#45;&gt;Node29</title>
-<path fill="none" stroke="#191970" d="M221.3139,-114.411C238.5326,-109.5281 259.6637,-103.5357 278.0733,-98.315"/>
-<polygon fill="#191970" stroke="#191970" points="279.0312,-101.6815 287.697,-95.5859 277.1214,-94.947 279.0312,-101.6815"/>
+<path fill="none" stroke="#191970" d="M240.3373,-114.411C259.0829,-109.4642 282.1432,-103.3789 302.1066,-98.1108"/>
+<polygon fill="#191970" stroke="#191970" points="303.1481,-101.4558 311.924,-95.5201 301.3619,-94.6875 303.1481,-101.4558"/>
 </g>
 <!-- Node27 -->
 <g id="node5" class="node">
 <title>Node27</title>
 <g id="a_node5"><a xlink:href="parserutil_8c.html#a2d9e8c20025b7b883c4e87790685a6ad" target="_top" xlink:title="Proxy to parser_next.">
-<polygon fill="#ffffff" stroke="#000000" points="406,-114.5 406,-133.5 492,-133.5 492,-114.5 406,-114.5"/>
-<text text-anchor="middle" x="449" y="-121.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">parser_advance</text>
+<polygon fill="#ffffff" stroke="#000000" points="437,-114.5 437,-133.5 531,-133.5 531,-114.5 437,-114.5"/>
+<text text-anchor="middle" x="484" y="-121.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">parser_advance</text>
 </a>
 </g>
 </g>
 <!-- Node26&#45;&gt;Node27 -->
 <g id="edge4" class="edge">
 <title>Node26&#45;&gt;Node27</title>
-<path fill="none" stroke="#191970" d="M370.066,-124C378.4713,-124 387.2505,-124 395.7717,-124"/>
-<polygon fill="#191970" stroke="#191970" points="395.9954,-127.5001 405.9954,-124 395.9954,-120.5001 395.9954,-127.5001"/>
+<path fill="none" stroke="#191970" d="M401.3605,-124C409.7195,-124 418.3884,-124 426.8288,-124"/>
+<polygon fill="#191970" stroke="#191970" points="426.9749,-127.5001 436.9748,-124 426.9748,-120.5001 426.9749,-127.5001"/>
 </g>
 <!-- Node28 -->
 <g id="node6" class="node">
 <title>Node28</title>
 <g id="a_node6"><a xlink:href="parserutil_8c.html#ab25a97ff31329fe9461666bfe2dc6f2c" target="_top" xlink:title="Iterate the parser.">
-<polygon fill="#ffffff" stroke="#000000" points="528,-114.5 528,-133.5 596,-133.5 596,-114.5 528,-114.5"/>
-<text text-anchor="middle" x="562" y="-121.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">parser_next</text>
+<polygon fill="#ffffff" stroke="#000000" points="567,-114.5 567,-133.5 641,-133.5 641,-114.5 567,-114.5"/>
+<text text-anchor="middle" x="604" y="-121.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">parser_next</text>
 </a>
 </g>
 </g>
 <!-- Node27&#45;&gt;Node28 -->
 <g id="edge5" class="edge">
 <title>Node27&#45;&gt;Node28</title>
-<path fill="none" stroke="#191970" d="M492.0428,-124C500.4677,-124 509.3165,-124 517.7791,-124"/>
-<polygon fill="#191970" stroke="#191970" points="517.8556,-127.5001 527.8556,-124 517.8555,-120.5001 517.8556,-127.5001"/>
+<path fill="none" stroke="#191970" d="M531.0828,-124C539.4854,-124 548.2428,-124 556.6528,-124"/>
+<polygon fill="#191970" stroke="#191970" points="556.6916,-127.5001 566.6916,-124 556.6916,-120.5001 556.6916,-127.5001"/>
 </g>
 </g>
 </svg>

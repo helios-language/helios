@@ -1,8 +1,9 @@
 <map id="helios_set_garbagecollectable" name="helios_set_garbagecollectable">
-<area shape="rect" id="node1" title=" " alt="" coords="237,107,433,133"/>
-<area shape="rect" id="node2" href="$helios__code_8h.html#ab47a14436bfa855c861f5cd333cd1dfd" title=" " alt="" coords="40,5,155,32"/>
-<area shape="rect" id="node3" href="$helios__float_8h.html#a6b9f18063c74a36f08d05c6310bc45da" title="Constructor of a helios_float object." alt="" coords="41,56,153,83"/>
-<area shape="rect" id="node4" href="$helios__integer_8h.html#a50a26b1e9578164839f3a5bb17e04051" title="Constructor of a helios_integer object." alt="" coords="34,107,161,133"/>
-<area shape="rect" id="node5" href="$serialize_8c.html#ad72a9663ebca3d0f4f38b63a0e8e8668" title=" " alt="" coords="5,157,189,184"/>
-<area shape="rect" id="node6" href="$helios__string_8h.html#af727ca5352482ab7e542510f178a9f85" title="Constructor of a helios_string." alt="" coords="38,208,157,235"/>
+<area shape="rect" id="node1" title=" " alt="" coords="260,132,479,159"/>
+<area shape="rect" id="node2" href="$helios__code_8h.html#ab47a14436bfa855c861f5cd333cd1dfd" title=" " alt="" coords="45,5,172,32"/>
+<area shape="rect" id="node3" href="$helios__float_8h.html#a6b9f18063c74a36f08d05c6310bc45da" title="Constructor of a helios_float object." alt="" coords="46,56,171,83"/>
+<area shape="rect" id="node4" href="$helios__hashmap_8h.html#a88ce0bf35a0f8d3e799fb6cb13a10044" title=" " alt="" coords="31,107,187,133"/>
+<area shape="rect" id="node5" href="$helios__integer_8h.html#a50a26b1e9578164839f3a5bb17e04051" title="Constructor of a helios_integer object." alt="" coords="37,157,180,184"/>
+<area shape="rect" id="node6" href="$serialize_8c.html#ad72a9663ebca3d0f4f38b63a0e8e8668" title=" " alt="" coords="5,208,212,235"/>
+<area shape="rect" id="node7" href="$helios__string_8h.html#af727ca5352482ab7e542510f178a9f85" title="Constructor of a helios_string." alt="" coords="42,259,175,285"/>
 </map>

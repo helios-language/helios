@@ -1,5 +1,5 @@
 <map id="helios_hashmap" name="helios_hashmap">
-<area shape="rect" id="node1" title=" " alt="" coords="5,199,121,225"/>
-<area shape="rect" id="node2" href="$structhashmap__entry.html" title=" " alt="" coords="8,109,119,136"/>
-<area shape="rect" id="node3" href="$structhelios__object.html" title="Definition of the most basic helios object." alt="" coords="14,5,113,32"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,199,133,225"/>
+<area shape="rect" id="node2" href="$structhashmap__entry.html" title=" " alt="" coords="8,109,131,136"/>
+<area shape="rect" id="node3" href="$structhelios__object.html" title="Definition of the most basic helios object." alt="" coords="15,5,123,32"/>
 </map>

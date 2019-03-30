@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['gc_5fdefault_5flength',['GC_DEFAULT_LENGTH',['../helios__memory_8h.html#a5e29bea4269384b13c7e2799b02d4ded',1,'helios_memory.h']]],
-  ['gc_5frehash_5flower_5fpercent',['GC_REHASH_LOWER_PERCENT',['../helios__memory_8h.html#acf1377fdc0c088c3bea11743f7a3ff18',1,'helios_memory.h']]],
-  ['gc_5frehash_5fpercent',['GC_REHASH_PERCENT',['../helios__memory_8h.html#afcb2995864ced8e4d4bfa1672b3a45bf',1,'helios_memory.h']]]
+  ['float_5fdelta',['FLOAT_DELTA',['../helios__integer__math__test_8c.html#a3045181fe0dd44e8975c3c3405bd946a',1,'helios_integer_math_test.c']]],
+  ['float_5fhash_5fcutoff_5fprecision',['FLOAT_HASH_CUTOFF_PRECISION',['../helios__float_8h.html#a0b5ada26cdf7112c02d3131ba0a265f2',1,'helios_float.h']]]
 ];

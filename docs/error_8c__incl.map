@@ -1,9 +1,9 @@
-<map id="parser/error.c" name="parser/error.c">
-<area shape="rect" id="node1" title=" " alt="" coords="153,5,252,32"/>
-<area shape="rect" id="node2" title=" " alt="" coords="5,155,80,181"/>
-<area shape="rect" id="node3" title=" " alt="" coords="239,155,305,181"/>
-<area shape="rect" id="node4" title=" " alt="" coords="129,80,191,107"/>
-<area shape="rect" id="node5" title=" " alt="" coords="215,80,279,107"/>
-<area shape="rect" id="node6" title=" " alt="" coords="303,80,369,107"/>
-<area shape="rect" id="node7" href="$error_8h.html" title=" " alt="" coords="47,80,105,107"/>
+<map id="main/parser/error.c" name="main/parser/error.c">
+<area shape="rect" id="node1" title=" " alt="" coords="181,5,326,32"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,155,88,181"/>
+<area shape="rect" id="node3" title=" " alt="" coords="273,155,343,181"/>
+<area shape="rect" id="node4" title=" " alt="" coords="173,80,240,107"/>
+<area shape="rect" id="node5" title=" " alt="" coords="265,80,335,107"/>
+<area shape="rect" id="node6" title=" " alt="" coords="359,80,430,107"/>
+<area shape="rect" id="node7" href="$parser__error_8h.html" title=" " alt="" coords="37,80,149,107"/>
 </map>

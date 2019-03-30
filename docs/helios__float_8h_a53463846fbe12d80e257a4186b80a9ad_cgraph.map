@@ -1,6 +1,6 @@
 <map id="helios_float_copy" name="helios_float_copy">
-<area shape="rect" id="node1" title="Copy a helios float object." alt="" coords="5,31,128,57"/>
-<area shape="rect" id="node2" href="$helios__float_8c.html#a6b9f18063c74a36f08d05c6310bc45da" title="Constructor of a helios_float object." alt="" coords="176,31,288,57"/>
-<area shape="rect" id="node3" href="$helios__memory_8h.html#af87f0050f8e236d0945592fa4e54dc94" title="Allocates a new helios object (and performs all the GC steps associated with that action)." alt="" coords="359,5,509,32"/>
-<area shape="rect" id="node4" href="$helios__memory_8h.html#ab14fb1c046aae61ab06eda8eeaf2cd85" title=" " alt="" coords="336,56,532,83"/>
+<area shape="rect" id="node1" title="Copy a helios float object." alt="" coords="5,31,140,57"/>
+<area shape="rect" id="node2" href="$helios__float_8c.html#a6b9f18063c74a36f08d05c6310bc45da" title="Constructor of a helios_float object." alt="" coords="188,31,313,57"/>
+<area shape="rect" id="node3" href="$helios__memory_8h.html#af87f0050f8e236d0945592fa4e54dc94" title="Allocates a new helios object (and performs all the GC steps associated with that action)." alt="" coords="387,5,554,32"/>
+<area shape="rect" id="node4" href="$helios__memory_8h.html#ab14fb1c046aae61ab06eda8eeaf2cd85" title=" " alt="" coords="361,56,580,83"/>
 </map>

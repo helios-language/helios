@@ -1,10 +1,10 @@
 <map id="PARSERFUNC" name="PARSERFUNC">
-<area shape="rect" id="node1" title="Either accepts an atom or a bracketed expression." alt="" coords="5,56,120,83"/>
-<area shape="rect" id="node2" href="$parser_8h.html#a8c4c57eca60b2cec9a372a04abea456d" title="Advances the parser as long as it can find whitespace." alt="" coords="357,5,463,32"/>
-<area shape="rect" id="node5" href="$parser_8h.html#a1a00af051004cb18edac760f39982eea" title="Searches for the given character, advances the parser if it found it." alt="" coords="168,56,297,83"/>
-<area shape="rect" id="node6" href="$parser_8h.html#ad7f3825521eb3e5bd3af734357caa4d6" title="If the parser can accept the given character, accept it, else push an error on the parsers errorstack..." alt="" coords="168,107,297,133"/>
-<area shape="rect" id="node3" href="$parserutil_8c.html#a2d9e8c20025b7b883c4e87790685a6ad" title="Proxy to parser_next." alt="" coords="523,56,637,83"/>
-<area shape="rect" id="node4" href="$parserutil_8c.html#ab25a97ff31329fe9461666bfe2dc6f2c" title="Iterate the parser." alt="" coords="685,56,776,83"/>
-<area shape="rect" id="node7" href="$parserutil_8c.html#a1a00af051004cb18edac760f39982eea" title="Searches for the given character, advances the parser if it found it." alt="" coords="345,107,475,133"/>
-<area shape="rect" id="node8" href="$error_8c.html#a1febf822c4d9249dd4afd09c5d5f87bb" title="Construct a new error object out of parameters, and push it to the errorstack." alt="" coords="353,157,467,184"/>
+<area shape="rect" id="node1" title="Either accepts an atom or a bracketed expression." alt="" coords="5,56,113,83"/>
+<area shape="rect" id="node2" href="$parser_8h.html#a8c4c57eca60b2cec9a372a04abea456d" title="Advances the parser as long as it can find whitespace." alt="" coords="365,5,480,32"/>
+<area shape="rect" id="node5" href="$parser_8h.html#a1a00af051004cb18edac760f39982eea" title="Searches for the given character, advances the parser if it found it." alt="" coords="162,56,303,83"/>
+<area shape="rect" id="node6" href="$parser_8h.html#ad7f3825521eb3e5bd3af734357caa4d6" title="If the parser can accept the given character, accept it, else push an error on the parsers errorstack..." alt="" coords="161,107,304,133"/>
+<area shape="rect" id="node3" href="$parserutil_8c.html#a2d9e8c20025b7b883c4e87790685a6ad" title="Proxy to parser_next." alt="" coords="541,56,667,83"/>
+<area shape="rect" id="node4" href="$parserutil_8c.html#ab25a97ff31329fe9461666bfe2dc6f2c" title="Iterate the parser." alt="" coords="715,56,813,83"/>
+<area shape="rect" id="node7" href="$parserutil_8c.html#a1a00af051004cb18edac760f39982eea" title="Searches for the given character, advances the parser if it found it." alt="" coords="352,107,493,133"/>
+<area shape="rect" id="node8" href="$error_8c.html#ae07365063509d8944da638087336597b" title="Construct a new error object out of parameters, and push it to the errorstack." alt="" coords="359,157,486,184"/>
 </map>

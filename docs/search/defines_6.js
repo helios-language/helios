@@ -1,10 +1,11 @@
 var searchData=
 [
-  ['parser_5faccepted_5fmax_5fstrlen',['PARSER_ACCEPTED_MAX_STRLEN',['../parser_8h.html#a68f7d038b8d2ddc6a9ff4813fc4f0d96',1,'parser.h']]],
-  ['parser_5fdedent',['PARSER_DEDENT',['../parser_8h.html#a36c103fa13350b71df4bb86b6aa2eb35',1,'parser.h']]],
-  ['parser_5findent',['PARSER_INDENT',['../parser_8h.html#ad2a6783f7482bd85ccb9598c6cbaf46a',1,'parser.h']]],
-  ['parser_5findent_5fstack_5fdefault_5fsize',['PARSER_INDENT_STACK_DEFAULT_SIZE',['../parser_8h.html#a0593ad85d58aa382fd7b8917f2f8b1f3',1,'parser.h']]],
-  ['parser_5fspaces_5fper_5ftab',['PARSER_SPACES_PER_TAB',['../parser_8h.html#a16c6094e1ca2190e24a99b30e365cf4e',1,'parser.h']]],
-  ['parsercall',['PARSERCALL',['../parser_8h.html#a2fb0a38568a552cdf1bca1ba692601e8',1,'parser.h']]],
-  ['parserfunc',['PARSERFUNC',['../parser_8h.html#a1f0c632be002f48bb0f43e7ba2537fb8',1,'parser.h']]]
+  ['is_5fhelios_5fboolean',['IS_HELIOS_BOOLEAN',['../helios__boolean_8h.html#a9234afff5ccf549d253be0fd0e475047',1,'helios_boolean.h']]],
+  ['is_5fhelios_5fcode',['IS_HELIOS_CODE',['../helios__code_8h.html#ab63fadc7ba8d13035e618015fdad6dca',1,'helios_code.h']]],
+  ['is_5fhelios_5ffloat',['IS_HELIOS_FLOAT',['../helios__float_8h.html#acc70a320d72a7523c68494fc4a1b1a65',1,'helios_float.h']]],
+  ['is_5fhelios_5fhashmap',['IS_HELIOS_HASHMAP',['../helios__hashmap_8h.html#a61756c87c9fddf2d5d279abb1e03a19a',1,'helios_hashmap.h']]],
+  ['is_5fhelios_5finteger',['IS_HELIOS_INTEGER',['../helios__integer_8h.html#a8476cc43434d502c78ccf44f01b7bf4b',1,'helios_integer.h']]],
+  ['is_5fhelios_5fobject',['IS_HELIOS_OBJECT',['../helios__object_8h.html#ae7d1b8152e981ef705ab15f6258a385e',1,'helios_object.h']]],
+  ['is_5fhelios_5fserialized_5fobject',['IS_HELIOS_SERIALIZED_OBJECT',['../serialize_8h.html#a8b1f4f92694b376c26305ec65bd2773e',1,'serialize.h']]],
+  ['is_5fhelios_5fstring',['IS_HELIOS_STRING',['../helios__string_8h.html#a0f47701ddc25605fe95c731aec3eeeea',1,'helios_string.h']]]
 ];

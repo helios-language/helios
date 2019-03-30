@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.15"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Helios-Language: builtins/type/include/helios_type.h File Reference</title>
+<title>Helios-Language: main/builtins/type/include/helios_type.h File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -62,7 +62,7 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_96245007931de700bb8a76b2e98ce70a.html">builtins</a></li><li class="navelem"><a class="el" href="dir_e558b8e126febdf8b95f4d8be0195ecf.html">type</a></li><li class="navelem"><a class="el" href="dir_e334f6878e5ee6f604af3f15487d92f2.html">include</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_5c982d53a68cdbcd421152b4020263a9.html">main</a></li><li class="navelem"><a class="el" href="dir_f9352377262e2d6c535a8e1ae042e5ec.html">builtins</a></li><li class="navelem"><a class="el" href="dir_baf665de47213e165afabc752fe5c74c.html">type</a></li><li class="navelem"><a class="el" href="dir_61735fd6821ce7c6a859a5265acde4b1.html">include</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -79,13 +79,12 @@ $(function() {
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for helios_type.h:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="helios__type_8h__incl.svg" width="452" height="202"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="helios__type_8h__incl.svg" width="488" height="202"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div><div class="textblock"><div class="dynheader">
 This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="helios__type_8h__dep__incl.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="helios__type_8h__dep__incl.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 </div>
 <p><a href="helios__type_8h_source.html">Go to the source code of this file.</a></p>
@@ -117,6 +116,8 @@ Macros</h2></td></tr>
 <tr class="separator:ae1793ae481c120492834f36e9eefb65c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aaecee8ede1484ba93126f8fe937e836c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="helios__type_8h.html#aaecee8ede1484ba93126f8fe937e836c">HELIOS_OBJECT_BASIC_FIELDS_COPY</a>(function)&#160;&#160;&#160;.copy = function</td></tr>
 <tr class="separator:aaecee8ede1484ba93126f8fe937e836c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a991b32668b8f5443e7fd002cf5b151d1"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="helios__type_8h.html#a991b32668b8f5443e7fd002cf5b151d1">HELIOS_OBJECT_BASIC_FIELDS_HASH</a>(function)&#160;&#160;&#160;.hash = function</td></tr>
+<tr class="separator:a991b32668b8f5443e7fd002cf5b151d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1b8a3ff208bb571705e4d040f611ff2e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="helios__type_8h.html#a1b8a3ff208bb571705e4d040f611ff2e">HELIOS_OBJECT_BINOPS_FIELDS</a></td></tr>
 <tr class="separator:a1b8a3ff208bb571705e4d040f611ff2e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab907377d72b96b551da5961ad8f76689"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="helios__type_8h.html#ab907377d72b96b551da5961ad8f76689">HELIOS_OBJECT_BINOPS_FIELDS_NULL</a>()</td></tr>
@@ -149,6 +150,26 @@ Macros</h2></td></tr>
 <tr class="separator:a1380bf686eececb0061bae51b1edce49"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a70022692e940cd98f1a08ea8f8e56b89"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="helios__type_8h.html#a70022692e940cd98f1a08ea8f8e56b89">HELIOS_OBJECT_STATIC</a>()&#160;&#160;&#160;.staticobj = true</td></tr>
 <tr class="separator:a70022692e940cd98f1a08ea8f8e56b89"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5b3d3bffcfb46e56b3e4df9bb085d384"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="helios__type_8h.html#a5b3d3bffcfb46e56b3e4df9bb085d384">HELIOS_OBJECT_COMPARISON_FIELDS</a></td></tr>
+<tr class="separator:a5b3d3bffcfb46e56b3e4df9bb085d384"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abb145426707c74aefc63375a487abfb1"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="helios__type_8h.html#abb145426707c74aefc63375a487abfb1">HELIOS_OBJECT_COMPARISON_FIELDS_NULL</a>()</td></tr>
+<tr class="separator:abb145426707c74aefc63375a487abfb1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab3823c07dcc4e99f34e2a7a3f9e17b32"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="helios__type_8h.html#ab3823c07dcc4e99f34e2a7a3f9e17b32">HELIOS_OBJECT_COMPARISON_FIELDS_EQUAL</a>(function)&#160;&#160;&#160;.equal = function</td></tr>
+<tr class="separator:ab3823c07dcc4e99f34e2a7a3f9e17b32"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae0bf121d29291aad9055a7c29bbde68f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="helios__type_8h.html#ae0bf121d29291aad9055a7c29bbde68f">HELIOS_OBJECT_COMPARISON_FIELDS_GREATER</a>(function)&#160;&#160;&#160;.greater = function</td></tr>
+<tr class="separator:ae0bf121d29291aad9055a7c29bbde68f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3763eb1d45d1bd80cc4137a524e72065"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="helios__type_8h.html#a3763eb1d45d1bd80cc4137a524e72065">HELIOS_OBJECT_COMPARISON_FIELDS_LESS</a>(function)&#160;&#160;&#160;.less = function</td></tr>
+<tr class="separator:a3763eb1d45d1bd80cc4137a524e72065"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af219d2ae1ed5e157b7b2b4c11e8f792c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="helios__type_8h.html#af219d2ae1ed5e157b7b2b4c11e8f792c">HELIOS_OBJECT_COMPARISON_FIELDS_GREATEREQUAL</a>(function)&#160;&#160;&#160;.greaterequal = function</td></tr>
+<tr class="separator:af219d2ae1ed5e157b7b2b4c11e8f792c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a47d4f106f0edeba16852edac640bcf85"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="helios__type_8h.html#a47d4f106f0edeba16852edac640bcf85">HELIOS_OBJECT_COMPARISON_FIELDS_LESSEQUAL</a>(function)&#160;&#160;&#160;.lessequal = function</td></tr>
+<tr class="separator:a47d4f106f0edeba16852edac640bcf85"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a20d3a1cea9c540502edb5defc4afe1d7"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="helios__type_8h.html#a20d3a1cea9c540502edb5defc4afe1d7">HELIOS_OBJECT_COMPARISON_FIELDS_NOTEQUAL</a>(function)&#160;&#160;&#160;.notequal = function</td></tr>
+<tr class="separator:a20d3a1cea9c540502edb5defc4afe1d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af2be4fab47380651436a02ab811ebda8"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="helios__type_8h.html#af2be4fab47380651436a02ab811ebda8">HELIOS_OBJECT_COMPARISON_FIELDS_BOOLEAN</a>(function)&#160;&#160;&#160;.boolean = function</td></tr>
+<tr class="separator:af2be4fab47380651436a02ab811ebda8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acebffdb933b9e1b52791ec9fc561fa47"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="helios__type_8h.html#acebffdb933b9e1b52791ec9fc561fa47">HELIOS_OBJECT_SEQUENCE_FIELDS</a></td></tr>
+<tr class="separator:acebffdb933b9e1b52791ec9fc561fa47"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Macro Definition Documentation</h2>
 <a id="a88b3cb317a48eb70fc4ac7a5647b93ed"></a>
@@ -162,7 +183,7 @@ Macros</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line"><span class="keyword">struct </span>__helios_object_s *(*constructor)();                                \</div><div class="line">    void (*destructor)(<span class="keyword">struct </span>__helios_object_s * obj);                        \</div><div class="line">    char *classname;                                                           \</div><div class="line">    struct __helios_object_s *(*represent)(<span class="keyword">struct </span>__helios_object_s * obj);    \</div><div class="line">    struct __helios_object_s *(*tostring)(<span class="keyword">struct </span>__helios_object_s * obj);     \</div><div class="line">    struct __helios_object_s *(*copy)(<span class="keyword">struct </span>__helios_object_s * obj);</div></div><!-- fragment -->
+<b>Value:</b><div class="fragment"><div class="line"><span class="keyword">struct </span>__helios_object_s *(*constructor)();                                \</div><div class="line">    void (*destructor)(<span class="keyword">struct </span>__helios_object_s * obj);                        \</div><div class="line">    char *classname;                                                           \</div><div class="line">    struct __helios_object_s *(*represent)(<span class="keyword">struct </span>__helios_object_s * obj);    \</div><div class="line">    struct __helios_object_s *(*tostring)(<span class="keyword">struct </span>__helios_object_s * obj);     \</div><div class="line">    struct __helios_object_s *(*copy)(<span class="keyword">struct </span>__helios_object_s * obj);         \</div><div class="line">    struct __helios_object_s *(*hash)(<span class="keyword">struct </span>__helios_object_s * <span class="keyword">self</span>);</div></div><!-- fragment -->
 <p>This macro defines the most basic fields an object can have: a name, constructor, destructor and tostring method. </p>
 
 <p class="definition">Definition at line <a class="el" href="helios__type_8h_source.html#l00032">32</a> of file <a class="el" href="helios__type_8h_source.html">helios_type.h</a>.</p>
@@ -187,7 +208,7 @@ Macros</h2></td></tr>
 
 <p>Set the classname in a struct initialization. </p>
 
-<p class="definition">Definition at line <a class="el" href="helios__type_8h_source.html#l00059">59</a> of file <a class="el" href="helios__type_8h_source.html">helios_type.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="helios__type_8h_source.html#l00060">60</a> of file <a class="el" href="helios__type_8h_source.html">helios_type.h</a>.</p>
 
 </div>
 </div>
@@ -209,7 +230,7 @@ Macros</h2></td></tr>
 
 <p>Set the constructor in a struct initialization. </p>
 
-<p class="definition">Definition at line <a class="el" href="helios__type_8h_source.html#l00051">51</a> of file <a class="el" href="helios__type_8h_source.html">helios_type.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="helios__type_8h_source.html#l00052">52</a> of file <a class="el" href="helios__type_8h_source.html">helios_type.h</a>.</p>
 
 </div>
 </div>
@@ -231,7 +252,7 @@ Macros</h2></td></tr>
 
 <p>Set the copy function in a struct initialization. </p>
 
-<p class="definition">Definition at line <a class="el" href="helios__type_8h_source.html#l00071">71</a> of file <a class="el" href="helios__type_8h_source.html">helios_type.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="helios__type_8h_source.html#l00072">72</a> of file <a class="el" href="helios__type_8h_source.html">helios_type.h</a>.</p>
 
 </div>
 </div>
@@ -253,7 +274,29 @@ Macros</h2></td></tr>
 
 <p>Set the destructor in a struct initialization. </p>
 
-<p class="definition">Definition at line <a class="el" href="helios__type_8h_source.html#l00055">55</a> of file <a class="el" href="helios__type_8h_source.html">helios_type.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="helios__type_8h_source.html#l00056">56</a> of file <a class="el" href="helios__type_8h_source.html">helios_type.h</a>.</p>
+
+</div>
+</div>
+<a id="a991b32668b8f5443e7fd002cf5b151d1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a991b32668b8f5443e7fd002cf5b151d1">&#9670;&nbsp;</a></span>HELIOS_OBJECT_BASIC_FIELDS_HASH</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define HELIOS_OBJECT_BASIC_FIELDS_HASH</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">function</td><td>)</td>
+          <td>&#160;&#160;&#160;.hash = function</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set the hash function in a struct initialization. </p>
+
+<p class="definition">Definition at line <a class="el" href="helios__type_8h_source.html#l00076">76</a> of file <a class="el" href="helios__type_8h_source.html">helios_type.h</a>.</p>
 
 </div>
 </div>
@@ -271,11 +314,11 @@ Macros</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line">.constructor = NULL, .destructor = NULL, .classname = NULL,                \</div><div class="line">    .tostring = NULL, .represent = NULL, .copy = NULL</div></div><!-- fragment -->
+<b>Value:</b><div class="fragment"><div class="line">.constructor = NULL, .destructor = NULL, .classname = NULL,                \</div><div class="line">    .tostring = NULL, .represent = NULL, .copy = NULL, .hash = NULL</div></div><!-- fragment -->
 <p>Initializes all HELIOS_OBJECT_BASIC_FIELDS to NULL. </p>
 <p>Technically not needed as struct fields are nulled automatically. But it does make stuff much clearer. </p>
 
-<p class="definition">Definition at line <a class="el" href="helios__type_8h_source.html#l00044">44</a> of file <a class="el" href="helios__type_8h_source.html">helios_type.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="helios__type_8h_source.html#l00045">45</a> of file <a class="el" href="helios__type_8h_source.html">helios_type.h</a>.</p>
 
 </div>
 </div>
@@ -297,7 +340,7 @@ Macros</h2></td></tr>
 
 <p>Set the represent function in a struct initialization. </p>
 
-<p class="definition">Definition at line <a class="el" href="helios__type_8h_source.html#l00067">67</a> of file <a class="el" href="helios__type_8h_source.html">helios_type.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="helios__type_8h_source.html#l00068">68</a> of file <a class="el" href="helios__type_8h_source.html">helios_type.h</a>.</p>
 
 </div>
 </div>
@@ -319,7 +362,7 @@ Macros</h2></td></tr>
 
 <p>Set the tostring function in a struct initialization. </p>
 
-<p class="definition">Definition at line <a class="el" href="helios__type_8h_source.html#l00063">63</a> of file <a class="el" href="helios__type_8h_source.html">helios_type.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="helios__type_8h_source.html#l00064">64</a> of file <a class="el" href="helios__type_8h_source.html">helios_type.h</a>.</p>
 
 </div>
 </div>
@@ -337,7 +380,7 @@ Macros</h2></td></tr>
 <b>Value:</b><div class="fragment"><div class="line"><span class="keyword">struct </span>__helios_object_s *(*add)(<span class="keyword">struct </span>__helios_object_s * <span class="keyword">self</span>,          \</div><div class="line">                                     struct __helios_object_s * other);        \</div><div class="line">    struct __helios_object_s *(*subtract)(<span class="keyword">struct </span>__helios_object_s * <span class="keyword">self</span>,     \</div><div class="line">                                          struct __helios_object_s * other);   \</div><div class="line">    struct __helios_object_s *(*divide)(<span class="keyword">struct </span>__helios_object_s * <span class="keyword">self</span>,       \</div><div class="line">                                        struct __helios_object_s * other);     \</div><div class="line">    struct __helios_object_s *(*multiply)(<span class="keyword">struct </span>__helios_object_s * <span class="keyword">self</span>,     \</div><div class="line">                                          struct __helios_object_s * other);   \</div><div class="line">    struct __helios_object_s *(*modulo)(<span class="keyword">struct </span>__helios_object_s * <span class="keyword">self</span>,       \</div><div class="line">                                        struct __helios_object_s * other);     \</div><div class="line">    struct __helios_object_s *(*power)(<span class="keyword">struct </span>__helios_object_s * <span class="keyword">self</span>,        \</div><div class="line">                                       struct __helios_object_s * other);      \</div><div class="line">    struct __helios_object_s *(*floordivide)(                                  \</div><div class="line">        struct __helios_object_s * <span class="keyword">self</span>, <span class="keyword">struct </span>__helios_object_s * other);</div></div><!-- fragment -->
 <p>Define the fields corresponding to binary number operators for helios object struct definitions. </p>
 
-<p class="definition">Definition at line <a class="el" href="helios__type_8h_source.html#l00077">77</a> of file <a class="el" href="helios__type_8h_source.html">helios_type.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="helios__type_8h_source.html#l00082">82</a> of file <a class="el" href="helios__type_8h_source.html">helios_type.h</a>.</p>
 
 </div>
 </div>
@@ -359,7 +402,7 @@ Macros</h2></td></tr>
 
 <p>Set the add function in a struct initialization. </p>
 
-<p class="definition">Definition at line <a class="el" href="helios__type_8h_source.html#l00105">105</a> of file <a class="el" href="helios__type_8h_source.html">helios_type.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="helios__type_8h_source.html#l00110">110</a> of file <a class="el" href="helios__type_8h_source.html">helios_type.h</a>.</p>
 
 </div>
 </div>
@@ -381,7 +424,7 @@ Macros</h2></td></tr>
 
 <p>Set the divide function in a struct initialization. </p>
 
-<p class="definition">Definition at line <a class="el" href="helios__type_8h_source.html#l00113">113</a> of file <a class="el" href="helios__type_8h_source.html">helios_type.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="helios__type_8h_source.html#l00118">118</a> of file <a class="el" href="helios__type_8h_source.html">helios_type.h</a>.</p>
 
 </div>
 </div>
@@ -403,7 +446,7 @@ Macros</h2></td></tr>
 
 <p>Set the floordivide function in a struct initialization. </p>
 
-<p class="definition">Definition at line <a class="el" href="helios__type_8h_source.html#l00129">129</a> of file <a class="el" href="helios__type_8h_source.html">helios_type.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="helios__type_8h_source.html#l00134">134</a> of file <a class="el" href="helios__type_8h_source.html">helios_type.h</a>.</p>
 
 </div>
 </div>
@@ -425,7 +468,7 @@ Macros</h2></td></tr>
 
 <p>Set the modulo function in a struct initialization. </p>
 
-<p class="definition">Definition at line <a class="el" href="helios__type_8h_source.html#l00121">121</a> of file <a class="el" href="helios__type_8h_source.html">helios_type.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="helios__type_8h_source.html#l00126">126</a> of file <a class="el" href="helios__type_8h_source.html">helios_type.h</a>.</p>
 
 </div>
 </div>
@@ -447,7 +490,7 @@ Macros</h2></td></tr>
 
 <p>Set the multiply function in a struct initialization. </p>
 
-<p class="definition">Definition at line <a class="el" href="helios__type_8h_source.html#l00117">117</a> of file <a class="el" href="helios__type_8h_source.html">helios_type.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="helios__type_8h_source.html#l00122">122</a> of file <a class="el" href="helios__type_8h_source.html">helios_type.h</a>.</p>
 
 </div>
 </div>
@@ -469,7 +512,7 @@ Macros</h2></td></tr>
 <p>Zero out all HELIOS_OBJECT_BINOPS_FIELDS. </p>
 <p>Technically not needed as struct fields are nulled automatically. But it does make stuff much clearer. </p>
 
-<p class="definition">Definition at line <a class="el" href="helios__type_8h_source.html#l00098">98</a> of file <a class="el" href="helios__type_8h_source.html">helios_type.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="helios__type_8h_source.html#l00103">103</a> of file <a class="el" href="helios__type_8h_source.html">helios_type.h</a>.</p>
 
 </div>
 </div>
@@ -491,7 +534,7 @@ Macros</h2></td></tr>
 
 <p>Set the power function in a struct initialization. </p>
 
-<p class="definition">Definition at line <a class="el" href="helios__type_8h_source.html#l00125">125</a> of file <a class="el" href="helios__type_8h_source.html">helios_type.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="helios__type_8h_source.html#l00130">130</a> of file <a class="el" href="helios__type_8h_source.html">helios_type.h</a>.</p>
 
 </div>
 </div>
@@ -513,7 +556,7 @@ Macros</h2></td></tr>
 
 <p>Set the subtract function in a struct initialization. </p>
 
-<p class="definition">Definition at line <a class="el" href="helios__type_8h_source.html#l00109">109</a> of file <a class="el" href="helios__type_8h_source.html">helios_type.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="helios__type_8h_source.html#l00114">114</a> of file <a class="el" href="helios__type_8h_source.html">helios_type.h</a>.</p>
 
 </div>
 </div>
@@ -558,6 +601,218 @@ Macros</h2></td></tr>
 
 </div>
 </div>
+<a id="a5b3d3bffcfb46e56b3e4df9bb085d384"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5b3d3bffcfb46e56b3e4df9bb085d384">&#9670;&nbsp;</a></span>HELIOS_OBJECT_COMPARISON_FIELDS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define HELIOS_OBJECT_COMPARISON_FIELDS</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line"><span class="keyword">struct </span>__helios_object_s *(*equal)(<span class="keyword">struct </span>__helios_object_s * <span class="keyword">self</span>,        \</div><div class="line">                                       struct __helios_object_s * other);      \</div><div class="line">    struct __helios_object_s *(*greater)(<span class="keyword">struct </span>__helios_object_s * <span class="keyword">self</span>,      \</div><div class="line">                                         struct __helios_object_s * other);    \</div><div class="line">    struct __helios_object_s *(*less)(<span class="keyword">struct </span>__helios_object_s * <span class="keyword">self</span>,         \</div><div class="line">                                      struct __helios_object_s * other);       \</div><div class="line">    struct __helios_object_s *(*greaterequal)(                                 \</div><div class="line">        struct __helios_object_s * <span class="keyword">self</span>, <span class="keyword">struct </span>__helios_object_s * other);    \</div><div class="line">    struct __helios_object_s *(*lessequal)(<span class="keyword">struct </span>__helios_object_s * <span class="keyword">self</span>,    \</div><div class="line">                                           struct __helios_object_s * other);  \</div><div class="line">    struct __helios_object_s *(*notequal)(<span class="keyword">struct </span>__helios_object_s * <span class="keyword">self</span>,     \</div><div class="line">                                          struct __helios_object_s * other);   \</div><div class="line">    struct __helios_object_s *(*boolean)(<span class="keyword">struct </span>__helios_object_s * <span class="keyword">self</span>)</div></div><!-- fragment -->
+<p>These fields define methods which compare objects. </p>
+
+<p class="definition">Definition at line <a class="el" href="helios__type_8h_source.html#l00181">181</a> of file <a class="el" href="helios__type_8h_source.html">helios_type.h</a>.</p>
+
+</div>
+</div>
+<a id="af2be4fab47380651436a02ab811ebda8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af2be4fab47380651436a02ab811ebda8">&#9670;&nbsp;</a></span>HELIOS_OBJECT_COMPARISON_FIELDS_BOOLEAN</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define HELIOS_OBJECT_COMPARISON_FIELDS_BOOLEAN</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">function</td><td>)</td>
+          <td>&#160;&#160;&#160;.boolean = function</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set the bool function in a struct initialization. </p>
+
+<p class="definition">Definition at line <a class="el" href="helios__type_8h_source.html#l00240">240</a> of file <a class="el" href="helios__type_8h_source.html">helios_type.h</a>.</p>
+
+</div>
+</div>
+<a id="ab3823c07dcc4e99f34e2a7a3f9e17b32"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab3823c07dcc4e99f34e2a7a3f9e17b32">&#9670;&nbsp;</a></span>HELIOS_OBJECT_COMPARISON_FIELDS_EQUAL</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define HELIOS_OBJECT_COMPARISON_FIELDS_EQUAL</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">function</td><td>)</td>
+          <td>&#160;&#160;&#160;.equal = function</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set the equals function in a struct initialization. </p>
+
+<p class="definition">Definition at line <a class="el" href="helios__type_8h_source.html#l00208">208</a> of file <a class="el" href="helios__type_8h_source.html">helios_type.h</a>.</p>
+
+</div>
+</div>
+<a id="ae0bf121d29291aad9055a7c29bbde68f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae0bf121d29291aad9055a7c29bbde68f">&#9670;&nbsp;</a></span>HELIOS_OBJECT_COMPARISON_FIELDS_GREATER</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define HELIOS_OBJECT_COMPARISON_FIELDS_GREATER</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">function</td><td>)</td>
+          <td>&#160;&#160;&#160;.greater = function</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set the greater function in a struct initialization. </p>
+
+<p class="definition">Definition at line <a class="el" href="helios__type_8h_source.html#l00213">213</a> of file <a class="el" href="helios__type_8h_source.html">helios_type.h</a>.</p>
+
+</div>
+</div>
+<a id="af219d2ae1ed5e157b7b2b4c11e8f792c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af219d2ae1ed5e157b7b2b4c11e8f792c">&#9670;&nbsp;</a></span>HELIOS_OBJECT_COMPARISON_FIELDS_GREATEREQUAL</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define HELIOS_OBJECT_COMPARISON_FIELDS_GREATEREQUAL</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">function</td><td>)</td>
+          <td>&#160;&#160;&#160;.greaterequal = function</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set the greaterequals function in a struct initialization. </p>
+
+<p class="definition">Definition at line <a class="el" href="helios__type_8h_source.html#l00223">223</a> of file <a class="el" href="helios__type_8h_source.html">helios_type.h</a>.</p>
+
+</div>
+</div>
+<a id="a3763eb1d45d1bd80cc4137a524e72065"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3763eb1d45d1bd80cc4137a524e72065">&#9670;&nbsp;</a></span>HELIOS_OBJECT_COMPARISON_FIELDS_LESS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define HELIOS_OBJECT_COMPARISON_FIELDS_LESS</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">function</td><td>)</td>
+          <td>&#160;&#160;&#160;.less = function</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set the less function in a struct initialization. </p>
+
+<p class="definition">Definition at line <a class="el" href="helios__type_8h_source.html#l00218">218</a> of file <a class="el" href="helios__type_8h_source.html">helios_type.h</a>.</p>
+
+</div>
+</div>
+<a id="a47d4f106f0edeba16852edac640bcf85"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a47d4f106f0edeba16852edac640bcf85">&#9670;&nbsp;</a></span>HELIOS_OBJECT_COMPARISON_FIELDS_LESSEQUAL</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define HELIOS_OBJECT_COMPARISON_FIELDS_LESSEQUAL</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">function</td><td>)</td>
+          <td>&#160;&#160;&#160;.lessequal = function</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set the lessequals function in a struct initialization. </p>
+
+<p class="definition">Definition at line <a class="el" href="helios__type_8h_source.html#l00229">229</a> of file <a class="el" href="helios__type_8h_source.html">helios_type.h</a>.</p>
+
+</div>
+</div>
+<a id="a20d3a1cea9c540502edb5defc4afe1d7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a20d3a1cea9c540502edb5defc4afe1d7">&#9670;&nbsp;</a></span>HELIOS_OBJECT_COMPARISON_FIELDS_NOTEQUAL</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define HELIOS_OBJECT_COMPARISON_FIELDS_NOTEQUAL</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">function</td><td>)</td>
+          <td>&#160;&#160;&#160;.notequal = function</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set the notequals function in a struct initialization. </p>
+
+<p class="definition">Definition at line <a class="el" href="helios__type_8h_source.html#l00235">235</a> of file <a class="el" href="helios__type_8h_source.html">helios_type.h</a>.</p>
+
+</div>
+</div>
+<a id="abb145426707c74aefc63375a487abfb1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abb145426707c74aefc63375a487abfb1">&#9670;&nbsp;</a></span>HELIOS_OBJECT_COMPARISON_FIELDS_NULL</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define HELIOS_OBJECT_COMPARISON_FIELDS_NULL</td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">.equals = NULL, .greater = NULL, .less = NULL, .greaterequal = NULL,       \</div><div class="line">    .lessequal = NULL, .notequal = NULL, .boolean = NULL</div></div><!-- fragment -->
+<p>Zero out all HELIOS_OBJECT_COMPARISON_FIELDS. </p>
+<p>Technically not needed as struct fields are nulled automatically. But it does make stuff much clearer. </p>
+
+<p class="definition">Definition at line <a class="el" href="helios__type_8h_source.html#l00201">201</a> of file <a class="el" href="helios__type_8h_source.html">helios_type.h</a>.</p>
+
+</div>
+</div>
+<a id="acebffdb933b9e1b52791ec9fc561fa47"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acebffdb933b9e1b52791ec9fc561fa47">&#9670;&nbsp;</a></span>HELIOS_OBJECT_SEQUENCE_FIELDS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define HELIOS_OBJECT_SEQUENCE_FIELDS</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line"><span class="keyword">struct </span>__helios_object_s *(*length)(<span class="keyword">struct </span>__helios_object_s * <span class="keyword">self</span>);      \</div><div class="line">    struct __helios_object_s *(*iter)(<span class="keyword">struct </span>__helios_object_s * <span class="keyword">self</span>);        \</div><div class="line">    struct __helios_object_s *(*getitem)(<span class="keyword">struct </span>__helios_object_s * <span class="keyword">self</span>,      \</div><div class="line">                                         struct __helios_object_s * item);     \</div><div class="line">    struct __helios_object_s *(*getattr)(<span class="keyword">struct </span>__helios_object_s * <span class="keyword">self</span>,      \</div><div class="line">                                         struct __helios_object_s * attr);     \</div><div class="line">    struct __helios_object_s *(*setitem)(<span class="keyword">struct </span>__helios_object_s * <span class="keyword">self</span>,      \</div><div class="line">                                         struct __helios_object_s * item,      \</div><div class="line">                                         struct __helios_object_s * value);    \</div><div class="line">    struct __helios_object_s *(*setattr)(<span class="keyword">struct </span>__helios_object_s * <span class="keyword">self</span>,      \</div><div class="line">                                         struct __helios_object_s * attr,      \</div><div class="line">                                         struct __helios_object_s * value);    \</div><div class="line">    struct __helios_object_s *(*append)(<span class="keyword">struct </span>__helios_object_s * <span class="keyword">self</span>,       \</div><div class="line">                                        struct __helios_object_s * other);     \</div><div class="line">    struct __helios_object_s *(*extend)(<span class="keyword">struct </span>__helios_object_s * <span class="keyword">self</span>,       \</div><div class="line">                                        struct __helios_object_s * other);     \</div><div class="line">    struct __helios_object_s *(*repeat)(<span class="keyword">struct </span>__helios_object_s * <span class="keyword">self</span>,       \</div><div class="line">                                        struct __helios_object_s * other);     \</div><div class="line">    struct __helios_object_s *(*contains)(<span class="keyword">struct </span>__helios_object_s * <span class="keyword">self</span>,     \</div><div class="line">                                          struct __helios_object_s * other)</div></div><!-- fragment -->
+<p>These fields define methods applying on sequences. </p>
+
+<p class="definition">Definition at line <a class="el" href="helios__type_8h_source.html#l00245">245</a> of file <a class="el" href="helios__type_8h_source.html">helios_type.h</a>.</p>
+
+</div>
+</div>
 <a id="a70022692e940cd98f1a08ea8f8e56b89"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a70022692e940cd98f1a08ea8f8e56b89">&#9670;&nbsp;</a></span>HELIOS_OBJECT_STATIC</h2>
 
@@ -575,7 +830,7 @@ Macros</h2></td></tr>
 
 <p>sets this static field </p>
 
-<p class="definition">Definition at line <a class="el" href="helios__type_8h_source.html#l00171">171</a> of file <a class="el" href="helios__type_8h_source.html">helios_type.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="helios__type_8h_source.html#l00176">176</a> of file <a class="el" href="helios__type_8h_source.html">helios_type.h</a>.</p>
 
 </div>
 </div>
@@ -594,7 +849,7 @@ Macros</h2></td></tr>
 <p>If this field is true, instances of this object can never be freed. </p>
 <p>This is for example done with the True and False objects. </p>
 
-<p class="definition">Definition at line <a class="el" href="helios__type_8h_source.html#l00168">168</a> of file <a class="el" href="helios__type_8h_source.html">helios_type.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="helios__type_8h_source.html#l00173">173</a> of file <a class="el" href="helios__type_8h_source.html">helios_type.h</a>.</p>
 
 </div>
 </div>
@@ -612,7 +867,7 @@ Macros</h2></td></tr>
 <b>Value:</b><div class="fragment"><div class="line"><span class="keyword">struct </span>__helios_object_s *(*minus)(<span class="keyword">struct </span>__helios_object_s * <span class="keyword">self</span>);       \</div><div class="line">    struct __helios_object_s *(*invert)(<span class="keyword">struct </span>__helios_object_s * <span class="keyword">self</span>);      \</div><div class="line">    struct __helios_object_s *(*plus)(<span class="keyword">struct </span>__helios_object_s * <span class="keyword">self</span>)</div></div><!-- fragment -->
 <p>Define the fields corresponding to unary number operators for helios object struct definitions. </p>
 
-<p class="definition">Definition at line <a class="el" href="helios__type_8h_source.html#l00136">136</a> of file <a class="el" href="helios__type_8h_source.html">helios_type.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="helios__type_8h_source.html#l00141">141</a> of file <a class="el" href="helios__type_8h_source.html">helios_type.h</a>.</p>
 
 </div>
 </div>
@@ -634,7 +889,7 @@ Macros</h2></td></tr>
 
 <p>Set the invert function in a struct initialization. </p>
 
-<p class="definition">Definition at line <a class="el" href="helios__type_8h_source.html#l00157">157</a> of file <a class="el" href="helios__type_8h_source.html">helios_type.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="helios__type_8h_source.html#l00162">162</a> of file <a class="el" href="helios__type_8h_source.html">helios_type.h</a>.</p>
 
 </div>
 </div>
@@ -656,7 +911,7 @@ Macros</h2></td></tr>
 
 <p>Set the minus function in a struct initialization. </p>
 
-<p class="definition">Definition at line <a class="el" href="helios__type_8h_source.html#l00152">152</a> of file <a class="el" href="helios__type_8h_source.html">helios_type.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="helios__type_8h_source.html#l00157">157</a> of file <a class="el" href="helios__type_8h_source.html">helios_type.h</a>.</p>
 
 </div>
 </div>
@@ -678,7 +933,7 @@ Macros</h2></td></tr>
 <p>Zero out all HELIOS_OBJECT_UNARYOPS_FIELDS. </p>
 <p>Technically not needed as struct fields are nulled automatically. But it does make stuff much clearer. </p>
 
-<p class="definition">Definition at line <a class="el" href="helios__type_8h_source.html#l00146">146</a> of file <a class="el" href="helios__type_8h_source.html">helios_type.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="helios__type_8h_source.html#l00151">151</a> of file <a class="el" href="helios__type_8h_source.html">helios_type.h</a>.</p>
 
 </div>
 </div>
@@ -700,14 +955,14 @@ Macros</h2></td></tr>
 
 <p>Set the plus function in a struct initialization. </p>
 
-<p class="definition">Definition at line <a class="el" href="helios__type_8h_source.html#l00162">162</a> of file <a class="el" href="helios__type_8h_source.html">helios_type.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="helios__type_8h_source.html#l00167">167</a> of file <a class="el" href="helios__type_8h_source.html">helios_type.h</a>.</p>
 
 </div>
 </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Mar 26 2019 20:58:47 for Helios-Language by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat Mar 30 2019 13:13:03 for Helios-Language by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.15
 </small></address>

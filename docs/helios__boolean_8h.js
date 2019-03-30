@@ -1,0 +1,27 @@
+var helios__boolean_8h =
+[
+    [ "helios_boolean", "structhelios__boolean.html", "structhelios__boolean" ],
+    [ "HELIOS_BOOLEAN_DEFAULT_VALUE", "helios__boolean_8h.html#af1aa188bd7bedf14653f0d1f0a8d8ca2", null ],
+    [ "HELIOS_BOOLEAN_IS_FALSE", "helios__boolean_8h.html#a2b66fc1e5c04636d6e3c74923378c44e", null ],
+    [ "HELIOS_BOOLEAN_IS_TRUE", "helios__boolean_8h.html#af37a56ce488967de596b36417a631ef6", null ],
+    [ "IS_HELIOS_BOOLEAN", "helios__boolean_8h.html#a9234afff5ccf549d253be0fd0e475047", null ],
+    [ "TO_HELIOS_BOOLEAN", "helios__boolean_8h.html#aee72e540e3d1bb146f3f07dde2ba4730", null ],
+    [ "helios_boolean_boolean", "helios__boolean_8h.html#a2acb546ea8cea68773b554e4ff66efea", null ],
+    [ "helios_boolean_copy", "helios__boolean_8h.html#a8eb294e34264137bb02c8606d4d76a99", null ],
+    [ "helios_boolean_delete", "helios__boolean_8h.html#a43c43ef7355a612aa0b2cf8502540374", null ],
+    [ "helios_boolean_equal", "helios__boolean_8h.html#a9c91d5d7c75f03789c23b808df808ffb", null ],
+    [ "helios_boolean_from_cbool", "helios__boolean_8h.html#a50e186696d4b9f2e8efdcddc17ab5ce5", null ],
+    [ "helios_boolean_from_cint", "helios__boolean_8h.html#ab172c15c28782b45e824c42601484606", null ],
+    [ "helios_boolean_greater", "helios__boolean_8h.html#aaa2879ed47a36bfc77896737b9b189af", null ],
+    [ "helios_boolean_greaterequal", "helios__boolean_8h.html#a088e48307c77863279cc1dbe8ec2445a", null ],
+    [ "helios_boolean_init", "helios__boolean_8h.html#a9f2947d5f9f996ae00783073c89b5dc3", null ],
+    [ "helios_boolean_integer", "helios__boolean_8h.html#a856733e7e090437084fcf595bd4e3b8f", null ],
+    [ "helios_boolean_less", "helios__boolean_8h.html#af7acea2d8b549034a8531cb41c8ebb7e", null ],
+    [ "helios_boolean_lessequal", "helios__boolean_8h.html#a3b954dfb6b86d93ec53013e70fc9f9f2", null ],
+    [ "helios_boolean_notequal", "helios__boolean_8h.html#af7fb855d489343afe2cecd5271d3a4a7", null ],
+    [ "helios_boolean_represent", "helios__boolean_8h.html#a9895b4371b69cb8a01232a32d7dc3dcb", null ],
+    [ "helios_boolean_tostring", "helios__boolean_8h.html#ad10068c0d33dd1c2cd19173af2744bcf", null ],
+    [ "helios_boolean_false", "helios__boolean_8h.html#ae80169b056dcc69cdd78fb5297266ad0", null ],
+    [ "helios_boolean_true", "helios__boolean_8h.html#a22e79934f4e5778ff7c33e72b53f276e", null ],
+    [ "helios_boolean_type", "helios__boolean_8h.html#a8f011aaf753ea8f4f54a10e2286e9424", null ]
+];

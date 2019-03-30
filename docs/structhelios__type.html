@@ -82,6 +82,10 @@ Public Attributes</h2></td></tr>
 <tr class="separator:a8bed11a460a4cb60dea16e24486c8b8a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a622228f7087636374472f221f158255f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structhelios__type.html#a622228f7087636374472f221f158255f">HELIOS_OBJECT_UNARYOPS_FIELDS</a></td></tr>
 <tr class="separator:a622228f7087636374472f221f158255f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab554fc80fc0e8f93f98774b29ea9bb9e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structhelios__type.html#ab554fc80fc0e8f93f98774b29ea9bb9e">HELIOS_OBJECT_SEQUENCE_FIELDS</a></td></tr>
+<tr class="separator:ab554fc80fc0e8f93f98774b29ea9bb9e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab447d8cf1d71220483e2c1706b99b686"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structhelios__type.html#ab447d8cf1d71220483e2c1706b99b686">HELIOS_OBJECT_COMPARISON_FIELDS</a></td></tr>
+<tr class="separator:ab447d8cf1d71220483e2c1706b99b686"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2932c345003995760e1d58e051753455"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structhelios__type.html#a2932c345003995760e1d58e051753455">HELIOS_OBJECT_STATIC_FIELD</a></td></tr>
 <tr class="separator:a2932c345003995760e1d58e051753455"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
@@ -90,7 +94,7 @@ Public Attributes</h2></td></tr>
 <p>This is the part in any helios object defining what type it is. Any helios struct must define a type and use it in the HELIOS_OBJECT_COMMON_BASE which tells the object system what type the object is. It has pointers to all the functions and fields acting on the type which are standardized. Non standard functions can still be exported (example: helios_string_from_charp).</p>
 <p>Inheritance system: Any object has an <a class="el" href="structhelios__type.html" title="The definition of a helios type struct.">helios_type</a> object in it of which the object is an instance. <a class="el" href="structhelios__type.html" title="The definition of a helios type struct.">helios_type</a> is always instance of itself. By putting a pointer to the type of an object in the first field of the struct, any <a class="el" href="structhelios__object.html" title="Definition of the most basic helios object.">helios_object</a> can be cast to the msot basic object possible (<a class="el" href="structhelios__object.html" title="Definition of the most basic helios object.">helios_object</a>), and using the type it's type can be determined and the object can be cast back. This makes it possible to use <a class="el" href="structhelios__object.html" title="Definition of the most basic helios object.">helios_object</a> as type for any helios object. </p>
 
-<p class="definition">Definition at line <a class="el" href="helios__type_8h_source.html#l00190">190</a> of file <a class="el" href="helios__type_8h_source.html">helios_type.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="helios__type_8h_source.html#l00294">294</a> of file <a class="el" href="helios__type_8h_source.html">helios_type.h</a>.</p>
 </div><h2 class="groupheader">Member Data Documentation</h2>
 <a id="a344e31472d03e58a6aba03d55611f0e1"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a344e31472d03e58a6aba03d55611f0e1">&#9670;&nbsp;</a></span>HELIOS_OBJECT_BASIC_FIELDS</h2>
@@ -104,7 +108,7 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="helios__type_8h_source.html#l00192">192</a> of file <a class="el" href="helios__type_8h_source.html">helios_type.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="helios__type_8h_source.html#l00296">296</a> of file <a class="el" href="helios__type_8h_source.html">helios_type.h</a>.</p>
 
 </div>
 </div>
@@ -120,7 +124,7 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="helios__type_8h_source.html#l00193">193</a> of file <a class="el" href="helios__type_8h_source.html">helios_type.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="helios__type_8h_source.html#l00297">297</a> of file <a class="el" href="helios__type_8h_source.html">helios_type.h</a>.</p>
 
 </div>
 </div>
@@ -136,7 +140,39 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="helios__type_8h_source.html#l00191">191</a> of file <a class="el" href="helios__type_8h_source.html">helios_type.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="helios__type_8h_source.html#l00295">295</a> of file <a class="el" href="helios__type_8h_source.html">helios_type.h</a>.</p>
+
+</div>
+</div>
+<a id="ab447d8cf1d71220483e2c1706b99b686"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab447d8cf1d71220483e2c1706b99b686">&#9670;&nbsp;</a></span>HELIOS_OBJECT_COMPARISON_FIELDS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">helios_type::HELIOS_OBJECT_COMPARISON_FIELDS</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="helios__type_8h_source.html#l00300">300</a> of file <a class="el" href="helios__type_8h_source.html">helios_type.h</a>.</p>
+
+</div>
+</div>
+<a id="ab554fc80fc0e8f93f98774b29ea9bb9e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab554fc80fc0e8f93f98774b29ea9bb9e">&#9670;&nbsp;</a></span>HELIOS_OBJECT_SEQUENCE_FIELDS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">helios_type::HELIOS_OBJECT_SEQUENCE_FIELDS</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="helios__type_8h_source.html#l00299">299</a> of file <a class="el" href="helios__type_8h_source.html">helios_type.h</a>.</p>
 
 </div>
 </div>
@@ -152,7 +188,7 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="helios__type_8h_source.html#l00196">196</a> of file <a class="el" href="helios__type_8h_source.html">helios_type.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="helios__type_8h_source.html#l00302">302</a> of file <a class="el" href="helios__type_8h_source.html">helios_type.h</a>.</p>
 
 </div>
 </div>
@@ -168,17 +204,17 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="helios__type_8h_source.html#l00194">194</a> of file <a class="el" href="helios__type_8h_source.html">helios_type.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="helios__type_8h_source.html#l00298">298</a> of file <a class="el" href="helios__type_8h_source.html">helios_type.h</a>.</p>
 
 </div>
 </div>
 <hr/>The documentation for this struct was generated from the following file:<ul>
-<li>builtins/type/include/<a class="el" href="helios__type_8h_source.html">helios_type.h</a></li>
+<li>main/builtins/type/include/<a class="el" href="helios__type_8h_source.html">helios_type.h</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Mar 26 2019 20:58:47 for Helios-Language by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat Mar 30 2019 13:13:03 for Helios-Language by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.15
 </small></address>

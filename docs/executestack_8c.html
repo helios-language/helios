@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.15"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Helios-Language: hvm/executestack.c File Reference</title>
+<title>Helios-Language: main/hvm/executestack.c File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -62,7 +62,7 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_63b2bb1a1d869df538b85d02b91fdcfa.html">hvm</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_5c982d53a68cdbcd421152b4020263a9.html">main</a></li><li class="navelem"><a class="el" href="dir_363e115a0c294a9ff35ee8a9327b07f0.html">hvm</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -81,8 +81,7 @@ $(function() {
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for executestack.c:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="executestack_8c__incl.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="executestack_8c__incl.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 </div>
 <p><a href="executestack_8c_source.html">Go to the source code of this file.</a></p>
@@ -170,7 +169,7 @@ Here is the call graph for this function:</div>
 </dl>
 
 <p class="definition">Definition at line <a class="el" href="executestack_8c_source.html#l00031">31</a> of file <a class="el" href="executestack_8c_source.html">executestack.c</a>.</p>
-<div class="fragment"><div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;                                        {</div><div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <a class="code" href="helios__memory_8h.html#a48e4eb31a7e7d92b0e015ae68c01bb3a">helios_garbage_collect</a>(stack-&gt;<a class="code" href="structexecstack.html#a1f814fa32da2b6aff99acac16c724e82">gc</a>);</div><div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    free(stack-&gt;<a class="code" href="structexecstack.html#af41ed0c0080673d199d6c2a8597e970c">stack</a>);</div><div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    free(stack);</div><div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;}</div><div class="ttc" id="helios__memory_8h_html_a48e4eb31a7e7d92b0e015ae68c01bb3a"><div class="ttname"><a href="helios__memory_8h.html#a48e4eb31a7e7d92b0e015ae68c01bb3a">helios_garbage_collect</a></div><div class="ttdeci">void helios_garbage_collect(garbagecollector *gc)</div><div class="ttdoc">Perform a GC cleanup cycle.</div><div class="ttdef"><b>Definition:</b> <a href="refcount_8c_source.html#l00250">refcount.c:250</a></div></div>
+<div class="fragment"><div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;                                        {</div><div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <a class="code" href="helios__memory_8h.html#a48e4eb31a7e7d92b0e015ae68c01bb3a">helios_garbage_collect</a>(stack-&gt;<a class="code" href="structexecstack.html#a1f814fa32da2b6aff99acac16c724e82">gc</a>);</div><div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    free(stack-&gt;<a class="code" href="structexecstack.html#af41ed0c0080673d199d6c2a8597e970c">stack</a>);</div><div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    free(stack);</div><div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;}</div><div class="ttc" id="helios__memory_8h_html_a48e4eb31a7e7d92b0e015ae68c01bb3a"><div class="ttname"><a href="helios__memory_8h.html#a48e4eb31a7e7d92b0e015ae68c01bb3a">helios_garbage_collect</a></div><div class="ttdeci">void helios_garbage_collect(garbagecollector *gc)</div><div class="ttdoc">Perform a GC cleanup cycle.</div><div class="ttdef"><b>Definition:</b> <a href="refcount_8c_source.html#l00266">refcount.c:266</a></div></div>
 <div class="ttc" id="structexecstack_html_a1f814fa32da2b6aff99acac16c724e82"><div class="ttname"><a href="structexecstack.html#a1f814fa32da2b6aff99acac16c724e82">execstack::gc</a></div><div class="ttdeci">garbagecollector * gc</div><div class="ttdoc">Every execstack is tied to a garbage collector.</div><div class="ttdef"><b>Definition:</b> <a href="executestack_8h_source.html#l00020">executestack.h:20</a></div></div>
 <div class="ttc" id="structexecstack_html_af41ed0c0080673d199d6c2a8597e970c"><div class="ttname"><a href="structexecstack.html#af41ed0c0080673d199d6c2a8597e970c">execstack::stack</a></div><div class="ttdeci">helios_object ** stack</div><div class="ttdef"><b>Definition:</b> <a href="executestack_8h_source.html#l00018">executestack.h:18</a></div></div>
 </div><!-- fragment --><div class="dynheader">
@@ -433,7 +432,7 @@ Here is the call graph for this function:</div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Mar 26 2019 20:58:47 for Helios-Language by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat Mar 30 2019 13:13:03 for Helios-Language by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.15
 </small></address>

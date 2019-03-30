@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.15"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Helios-Language: parser/parserfuncs/strings.c File Reference</title>
+<title>Helios-Language: main/parser/parserfuncs/strings.c File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -62,7 +62,7 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_572890c148f68441e050f6560d78312b.html">parser</a></li><li class="navelem"><a class="el" href="dir_aa5e47c4bffeeec7e25e41aaf2682e12.html">parserfuncs</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_5c982d53a68cdbcd421152b4020263a9.html">main</a></li><li class="navelem"><a class="el" href="dir_0001ea4fffb871e6e0daf06fe0eef6de.html">parser</a></li><li class="navelem"><a class="el" href="dir_2ecd9cab03696de09174782d42e2417c.html">parserfuncs</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -73,8 +73,8 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &lt;<a class="el" href="AST_8h_source.html">AST.h</a>&gt;</code><br />
-<code>#include &lt;<a class="el" href="error_8h_source.html">error.h</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="parser_8h_source.html">parser.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="parser__error_8h_source.html">parser_error.h</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="token_8h_source.html">token.h</a>&gt;</code><br />
 <code>#include &lt;ctype.h&gt;</code><br />
 <code>#include &lt;errno.h&gt;</code><br />
@@ -87,8 +87,7 @@ $(function() {
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for strings.c:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="strings_8c__incl.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="strings_8c__incl.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 </div>
 <p><a href="strings_8c_source.html">Go to the source code of this file.</a></p>
@@ -118,9 +117,9 @@ Functions</h2></td></tr>
 <p>parses a helios string. </p>
 
 <p class="definition">Definition at line <a class="el" href="strings_8c_source.html#l00052">52</a> of file <a class="el" href="strings_8c_source.html">strings.c</a>.</p>
-<div class="fragment"><div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;                        {</div><div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="parser_8h.html#a1a00af051004cb18edac760f39982eea">parser_acceptchar</a>(parser, <span class="charliteral">&#39;\&quot;&#39;</span>)) {</div><div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        <span class="keywordflow">return</span> string_internal(parser, <span class="charliteral">&#39;\&quot;&#39;</span>);</div><div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code" href="parser_8h.html#a1a00af051004cb18edac760f39982eea">parser_acceptchar</a>(parser, <span class="charliteral">&#39;\&#39;&#39;</span>)) {</div><div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        <span class="keywordflow">return</span> string_internal(parser, <span class="charliteral">&#39;\&#39;&#39;</span>);</div><div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    } <span class="keywordflow">else</span> {</div><div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        <a class="code" href="error_8c.html#a1febf822c4d9249dd4afd09c5d5f87bb">errorstack_push</a>(parser-&gt;es, <span class="stringliteral">&quot;invalid string constant&quot;</span>, parser-&gt;line,</div><div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;                        parser-&gt;character);</div><div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="AST_8c.html#a3a1c70c232e669f02ef0a4e171ee6ab2">AST_new</a>(NULL);</div><div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    }</div><div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;}</div><div class="ttc" id="parser_8h_html_a1a00af051004cb18edac760f39982eea"><div class="ttname"><a href="parser_8h.html#a1a00af051004cb18edac760f39982eea">parser_acceptchar</a></div><div class="ttdeci">bool parser_acceptchar(Parser_t *parser, char character)</div><div class="ttdoc">Searches for the given character, advances the parser if it found it.</div><div class="ttdef"><b>Definition:</b> <a href="parserutil_8c_source.html#l00352">parserutil.c:352</a></div></div>
-<div class="ttc" id="error_8c_html_a1febf822c4d9249dd4afd09c5d5f87bb"><div class="ttname"><a href="error_8c.html#a1febf822c4d9249dd4afd09c5d5f87bb">errorstack_push</a></div><div class="ttdeci">void errorstack_push(errorstack_t *es, const char *message, uint32_t line, uint32_t character)</div><div class="ttdoc">Construct a new error object out of parameters, and push it to the errorstack.</div><div class="ttdef"><b>Definition:</b> <a href="error_8c_source.html#l00121">error.c:121</a></div></div>
+<div class="fragment"><div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;                        {</div><div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="parser_8h.html#a1a00af051004cb18edac760f39982eea">parser_acceptchar</a>(parser, <span class="charliteral">&#39;\&quot;&#39;</span>)) {</div><div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        <span class="keywordflow">return</span> string_internal(parser, <span class="charliteral">&#39;\&quot;&#39;</span>);</div><div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code" href="parser_8h.html#a1a00af051004cb18edac760f39982eea">parser_acceptchar</a>(parser, <span class="charliteral">&#39;\&#39;&#39;</span>)) {</div><div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        <span class="keywordflow">return</span> string_internal(parser, <span class="charliteral">&#39;\&#39;&#39;</span>);</div><div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    } <span class="keywordflow">else</span> {</div><div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        <a class="code" href="error_8c.html#ae07365063509d8944da638087336597b">errorstack_push</a>(parser-&gt;es, <span class="stringliteral">&quot;invalid string constant&quot;</span>, parser-&gt;line,</div><div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;                        parser-&gt;character);</div><div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="AST_8c.html#a3a1c70c232e669f02ef0a4e171ee6ab2">AST_new</a>(NULL);</div><div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    }</div><div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;}</div><div class="ttc" id="parser_8h_html_a1a00af051004cb18edac760f39982eea"><div class="ttname"><a href="parser_8h.html#a1a00af051004cb18edac760f39982eea">parser_acceptchar</a></div><div class="ttdeci">bool parser_acceptchar(Parser_t *parser, char character)</div><div class="ttdoc">Searches for the given character, advances the parser if it found it.</div><div class="ttdef"><b>Definition:</b> <a href="parserutil_8c_source.html#l00281">parserutil.c:281</a></div></div>
 <div class="ttc" id="AST_8c_html_a3a1c70c232e669f02ef0a4e171ee6ab2"><div class="ttname"><a href="AST_8c.html#a3a1c70c232e669f02ef0a4e171ee6ab2">AST_new</a></div><div class="ttdeci">AST * AST_new(Token_t *value)</div><div class="ttdoc">Constructore for ast objects.</div><div class="ttdef"><b>Definition:</b> <a href="AST_8c_source.html#l00017">AST.c:17</a></div></div>
+<div class="ttc" id="error_8c_html_ae07365063509d8944da638087336597b"><div class="ttname"><a href="error_8c.html#ae07365063509d8944da638087336597b">errorstack_push</a></div><div class="ttdeci">void errorstack_push(errorstack *es, const char *message, uint32_t line, uint32_t character)</div><div class="ttdoc">Construct a new error object out of parameters, and push it to the errorstack.</div><div class="ttdef"><b>Definition:</b> <a href="error_8c_source.html#l00121">error.c:121</a></div></div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -132,7 +131,7 @@ Here is the call graph for this function:</div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Mar 26 2019 20:58:47 for Helios-Language by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat Mar 30 2019 13:13:03 for Helios-Language by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.15
 </small></address>

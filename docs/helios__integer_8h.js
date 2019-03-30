@@ -1,0 +1,27 @@
+var helios__integer_8h =
+[
+    [ "helios_integer", "structhelios__integer.html", "structhelios__integer" ],
+    [ "HELIOS_INTEGER_DEFAULT_VALUE", "helios__integer_8h.html#abb5b5eb1aa7530e84b4a8e9cbcb9bdb6", null ],
+    [ "IS_HELIOS_INTEGER", "helios__integer_8h.html#a8476cc43434d502c78ccf44f01b7bf4b", null ],
+    [ "TO_HELIOS_INTEGER", "helios__integer_8h.html#a5e58e30c9022b406bcff64cd49e99589", null ],
+    [ "helios_integer_add", "helios__integer_8h.html#a6d085b52e19cf3a4a7d43bfb08a7bfb5", null ],
+    [ "helios_integer_boolean", "helios__integer_8h.html#a6cc88ed2131cb6e795558d81d047c10e", null ],
+    [ "helios_integer_copy", "helios__integer_8h.html#a7154861bddc28b62ea3d85375dfc2416", null ],
+    [ "helios_integer_delete", "helios__integer_8h.html#ac7731385ec91b5f6fdf7ef205eba7ded", null ],
+    [ "helios_integer_divide", "helios__integer_8h.html#a80a7bcb0782e2255bdb89e10c2432c26", null ],
+    [ "helios_integer_equal", "helios__integer_8h.html#a1ea0f771c4d0aa678fe5657bc3a79b55", null ],
+    [ "helios_integer_from_cint", "helios__integer_8h.html#af677316afd6536844aeb027f14c198cf", null ],
+    [ "helios_integer_greater", "helios__integer_8h.html#af1a63202644551627182d41ba5c511a4", null ],
+    [ "helios_integer_greaterequal", "helios__integer_8h.html#a58215fdda77903566e97a0e2aad2a42c", null ],
+    [ "helios_integer_hash", "helios__integer_8h.html#afd4e80167217aca02143c82c6e2198ce", null ],
+    [ "helios_integer_init", "helios__integer_8h.html#a50a26b1e9578164839f3a5bb17e04051", null ],
+    [ "helios_integer_less", "helios__integer_8h.html#a09042a280230b0083b6d06d84213b0ee", null ],
+    [ "helios_integer_lessequal", "helios__integer_8h.html#adc82b8e40706a9328ea90c41ef6348aa", null ],
+    [ "helios_integer_multiply", "helios__integer_8h.html#aec4985a44cb2a1f2a3be48ab927b375a", null ],
+    [ "helios_integer_notequal", "helios__integer_8h.html#a0b71bce728cb459e01cd664eead44680", null ],
+    [ "helios_integer_represent", "helios__integer_8h.html#a7a0735b43da010e36d81fd923db75ba7", null ],
+    [ "helios_integer_subtract", "helios__integer_8h.html#a193f46bd1b30af69bd5022d7ad9a108c", null ],
+    [ "helios_integer_to_cint", "helios__integer_8h.html#a431fa4b0a6028a9ec5fab0a4d4699718", null ],
+    [ "helios_integer_tostring", "helios__integer_8h.html#a5332d92b4fbb2aef5764c95999b4a44a", null ],
+    [ "helios_integer_type", "helios__integer_8h.html#affaca2e4bc27813c6c677075be675b56", null ]
+];
